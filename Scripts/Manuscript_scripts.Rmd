@@ -312,3 +312,169 @@ ggpar(p_arg_abundance,x.text.angle = 30,legend = 'none')
 ```
 
 ```{r Fig 2a}
+
+df_profiles = read.csv(r"(LRT_microbiomes_critical_illness\Data_repository\Main_figures\microbiota-pneumonia-species_phyloseqized.csv)",header = FALSE)
+sampleid2site = read.csv(r"(LRT_microbiomes_critical_illness\Data_repository\Main_figures\metadata-pneumonia-sampleid2site.csv)",header = TRUE)
+df_arrows <- read.csv(r'(LRT_microbiomes_critical_illness\Data_repository\Main_figures\MDS_metrics-bray-specie_pneumonia-arrows_coordinates.csv)')
+
+#otu-like data reformat 
+otu_metaphlan <- as.matrix(df_profiles[2:nrow(df_profiles),2:ncol(df_profiles)]) # otu matrix can't have any character-like data, you have to use index to remove it
+class(otu_metaphlan) <- "numeric" # convert the datatype of the matrix into "numeric"
+otu_metaphlan <- otu_metaphlan*1000000
+rownames(otu_metaphlan) <- df_profiles[2:nrow(df_profiles),1]
+colnames(otu_metaphlan) <- df_profiles[1,2:ncol(df_profiles)]
+
+OTU = otu_table(otu_metaphlan,taxa_are_rows = TRUE)
+rownames(sampleid2site) <- sampleid2site$SampleID # you have to re-assign the rownames of meta-data, or you will run into a problem: "invalid “phyloseq” object: Component sample names do not match"
+sam_data = sample_data(sampleid2site)
+physeq_profiles = phyloseq(OTU,sam_data) 
+target_dist_methods <- c('bray')
+for( i in target_dist_methods ){
+  target_dist <- distance(physeq_profiles, method=i)
+  target_MDS_metrics <- ordinate(physeq_profiles, "MDS", distance=target_dist)
+  df_metrics <- data.frame(target_MDS_metrics[["vectors"]])
+  df_metrics_filter <- df_metrics[,1:2]
+  
+  # Merge df_metrics_filter and sampleid2site on the index
+  df_metrics_filter <- merge(df_metrics_filter, sampleid2site, by="row.names", all.x=TRUE)
+  df_metrics_filter  <- df_metrics_filter[,c(4,2,3,5)]
+}
+
+df_arrows$variable <- str_split(df_arrows$variable, "__", simplify = TRUE)[,2]
+df_arrows$variable  <- str_replace_all(df_arrows$variable, "_", " ")
+df_arrows$variable  <- str_replace_all(df_arrows$variable, " group", " ")
+df_distance_bray$Axis.2 <- df_distance_bray$Axis.2*-1
+df_arrows$Axis.2 <- df_arrows$Axis.2*-1
+
+plots <- ggscatter(df_distance_bray,
+                   x = "Axis.1", 
+                   y = "Axis.2",
+                   color = "SamplingSite",
+                   #shape = "SamplingSite",
+                   size=6,
+                   # palette = c( "#FC4E07","#00AFBB", "#E7B800"), #color1
+                   palette = c("#e64833", "#01a188", "#3e5386"), #color2
+                   # palette = c("#c23726", "#e3e3e3", "#0036fc"),  #palette2
+                   # palette = c( "#010101","#fe0000", "#0037fe"), #palette4
+                   #palette = c("#c23726", "#5a5a5a", "#2c83c6"),
+                   #palette = c("#7152a9", "#ffc376", "#eb7600"),
+                   margin.plot = "boxplot",
+                   ggtheme = theme_pubr(),
+                   #margin.params = list(fill="SamplingSite",size=0.36),
+                   legend = 'right') + 
+  geom_segment(data = df_arrows,
+               x = 0, y = 0, alpha = 0.7,
+               mapping = aes(xend = Axis.1, yend = Axis.2),
+               color = 'black',size=0.1,
+               # Add arrow head
+               arrow = arrow(length = unit(3, "mm"))) +
+  geom_label(data = df_arrows, aes(label = variable),color='black',alpha=0.7,size=7,label.size =0.01) 
+ggpar(plots,
+      xlab = "MDS1 (27.6%)",
+      ylab = "MDS2 (16.6%)") + theme_pubr(base_size = 24,border = T,legend = 'none')
+
+```
+
+```{r Fig 2b}
+
+df_distance_bray_species_pneumonia <- read.csv(r'(LRT_microbiomes_critical_illness\Data_repository\Main_figures\MDS_metrics-bray+species_abundance-species_pneumonia.csv)')
+df_distance_bray_species_pneumonia$variable <- str_split(df_distance_bray_species_pneumonia$variable, "__", simplify = TRUE)[,2]
+df_distance_bray_species_pneumonia$variable  <- str_replace_all(df_distance_bray_species_pneumonia$variable, "_", " ")
+df_distance_bray_species_pneumonia$variable  <- str_replace_all(df_distance_bray_species_pneumonia$variable, " group", " ")
+df_distance_bray_species_pneumonia$Axis.2 <- df_distance_bray_species_pneumonia$Axis.2*-1
+
+plots_mds_species <- ggscatter(df_distance_bray_species_pneumonia,
+                   x = "Axis.1", 
+                   y = "Axis.2",
+                   # color = "Streptococcus",
+                   color = 'value',
+                   #shape = "SamplingSite",
+                   size=6,
+                   margin.plot = "boxplot",
+                   ggtheme = theme_pubr(border = T),
+                   #margin.params = list(fill="Acinetobacter",size=0.36),
+                   legend = 'right') + #gradient_color(inferno(10))
+                   gradient_color(c('#bfbdbd','#fe1608')) + facet_wrap(~ variable) +
+  labs(x='MDS1 (19.8%)',y='MDS2 (14.5%)',color='Relative\nabundance (%)') + 
+  theme(axis.text.x  = element_text(size=32),axis.text.y = element_text(size=32),
+        axis.title.x = element_text(size = 32),axis.title.y = element_text(size = 32)) +
+  theme(strip.background = element_blank(),
+        strip.text = element_textbox(
+          size = 30,
+          color = "black", fill = "#d9d9d9", box.color = "#4A618C",#face = 'italic',
+          halign = 0.5, linetype = 1,  width = unit(1, "npc"),
+          margin = margin(0, 0, 0, 0),padding = margin(6, 6, 6, 6)),
+        panel.grid.major.x = element_blank(),
+        panel.grid.minor.x = element_blank(),
+        panel.grid.major.y = element_blank(),
+        panel.grid.minor.y = element_blank(),
+        legend.position = 'none',
+        legend.title = element_text(size=14),
+        legend.text = element_text(size=16)) +
+  xlim(-0.5,0.53)
+plots_mds_species
+
+```
+
+```{r Fig 2c,d}
+
+patientids <- c('P68','P23')
+df_abundance <- read.csv(paste("LRT_microbiomes_critical_illness\Data_repository\Main_figures/microbiota-individual_patient/",
+                               patientid,"-metaphlan3-species_microbiota.csv",sep=""))
+
+df_abundance$Sampling_Day_ICU <- factor(df_abundance$Sampling_Day_ICU,levels = unique(df_abundance$Sampling_Day_ICU))
+plot_df <- ggplot(df_abundance, aes(fill=taxonomy, x=Sampling_Day_ICU, y=relative_abundance))+
+  geom_bar(position = "stack",stat = "identity",) + ggtitle(label = patientid ) + 
+  scale_fill_manual(values = species2color)
+ggpar(plot_df,
+      ylab = "Relative\nabundance (%)",
+      xlab = F) + theme_pubr(base_size = 14,x.text.angle =50,legend = "none",margin = FALSE)  + xlab(NULL) +
+  ggeasy::easy_center_title() 
+
+```
+
+```{r Fig 2e}
+
+### visualized with circos webserver
+
+```
+
+```{r Fig 2g}
+
+my_comparisons <- list(c("Yes", "No"))
+df_combined$tetracycline__tetA_log10 <- log10(df_combined$tetracycline__tetA)
+ggboxplot(df_combined, x="Diagnosed.Pneumonia", y="tetracycline__tetA_log10",
+          color = "Diagnosed.Pneumonia", 
+          add = "jitter",add.params = list(size = 2.4, alpha = 0.8))  +
+  geom_boxplot(aes(color=Diagnosed.Pneumonia), lwd = 0.7) +
+  scale_x_discrete(labels = c("No" = "No Pneumonia", "Yes" = "Pneumonia")) +
+  stat_compare_means(comparisons = my_comparisons,label = "p.label",size=7,
+                     vjust=.15,tip.length= c(0,0,0)) + 
+  labs(x=NULL,y='Total ARG abundance (log10)',) +  ggtitle('Tetracycline__tetA') +
+  # scale_y_continuous(limits=c(-2,2))+
+  theme_pubr(base_size = 23,legend ='none',x.text.angle = 30) + 
+  ggeasy::easy_center_title() + 
+  scale_color_npg()
+
+```
+
+```{r Fig 2h}
+
+my_comparisons <- list(c("Yes", "No"))
+
+df_combined$multidrug__mexB_log10 <- log10(df_combined$multidrug__mexB)
+ggboxplot(df_combined, x="Diagnosed.Pneumonia", y="multidrug__mexB_log10",
+          color = "Diagnosed.Pneumonia", 
+          add = "jitter",add.params = list(size = 2.4, alpha = 0.8))  +
+  geom_boxplot(aes(color=Diagnosed.Pneumonia), lwd = 0.7) +
+  scale_x_discrete(labels = c("No" = "No Pneumonia", "Yes" = "Pneumonia")) +
+  stat_compare_means(comparisons = my_comparisons,label = "p.label",size=7,
+                     vjust=.15,tip.length= c(0,0,0)) + 
+  labs(x=NULL,y='Total ARG abundance (log10)',) +  ggtitle('Multidrug__mexB') +
+  theme_pubr(base_size = 23,legend ='none',x.text.angle = 30) + 
+  ggeasy::easy_center_title() + 
+  scale_color_npg()
+
+```
+
+```{r Fig 2i}
