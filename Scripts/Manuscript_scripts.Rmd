@@ -11,6 +11,10 @@ library(patchwork)
 ## Input data
 # input data was stored at the directory 'Data_repository'
 
+
+
+```{r Fig 1b}
+
 df_metaphlan_all <- read.csv(r'(LRT_microbiomes_critical_illness\Data_repository\Main_figures\microbiome_species-top_prevalent.csv)')
 df_metaphlan_all[df_metaphlan_all$SamplingSite=='HospitalA',]$Name
 df_input_list <- list(
@@ -18,9 +22,6 @@ df_input_list <- list(
   "Hospital B" = df_metaphlan_all[df_metaphlan_all$SamplingSite=='Hospital-B',]$taxonomy,
   "Hospital C" = df_metaphlan_all[df_metaphlan_all$SamplingSite=='Hospital-C',]$taxonomy
 )
-
-
-```{r Fig 1b}
 
 venn.diagram(
   x = df_input_list,
