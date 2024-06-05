@@ -1983,3 +1983,244 @@ ggpar(plot_mash_screen_arg,
 ```
 
 ```{r Fig s5c}
+
+df_prevalence_species_mobilome <- read.csv(r"(LRT_microbiomes_critical_illness\Data_repository\Supplementary_figures\prevalence_comparisons-five_prevalent_species+EHMOS-metaphlan.csv)")
+plot_df <- ggplot(df_prevalence_species_mobilome, aes(fill=SamplingSite, x=reorder(taxonomy,prevalency_percentage,sum,decreasing=T), y=prevalency_percentage))+  #'x=reorder(species,prevalency_percentage,sum,decreasing=T)' --> order stacked barplot with sum of values
+  geom_bar(position = "stack",stat = "identity",) +
+  scale_fill_manual(values = c('Hospital-A'='#d93526','Hospital-B'='#f7a902','Hospital-C'='#1a6196'))+
+  scale_x_discrete(labels=c('C. striatum','S. maltophilia','P. aeruginosa','K. pneumoniae','A. baumannii',
+                            'E. anophelis','P. melaninogenica','P. oris','N. subflava','H. influenzae'))+
+  theme_pubr(x.text.angle = 35)
+plot_df
+
+
+ggpar(plot_df,
+      ylab = "Percentage of detected\nsamples (%)",
+      xlab = "Species",
+      font.xtickslab=c(18),
+      font.ytickslab=c(18),
+      font.x = c(18,"bold"),
+      font.y = c(18,"bold"),
+      font.legend = c(18,'bold'),
+      x.text.angle =50) + theme_pubr(base_size = 30,x.text.angle =35,legend = "none",margin = FALSE)
+
+```
+
+```{r Fig s5d}
+
+df_prevalence_species_mobilome <- read.csv(r"(LRT_microbiomes_critical_illness\Data_repository\Supplementary_figures\prevalence_comparisons-five_prevalent_species+EHMOS.csv)")
+
+my_comparisons <- list(c('prevalent','EHMOS'))
+ggboxplot(df_prevalence_species_mobilome, x="group", y="prevalency_percentage",fill = 'group',
+          color = "group", palette =c("#E41A1C","#377EB8","#4DAF4A","#984EA3","#FF7F00","#F781BF","#A65628","#F781BF"),
+          add = "jitter",add.params = list(size = 1.5, alpha = 0.5))  +
+  stat_boxplot(mapping = aes(color=group),geom = "errorbar",width=0.1)  +
+  stat_compare_means(comparisons = my_comparisons,label = "p.label",size=12,
+                     vjust=.15,tip.length= c(0,0,0)) + 
+  scale_x_discrete(labels=c('More prevalent species','EHMOS'))+
+  labs(x=NULL,y='Percentage of detected\nsamples (%)',) +  
+  theme_pubr(base_size = 36,legend ='none',x.text.angle = 30) 
+
+```
+
+```{r Fig s5e}
+
+df_prevalence_species_mobilome <- read.csv(r"(LRT_microbiomes_critical_illness\Data_repository\Supplementary_figures\prevalence_comparisons-five_prevalent_species+EHMOS-metaphlan.csv)")
+
+plot_df <- ggplot(df_prevalence_species_mobilome, aes(fill=SamplingSite, x=reorder(taxonomy,prevalency_percentage,sum,decreasing=T), y=prevalency_percentage))+  #'x=reorder(species,prevalency_percentage,sum,decreasing=T)' --> order stacked barplot with sum of values
+  geom_bar(position = "dodge",stat = "identity",) +
+  scale_fill_manual(values = c('Hospital-A'='#d93526','Hospital-B'='#f7a902','Hospital-C'='#1a6196'))+
+  scale_x_discrete(labels=c('C. striatum','S. maltophilia','P. aeruginosa','K. pneumoniae','A. baumannii',
+                            'E. anophelis','P. melaninogenica','P. oris','N. subflava','H. influenzae'))+
+  theme_pubr(x.text.angle = 35)
+plot_df
+
+ggpar(plot_df,
+      ylab = "Percentage of detected\nsamples (%)",
+      xlab = "Species",
+      font.xtickslab=c(18),
+      font.ytickslab=c(18),
+      font.x = c(18,"bold"),
+      font.y = c(18,"bold"),
+      font.legend = c(18,'bold'),
+      x.text.angle =50) + theme_pubr(base_size = 30,x.text.angle =35,legend = "none",margin = FALSE)
+
+```
+
+```{r Fig s5f,g}
+
+### Fig s5g
+bbone <- read_mauve_backbone(r'(LRT_microbiomes_critical_illness\Data_repository\Supplementary_figures\plasmids_publish_selected.backbone)',
+                             ref=1, filter_low=0)
+names <- c('NZ_CP010782.1',
+           'Patient_6')
+names(bbone$dna_segs) <- names
+
+
+
+#Calculating the lengths by adding the length on both sides of the comparisons
+for (i in 1:length(bbone$comparisons)){
+  cmp <- bbone$comparisons[[i]]
+  bbone$comparisons[[i]]$length <-
+    abs(cmp$end1 - cmp$start1) + abs(cmp$end2 - cmp$start2)
+}
+plot_gene_map(dna_segs=bbone$dna_segs, 
+              comparisons=bbone$comparisons,dna_seg_label_col = "black",
+              global_color_scheme=c("length", "auto", "blue_red",0.9),
+              override_color_schemes=TRUE)
+
+### Fig s5g
+bbone <- read_mauve_backbone(r'(LRT_microbiomes_critical_illness\Data_repository\Supplementary_figures\plasmids_selected-comparisons-NZ_CP045266.1.backbone)',
+                             ref=1, filter_low=0)
+names <- c('NZ_CP030131.1',
+           'NZ_CP058229.1',
+           'NZ_CP045266.1',
+           'NZ_CP028795.1',
+           'NZ_CP034127.1',
+           'NZ_CP066522.1',
+           'NZ_CP069175.1',
+           'Patient_115')
+names(bbone$dna_segs) <- names
+
+
+
+#Calculating the lengths by adding the length on both sides of the comparisons
+for (i in 1:length(bbone$comparisons)){
+  cmp <- bbone$comparisons[[i]]
+  bbone$comparisons[[i]]$length <-
+    abs(cmp$end1 - cmp$start1) + abs(cmp$end2 - cmp$start2)
+}
+plot_gene_map(dna_segs=bbone$dna_segs, 
+              comparisons=bbone$comparisons,dna_seg_label_col = "black",
+              global_color_scheme=c("length", "auto", "blue_red",0.9),
+              override_color_schemes=TRUE)
+
+```
+
+```{r Fig s5h}
+### Custom function to generate the desired format of the matrix
+###-------------------------------------------------------
+#Get lower triangle of the correlation matrix
+get_lower_tri<-function(cormat){
+  cormat[upper.tri(cormat,diag = T)] <- NA
+  return(cormat)
+}
+#Get upper triangle of the correlation matrix
+get_upper_tri <- function(cormat){
+  cormat[lower.tri(cormat,diag = T)]<- NA
+  return(cormat)
+}
+###-------------------------------------------------------
+
+df_plasmids_ani <- read.csv(r"(LRT_microbiomes_critical_illness\Data_repository\Supplementary_figures\plasmids_selected-ANI-NZ_CP045266.1_fraglen.csv)")
+
+#replace patient name with patientID
+df_plasmids_ani$query <- str_replace(df_plasmids_ani$query,'zhouboxun-xiangya','Patient_115')
+colnames(df_plasmids_ani) <-  str_replace(colnames(df_plasmids_ani),'zhouboxun.xiangya','Patient_115')
+#remove suffix: '.fasta' 
+colnames(df_plasmids_ani) <- str_remove(colnames(df_plasmids_ani),'.fasta')
+row.names(df_plasmids_ani) <- str_remove(df_plasmids_ani$query,'.fasta')
+
+#dataframe --> martix
+df_plasmids_ani <- df_plasmids_ani[,-1]
+matrix_plasmids_ani <- as.matrix(df_plasmids_ani)
+
+x_axis<-c("NZ_CP030131.1",
+          "NZ_CP058229.1",
+          "NZ_CP045266.1",
+          "NZ_CP028795.1",
+          "NZ_CP034127.1",
+          "NZ_CP066522.1",
+          "NZ_CP069175.1")
+
+y_axis<-rev(c("NZ_CP058229.1",
+              "NZ_CP045266.1",
+              "NZ_CP028795.1",
+              "NZ_CP034127.1",
+              "NZ_CP066522.1",
+              "NZ_CP069175.1",
+              'Patient_115'))
+
+#reshape data: 'wide' --> 'long'
+df <- melt(get_lower_tri(matrix_plasmids_ani),na.rm = T)
+colnames(df) <- c('var1','var2','ANI')
+table(df$var1) 
+table(df$var2)
+
+
+#custom the order so that the plot will display in a lower-left layout
+df<-df %>%
+  mutate(var1=factor(var1,levels = y_axis),
+         var2=factor(var2,levels = x_axis))
+
+#labels to display on the heatmap
+txt.df<-data.frame(x=1:8,
+                   y=8:1,
+                   label=c(
+                     "NZ_CP030131.1",
+                     "NZ_CP058229.1",
+                     "NZ_CP045266.1",
+                     "NZ_CP028795.1",
+                     "NZ_CP034127.1",
+                     "NZ_CP066522.1",
+                     "NZ_CP069175.1",
+                     'Patient_115'))
+
+df$ANI <- round(df$ANI,3)
+
+p1 <- ggplot(data=df,aes(x=var2,y=var1))+
+  geom_tile(aes(fill=ANI),
+            color="black")+
+  geom_text(aes(label=ANI),size=10) +
+  geom_text(data=txt.df,
+            aes(x=x,y=y,label=label),size=10,
+            nudge_x = 0.45,nudge_y = -0.2)+
+  scale_fill_gradient2(low = "#fcbcce",mid = '#f2f2f2',high = "#6cb7d5",midpoint = 99.95) +
+
+  theme_bw()+
+  theme(axis.text = element_blank(),
+        axis.ticks = element_blank(),
+        panel.grid = element_blank(),
+        panel.border = element_blank(),
+        legend.position = "right",
+        legend.title = element_text(size = 24),
+        legend.text = element_text(size = 24),
+        axis.title = element_blank())+
+  coord_cartesian(xlim = c(0,8),y=c(0,8)) +
+  guides(fill=guide_colorbar(barheight = 10,
+                             ticks.colour = "black"))
+
+```
+
+```{r Fig 6b,c}
+
+df_instrain_comparison = read.csv(r"(LRT_microbiomes_critical_illness\Data_repository\Main_figures\instrain_comparisons-SNPs+ANI_groups.csv)")
+my_comparisons <- list(c('direct','indirect'))
+df_instrain_comparison$ANI <- df_instrain_comparison$ANI *100
+df_instrain_comparison$ANI
+
+### Fig 6b
+ggviolin(df_instrain_comparison, "Group", "SNPs_number",  fill = "Group",ylim=c(0,35),
+         palette = c("#FFE4FA", "#A3C6DE"),
+         add = "boxplot", add.params = list(fill = "white")) +
+  stat_compare_means(comparisons = my_comparisons,label = "p.label",size=11,
+                     vjust=.15,tip.length= c(0,0,0),label.y = 32) +
+  scale_x_discrete(labels=c('Direct transmission','Indirect transmission'))+
+  labs(x=NULL,y='SNPs number',) +  
+  theme_pubr(base_size = 26,legend ='none',x.text.angle = 35) 
+
+###  Fig 6c
+ggviolin(df_instrain_comparison, "Group", "ANI",  fill = "Group",ylim=c(99.999,100),
+         # palette = c("#fde5f0", "#bce3ed"),
+         palette = c("#FFE4FA", "#A3C6DE"),
+         add = "boxplot", add.params = list(fill = "white")) +
+  stat_compare_means(comparisons = my_comparisons,label = "p.label",size=11,
+                     vjust=.15,tip.length= c(0,0,0),label.y = 100) +
+  scale_x_discrete(labels=c('Direct transmission','Indirect transmission'))+
+  labs(x=NULL,y='Average nucleotide identity (%)',) +  
+  theme_pubr(base_size = 26,legend ='none',x.text.angle = 30) 
+
+
+```
+
+```{r Fig 6b,c}
