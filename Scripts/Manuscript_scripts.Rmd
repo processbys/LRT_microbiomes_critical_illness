@@ -857,6 +857,26 @@ col_fun <- data.frame(
 col_fun$col <- color_lookup[uniqueVar$predictor_reformat]
 col_fun$col[is.na(col_fun$col)] <- '#5D8DC3' %>% alpha(., 0.5)  # Default color for predictors not in the lookup
 
+chordDiagram(uniqueVar[, c('predictor_reformat', 'item', 'p_adjusted_log')], 
+             order = ord, 
+             annotationTrack = "grid", 
+             link.sort = TRUE,
+             grid.col = grid.col, 
+             col = col_fun$col, 
+             transparency = 0,
+             annotationTrackHeight = mm_h(2),
+             preAllocateTracks = list(track.height = 0.3))
+
+circos.track(track.index = 1,
+             panel.fun = function(x, y) {
+               circos.text(CELL_META$xcenter, CELL_META$ylim[2] - 0.92,  # Adjust the + 0.15 to move the text more outwards if required
+                           CELL_META$sector.index, 
+                           facing = "clockwise", 
+                           niceFacing = TRUE, 
+                           adj = c(0, 0.5), 
+                           cex = 1.0)
+             }, bg.border = NA)
+
 ```
 
 ```{r Fig S3g}
@@ -868,3 +888,1098 @@ col_fun$col[is.na(col_fun$col)] <- '#5D8DC3' %>% alpha(., 0.5)  # Default color 
 ```
 
 ```{r Fig S3f}
+
+```
+
+```{r Fig 4a}
+
+df_statistics <- read.csv(r'(LRT_microbiomes_critical_illness\Data_repository\Main_figures\mobile_elements_finder-category_statistics+sem.csv)')
+df_statistics['MGE_per_genome_round'] <- round(df_statistics['MGE_per_genome'],2)
+
+limits <- aes(ymax = MGE_per_genome+standard_error,
+              ymin = ifelse(MGE_per_genome-standard_error<0,0,MGE_per_genome-standard_error))
+
+
+df_statistics_acinetobacter <- subset(df_statistics,species=='acinetobacter')
+p_acinetobacter <- ggplot(df_statistics_acinetobacter, aes(x=mge_type, y=MGE_per_genome)) + 
+  geom_errorbar(limits, width=.2,col='#d08b70',
+                position=position_dodge(.9)) +
+  geom_bar(stat = "identity",fill='#d08b70') + 
+  # geom_text(aes(label=MGE_per_genome_round),position=position_dodge(width=0.9), vjust=-0.25) + 
+  scale_x_discrete(limits=c('insertion sequence','unit transposon','composite transposon','mite','ice')) +
+  ylim2(limits = c(0,10)) + xlab(NULL) + ylab(NULL) + labs(title = 'A. baumannii') +
+  theme_bw()  +
+  theme(axis.text.x  = element_blank(),axis.text.y = element_text(size=36),axis.ticks.x = element_blank()) + 
+  theme(strip.background = element_blank(),
+        plot.title  = element_textbox(
+          size = 34,
+          color = "#4d4d4d", fill = "#dbdad9", box.color = "black",face = 'italic',
+          halign = 0.5, linetype = 1,  width = unit(1, "npc"),
+          margin = margin(0, 0, 0, 0),padding = margin(6, 6, 6, 6)),
+        panel.grid.major.x = element_blank(),
+        panel.grid.minor.x = element_blank()) 
+
+
+
+df_statistics_corynebacterium <- subset(df_statistics,species=='corynebacterium')
+p_corynebacterium <- ggplot(df_statistics_corynebacterium, aes(x=mge_type, y=MGE_per_genome)) + 
+  geom_errorbar(limits, width=.2,col='#988b74',
+                position=position_dodge(.9)) +
+  geom_bar(stat = "identity",fill='#988b74') + 
+  # geom_text(aes(label=MGE_per_genome_round),position=position_dodge(width=0.9), vjust=-0.25) + 
+  scale_x_discrete(limits=c('insertion sequence','unit transposon','composite transposon','mite','ice')) +
+  ylim2(limits = c(0,10)) + xlab(NULL) + ylab(NULL) + labs(title = 'C. striatum') +
+  theme_bw()  +
+  theme(axis.text.x  = element_blank(),axis.ticks.x = element_blank(),axis.ticks.y =element_blank(), axis.text.y =element_blank()) +
+  theme(strip.background = element_blank(),
+        plot.title  = element_textbox(
+          size = 34,
+          color = "#4d4d4d", fill = "#dbdad9", box.color = "black",face = 'italic',
+          halign = 0.5, linetype = 1,  width = unit(1, "npc"),
+          margin = margin(0, 0, 0, 0),padding = margin(6, 6, 6, 6)),
+        panel.grid.major.x = element_blank(),
+        panel.grid.minor.x = element_blank()) 
+
+df_statistics_klebsiella <- subset(df_statistics,species=='klebsiella')
+p_klebsiella <- ggplot(df_statistics_klebsiella, aes(x=mge_type, y=MGE_per_genome)) + 
+  geom_errorbar(limits, width=.2,col='#6fa9c8',
+                position=position_dodge(.9)) +
+  geom_bar(stat = "identity",fill='#6fa9c8') + 
+  # geom_text(aes(label=MGE_per_genome_round),position=position_dodge(width=0.9), vjust=-0.25) + 
+  scale_x_discrete(limits=c('insertion sequence','unit transposon','composite transposon','mite','ice')) +
+  ylim2(limits = c(0,10)) + xlab(NULL) + ylab(NULL) + labs(title = 'K. pneumoniae') +
+  theme_bw()  +
+  theme(axis.text.x  = element_blank(),axis.ticks.x = element_blank(),axis.ticks.y =element_blank(), axis.text.y =element_blank()) +
+  theme(strip.background = element_blank(),
+        plot.title  = element_textbox(
+          size = 34,
+          color = "#4d4d4d", fill = "#dbdad9", box.color = "black",face = 'italic',
+          halign = 0.5, linetype = 1,  width = unit(1, "npc"),
+          margin = margin(0, 0, 0, 0),padding = margin(6, 6, 6, 6)),
+        panel.grid.major.x = element_blank(),
+        panel.grid.minor.x = element_blank()) 
+
+df_statistics_pseudomonas <- subset(df_statistics,species=='pseudomonas')
+p_pseudomonas <- ggplot(df_statistics_pseudomonas, aes(x=mge_type, y=MGE_per_genome)) + 
+  geom_errorbar(limits, width=.2,col='#98c5b4',
+                position=position_dodge(.9)) +
+  geom_bar(stat = "identity",fill='#98c5b4') + 
+  # geom_text(aes(label=MGE_per_genome_round),position=position_dodge(width=0.9), vjust=-0.25) + 
+  scale_x_discrete(limits=c('insertion sequence','unit transposon','composite transposon','mite','ice'),
+                   labels=c('IS','Unit Transposon','Composite Transposon','MITE', 'ICE')) +
+  ylim2(limits = c(0,10)) + xlab(NULL) + ylab('Number of mobile elements\nper genome') + labs(title = 'P. aeruginosa') +
+  theme_bw()  + 
+  theme(strip.background = element_blank(),
+        plot.title  = element_textbox(
+          size = 34,
+          color = "#4d4d4d", fill = "#dbdad9", box.color = "black",face = 'italic',
+          halign = 0.5, linetype = 1,  width = unit(1, "npc"),
+          margin = margin(0, 0, 0, 0),padding = margin(6, 6, 6, 6)),
+        panel.grid.major.x = element_blank(),
+        panel.grid.minor.x = element_blank()) + 
+  theme(axis.text.x = element_text(angle = 30,hjust = 1,size=30),
+        axis.text.y = element_text(size = 36),
+        axis.title.y = element_text(size=36)) #change ylabs fontsize,ylab() --> axis.title.y()
+
+df_statistics_stenotrophomonas <- subset(df_statistics,species=='stenotrophomonas')
+p_stenotrophomonas <- ggplot(df_statistics_stenotrophomonas, aes(x=mge_type, y=MGE_per_genome)) + 
+  geom_errorbar(limits, width=.2,col='#384073',
+                position=position_dodge(.9)) +
+  geom_bar(stat = "identity",fill='#384073') + 
+  # geom_text(aes(label=MGE_per_genome_round),position=position_dodge(width=0.9), vjust=-0.25) + 
+  scale_x_discrete(limits=c('insertion sequence','unit transposon','composite transposon','mite','ice'),
+                   labels=c('IS','Unit Transposon','Composite Transposon','MITE', 'ICE')) +
+  ylim2(limits = c(0,10)) + xlab('Mobile element type') + ylab(NULL) + labs(title = 'S. maltophilia') +
+  theme_bw()  +
+  theme(axis.ticks.y =element_blank(), axis.text.y =element_blank(),axis.text.x = element_text(angle = 30,hjust = 1,size=30)) +
+  theme(strip.background = element_blank(),
+        plot.title  = element_textbox(
+          size = 34,
+          color = "#4d4d4d", fill = "#dbdad9", box.color = "black",face = 'italic',
+          halign = 0.5, linetype = 1,  width = unit(1, "npc"),
+          margin = margin(0, 0, 0, 0),padding = margin(6, 6, 6, 6)),
+        panel.grid.major.x = element_blank(),
+        panel.grid.minor.x = element_blank(),
+        axis.title.x = element_text(size=36)) # change xlabs fontsize, xlab() --> axis.title.x()
+
+df_statistics_EMHOS <- subset(df_statistics,species=='EHMOS')
+p_EMHOS <- ggplot(df_statistics_EMHOS, aes(x=mge_type, y=MGE_per_genome)) +
+  geom_errorbar(limits, width=.2,col='#b54030',
+                position=position_dodge(.9)) +
+  geom_bar(stat = "identity",fill='#b54030') + 
+  # geom_text(aes(label=MGE_per_genome_round),position=position_dodge(width=0.9), vjust=-0.25) + 
+  scale_x_discrete(limits=c('insertion sequence','unit transposon','composite transposon','mite','ice'),
+                   labels=c('IS','Unit Transposon','Composite Transposon','MITE', 'ICE')) +
+  ylim2(limits = c(0,10)) + xlab(NULL) + ylab(NULL) + labs(title = 'EHMOS') +
+  theme_bw()  +
+  theme(axis.ticks.y =element_blank(), axis.text.y =element_blank(),axis.text.x = element_text(angle = 30,hjust = 1,size=30)) +
+  theme(strip.background = element_blank(),
+        plot.title  = element_textbox(
+          size = 34,
+          color = "#4d4d4d", fill = "#dbdad9", box.color = "black",face = 'italic',
+          halign = 0.5, linetype = 1,  width = unit(1, "npc"),
+          margin = margin(0, 0, 0, 0),padding = margin(6, 6, 6, 6)),
+        panel.grid.major.x = element_blank(),
+        panel.grid.minor.x = element_blank())
+
+p_combined <- plot_list( p_acinetobacter, p_corynebacterium, p_klebsiella,p_pseudomonas,p_stenotrophomonas,p_EMHOS)
+p_combined
+
+```
+
+```{r Fig 4b}
+
+df_mge_abundance = read.csv(r"(\mobile_elements_finder-stats_comparisons-mge_abundance.csv)")
+df_mge_abundance$species <- factor(df_mge_abundance$species,levels = c('EHMOS','corynebacterium','stenotrophomonas','pseudomonas','acinetobacter','klebsiella'))
+my_comparisons <- list(c('EHMOS','corynebacterium'),c('EHMOS','stenotrophomonas'),c('EHMOS','pseudomonas'),
+                       c('EHMOS','acinetobacter'),c('EHMOS','klebsiella'))
+
+ggboxplot(df_mge_abundance, x="species", y="mge_num",
+          color = "species", palette =c("#E41A1C","#377EB8","#4DAF4A","#984EA3","#FF7F00","#F781BF","#A65628","#F781BF"),
+          add = "jitter",add.params = list(size = 1.5, alpha = 0.5))  +
+  stat_boxplot(mapping = aes(color=species),geom = "errorbar",width=0.1)  +
+  stat_compare_means(comparisons = my_comparisons,label = "p.label",size=8,
+                     vjust=.15,tip.length= c(0,0,0)) + 
+  scale_x_discrete(labels=c('EHMOS','C. striatum','S. maltophilia','P. aeruginosa','A. baumannii','K. pneumoniae'))+
+  labs(x=NULL,y='Number of mobile elements',) +  
+  theme_pubr(base_size = 24,legend ='none',x.text.angle = 30) 
+
+```
+
+```{r Fig 4c}
+
+
+df_profile <- read.csv(r'(LRT_microbiomes_critical_illness\Data_repository\Main_figures\mobile_elements_finder-profile.csv)')
+df_profile <- subset(df_profile,species !='assembled_contigs_all')
+
+# reorder the species column
+df_profile$species <- factor(df_profile$species, levels=c("acinetobacter", "corynebacterium", "klebsiella","pseudomonas","stenotrophomonas","EHMOS"))
+# change the facted plots labels
+species.labs <- c("A. baumannii", "C. striatum", "K. pneumoniae", "P. aeruginosa", "S. maltophilia", "EHMOS")
+names(species.labs) <- c("acinetobacter", "corynebacterium", "klebsiella","pseudomonas","stenotrophomonas","EHMOS")
+
+p_profile <- ggplot(df_profile, aes(x=allele_len,fill=species)) + 
+  geom_histogram(color="#e9ecef", alpha=1, position = 'identity') + 
+  scale_x_log10(limits=c(100,100000),labels=scales::comma) + ylim2(limits = c(-1,40)) + 
+  scale_fill_manual(values = c("acinetobacter"="#d08b70", "corynebacterium"='#988b74', "klebsiella"='#6fa9c8',
+                               "pseudomonas"='#98c5b4',"stenotrophomonas"='#384073',"EHMOS"='#b54030')) +
+  theme_bw() + 
+  facet_grid(species ~ .,
+             labeller = labeller(species = species.labs)) +
+  xlab('Element length(bp)') + ylab('Number of mobile elements') +
+  theme(axis.text.x  = element_text(size = 30),axis.text.y = element_text(size = 30),
+        axis.title.x = element_text(size = 32),axis.title.y = element_text(size = 32)) +
+  theme(strip.background = element_blank(),
+        strip.text.y = element_textbox_simple(size = 22, # left y-label fontsize
+                                              color = "#4d4d4d", fill = "#dbdad9", box.color = "black",face = 'italic', orientation = "right-rotated",
+                                              halign = 0.5, linetype = 1,  width = unit(1, "npc"),
+                                              margin = margin(0, 0, 0, 0),padding = margin(6, 6, 6, 6)),
+        panel.grid.major.x = element_blank(),
+        panel.grid.minor.x = element_blank(),
+        legend.position = 'none',panel.spacing.y = unit(2, "lines"))
+p_profile
+
+
+### claculate the p-values using Kolmogorov-Smirnov Test
+
+vec <- c('pseudomonas','acinetobacter','klebsiella','corynebacterium','stenotrophomonas','EHMOS')
+
+# Generate all pairs
+pairs <- combn(vec, 2)
+
+# Convert to a list of vectors, which can be used in stat_compare_means
+comparison_list <- split(pairs, col(pairs))
+
+
+# Conduct KS test for each pair
+result_list <- lapply(comparison_list, function(pair) {
+  group1 <- df_profile[df_profile$species == pair[1], "allele_len"]
+  group2 <- df_profile[df_profile$species == pair[2], "allele_len"]
+  ks_result <- ks.test(group1, group2)
+  
+  # Return a data frame
+  data.frame(
+    group1 = pair[1],
+    group2 = pair[2],
+    p_value = ks_result$p.value
+  )
+})
+
+# Combine all results into one data frame
+result_df <- do.call(rbind, result_list)
+
+# r$> result_df
+#              group1           group2      p_value
+# 1       pseudomonas    acinetobacter 1.486184e-03
+# 2       pseudomonas       klebsiella 2.595425e-03
+# 3       pseudomonas  corynebacterium 3.880953e-02
+# 4       pseudomonas stenotrophomonas 2.400837e-01
+# 5       pseudomonas            EHMOS 6.234450e-05
+# 6     acinetobacter       klebsiella 4.514242e-03
+# 7     acinetobacter  corynebacterium 3.178381e-08
+# 8     acinetobacter stenotrophomonas 7.544480e-02
+# 9     acinetobacter            EHMOS 8.663095e-04
+# 10       klebsiella  corynebacterium 2.106382e-03
+# 11       klebsiella stenotrophomonas 1.432543e-01
+# 12       klebsiella            EHMOS 8.003375e-03
+# 13  corynebacterium stenotrophomonas 3.150332e-02
+# 14  corynebacterium            EHMOS 1.700597e-03
+# 15 stenotrophomonas            EHMOS 1.631064e-02
+
+```
+
+```{r Fig 4d}
+
+# Sample dataset
+nodes <- read.csv(r'(LRT_microbiomes_critical_illness\Data_repository\Main_figures\mobile_elements_finder-draft_genomes-arg_sankey-nodes.csv)',header = F)
+names(nodes) <- c('name')
+links <- read.csv(r'(LRT_microbiomes_critical_illness\Data_repository\Main_figures\mobile_elements_finder-draft_genomes-arg_sankey-links-scaled.csv)')
+
+# Create Sankey plot using plotly
+p <-plot_ly(type = "sankey",
+        domain = list(
+          x = c(0, 1),
+          y = c(0, 1)
+        ),
+        orientation = "h",
+        valueformat = ".0f",
+        node = list(
+          pad = 0,
+          thickness = 20,
+          line = list(
+            color = "black",
+            width = 0.5
+          ),
+          label = nodes$name
+        ),
+        link = list(
+          source = links$source,
+          target = links$target,
+          value = links$normalized_value,
+          color = c("rgba(204, 204, 204, 0.35)")
+        ),
+        width =1500,height =700) %>%
+  layout(
+    title = NULL,
+    font = list(size = 32,family="Arial"),
+    xaxis = list(showgrid = FALSE, zeroline = FALSE),
+    yaxis = list(showgrid = FALSE, zeroline = FALSE)
+  )
+
+```
+
+```{r Fig 4f}
+
+### Custom function to generate the desired format of the matrix
+###-------------------------------------------------------
+#Get lower triangle of the correlation matrix
+get_lower_tri<-function(cormat){
+  cormat[upper.tri(cormat,diag = T)] <- NA
+  return(cormat)
+}
+#Get upper triangle of the correlation matrix
+get_upper_tri <- function(cormat){
+  cormat[lower.tri(cormat,diag = T)]<- NA
+  return(cormat)
+}
+###-------------------------------------------------------
+
+df_plasmids_ani <- read.csv(r"(LRT_microbiomes_critical_illness\Data_repository\Main_figures\plasmids_selected-ANI-NZ_CP010782.1_fraglen.csv)")
+
+#replace patient name with patientID
+df_plasmids_ani$query <- str_replace(df_plasmids_ani$query,'zhujianfen-zheyi','Patient_6')
+colnames(df_plasmids_ani) <-  str_replace(colnames(df_plasmids_ani),'zhujianfen.zheyi','Patient_6')
+#remove suffix: '.fasta' 
+colnames(df_plasmids_ani) <- str_remove(colnames(df_plasmids_ani),'.fasta')
+row.names(df_plasmids_ani) <- str_remove(df_plasmids_ani$query,'.fasta')
+
+#dataframe --> martix
+df_plasmids_ani <- df_plasmids_ani[,-1]
+matrix_plasmids_ani <- as.matrix(df_plasmids_ani)
+
+#Remeber not to modify the order of samples name, just copy the output of 'table(df$var1)' and 'table(df$var2)' !!!
+x_axis<-c("NZ_CP010782.1",
+          "NZ_CP008708.1",
+          "NZ_CP008850.1",
+          "NZ_CP020576.1",
+          "NZ_CP030084.1",
+          "NZ_CP050414.1",
+          "NZ_CP066231.1")
+y_axis<-rev(c("NZ_CP008708.1",
+              "NZ_CP008850.1",
+              "NZ_CP020576.1",
+              "NZ_CP030084.1",
+              "NZ_CP050414.1",
+              "NZ_CP066231.1",
+              "Patient_6"))
+
+#reshape data: 'wide' --> 'long'
+df <- melt(get_lower_tri(matrix_plasmids_ani),na.rm = T)
+colnames(df) <- c('var1','var2','ANI')
+
+#generate the order of "x_axis" and "y_axis"
+table(df$var1) 
+table(df$var2)
+
+#custom the order so that the plot will display in a lower-left layout
+df<-df %>%
+  mutate(var1=factor(var1,levels = y_axis),
+         var2=factor(var2,levels = x_axis))
+
+#labels to display on the heatmap
+txt.df<-data.frame(x=1:8,
+                   y=8:1,
+                   label=c(
+                     "NZ_CP010782.1",
+                     "NZ_CP008708.1",
+                     "NZ_CP008850.1",
+                     "NZ_CP020576.1",
+                     "NZ_CP030084.1",
+                     "NZ_CP050414.1",
+                     "NZ_CP066231.1",
+                     'Patient_6'))
+
+df$ANI <- round(df$ANI,3)
+p1 <- ggplot(data=df,aes(x=var2,y=var1))+
+  geom_tile(aes(fill=ANI),
+            color="black", width = 0.92, height = 0.92)+
+  geom_text(aes(label=ANI),size=10) +
+  geom_text(data=txt.df,
+            aes(x=x,y=y,label=label),size=10,
+            nudge_x = 0.45,nudge_y = -0.2)+
+  scale_fill_gradient2(low = "#fcbcce",mid = '#f2f2f2',high = "#6cb7d5",midpoint = 99.95) +
+  theme_bw()+
+  theme(axis.text = element_blank(),
+        axis.ticks = element_blank(),
+        panel.grid = element_blank(),
+        panel.border = element_blank(),
+        legend.position = "right",
+        legend.title = element_text(size = 24),
+        legend.text = element_text(size = 24),
+        axis.title = element_blank())+
+  coord_cartesian(xlim = c(0,8),y=c(0,8)) +
+  guides(fill=guide_colorbar(barheight = 10,
+                             ticks.colour = "black"))
+
+```
+
+```{r Fig 4g}
+
+bbone <- read_mauve_backbone(r'(E:\learning materials\graduate student\Lab-Data\Task-01-New\Processed-Data\MGEs\PLSDB\mauve_alignment\plasmids_publish_selected.backbone)',
+                             ref=1, filter_low=0)
+names <- c('NZ_CP010782.1',
+           'Patient_6')
+names(bbone$dna_segs) <- names
+
+
+#Calculating the lengths by adding the length on both sides of the comparisons
+for (i in 1:length(bbone$comparisons)){
+  cmp <- bbone$comparisons[[i]]
+  bbone$comparisons[[i]]$length <-
+    abs(cmp$end1 - cmp$start1) + abs(cmp$end2 - cmp$start2)
+}
+plot_gene_map(dna_segs=bbone$dna_segs, 
+              comparisons=bbone$comparisons,dna_seg_label_col = "black",
+              global_color_scheme=c("length", "auto", "blue_red",0.9),
+              override_color_schemes=TRUE)
+
+```
+
+```{r Fig s4a}
+
+# matrix_rgi_species_all_norm <- normalize(matrix_rgi_species_all,margin = 1,method = 'range',range = c(0,2))
+matrix_rgi_species_all_norm <- normalize(matrix_rgi_species_all,margin = 1,method = 'scale')
+colnames(matrix_rgi_species_all_norm) <- colnames(matrix_rgi_species_all)
+
+plot_heatmap_species_all <- Heatmap(matrix_rgi_species_all_norm,
+                                    #breaks = c(0,1,3),
+                                    col = c('#ffffff','#ff0000'),
+                                    # col = c('#f7faff','#08306b'),
+                                    left_annotation  = rowAnnotation(df=labels_annotation_col,
+                                                                     col=list(species=c(corynebacterium="#e36255", stenotrophomonas="#ec9a86",
+                                                                                        pseudomonas="#a2c5c9", klebsiella="#f3c262", 
+                                                                                        acinetobacter="#f1e0ce"))),
+                                    #                                     col = list(category=c(core='#16519f',accessory='#f07e74'))),
+                                    # row_split = factor(labels_annotation_col[,1],levels = c("corynebacterium",'stenotrophomonas','klebsiella','pseudomonas',"acinetobacter")),
+                                    # row_split = c(30,9,12,13,27),
+                                    #border_color = NA,
+                                    cluster_rows =as.dendrogram(dend_species_all), cluster_columns =T,
+                                    # cluster_rows = T,cluster_columns =T,
+                                    show_column_dend = F,show_row_dend = T,rect_gp = gpar(col= "grey"),
+                                    show_column_names = T,show_row_names = T)
+
+```
+
+```{r Fig s4b}
+
+df_args_vs_vfs <-
+  read.csv(r'(LRT_microbiomes_critical_illness\Data_repository\Supplementary_figures\spearman_correlations-numberf_of_ARGs+VFs.csv)')
+
+ggscatterstats(
+  data = df_args_vs_vfs,
+  x = arg_num,
+  y = vf_num,
+  xlab = 'Number of ARGs',
+  ylab = 'Number of VFs',
+  bf.message = F,results.subtitle = F
+)
+
+
+cor.test(df_args_vs_vfs$arg_num,df_args_vs_vfs$vf_num,
+         method = 'spearman')
+# Spearman's rank correlation rho
+# 
+# data:  df_args_vs_vfs$arg_num and df_args_vs_vfs$vf_num
+# S = 13349, p-value < 2.2e-16
+# alternative hypothesis: true rho is not equal to 0
+# sample estimates:
+#       rho 
+# 0.8936982 
+
+```
+
+```{r Fig s4c}
+
+df_rgi_profile_acinetobacter = read.csv(r"(LRT_microbiomes_critical_illness\Data_repository\Supplementary_figures\RGI_profile-PCoA_acinetobacter.csv)", header= TRUE)
+abundance_acinetobacter = df_rgi_profile_acinetobacter[,2:(ncol(df_rgi_profile_acinetobacter)-2)]
+m_abundance_acinetobacter = as.matrix(abundance_acinetobacter)
+diss_acinetobacter <- vegdist(m_abundance_acinetobacter, method = "bray")
+
+# Perform PCoA using cmdscale()
+pcoa_acinetobacter <- cmdscale(diss_acinetobacter, eig = TRUE, k = 2) 
+
+#extract PCoA scores (PCoA1, PCoA2)
+data_scores_acinetobacter = as.data.frame(pcoa_acinetobacter$points)
+names(data_scores_acinetobacter) <- c("PCoA1", "PCoA2")
+
+data_scores_acinetobacter$filename = df_rgi_profile_acinetobacter$filename
+data_scores_acinetobacter$SamplingSite = df_rgi_profile_acinetobacter$SamplingSite
+
+set.seed(123)
+adonis2(m_abundance_acinetobacter ~ SamplingSite, data_scores_acinetobacter, method = "bray", permutations = 999)
+# Permutation test for adonis under reduced model
+# Terms added sequentially (first to last)
+# Permutation: free
+# Number of permutations: 999
+# 
+# adonis2(formula = m_abundance_acinetobacter ~ SamplingSite, data = data_scores_acinetobacter, permutations = 999, method = "bray")
+# Df SumOfSqs      R2       F Pr(>F)
+# SamplingSite  1 -0.00419 -0.0098 -0.2425  0.993
+# Residual     25  0.43142  1.0098               
+# Total        26  0.42724  1.0000   
+
+p_scatter_acinetobacter <- ggscatter(data_scores_acinetobacter,
+                                     x = "PCoA1", 
+                                     y = "PCoA2",
+                                     color = 'SamplingSite',
+                                     palette = c("HospitalA"="#e64833","HospitalB"="#7f59af","HospitalC"="#3e5386"),
+                                     #shape = "SamplingSite",
+                                     size=5,
+                                     ggtheme = theme_pubr(border = T,base_size = 45),
+                                     legend = 'none',
+                                     ellipse = T,ellipse.level = 0.90)  + ggtitle('A. baumannii') +
+  ggeasy::easy_center_title() + theme(plot.title = element_text(face = "italic",size = 45))
+
+
+
+
+###-----------------------------------------------------------------------------------------------------------------------------------------
+
+###plot RGI profile for corynebacterium based on sampling site
+df_rgi_profile_corynebacterium = read.csv(r"(LRT_microbiomes_critical_illness\Data_repository\Supplementary_figures\RGI_profile-PCoA_corynebacterium.csv)", header= TRUE)
+abundance_corynebacterium = df_rgi_profile_corynebacterium[,2:(ncol(df_rgi_profile_corynebacterium)-2)]
+m_abundance_corynebacterium = as.matrix(abundance_corynebacterium)
+
+
+diss_corynebacterium <- vegdist(m_abundance_corynebacterium, method = "bray")
+# Perform PCoA using cmdscale()
+pcoa_corynebacterium <- cmdscale(diss_corynebacterium, eig = TRUE, k = 2) 
+
+#extract PCoA scores (PCoA1, PCoA2)
+data_scores_corynebacterium = as.data.frame(pcoa_corynebacterium$points)
+names(data_scores_corynebacterium) <- c("PCoA1", "PCoA2")
+
+data_scores_corynebacterium$filename = df_rgi_profile_corynebacterium$filename
+data_scores_corynebacterium$SamplingSite = df_rgi_profile_corynebacterium$SamplingSite
+
+set.seed(123)
+adonis2(m_abundance_corynebacterium ~ SamplingSite, data_scores_corynebacterium, method = "bray", permutations = 999)
+# Permutation test for adonis under reduced model
+# Terms added sequentially (first to last)
+# Permutation: free
+# Number of permutations: 999
+# 
+# adonis2(formula = m_abundance_corynebacterium ~ SamplingSite, data = data_scores_corynebacterium, permutations = 999, method = "bray")
+# Df SumOfSqs      R2      F Pr(>F)
+# SamplingSite  1  0.15791 0.05235 1.5466  0.213
+# Residual     28  2.85874 0.94765              
+# Total        29  3.01665 1.00000 
+
+p_scatter_corynebacterium <- ggscatter(data_scores_corynebacterium,
+                                       x = "PCoA1", 
+                                       y = "PCoA2",
+                                       color = 'SamplingSite',
+                                       palette = c("HospitalA"="#e64833","HospitalB"="#7f59af","HospitalC"="#3e5386"),
+                                       #shape = "SamplingSite",
+                                       size=5,
+                                       ggtheme = theme_pubr(border = T,base_size = 45),
+                                       legend = 'none',
+                                       ellipse = T,ellipse.level = 0.90)  + ggtitle('C. striatum') +
+  ggeasy::easy_center_title() + theme(plot.title = element_text(face = "italic",size = 45))
+
+###-----------------------------------------------------------------------------------------------------------------------------------------
+
+###plot RGI profile for klebsiella based on sampling site
+df_rgi_profile_klebsiella = read.csv(r"(LRT_microbiomes_critical_illness\Data_repository\Supplementary_figures\RGI_profile-PCoA_klebsiella.csv)", header= TRUE)
+abundance_klebsiella = df_rgi_profile_klebsiella[,2:(ncol(df_rgi_profile_klebsiella)-2)]
+m_abundance_klebsiella = as.matrix(abundance_klebsiella)
+
+diss_klebsiella <- vegdist(m_abundance_klebsiella, method = "bray")
+
+# Perform PCoA using cmdscale()
+pcoa_klebsiella <- cmdscale(diss_klebsiella, eig = TRUE, k = 2) 
+
+#extract PCoA scores (PCoA1, PCoA2)
+data_scores_klebsiella = as.data.frame(pcoa_klebsiella$points)
+names(data_scores_klebsiella) <- c("PCoA1", "PCoA2")
+
+data_scores_klebsiella$filename = df_rgi_profile_klebsiella$filename
+data_scores_klebsiella$SamplingSite = df_rgi_profile_klebsiella$SamplingSite
+
+set.seed(123)
+adonis2(m_abundance_klebsiella ~ SamplingSite, data_scores_klebsiella, method = "bray", permutations = 999)
+# Permutation test for adonis under reduced model
+# Terms added sequentially (first to last)
+# Permutation: free
+# Number of permutations: 999
+# 
+# adonis2(formula = m_abundance_klebsiella ~ SamplingSite, data = data_scores_klebsiella, permutations = 999, method = "bray")
+# Df SumOfSqs      R2      F Pr(>F)  
+# SamplingSite  2  0.14675 0.40922 3.4634  0.022 *
+#   Residual     10  0.21186 0.59078                
+# Total        12  0.35861 1.00000                
+
+p_scatter_klebsiella <- ggscatter(data_scores_klebsiella,
+                                  x = "PCoA1", 
+                                  y = "PCoA2",
+                                  color = 'SamplingSite',
+                                  palette = c("HospitalA"="#e64833","HospitalB"="#7f59af","HospitalC"="#3e5386"),
+                                  #shape = "SamplingSite",
+                                  size=5,
+                                  ggtheme = theme_pubr(border = T,base_size = 45),
+                                  legend = 'right',
+                                  ellipse = T,ellipse.level = 0.90)  + ggtitle('K. pneumoniae') +
+  ggeasy::easy_center_title() + theme(plot.title = element_text(face = "italic",size = 45))
+
+
+###-----------------------------------------------------------------------------------------------------------------------------------------
+
+###plot RGI profile for pseudomonas based on sampling site
+df_rgi_profile_pseudomonas = read.csv(r"(LRT_microbiomes_critical_illness\Data_repository\Supplementary_figures\RGI_profile-PCoA_pseudomonas.csv)", header= TRUE)
+abundance_pseudomonas = df_rgi_profile_pseudomonas[,2:(ncol(df_rgi_profile_pseudomonas)-2)]
+m_abundance_pseudomonas = as.matrix(abundance_pseudomonas)
+
+diss_pseudomonas <- vegdist(m_abundance_pseudomonas, method = "bray")
+
+# Perform PCoA using cmdscale()
+pcoa_pseudomonas <- cmdscale(diss_pseudomonas, eig = TRUE, k = 2) 
+
+#extract PCoA scores (PCoA1, PCoA2)
+data_scores_pseudomonas = as.data.frame(pcoa_pseudomonas$points)
+names(data_scores_pseudomonas) <- c("PCoA1", "PCoA2")
+
+data_scores_pseudomonas$filename = df_rgi_profile_pseudomonas$filename
+data_scores_pseudomonas$SamplingSite = df_rgi_profile_pseudomonas$SamplingSite
+
+set.seed(123)
+adonis2(m_abundance_pseudomonas ~ SamplingSite, data_scores_pseudomonas, method = "bray", permutations = 999)
+# Permutation test for adonis under reduced model
+# Terms added sequentially (first to last)
+# Permutation: free
+# Number of permutations: 999
+# 
+# adonis2(formula = m_abundance_pseudomonas ~ SamplingSite, data = data_scores_pseudomonas, permutations = 999, method = "bray")
+# Df SumOfSqs     R2      F Pr(>F)
+# SamplingSite  2 0.029636 0.1546 0.8229  0.657
+# Residual      9 0.162059 0.8454              
+# Total        11 0.191696 1.0000 
+
+p_scatter_pseudomonas <- ggscatter(data_scores_pseudomonas,
+                                   x = "PCoA1", 
+                                   y = "PCoA2",
+                                   color = 'SamplingSite',
+                                   palette = c("HospitalA"="#e64833","HospitalB"="#7f59af","HospitalC"="#3e5386"),
+                                   #shape = "SamplingSite",
+                                   size=5,
+                                   ggtheme = theme_pubr(border = T,base_size = 45),
+                                   legend = 'none',
+                                   ellipse = T,ellipse.level = 0.90)  + ggtitle('P. aeruginosa') +
+  ggeasy::easy_center_title() + theme(plot.title = element_text(face = "italic",size = 45))
+
+###-----------------------------------------------------------------------------------------------------------------------------------------
+
+###plot RGI profile for stenotrophomonas based on sampling site
+df_rgi_profile_stenotrophomonas = read.csv(r"(LRT_microbiomes_critical_illness\Data_repository\Supplementary_figures\RGI_profile-PCoA_stenotrophomonas.csv)", header= TRUE)
+abundance_stenotrophomonas = df_rgi_profile_stenotrophomonas[,2:(ncol(df_rgi_profile_stenotrophomonas)-2)]
+m_abundance_stenotrophomonas = as.matrix(abundance_stenotrophomonas)
+
+diss_stenotrophomonas <- vegdist(m_abundance_stenotrophomonas, method = "bray")
+
+# Perform PCoA using cmdscale()
+pcoa_stenotrophomonas <- cmdscale(diss_stenotrophomonas, eig = TRUE, k = 2) 
+
+#extract PCoA scores (PCoA1, PCoA2)
+data_scores_stenotrophomonas = as.data.frame(pcoa_stenotrophomonas$points)
+names(data_scores_stenotrophomonas) <- c("PCoA1", "PCoA2")
+
+
+data_scores_stenotrophomonas$filename = df_rgi_profile_stenotrophomonas$filename
+data_scores_stenotrophomonas$SamplingSite = df_rgi_profile_stenotrophomonas$SamplingSite
+
+
+set.seed(123)
+adonis2(m_abundance_stenotrophomonas ~ SamplingSite, data_scores_stenotrophomonas, method = "bray", permutations = 999)
+# Permutation test for adonis under reduced model
+# Terms added sequentially (first to last)
+# Permutation: free
+# Number of permutations: 999
+# 
+# adonis2(formula = m_abundance_stenotrophomonas ~ SamplingSite, data = data_scores_stenotrophomonas, permutations = 999, method = "bray")
+# Df SumOfSqs      R2      F Pr(>F)
+# SamplingSite  1  0.11071 0.15611 1.2949  0.263
+# Residual      7  0.59850 0.84389              
+# Total         8  0.70922 1.00000 
+
+
+p_scatter_stenotrophomonas <- ggscatter(data_scores_stenotrophomonas,
+                                        x = "PCoA1", 
+                                        y = "PCoA2",
+                                        color = 'SamplingSite',
+                                        palette = c("HospitalA"="#e64833","HospitalB"="#7f59af","HospitalC"="#3e5386"),
+                                        #shape = "SamplingSite",
+                                        size=5,
+                                        ggtheme = theme_pubr(border = T,base_size = 45),
+                                        legend = 'none',
+                                        ellipse = T,ellipse.level = 0.90)  + ggtitle('S. maltophilia') +
+  ggeasy::easy_center_title() + theme(plot.title = element_text(face = "italic",size = 45))
+
+
+(p_scatter_acinetobacter|p_scatter_corynebacterium|p_scatter_klebsiella|p_scatter_pseudomonas|p_scatter_stenotrophomonas)
+
+```
+
+```{r Fig s4d}
+
+df_vfdb_profile_acinetobacter = read.csv(r"(LRT_microbiomes_critical_illness\Data_repository\Supplementary_figures\vfdb_profile-PCoA_acinetobacter.csv)", header= TRUE)
+abundance_acinetobacter = df_vfdb_profile_acinetobacter[,2:(ncol(df_vfdb_profile_acinetobacter)-2)]
+m_abundance_acinetobacter = as.matrix(abundance_acinetobacter)
+
+
+diss_acinetobacter <- vegdist(m_abundance_acinetobacter, method = "bray")
+pcoa_acinetobacter <- cmdscale(diss_acinetobacter, eig = TRUE, k = 2) 
+
+data_scores_acinetobacter = as.data.frame(pcoa_acinetobacter$points)
+names(data_scores_acinetobacter) <- c("PCoA1", "PCoA2")
+
+data_scores_acinetobacter$filename = df_vfdb_profile_acinetobacter$filename
+data_scores_acinetobacter$SamplingSite = df_vfdb_profile_acinetobacter$SamplingSite
+
+set.seed(123)
+adonis2(m_abundance_acinetobacter ~ SamplingSite, data_scores_acinetobacter, method = "bray", permutations = 999)
+# Permutation test for adonis under reduced model
+# Terms added sequentially (first to last)
+# Permutation: free
+# Number of permutations: 999
+# 
+# adonis2(formula = m_abundance_acinetobacter ~ SamplingSite, data = data_scores_acinetobacter, permutations = 999, method = "bray")
+# Df SumOfSqs      R2      F Pr(>F)
+# SamplingSite  1  0.01803 0.04527 1.1854  0.315
+# Residual     25  0.38015 0.95473              
+# Total        26  0.39817 1.00000  
+
+p_scatter_acinetobacter <- ggscatter(data_scores_acinetobacter,
+                                     x = "PCoA1", 
+                                     y = "PCoA2",
+                                     color = 'SamplingSite',
+                                     palette = c("HospitalA"="#e64833","HospitalB"="#7f59af","HospitalC"="#3e5386"),
+                                     #shape = "SamplingSite",
+                                     size=5,
+                                     ggtheme = theme_pubr(border = T,base_size = 45),
+                                     legend = 'none',
+                                     ellipse = T,ellipse.level = 0.90)  + ggtitle('A. baumannii') +
+  ggeasy::easy_center_title() + theme(plot.title = element_text(face = "italic",size = 45))
+
+
+
+
+###-----------------------------------------------------------------------------------------------------------------------------------------
+
+###plot vfdb profile for corynebacterium based on sampling site
+df_vfdb_profile_corynebacterium = read.csv(r"(LRT_microbiomes_critical_illness\Data_repository\Supplementary_figures\vfdb_profile-PCoA_corynebacterium.csv)", header= TRUE)
+abundance_corynebacterium = df_vfdb_profile_corynebacterium[,2:(ncol(df_vfdb_profile_corynebacterium)-2)]
+m_abundance_corynebacterium = as.matrix(abundance_corynebacterium)
+
+
+diss_corynebacterium <- vegdist(m_abundance_corynebacterium, method = "bray")
+pcoa_corynebacterium <- cmdscale(diss_corynebacterium, eig = TRUE, k = 2) 
+
+data_scores_corynebacterium = as.data.frame(pcoa_corynebacterium$points)
+names(data_scores_corynebacterium) <- c("PCoA1", "PCoA2")
+
+data_scores_corynebacterium$filename = df_vfdb_profile_corynebacterium$filename
+data_scores_corynebacterium$SamplingSite = df_vfdb_profile_corynebacterium$SamplingSite
+
+set.seed(123)
+adonis2(m_abundance_corynebacterium ~ SamplingSite, data_scores_corynebacterium, method = "bray", permutations = 999)
+# Permutation test for adonis under reduced model
+# Terms added sequentially (first to last)
+# Permutation: free
+# Number of permutations: 999
+# 
+# adonis2(formula = m_abundance_corynebacterium ~ SamplingSite, data = data_scores_corynebacterium, permutations = 999, method = "bray")
+# Df SumOfSqs      R2      F Pr(>F)
+# SamplingSite  1   0.2660 0.04841 1.3228   0.23
+# Residual     26   5.2276 0.95159              
+# Total        27   5.4936 1.00000  
+
+p_scatter_corynebacterium <- ggscatter(data_scores_corynebacterium,
+                                       x = "PCoA1", 
+                                       y = "PCoA2",
+                                       color = 'SamplingSite',
+                                       palette = c("HospitalA"="#e64833","HospitalB"="#7f59af","HospitalC"="#3e5386"),
+                                       #shape = "SamplingSite",
+                                       size=5,
+                                       ggtheme = theme_pubr(border = T,base_size = 45),
+                                       legend = 'none',
+                                       ellipse = T,ellipse.level = 0.90)  + ggtitle('C. striatum') +
+  ggeasy::easy_center_title() + theme(plot.title = element_text(face = "italic",size = 45))
+
+
+
+
+###-----------------------------------------------------------------------------------------------------------------------------------------
+
+###plot vfdb profile for klebsiella based on sampling site
+df_vfdb_profile_klebsiella = read.csv(r"(LRT_microbiomes_critical_illness\Data_repository\Supplementary_figures\vfdb_profile-PCoA_klebsiella.csv)", header= TRUE)
+abundance_klebsiella = df_vfdb_profile_klebsiella[,2:(ncol(df_vfdb_profile_klebsiella)-2)]
+m_abundance_klebsiella = as.matrix(abundance_klebsiella)
+
+diss_klebsiella <- vegdist(m_abundance_klebsiella, method = "bray")
+pcoa_klebsiella <- cmdscale(diss_klebsiella, eig = TRUE, k = 2) 
+
+data_scores_klebsiella = as.data.frame(pcoa_klebsiella$points)
+names(data_scores_klebsiella) <- c("PCoA1", "PCoA2")
+
+data_scores_klebsiella$filename = df_vfdb_profile_klebsiella$filename
+data_scores_klebsiella$SamplingSite = df_vfdb_profile_klebsiella$SamplingSite
+
+set.seed(123)
+adonis2(m_abundance_klebsiella ~ SamplingSite, data_scores_klebsiella, method = "bray", permutations = 999)
+# Permutation test for adonis under reduced model
+# Terms added sequentially (first to last)
+# Permutation: free
+# Number of permutations: 999
+# 
+# adonis2(formula = m_abundance_klebsiella ~ SamplingSite, data = data_scores_klebsiella, permutations = 999, method = "bray")
+# Df SumOfSqs      R2      F Pr(>F)  
+# SamplingSite  2  0.51338 0.30725 2.2177   0.08 .
+# Residual     10  1.15749 0.69275                
+# Total        12  1.67087 1.00000
+
+p_scatter_klebsiella <- ggscatter(data_scores_klebsiella,
+                                  x = "PCoA1", 
+                                  y = "PCoA2",
+                                  color = 'SamplingSite',
+                                  palette = c("HospitalA"="#e64833","HospitalB"="#7f59af","HospitalC"="#3e5386"),
+                                  #shape = "SamplingSite",
+                                  size=5,
+                                  ggtheme = theme_pubr(border = T,base_size = 45),
+                                  legend = 'none',
+                                  ellipse = T,ellipse.level = 0.90)  + ggtitle('K. pneumoniae') +
+  ggeasy::easy_center_title() + theme(plot.title = element_text(face = "italic",size = 45))
+
+
+
+
+###-----------------------------------------------------------------------------------------------------------------------------------------
+
+###plot vfdb profile for pseudomonas based on sampling site
+df_vfdb_profile_pseudomonas = read.csv(r"(LRT_microbiomes_critical_illness\Data_repository\Supplementary_figures\vfdb_profile-PCoA_pseudomonas.csv)", header= TRUE)
+abundance_pseudomonas = df_vfdb_profile_pseudomonas[,2:(ncol(df_vfdb_profile_pseudomonas)-2)]
+m_abundance_pseudomonas = as.matrix(abundance_pseudomonas)
+
+
+diss_pseudomonas <- vegdist(m_abundance_pseudomonas, method = "bray")
+pcoa_pseudomonas <- cmdscale(diss_pseudomonas, eig = TRUE, k = 2) 
+
+data_scores_pseudomonas = as.data.frame(pcoa_pseudomonas$points)
+names(data_scores_pseudomonas) <- c("PCoA1", "PCoA2")
+
+data_scores_pseudomonas$filename = df_vfdb_profile_pseudomonas$filename
+data_scores_pseudomonas$SamplingSite = df_vfdb_profile_pseudomonas$SamplingSite
+
+set.seed(123)
+adonis2(m_abundance_pseudomonas ~ SamplingSite, data_scores_pseudomonas, method = "bray", permutations = 999)
+# Permutation test for adonis under reduced model
+# Terms added sequentially (first to last)
+# Permutation: free
+# Number of permutations: 999
+# 
+# adonis2(formula = m_abundance_pseudomonas ~ SamplingSite, data = data_scores_pseudomonas, permutations = 999, method = "bray")
+# Df SumOfSqs      R2      F Pr(>F)
+# SamplingSite  2  0.11810 0.10734 0.5411  0.846
+# Residual      9  0.98211 0.89266              
+# Total        11  1.10021 1.00000 
+
+
+p_scatter_pseudomonas <- ggscatter(data_scores_pseudomonas,
+                                   x = "PCoA1", 
+                                   y = "PCoA2",
+                                   color = 'SamplingSite',
+                                   palette = c("HospitalA"="#e64833","HospitalB"="#7f59af","HospitalC"="#3e5386"),
+                                   #shape = "SamplingSite",
+                                   size=5,
+                                   ggtheme = theme_pubr(border = T,base_size = 45),
+                                   legend = 'none',
+                                   ellipse = T,ellipse.level = 0.90)  + ggtitle('P. aeruginosa') +
+  ggeasy::easy_center_title() + theme(plot.title = element_text(face = "italic",size = 45))
+
+
+###-----------------------------------------------------------------------------------------------------------------------------------------
+
+###plot vfdb profile for stenotrophomonas based on sampling site
+df_vfdb_profile_stenotrophomonas = read.csv(r"(LRT_microbiomes_critical_illness\Data_repository\Supplementary_figures\vfdb_profile-PCoA_stenotrophomonas.csv)", header= TRUE)
+abundance_stenotrophomonas = df_vfdb_profile_stenotrophomonas[,2:(ncol(df_vfdb_profile_stenotrophomonas)-2)]
+m_abundance_stenotrophomonas = as.matrix(abundance_stenotrophomonas)
+
+
+diss_stenotrophomonas <- vegdist(m_abundance_stenotrophomonas, method = "bray")
+pcoa_stenotrophomonas <- cmdscale(diss_stenotrophomonas, eig = TRUE, k = 2) 
+
+data_scores_stenotrophomonas = as.data.frame(pcoa_stenotrophomonas$points)
+names(data_scores_stenotrophomonas) <- c("PCoA1", "PCoA2")
+
+data_scores_stenotrophomonas$filename = df_vfdb_profile_stenotrophomonas$filename
+data_scores_stenotrophomonas$SamplingSite = df_vfdb_profile_stenotrophomonas$SamplingSite
+
+
+set.seed(123)
+adonis2(m_abundance_stenotrophomonas ~ SamplingSite, data_scores_stenotrophomonas, method = "bray", permutations = 999)
+# Permutation test for adonis under reduced model
+# Terms added sequentially (first to last)
+# Permutation: free
+# Number of permutations: 999
+# 
+# adonis2(formula = m_abundance_stenotrophomonas ~ SamplingSite, data = data_scores_stenotrophomonas, permutations = 999, method = "bray")
+# Df SumOfSqs      R2      F Pr(>F)
+# SamplingSite  1 0.007856 0.06762 0.5076  0.481
+# Residual      7 0.108335 0.93238              
+# Total         8 0.116191 1.00000   
+
+
+p_scatter_stenotrophomonas <- ggscatter(data_scores_stenotrophomonas,
+                                        x = "PCoA1", 
+                                        y = "PCoA2",
+                                        color = 'SamplingSite',
+                                        palette = c("HospitalA"="#e64833","HospitalB"="#7f59af","HospitalC"="#3e5386"),
+                                        #shape = "SamplingSite",
+                                        size=5,
+                                        ggtheme = theme_pubr(border = T,base_size = 45),
+                                        legend = 'none',
+                                        ellipse = T,ellipse.level = 0.90)  + ggtitle('S. maltophilia') +
+  ggeasy::easy_center_title() + theme(plot.title = element_text(face = "italic",size = 45))
+
+(p_scatter_acinetobacter|p_scatter_corynebacterium|p_scatter_klebsiella|p_scatter_pseudomonas|p_scatter_stenotrophomonas)
+
+```
+
+```{r Fig s4e}
+
+```
+
+```{r Fig 5a}
+
+df_snps_p  <- read.csv(r"(LRT_microbiomes_critical_illness\Data_repository\Main_figures\acinetobacter-snps_distribution-merged.csv)")
+df_snps_p$position[df_snps_p$types =='synonymous_variant'] <- df_snps_p$position[df_snps_p$types =='synonymous_variant'] - 5000
+df_snps_p$type <- gsub("Style", "Pattern ", df_snps_p$type)
+
+p_snps_distribution <- ggplot(df_snps_p) + geom_segment(aes(x=position,y=0,xend=position,yend=snps_counts,color=types),data=df_snps_p,size=.3)  +
+  scale_color_manual(values=c('nonsynonymous_variant'='red','synonymous_variant'='blue'),
+                     name='',
+                     labels = c('Nonsynonymous','Synonymous')) + 
+  scale_x_continuous(labels= scales::comma)  +
+  guides(color=guide_legend(nrow = 2)) + facet_grid(type~.,scales = "free_y") +
+  ggtitle('Acinetobacter baumannii')
+
+ggpar(p_snps_distribution,
+      xlab = "Genomic position",
+      ylab = "SNP number") + theme_pubr(base_size = 20,legend = "none",margin = FALSE,border = T) + 
+  ggeasy::easy_center_title() + theme(plot.title = element_text(face = "italic"))
+
+```
+
+```{r Fig 5b}
+
+df_snps_p  <- read.csv(r"(LRT_microbiomes_critical_illness\Data_repository\Main_figures\klebsiella-snps_distribution-merged.csv)")
+df_snps_p$position[df_snps_p$types =='synonymous_variant'] <- df_snps_p$position[df_snps_p$types =='synonymous_variant'] - 5000
+df_snps_p$type <- gsub("Style", "Pattern ", df_snps_p$type)
+
+p_snps_distribution <- ggplot(df_snps_p) + geom_segment(aes(x=position,y=0,xend=position,yend=snps_counts,color=types),data=df_snps_p,size=.3)  +
+  scale_color_manual(values=c('nonsynonymous_variant'='red','synonymous_variant'='blue'),
+                     name='',
+                     labels = c('Nonsynonymous','Synonymous')) + 
+  scale_x_continuous(labels= scales::comma)  +
+  guides(color=guide_legend(nrow = 2)) + facet_grid(type~.,scales = "free_y") +
+  ggtitle('Klebsiella pneumoniae') 
+
+ggpar(p_snps_distribution,
+      xlab = "Genomic position",
+      ylab = "SNP number") + theme_pubr(base_size = 20,legend = "none",margin = FALSE,border = T) + 
+  ggeasy::easy_center_title() + theme(plot.title = element_text(face = "italic"))
+
+```
+
+```{r Fig 5c,d}
+
+df_recombinations_all <- read.csv(r'(LRT_microbiomes_critical_illness\Data_repository\Main_figures\acinetobacter-recombinations-consensus_blocks_all.csv)')
+df_pi <- read.table(r"(LRT_microbiomes_critical_illness\Data_repository\Main_figures\all_patients-acinetobacter.pi)",header = T)
+
+
+p_recombinations <- ggplot() + 
+  geom_segment(aes(x=coordinates,y=y_start,xend=coordinates,yend=y_end,size=cds_length),
+               data=df_recombinations_all,color='#377eb8') +
+  labs(x='Position on Chromosome',y='Recombination\nblocks') + 
+  scale_x_continuous(expand = c(0.02, 0),limits = c(0,4100000),labels= scales::comma) +
+  scale_y_continuous(expand = c(0, 0)) +
+  theme_bw(base_size = 35) +
+  theme(axis.text.y = element_blank(),
+        axis.ticks.y = element_blank(),legend.position = 'none')
+
+p_pi<-ggplot(df_pi,aes(x = BIN_END, y = PI))+
+  geom_line(size = 0.66,color='#e41a1c') +
+  theme_classic2()+
+  theme(panel.spacing = unit(1.5, "cm"),
+        strip.background = element_blank(),
+        strip.placement = "outside",
+        legend.position = "none",
+        plot.margin=unit(c(1,1,1,1), "cm"))+
+  scale_x_continuous(expand = c(0.02, 0),limits = c(0,4100000),labels= scales::comma) +
+  scale_y_continuous(expand = c(0, 0)) + theme_bw(base_size = 35)
+p_pi <- ggpar(p_pi,
+              xlab = "",
+              ylab= "Pi") 
+
+ggarrange(p_pi,p_recombinations,ncol=1,nrow=2,align = c("hv")) + theme(plot.margin = margin(0.1,1.6,2,0.1, "cm")) 
+
+
+```
+
+```{r Fig 5e}
+
+my_order <- c('P151','P156','P105','P132','P114','P141','P124','P112','P157','P144','P26','P23',
+              'P146','P52','P77','P136','P25','P123','P143','P130','P118','P113')
+my_palette <- c("#267278","#65338D","#4770B3","#D21F75","#3B3689","#50AED3","#48B24F",
+                "#E57438","#569DD2","#569D79","#58595B","#84D2F4","#CAD93f","#F5C8AF","#9AC483","#9E9EA2",
+                "#F2F4F9","#51A2DA","#B8D1FF","#C2CEE5", "#F0F921FF", "#FCA636FF")
+my_cols <- c("#0D0887FF", "#6A00A8FF", "#B12A90FF",
+             "#E16462FF", "#FCA636FF", "#F0F921FF")
+
+df_acinetobacter <- read.csv(r'(LRT_microbiomes_critical_illness\Data_repository\Main_figures\all_patients-snps_distribution-acinetobacter-region1.csv)')
+df_acinetobacter_filtered <- subset(df_acinetobacter,PatientID %in% my_order)
+
+df_tree <- read.tree(r"(LRT_microbiomes_critical_illness\Data_repository\Main_figures\draft_only-outgroup_removed-snpscalling_filtered_resolved.tre)")
+df_tree2 <- read.tree(r"(LRT_microbiomes_critical_illness\Data_repository\Main_figures\draft_only-outgroup_removed-snpscalling_filtered_resolved.tre2)")
+df_meta <- read.csv(r"(LRT_microbiomes_critical_illness\Data_repository\Main_figures\metadata-filename2sampleid.csv)")
+
+tree_order_sampleid <- c('P105','P124','P114','P156','P141','P132','P151','P118','P130','P113','P143',
+                         'P123','P144','P112','P136','P77','P25','P52','P146','P23','P26','P157')
+df_acinetobacter_filtered2 <- subset(df_acinetobacter,PatientID %in% tree_order_sampleid)
+
+## plot ballonplot with ggplot2 directly
+plot_ballon <- ggplot(df_acinetobacter_filtered2,aes(x=LOCUS_TAG,y=PatientID))+
+  geom_point(aes(size=`percentage`,
+                 color=`percentage`))+
+  theme_bw()+
+  theme(panel.grid = element_blank(),
+        axis.text.x=element_text(angle=90,vjust=0.5,hjust = 1))+
+  labs(y=NULL) +
+  scale_color_gradientn(colors =rev(brewer.pal(n = 10, name = 'RdBu'))) +
+  theme(axis.text.x = element_text(size=18,color='black'),axis.text.y = element_text(size=18,color='black'),
+        axis.title = element_text(size=20)) +
+  guides(size=guide_legend(order=3))
+
+plot_tree <- ggtree(df_tree2,branch.length = 'none') 
+plot_ballon %>%
+  insert_left(plot_tree,width =0.2) 
+
+```
+
+```{r Fig 5e}
+
+### the strcuture of the putative phage was ploted with python
+
+from dna_features_viewer import GraphicFeature,BiopythonTranslator,GraphicRecord
+import matplotlib.      pyplot as plt
+import matplotlib
+color_map = {
+    "rep_origin": "yellow",
+    "CDS": "blue",
+    "regulatory": "red",
+    "misc_recomb": "darkblue",
+    "misc_feature": "lightblue",
+}
+
+def feature_properties(f):
+
+    return dict(fontdict={'size':32},box_linewidth=1.2,color='#4dbad4')
+
+
+translator = BiopythonTranslator(
+    features_filters=(lambda f: f.type not in ["gene"],),
+    features_properties=feature_properties
+)
+
+graphic_record = translator.translate_record(r"LRT_microbiomes_critical_illness\Data_repository\Main_figures\GCA_025677765.1_subsets_snps_phage.gb")
+graphic_record_sub = graphic_record.crop((3317571,3330094))
+matplotlib.rcdefaults()
+plt.rcParams.update({'font.size': 32})
+ax, _ = graphic_record_sub.plot(figure_width=40,figure_height=12,strand_in_label_threshold=7,max_label_length=50,max_line_length=30,level_offset=2.4,elevate_outline_annotations=False)
+ax.figure.tight_layout()
+
+```
+
+```{r Fig s5a}
+df_top_abundant_mges <- read.csv(r'(LRT_microbiomes_critical_illness\Data_repository\Supplementary_figures\mobile_elements_finder-contigs_all-most_abundant_mges.csv)')
+
+
+plot_top_abundant_mges<- ggbarplot(df_top_abundant_mges[1:6,],x = "name", y = "counts",#orientation = "horiz",
+                                  fill = "#a6cee3", color = "#a6cee3") + theme_bw(base_size = 24) +
+  theme(axis.text.x = element_text(color = 'black'),
+        axis.text.y = element_text(color = 'black'))
+
+ggpar(plot_top_abundant_mges,
+               xlab = "Mobile element",
+               ylab = "Number of\nmobile elements",
+      x.text.angle = 30)  
+
+```
+
+```{r Fig s5b}
+
+df_mash_screen_arg <- read.csv(r'(LRT_microbiomes_critical_illness\Data_repository\Supplementary_figures\mash_screen-MGEs-carrying_ARG-contigs_allarg_prevalence.csv)')
+
+
+plot_mash_screen_arg <- ggbarplot(df_mash_screen_arg[12:1,],x = "Best_Hit_ARO", y = "counts",sort.val = 'desc',#orientation = "horiz",
+                           fill = "#a6cee3", color = "#a6cee3") + theme_bw(base_size = 24)+
+  theme(axis.text.x = element_text(color = 'black'),
+        axis.text.y = element_text(color = 'black'))
+
+ggpar(plot_mash_screen_arg,
+      xlab = "Gene",
+      ylab = "Number of\ntransferable ARGs",
+      x.text.angle = 30) 
+
+
+```
+
+```{r Fig s5c}
