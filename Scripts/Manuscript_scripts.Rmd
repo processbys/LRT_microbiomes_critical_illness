@@ -610,3 +610,261 @@ plot_heatmap_species_all <- Heatmap(t(matrix_rgi_species_all),
                                     show_column_names = T,show_row_names = T,
                                     row_order = order_row$species)
 
+```
+
+```{r Fig 3c}
+
+```
+
+```{r Fig 3d}
+
+
+df_vf_num = read.csv(r"(LRT_microbiomes_critical_illness\Data_repository\Main_figures\vfdb_profile-species_all-vf_num.csv)")
+df_vf_num$species <- factor(df_vf_num$species,levels = c('pseudomonas','acinetobacter','klebsiella','corynebacterium','stenotrophomonas'))
+my_comparisons <- list(c('pseudomonas','stenotrophomonas'),c('pseudomonas','corynebacterium'),
+                       c('acinetobacter','stenotrophomonas'),c('acinetobacter','corynebacterium'),
+                       c('klebsiella','stenotrophomonas'),c('klebsiella','corynebacterium'))
+
+map <-c('acinetobacter'=3.965,'pseudomonas'=6.644,'klebsiella'=5.596,'corynebacterium'=2.841,'stenotrophomonas'=4.613)
+df_vf_num <- df_vf_num %>%
+  mutate(genome_length = map[species])
+df_vf_num <- df_vf_num %>%
+  mutate(vf_num_normalized = vf_num/genome_length)
+
+ggboxplot(df_vf_num, x="species", y="vf_num_normalized",
+          color = "species", palette =c("#E41A1C","#377EB8","#4DAF4A","#984EA3","#FF7F00","#F781BF","#A65628","#F781BF"),
+          add = "jitter",add.params = list(size = 1.5, alpha = 0.5))  +
+  stat_boxplot(mapping = aes(color=species),geom = "errorbar",width=0.1,lwd=0.8) +
+  stat_compare_means(comparisons = rev(my_comparisons),label = "p.label",size=10,
+                     vjust=.15,tip.length= c(0,0,0)) +
+  scale_x_discrete(labels=c('P. aeruginosa','A. baumannii','K. pneumoniae','C. striatum','S. maltophilia'))+
+  labs(x=NULL,y='Number of VFs (Normalized)',) +  
+  theme_pubr(base_size = 32,legend ='none',x.text.angle = 30) 
+
+```
+
+```{r Fig 3e}
+
+```
+
+```{r Fig 3f}
+
+```
+
+```{r Fig S3a}
+
+df_argsubtype_top3 <- read.csv(r"(LRT_microbiomes_critical_illness\Data_repository\Supplementary_figures\statistics-pneumonia_patients-argsubtypes_top-each_hospital.csv)")
+df_argsubtype_top3$arg_type <- factor(df_argsubtype_top3$arg_type,levels = c('Multidrug','Beta-lactam','Aminoglycoside','MLS'))
+
+pal <- c('Multidrug__acra'='#3182BD','Multidrug__multidrug_transporter'='#00A2CE','Beta-lactam__shv-39'='#31A354','Beta-lactam__cfxa2'='#008179',
+         'Beta-lactam__oxa-225'='#9ED1A6','Aminoglycoside__rmtb'='#FFB500',"Aminoglycoside__aac(6')-i"='#FFB686',"Aminoglycoside__aph(3'')-i"='#FFEDCB',
+         'MLS__maca'='#EFD7EB','MLS__ermx'='#FFD1E0')
+ggbarplot(df_argsubtype_top3,
+          x='sites',y='mean_abundance',fill = 'argsubtypes') + 
+  scale_fill_manual(values = pal)  +
+  labs(x=NULL,y='Mean abundance') +
+  guides(fill=guide_legend('ARG subtype',ncol = 2)) +
+  facet_grid(~arg_type) + theme_pubr(border = T,x.text.angle = 30,legend = 'bottom',base_size = 20)
+
+```
+
+```{r Fig S3b}
+
+df_argtypes_collection <- read.csv(r"(LRT_microbiomes_critical_illness\Data_repository\Supplementary_figures\argtypes-collection_all_sites.csv)")
+df_argtypes_collection2 <- arrange(df_argtypes_collection,SamplingSite)
+my_comparisons <- list( c("HospitalA", "HospitalB"), c("HospitalA", "HospitalC"), c("HospitalB", "HospitalC") )
+
+
+#plot for 'MLS'
+ggboxplot(df_argtypes_collection2, x="SamplingSite", y="macrolide.lincosamide.streptogramin",
+          color = "SamplingSite", palette =c("#f93800", "#007a8b","#ffb500"),
+          add = "jitter",add.params = list(size = 1.5, alpha = 0.5))  +
+  stat_boxplot(mapping = aes(color=SamplingSite),geom = "errorbar",width=0.1)  +
+  stat_compare_means(comparisons = my_comparisons,label = "p.label",size=5,
+                     vjust=.15,tip.length= c(0,0,0)) + 
+  yscale("log10", .format = F)  + 
+  labs(x=NULL,y='ARG abundance',) +  ggtitle('MLS') +
+  theme_pubr(base_size = 18,legend ='none',x.text.angle = 30) +
+  ggeasy::easy_center_title() 
+
+#plot for 'tetracycline'
+ggboxplot(df_argtypes_collection2, x="SamplingSite", y="tetracycline",
+          color = "SamplingSite", palette =c("#f93800", "#007a8b","#ffb500"),
+          add = "jitter",add.params = list(size = 1.5, alpha = 0.5))  +
+  stat_boxplot(mapping = aes(color=SamplingSite),geom = "errorbar",width=0.1)  +
+  stat_compare_means(comparisons = my_comparisons,label = "p.label",size=5,
+                     vjust=.15,tip.length= c(0,0,0)) + 
+  yscale("log10", .format = F)  + 
+  labs(x=NULL,y='ARG abundance',) +  ggtitle('Tetracycline') +
+  theme_pubr(base_size = 18,legend ='none',x.text.angle = 30) +
+  ggeasy::easy_center_title() 
+
+#plot for 'sulfonamide'
+ggboxplot(df_argtypes_collection2, x="SamplingSite", y="sulfonamide",
+          color = "SamplingSite", palette =c("#f93800", "#007a8b","#ffb500"),
+          add = "jitter",add.params = list(size = 1.5, alpha = 0.5))  +
+  stat_boxplot(mapping = aes(color=SamplingSite),geom = "errorbar",width=0.1)  +
+  stat_compare_means(comparisons = my_comparisons,label = "p.label",size=5,
+                     vjust=.15,tip.length= c(0,0,0)) + 
+  yscale("log10", .format = F)  + 
+  labs(x=NULL,y='ARG abundance',) +  ggtitle('Sulfonamide') +
+  theme_pubr(base_size = 18,legend ='none',x.text.angle = 30) +
+  ggeasy::easy_center_title() 
+
+```
+
+```{r Fig S3c}
+
+df_nmds = read.csv(r'(LRT_microbiomes_critical_illness\Data_repository\Supplementary_figures\NMDS_arg_subtypes-all_sites.csv)',header = TRUE)
+my_comparisons <- list( c("HospitalA", "HospitalB"), c("HospitalA", "HospitalC"), c("HospitalB", "HospitalC") )
+df_nmds$NMDS1 <- as.numeric(df_nmds$NMDS1)
+df_nmds$NMDS2 <- as.numeric(df_nmds$NMDS2)
+
+
+#scatter plot to show the argsubtypes distribution for all ETA samples
+p_scatter <- ggscatter(df_nmds,
+                       x = "NMDS1", 
+                       y = "NMDS2",
+                       color = 'SamplingSite',
+                       palette = c("#e64833", "#01a188", "#3e5386"),
+                       #shape = "SamplingSite",
+                       size=5,
+                       ggtheme = theme_pubr(border = T,base_size = 32),
+                       legend = 'none')  + xlim2(limits = c(-2.5,2.5)) + ylim2(limits = c(-2.5,1.8)) +  
+  theme(axis.title = element_blank(),
+        axis.ticks = element_blank(),
+        axis.text.x = element_blank(),
+        axis.text.y = element_blank())
+p <-ggscatterhist(df_nmds,
+              x = "NMDS1", 
+              y = "NMDS2",
+              xlim= c(-2.2,2.2),
+              ylim= c(-2.5,1.5),
+              color = "SamplingSite",
+              size=5,
+              palette = c("#e64833", "#01a188", "#3e5386"),
+              margin.plot = "density",
+              ggtheme = theme_pubr(border = T,base_size = 32),
+              margin.params = list(fill="SamplingSite",size=0.3),
+              legend = 'right')
+
+```
+
+```{r Fig S3d}
+
+df_splsda = read.csv(r'(LRT_microbiomes_critical_illness\Data_repository\Supplementary_figures\PLS-DA_arg_subtypes-all_sites.csv)',header = TRUE)
+
+### Plot the PLS-DA components distribution 
+plot_splsda <- ggscatter(df_splsda,
+          x = "comp1", 
+          y = "comp2",
+          color = "SamplingSite",
+          # shape = "SamplingSite",
+          size=4,
+          ellipse=TRUE,
+          # star.plot = TRUE,
+          # palette = c("#00AFBB", "#E7B800", "#FC4E07"), #palette1
+          palette = c("#c23726", "#00C19B", "#2c83c6"),  #palette2
+          # palette = c("#e64833", "#01a188", "#3e5386"), #palette3
+          # margin.plot = "boxplot",
+          # ggtheme = theme_pubr(),
+          # margin.params = list(fill="SamplingSite",size=0.36),
+          legend = 'right')
+ggpar(plot_splsda,
+      xlab = "Component 1 (12%)",
+      ylab = "Component 2 (3%)",
+      font.xtickslab=c(32),
+      font.ytickslab=c(32),
+      font.x = c(32),
+      font.y = c(32),
+      legend.title = "Sampling site",
+      font.legend = c(32))  + theme_pubr(base_size = 32,legend = "none",margin = FALSE,border = T)
+
+```
+
+```{r Fig S3e}
+
+df_loading1 <- read.csv(r'(LRT_microbiomes_critical_illness\Data_repository\Supplementary_figures\PLS-DA_arg_subtypes-all_sites-loadings-comp1.csv)',header = TRUE)
+plot_loading1 <- ggbarplot(df_loading1[1:6,],x = "X", y = "value.var",orientation = "horiz",
+          fill = "#e6a024", color = "#e6a024",sort.val = 'desc',ggtheme = theme_bw(base_size = 19)) + labs(title = 'Component-1') +
+  theme(plot.title = element_text(hjust = 0.5),
+        axis.text = element_blank(),
+        axis.title = element_blank())
+
+plot_loading1 <- ggpar(plot_loading1,
+      orientation = 'reverse')  #+ theme_pubr(base_size = 32,legend = "right",margin = FALSE)
+
+#plot loadings on component-2
+df_loading2 <- read.csv(r'(LRT_microbiomes_critical_illness\Data_repository\Supplementary_figures\PLS-DA_arg_subtypes-all_sites-loadings-comp2.csv)',header = TRUE)
+df_loading2 <- df_loading2 %>%
+  mutate(X=str_replace(X,'_chloramphenicol acetyltransferase',''),
+         X=str_replace(X,'_\\(ramA_or_sud2\\)',''))
+
+plot_loading2 <- ggbarplot(df_loading2[1:6,],x = "X", y = "value.var",orientation = "horiz",
+                           fill = "#5bb4e5", color = "#5bb4e5",sort.val = 'asc',ggtheme = theme_bw(base_size = 19))+ labs(title = 'Component-2') +
+  theme(plot.title = element_text(hjust = 0.5),
+        axis.text = element_blank(),
+        axis.title = element_blank())
+
+plot_loading1 | plot_loading2
+
+```
+
+```{r Fig S3f}
+
+lmeRes <- read.csv(r'(LRT_microbiomes_critical_illness\Data_repository\Supplementary_figures\lme-argsubtypes.csv)')
+
+# Subset and reformat the dataset
+lmeRes <- subset(lmeRes, predictor %in% c("Sampling_Day_ICU", "Oxygenation.Index.of.The.Day", "Diagnosed.PneumoniaYes"))
+lmeRes <- lmeRes %>%
+  mutate(predictor_reformat = recode(predictor, 
+                            "Sampling_Day_ICU" = "Days in the ICU", 
+                            "Oxygenation.Index.of.The.Day" = "Oxygenation index", 
+                            "Diagnosed.PneumoniaYes" = "Diagnosed pneumonia"))
+
+# Setting the factor levels
+lmeRes$predictor_reformat <- factor(lmeRes$predictor_reformat, levels = c("Diagnosed pneumonia", "Days in the ICU", "Oxygenation index"))
+
+valid_x <- c("Days in the ICU", "Oxygenation index", "Diagnosed pneumonia")
+
+multiVarSigDF <- subset(lmeRes, predictor_reformat %in% valid_x & p_adjusted <= 0.05)
+multiVarSigDF$p_adjusted_log <- -log10(multiVarSigDF$p_adjusted)
+
+uniqueVar <- multiVarSigDF[, c('item', 'predictor_reformat', 'p_adjusted_log', 'p_adjusted')]
+spW <- uniqueVar %>% group_by(item) %>% summarise(value = sum(p_adjusted_log))
+xW <- uniqueVar %>% group_by(predictor_reformat) %>% summarise(value = sum(p_adjusted_log))
+
+YsName <- spW$item[order(spW$value)]
+# XsName <- xW$predictor_reformat[order(match(xW$predictor_reformat, valid_x))]
+XsName <- rev(c("Diagnosed pneumonia", "Days in the ICU", "Oxygenation index"))
+
+ord <- c(XsName, YsName)
+
+grid.col <- c(rep('#FDCA4E' %>% alpha(., 1), length(YsName)),
+              rep('#89ADD4' %>% alpha(., 1), length(XsName)))
+names(grid.col) <- c(YsName, XsName)
+
+color_lookup <- c(
+  "Diagnosed pneumonia" = alpha("#EB9E9A", 0.7),
+  "Days in the ICU" = alpha("#BAA8CE", 0.7),
+  "Oxygenation index" = alpha("#DFE7F1", 0.7)
+)
+
+col_fun <- data.frame(
+  uniqueVar$item,
+  uniqueVar$predictor_reformat
+)
+col_fun$col <- color_lookup[uniqueVar$predictor_reformat]
+col_fun$col[is.na(col_fun$col)] <- '#5D8DC3' %>% alpha(., 0.5)  # Default color for predictors not in the lookup
+
+```
+
+```{r Fig S3g}
+
+```
+
+```{r Fig S3h}
+
+```
+
+```{r Fig S3f}
