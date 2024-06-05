@@ -155,6 +155,7 @@ ggpar(plot,legend = 'bottom',x.text.angle = 30)
 ```
 
 ```{r Fig S1c}
+
 df_concentration <- read.csv(r'(LRT_microbiomes_critical_illness\Data_repository\Supplementary_figures\head-to-head_comparisons-DNA_concentration.csv)')
 df_concentration$Concentration  <- log10(df_concentration$Concentration + 1)
 df_concentration$Method <- factor(df_concentration$Method,levels =c('CMEM','Power Water','AllPrep DNA') )
@@ -171,3 +172,42 @@ p_concentration <- ggboxplot(df_concentration, "Method", "Concentration",
 ```
 
 ```{r Fig S1d}
+
+```
+
+```{r Fig S1e}
+df_profiles_vegan  <-  read.csv(r"(LRT_microbiomes_critical_illness\Data_repository\Supplementary_figures\microbial_profile-feasibility_validation.csv)",header = TRUE)
+metadata = read.csv(r"(LRT_microbiomes_critical_illness\Data_repository\Supplementary_figures\metadata-microbial_profile-feasibility_validation.csv)",header = TRUE) 
+
+df_profiles_vegan_abundance <- df_profiles_vegan[,3:ncol(df_profiles_vegan)]
+df_profiles_vegan_matrix <- as.matrix(df_profiles_vegan[,3:ncol(df_profiles_vegan)])
+
+abundance <- select(df_profiles_vegan,-c(SampleID,Group))
+rownames(abundance) <- df_profiles_vegan[1:nrow(df_profiles_vegan),1]
+abundance <- t(abundance) #transposed dataframe
+
+pca_metadata <- data.frame(df_profiles_vegan[1:nrow(df_profiles_vegan),2])
+rownames(pca_metadata) <- df_profiles_vegan[1:nrow(df_profiles_vegan),1]
+colnames(pca_metadata) <- c('Group')
+p <- pca(abundance,metadata=pca_metadata)
+
+# adonis test 
+set.seed(123)
+adonis2(df_profiles_vegan_matrix ~ Group, df_profiles_vegan, method = "bray", permutations = 999)
+
+df_pca_output <- as.data.frame(p$rotated)
+df_pca_output$SampleID <- rownames(df_pca_output)
+df_pca_output <- merge(df_pca_output, metadata, by = "SampleID")
+
+ggscatter(df_pca_output, x = "PC1", y = "PC2", color = "Group", palette = c("#0466AB", "#D15D4E"), 
+           size =5, alpha = 1) +
+  geom_line(data = df_pca_output, aes(group = Order), color = "black",alpha = 0.8) +
+  # stat_ellipse(aes(color = Group), geom = "path", alpha = 1, linetype = "solid",linewidth =0.8,
+  #              level = 0.9) + theme_pubr(border = T)
+  stat_ellipse(aes(fill = Group), geom = "polygon", linetype = "solid", level = 0.95,alpha=0.3) +
+#   scale_fill_manual(values = c("#0466AB", "#FFEFF2"))
+  theme_pubr(base_size = 23,border = T)
+
+```
+
+```{r Fig S1f}
