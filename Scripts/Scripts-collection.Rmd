@@ -1614,10 +1614,8 @@ circos.track(track.index = 1,
 ```{r Fig S3h}
 ### code was provided in Fig 2i,j
 ```
-
-```{r Fig S3f}
-
-```
+### Figure 4
+### --------------------------------------------------------------------------------------------------------------------------------------------
 
 ```{r Fig 4a}
 
@@ -1757,7 +1755,7 @@ p_combined
 
 ```{r Fig 4b}
 
-df_mge_abundance = read.csv(r"(\mobile_elements_finder-stats_comparisons-mge_abundance.csv)")
+df_mge_abundance = read.csv(r"(LRT_microbiomes_critical_illness\Data_repository\Main_figures\mobile_elements_finder-stats_comparisons-mge_abundance.csv)")
 df_mge_abundance$species <- factor(df_mge_abundance$species,levels = c('EHMOS','corynebacterium','stenotrophomonas','pseudomonas','acinetobacter','klebsiella'))
 my_comparisons <- list(c('EHMOS','corynebacterium'),c('EHMOS','stenotrophomonas'),c('EHMOS','pseudomonas'),
                        c('EHMOS','acinetobacter'),c('EHMOS','klebsiella'))
@@ -1859,9 +1857,9 @@ result_df <- do.call(rbind, result_list)
 ```{r Fig 4d}
 
 # Sample dataset
-nodes <- read.csv(r'(LRT_microbiomes_critical_illness\Data_repository\Main_figures\mobile_elements_finder-draft_genomes-arg_sankey-nodes.csv)',header = F)
+nodes <- read.csv(r'(LRT_microbiomes_critical_illness\Data_repository\Main_figures\mobile_elements_finder-draft_genomes-arg_sankey-nodes.csv)',header = F) # save in the same file 'mobile_elements_finder-draft_genomes-arg_sankey.txt'
 names(nodes) <- c('name')
-links <- read.csv(r'(LRT_microbiomes_critical_illness\Data_repository\Main_figures\mobile_elements_finder-draft_genomes-arg_sankey-links-scaled.csv)')
+links <- read.csv(r'(LRT_microbiomes_critical_illness\Data_repository\Main_figures\mobile_elements_finder-draft_genomes-arg_sankey-links-scaled.csv)') # save in the same file 'mobile_elements_finder-draft_genomes-arg_sankey.txt'
 
 # Create Sankey plot using plotly
 p <-plot_ly(type = "sankey",
@@ -1913,10 +1911,6 @@ get_upper_tri <- function(cormat){
 ###-------------------------------------------------------
 
 df_plasmids_ani <- read.csv(r"(LRT_microbiomes_critical_illness\Data_repository\Main_figures\plasmids_selected-ANI-NZ_CP010782.1_fraglen.csv)")
-
-#replace patient name with patientID
-df_plasmids_ani$query <- str_replace(df_plasmids_ani$query,'zhujianfen-zheyi','Patient_6')
-colnames(df_plasmids_ani) <-  str_replace(colnames(df_plasmids_ani),'zhujianfen.zheyi','Patient_6')
 #remove suffix: '.fasta' 
 colnames(df_plasmids_ani) <- str_remove(colnames(df_plasmids_ani),'.fasta')
 row.names(df_plasmids_ani) <- str_remove(df_plasmids_ani$query,'.fasta')
@@ -1993,7 +1987,7 @@ p1 <- ggplot(data=df,aes(x=var2,y=var1))+
 
 ```{r Fig 4g}
 
-bbone <- read_mauve_backbone(r'(E:\learning materials\graduate student\Lab-Data\Task-01-New\Processed-Data\MGEs\PLSDB\mauve_alignment\plasmids_publish_selected.backbone)',
+bbone <- read_mauve_backbone(r'(LRT_microbiomes_critical_illness\Data_repository\Main_figures\plasmids_selected.backbone)',
                              ref=1, filter_low=0)
 names <- c('NZ_CP010782.1',
            'Patient_6')
