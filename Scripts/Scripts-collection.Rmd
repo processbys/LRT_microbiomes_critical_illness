@@ -390,6 +390,8 @@ p_final_layer4 <- p_final_layer3 +
 ```{r Fig 1e}
 
 ```
+### Figure S1
+### --------------------------------------------------------------------------------------------------------------------------------------------
 
 ```{r Fig S1a}
 
@@ -438,7 +440,7 @@ plot_species_hospitalA|plot_species_hospitalB|plot_species_hospitalC
 
 ```{r Fig S1b}
 
-df_too_low <- read.csv((r'(LRT_microbiomes_critical_illness\Data_repository\Supplementary_figures\microbiome_species-top_prevalent.csv\head-to-head_comparisons-DNA_concentration_too_low.csv)'))
+df_too_low <- read.csv((r'(LRT_microbiomes_critical_illness\Data_repository\Supplementary_figures\microbiome_species-top_prevalent.csv\head-to-head_comparisons-DNA_concentration_too_low.csv)')) # save in the same file 'head-to-head_comparisons-DNA_concentration.txt'
 df_too_low$Percentage_Failed <- df_too_low$Percentage_Failed *100
 df_too_low$Percentage_successful <- 100 - df_too_low$Percentage_Failed
 plot <- ggbarplot(df_too_low, "Method", "Percentage_successful",
@@ -470,9 +472,22 @@ p_concentration <- ggboxplot(df_concentration, "Method", "Concentration",
 
 ```{r Fig S1d}
 
+df_mappingrate <- read.csv(r'(G:\Bio-Analysis\Python\Vscode\Task01-NEW\Responses-related\files-reformat\MappingRate_ETAs.csv)')
+df_mappingrate$microbial <- 100 - df_mappingrate$HumanMappingRate
+df_mappingrate$fold_increase <- 100 - df_mappingrate$HumanMappingRate -1
+
+plot_microbial_reads <- ggboxplot(df_mappingrate, x=NULL, y="microbial",
+                              color = "#2077b4", palette =c("#2077b4", "#E7B800", "#FC4E07"),
+                              add = "jitter",add.params = list(size = 1.5, alpha = 0.5)) +
+  stat_boxplot(geom = "errorbar",width=0.05,color='#2077b4')  +
+  scale_x_discrete(labels='Samples') +
+  labs(x=NULL,y='Proportion of microbial reads (%)') + theme_bw(base_size = 16)+
+  theme(axis.text.x = element_text(angle=30,hjust=0.7,vjust=0.8)) 
+
 ```
 
 ```{r Fig S1e}
+
 df_profiles_vegan  <-  read.csv(r"(LRT_microbiomes_critical_illness\Data_repository\Supplementary_figures\microbial_profile-feasibility_validation.csv)",header = TRUE)
 metadata = read.csv(r"(LRT_microbiomes_critical_illness\Data_repository\Supplementary_figures\metadata-microbial_profile-feasibility_validation.csv)",header = TRUE) 
 
