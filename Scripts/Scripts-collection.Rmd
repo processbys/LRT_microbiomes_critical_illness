@@ -578,7 +578,7 @@ p_arg_abundance <- ggplot(df_total_args, aes(x=Group,y=total_arg_abundance_log10
 
 ```{r Fig S1h}
 
-df_diversity  <- read.csv(r"(G:\Bio-Analysis\Python\Vscode\Task01-NEW\Data_submission\GitHub_repository\Data_repository\Supplementary_figures\alpha_diversity-comparison-pneumonia_vs_no_pneumonia.csv)",header = TRUE)
+df_diversity  <- read.csv(r"(LRT_microbiomes_critical_illness\Data_repository\Supplementary_figures\alpha_diversity-comparison-pneumonia_vs_no_pneumonia.csv)",header = TRUE)
 df_merged_subset$Diagnosed.Pneumonia   <- factor(df_merged_subset$Diagnosed.Pneumonia,levels = c("No","Yes"))
 
 my_comparisons <- list(c("No",'Yes'))
@@ -601,7 +601,7 @@ ggpar(p_diversity_shannon,x.text.angle = 30,legend = 'none')
 
 ```{r Fig S1i}
 
-df_arg_abundance  <- read.csv(r"(LRT_microbiomes_critical_illness\Data_repository\Supplementary_figures\argtypes-pneumonia_vs_nopneumonia.csv)",header = TRUE)
+df_arg_abundance  <- read.csv(r"(LRT_microbiomes_critical_illness\Data_repository\Supplementary_figures\argtypes-comparison-pneumonia_vs_nopneumonia.csv)",header = TRUE)
 df_arg_abundance$totoal_arg_abundance_log10 <- log10(df_arg_abundance$totoal_arg_abundance)
 my_comparisons <- list(c("No",'Yes'))
 p_arg_abundance <- ggplot(df_arg_abundance, aes(x=Diagnosed.Pneumonia,y=totoal_arg_abundance_log10,fill=Diagnosed.Pneumonia)) +
@@ -618,38 +618,18 @@ ggpar(p_arg_abundance,x.text.angle = 30,legend = 'none')
 
 ```
 
+### Figure 2
+### --------------------------------------------------------------------------------------------------------------------------------------------
+
 ```{r Fig 2a}
 
-df_profiles = read.csv(r"(LRT_microbiomes_critical_illness\Data_repository\Main_figures\microbiota-pneumonia-species_phyloseqized.csv)",header = FALSE)
-sampleid2site = read.csv(r"(LRT_microbiomes_critical_illness\Data_repository\Main_figures\metadata-pneumonia-sampleid2site.csv)",header = TRUE)
-df_arrows <- read.csv(r'(LRT_microbiomes_critical_illness\Data_repository\Main_figures\MDS_metrics-bray-specie_pneumonia-arrows_coordinates.csv)')
-
-#otu-like data reformat 
-otu_metaphlan <- as.matrix(df_profiles[2:nrow(df_profiles),2:ncol(df_profiles)]) # otu matrix can't have any character-like data, you have to use index to remove it
-class(otu_metaphlan) <- "numeric" # convert the datatype of the matrix into "numeric"
-otu_metaphlan <- otu_metaphlan*1000000
-rownames(otu_metaphlan) <- df_profiles[2:nrow(df_profiles),1]
-colnames(otu_metaphlan) <- df_profiles[1,2:ncol(df_profiles)]
-
-OTU = otu_table(otu_metaphlan,taxa_are_rows = TRUE)
-rownames(sampleid2site) <- sampleid2site$SampleID # you have to re-assign the rownames of meta-data, or you will run into a problem: "invalid “phyloseq” object: Component sample names do not match"
-sam_data = sample_data(sampleid2site)
-physeq_profiles = phyloseq(OTU,sam_data) 
-target_dist_methods <- c('bray')
-for( i in target_dist_methods ){
-  target_dist <- distance(physeq_profiles, method=i)
-  target_MDS_metrics <- ordinate(physeq_profiles, "MDS", distance=target_dist)
-  df_metrics <- data.frame(target_MDS_metrics[["vectors"]])
-  df_metrics_filter <- df_metrics[,1:2]
-  
-  # Merge df_metrics_filter and sampleid2site on the index
-  df_metrics_filter <- merge(df_metrics_filter, sampleid2site, by="row.names", all.x=TRUE)
-  df_metrics_filter  <- df_metrics_filter[,c(4,2,3,5)]
-}
-
+df_distance_bray <- read.csv(r'(LRT_microbiomes_critical_illness\Data_repository\Main_figures\MDS_metrics-bray-species_profiles_pneumonia.csv)')  # save in the same file 'MDS_metrics-bray-species_profiles_pneumonia.txt'
+df_arrows <- read.csv(r'(LRT_microbiomes_critical_illness\Data_repository\Main_figures\MDS_metrics-bray-specie_pneumonia-arrows_coordinates.csv)') # save in the same file 'MDS_metrics-bray-species_profiles_pneumonia.txt'
 df_arrows$variable <- str_split(df_arrows$variable, "__", simplify = TRUE)[,2]
 df_arrows$variable  <- str_replace_all(df_arrows$variable, "_", " ")
 df_arrows$variable  <- str_replace_all(df_arrows$variable, " group", " ")
+
+#remove plot direction
 df_distance_bray$Axis.2 <- df_distance_bray$Axis.2*-1
 df_arrows$Axis.2 <- df_arrows$Axis.2*-1
 
@@ -676,15 +656,19 @@ plots <- ggscatter(df_distance_bray,
                # Add arrow head
                arrow = arrow(length = unit(3, "mm"))) +
   geom_label(data = df_arrows, aes(label = variable),color='black',alpha=0.7,size=7,label.size =0.01) 
+
+
 ggpar(plots,
       xlab = "MDS1 (27.6%)",
       ylab = "MDS2 (16.6%)") + theme_pubr(base_size = 24,border = T,legend = 'none')
+
+
 
 ```
 
 ```{r Fig 2b}
 
-df_distance_bray_species_pneumonia <- read.csv(r'(LRT_microbiomes_critical_illness\Data_repository\Main_figures\MDS_metrics-bray+species_abundance-species_pneumonia.csv)')
+df_distance_bray_species_pneumonia <- read.csv(r'(LRT_microbiomes_critical_illness\Data_repository\Main_figures\MDS_metrics-bray+species_abundance-species_pneumonia.csv)') # save in the same file 'MDS_metrics-bray-species_profiles_pneumonia.txt'
 df_distance_bray_species_pneumonia$variable <- str_split(df_distance_bray_species_pneumonia$variable, "__", simplify = TRUE)[,2]
 df_distance_bray_species_pneumonia$variable  <- str_replace_all(df_distance_bray_species_pneumonia$variable, "_", " ")
 df_distance_bray_species_pneumonia$variable  <- str_replace_all(df_distance_bray_species_pneumonia$variable, " group", " ")
@@ -726,8 +710,8 @@ plots_mds_species
 ```{r Fig 2c,d}
 
 patientids <- c('P68','P23')
-df_abundance <- read.csv(paste("LRT_microbiomes_critical_illness\Data_repository\Main_figures/microbiota-individual_patient/",
-                               patientid,"-metaphlan3-species_microbiota.csv",sep=""))
+df_abundance <- read.csv(paste("LRT_microbiomes_critical_illness\Data_repository\Main_figures",
+                               patientid,"-metaphlan3-species_microbiota.csv",sep="")) # save in the same file 'pid_individual-metaphlan3-species_microbiota.txt'
 
 df_abundance$Sampling_Day_ICU <- factor(df_abundance$Sampling_Day_ICU,levels = unique(df_abundance$Sampling_Day_ICU))
 plot_df <- ggplot(df_abundance, aes(fill=taxonomy, x=Sampling_Day_ICU, y=relative_abundance))+
@@ -743,6 +727,55 @@ ggpar(plot_df,
 ```{r Fig 2e}
 
 ### visualized with circos webserver
+
+```
+
+```{r Fig 2f}
+
+df_argtypes_collection <- read.csv(r"(LRT_microbiomes_critical_illness\Data_repository\Main_figures\argtypes-collection_all_sites-pneumonia_patients.csv)")
+df_argtypes_collection2 <- arrange(df_argtypes_collection,SamplingSite)
+my_comparisons <- list( c("HospitalA", "HospitalB"), c("HospitalA", "HospitalC"), c("HospitalB", "HospitalC") )
+
+#plot for 'multidrug'
+ggboxplot(df_argtypes_collection2, x="SamplingSite", y="multidrug",
+          color = "SamplingSite", palette =c("#f93800", "#007a8b","#ffb500"),
+          add = "jitter",add.params = list(size = 2, alpha = 0.5))  +
+  stat_boxplot(mapping = aes(color=SamplingSite),geom = "errorbar",width=0.1)  +
+  geom_boxplot(aes(color=SamplingSite), lwd = 0.7,geom = "errorbar",) +
+  stat_compare_means(comparisons = my_comparisons,label = "p.label",size=5,
+                     vjust=.15,tip.length= c(0,0,0)) + 
+  yscale("log10", .format = F)  + 
+  labs(x=NULL,y='ARG abundance',) +  ggtitle('Multidrug') +
+  theme_pubr(base_size = 18,legend ='none',x.text.angle = 30) +
+  ggeasy::easy_center_title() 
+
+#plot for 'aminoglycoside'
+ggboxplot(df_argtypes_collection2, x="SamplingSite", y="aminoglycoside",
+                             color = "SamplingSite", palette =c("#f93800", "#007a8b","#ffb500"),
+                             add = "jitter",add.params = list(size = 2, alpha = 0.5))  +
+  stat_boxplot(mapping = aes(color=SamplingSite),geom = "errorbar",width=0.1)  +
+  geom_boxplot(aes(color=SamplingSite), lwd = 0.7,geom = "errorbar",) +
+  stat_compare_means(comparisons = my_comparisons,label = "p.label",size=5,
+                     vjust=.15,tip.length= c(0,0,0)) + 
+  yscale("log10", .format = F)  + 
+  labs(x=NULL,y='ARG abundance',) +  ggtitle('Aminoglycoside') +
+  theme_pubr(base_size = 18,legend ='none',x.text.angle = 30) +
+  ggeasy::easy_center_title() 
+
+
+#plot for 'beta.lactam'
+ggboxplot(df_argtypes_collection2, x="SamplingSite", y="beta.lactam",
+          color = "SamplingSite", palette =c("#f93800", "#007a8b","#ffb500"),
+          add = "jitter",add.params = list(size = 2, alpha = 0.5))  +
+  stat_boxplot(mapping = aes(color=SamplingSite),geom = "errorbar",width=0.1)  +
+  geom_boxplot(aes(color=SamplingSite), lwd = 0.7,geom = "errorbar",) +
+  stat_compare_means(comparisons = my_comparisons,label = "p.label",size=5,
+                     vjust=.15,tip.length= c(0,0,0)) + 
+  yscale("log10", .format = F)  +
+  labs(x=NULL,y='ARG abundance',) +  ggtitle('Beta-lactam') +
+  theme_pubr(base_size = 18,legend ='none',x.text.angle = 30) +
+  # theme(strip.text.x = element_text(size = 13.5)) +
+  ggeasy::easy_center_title() 
 
 ```
 
