@@ -1,0 +1,54 @@
+### P23-metaphlan3-species_microbiota.csv
+
+taxonomy,phylogeny,relative_abundance,Date,sampleid,Sampling_Day_ICU
+Acinetobacter baumannii,species,91.87069,2022-03-25,Sample315,ICU day 2
+Corynebacterium striatum,species,4.9362,2022-03-25,Sample315,ICU day 2
+Acinetobacter nosocomialis,species,2.12208,2022-03-25,Sample315,ICU day 2
+Others,species,1.07104,2022-03-25,Sample315,ICU day 2
+Acinetobacter baumannii,species,90.89073,2022-03-29,Sample316,ICU day 6
+Lautropia mirabilis,species,4.20843,2022-03-29,Sample316,ICU day 6
+Streptococcus salivarius,species,3.66758,2022-03-29,Sample316,ICU day 6
+Acinetobacter nosocomialis,species,1.23327,2022-03-29,Sample316,ICU day 6
+Others,species,0.0,2022-03-29,Sample316,ICU day 6
+Acinetobacter baumannii,species,93.96365,2022-03-31,Sample317,ICU day 8
+Streptococcus salivarius,species,3.64262,2022-03-31,Sample317,ICU day 8
+Lautropia mirabilis,species,1.8596,2022-03-31,Sample317,ICU day 8
+Others,species,0.53413,2022-03-31,Sample317,ICU day 8
+Others,species,0.8520500000000001,2022-04-01,Sample318,ICU day 9
+Acinetobacter nosocomialis,species,1.34769,2022-04-01,Sample318,ICU day 9
+Prevotella bivia,species,17.77822,2022-04-01,Sample318,ICU day 9
+Acinetobacter baumannii,species,71.60974,2022-04-01,Sample318,ICU day 9
+Prevotella melaninogenica,species,8.4123,2022-04-01,Sample318,ICU day 9
+Prevotella bivia,species,69.69247,2022-04-06,Sample319,ICU day 14
+Acinetobacter baumannii,species,13.85462,2022-04-06,Sample319,ICU day 14
+Alloprevotella tannerae,species,8.11136,2022-04-06,Sample319,ICU day 14
+Prevotella melaninogenica,species,5.04016,2022-04-06,Sample319,ICU day 14
+Dialister pneumosintes,species,2.07612,2022-04-06,Sample319,ICU day 14
+Others,species,1.22526,2022-04-06,Sample319,ICU day 14
+Enterococcus faecium,species,1.70096,2022-04-11,Sample320,ICU day 19
+Prevotella bivia,species,66.52132,2022-04-11,Sample320,ICU day 19
+Acinetobacter baumannii,species,22.99456,2022-04-11,Sample320,ICU day 19
+Dialister pneumosintes,species,3.92318,2022-04-11,Sample320,ICU day 19
+Alloprevotella tannerae,species,3.53023,2022-04-11,Sample320,ICU day 19
+Others,species,1.32974,2022-04-11,Sample320,ICU day 19
+
+### P68-metaphlan3-species_microbiota.csv
+
+taxonomy,phylogeny,relative_abundance,Date,sampleid,Sampling_Day_ICU
+Pseudomonas aeruginosa group,species,98.52618,2021-12-03,Sample363,ICU day 1
+Neisseria cinerea,species,1.47382,2021-12-03,Sample363,ICU day 1
+Others,species,0.0,2021-12-03,Sample363,ICU day 1
+Pseudomonas aeruginosa group,species,82.62545,2021-12-10,Sample364,ICU day 8
+Neisseria cinerea,species,15.89888,2021-12-10,Sample364,ICU day 8
+Lautropia mirabilis,species,1.17736,2021-12-10,Sample364,ICU day 8
+Others,species,0.2983,2021-12-10,Sample364,ICU day 8
+Others,species,0.0,2021-12-16,Sample365,ICU day 14
+Klebsiella pneumoniae,species,18.05157,2021-12-16,Sample365,ICU day 14
+Pseudomonas aeruginosa group,species,81.94843,2021-12-16,Sample365,ICU day 14
+Pseudomonas aeruginosa group,species,62.72029,2021-12-29,Sample366,ICU day 27
+Corynebacterium striatum,species,23.98408,2021-12-29,Sample366,ICU day 27
+Neisseria cinerea,species,13.29563,2021-12-29,Sample366,ICU day 27
+Others,species,0.0,2021-12-29,Sample366,ICU day 27
+Pseudomonas aeruginosa group,species,58.03812,2021-12-31,Sample367,ICU day 29
+Neisseria cinerea,species,41.96188,2021-12-31,Sample367,ICU day 29
+Others,species,0.0,2021-12-31,Sample367,ICU day 29
