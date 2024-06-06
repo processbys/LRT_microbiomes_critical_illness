@@ -2220,7 +2220,316 @@ ggviolin(df_instrain_comparison, "Group", "ANI",  fill = "Group",ylim=c(99.999,1
   labs(x=NULL,y='Average nucleotide identity (%)',) +  
   theme_pubr(base_size = 26,legend ='none',x.text.angle = 30) 
 
+```
+
+```{r Fig s6a}
+
+df_snps_p_corynebacterium  <- read.csv(r"(LRT_microbiomes_critical_illness\Data_repository\Supplementary_figures\corynebacterium-snps_distribution.csv)")
+df_snps_p_corynebacterium$position[df_snps_p_corynebacterium$types =='synonymous_variant'] <- df_snps_p_corynebacterium$position[df_snps_p_corynebacterium$types =='synonymous_variant'] - 5000
+
+p_snps_distribution_corynebacterium <- ggplot(df_snps_p_corynebacterium) + geom_segment(aes(x=position,y=0,xend=position,yend=snps_counts,color=types),data=df_snps_p_corynebacterium,size=.3)  +
+  scale_color_manual(values=c('nonsynonymous_variant'='red','synonymous_variant'='blue'),
+                     name='',
+                     labels = c('Nonsynonymous','Synonymous')) + 
+  scale_x_continuous(labels= scales::comma)  +
+  guides(color=guide_legend(nrow = 2)) + ggtitle('Corynebacterium striatum')
+
+p_snps_distribution_corynebacterium <- ggpar(p_snps_distribution_corynebacterium,
+                                             xlab = "Genomic position",
+                                             ylab = "SNP number",
+                                             # legend.title = "Groups",
+                                             font.xtickslab=c(18),
+                                             font.ytickslab=c(18),
+                                             font.x = c(18,"bold"),
+                                             font.y = c(18,"bold"),
+                                             font.legend = c(18,'bold')) + theme_pubr(base_size = 20,legend = "none",margin = FALSE,border = T) + 
+  ggeasy::easy_center_title() + theme(plot.title = element_text(face = "italic"))
+
+p_snps_distribution_corynebacterium
+
+###-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+###snps distribution for Pseudomonas aeruginosa
+
+df_snps_p_pseudomonas  <- read.csv(r"(LRT_microbiomes_critical_illness\Data_repository\Supplementary_figures\pseudomonas-snps_distribution.csv)")
+df_snps_p_pseudomonas$position[df_snps_p_pseudomonas$types =='synonymous_variant'] <- df_snps_p_pseudomonas$position[df_snps_p_pseudomonas$types =='synonymous_variant'] - 5000
+
+p_snps_distribution_pseudomonas <- ggplot(df_snps_p_pseudomonas) + geom_segment(aes(x=position,y=0,xend=position,yend=snps_counts,color=types),data=df_snps_p_pseudomonas,size=.3)  +
+  scale_color_manual(values=c('nonsynonymous_variant'='red','synonymous_variant'='blue'),
+                     name='',
+                     labels = c('Nonsynonymous','Synonymous')) + 
+  scale_x_continuous(labels= scales::comma)  +
+  guides(color=guide_legend(nrow = 2)) + ggtitle('Pseudomonas aeruginosa')
+
+p_snps_distribution_pseudomonas <- ggpar(p_snps_distribution_pseudomonas,
+                                         xlab = "Genomic position",
+                                         ylab = "SNP number",
+                                         # legend.title = "Groups",
+                                         font.xtickslab=c(18),
+                                         font.ytickslab=c(18),
+                                         font.x = c(18,"bold"),
+                                         font.y = c(18,"bold"),
+                                         font.legend = c(18,'bold')) + theme_pubr(base_size = 20,legend = "none",margin = FALSE,border = T) + 
+  ggeasy::easy_center_title() + theme(plot.title = element_text(face = "italic"))
+
+p_snps_distribution_pseudomonas
+
+
+
+###-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+###snps distribution for stenotrophomonas aeruginosa
+df_snps_p_stenotrophomonas  <- read.csv(r"(LRT_microbiomes_critical_illness\Data_repository\Supplementary_figures\stenotrophomonas-snps_distribution.csv)")
+df_snps_p_stenotrophomonas$position[df_snps_p_stenotrophomonas$types =='synonymous_variant'] <- df_snps_p_stenotrophomonas$position[df_snps_p_stenotrophomonas$types =='synonymous_variant'] - 5000
+
+
+p_snps_distribution_stenotrophomonas <- ggplot(df_snps_p_stenotrophomonas) + geom_segment(aes(x=position,y=0,xend=position,yend=snps_counts,color=types),data=df_snps_p_stenotrophomonas,size=.3)  +
+  scale_color_manual(values=c('nonsynonymous_variant'='red','synonymous_variant'='blue'),
+                     name='',
+                     labels = c('Nonsynonymous','Synonymous')) + 
+  scale_x_continuous(labels= scales::comma)  +
+  guides(color=guide_legend(nrow = 2)) + ggtitle('Stenotrophomonas maltophilia')
+
+
+p_snps_distribution_stenotrophomonas <- ggpar(p_snps_distribution_stenotrophomonas,
+                                              xlab = "Genomic position",
+                                              ylab = "SNP number",
+                                              # legend.title = "Groups",
+                                              font.xtickslab=c(18),
+                                              font.ytickslab=c(18),
+                                              font.x = c(18,"bold"),
+                                              font.y = c(18,"bold"),
+                                              font.legend = c(18,'bold')) + theme_pubr(base_size = 20,legend = "none",margin = FALSE,border = T) + 
+  ggeasy::easy_center_title() + theme(plot.title = element_text(face = "italic"))
+
+p_snps_distribution_stenotrophomonas
+
+
+p_snps_distribution_corynebacterium|p_snps_distribution_pseudomonas|p_snps_distribution_stenotrophomonas
 
 ```
 
-```{r Fig 6b,c}
+```{r Fig s6a}
+
+tree_acinetobacter <- read.tree(r'(LRT_microbiomes_critical_illness\Data_repository\Supplementary_figures\draft+ref_resolved.tre)')
+rooted_tree_acinetobacter <- ape::root(tree_acinetobacter, node_number=222, resolve.root = TRUE,outgroup=222)
+
+### display node number for each node
+# ggtree(rooted_tree_acinetobacter,layout = 'circular') + geom_text(aes(subset = !isTip, label = node, x = branch), hjust = 1.2, color = "blue")
+
+
+# Get the external node numbers
+external_node_numbers <- 1:length(rooted_tree_acinetobacter$tip.label)
+# Get the external node labels
+external_node_labels <- rooted_tree_acinetobacter$tip.label
+# Combine the node numbers and labels
+external_node_df <- data.frame(node = external_node_numbers, label = external_node_labels)
+# subset with our draft geomes node number
+external_node_df_filtered <- external_node_df %>%
+  filter(str_detect(label, 'coassembly'))
+
+###color our draft genomes with their node numbers
+nodes_to_color <- c(external_node_df_filtered$node)
+# Group the nodes using groupOTU
+tree_grouped <- groupOTU(rooted_tree_acinetobacter, nodes_to_color, "group1")
+
+###add colored points for our draft genomes 
+# Create ggtree object
+ggtree_obj <- ggtree(rooted_tree_acinetobacter)
+label_of_interest <- c(external_node_df_filtered$label)
+subset_data <- subset(ggtree_obj$data, label %in% label_of_interest)
+
+
+### circular layout
+tree_circular <- ggtree(tree_grouped,layout = 'circular',aes(color=group1)) + #geom_tiplab(size=0,align = T,linetype = 'dashed',linesize = 0.1) +
+  geom_tree() + geom_highlight(node=558,alpha=0.3) + #+ geom_tippoint(size=0.1)
+  # geom_text2(aes(subset = !is.na(label) & isTip == FALSE, label = label), hjust = -0.5) + #show the bootstrap values
+  geom_point(data = subset_data, aes(x, y), color = 'red', size = 1) +
+  scale_color_manual(values = c('black','red')) + theme(legend.position = 'none')
+
+```
+
+```{r Fig s6b}
+
+tree_klebsiella <- read.tree(r'(LRT_microbiomes_critical_illness\Data_repository\Supplementary_figures\draft+ref_resolved.tre)')
+rooted_tree_klebsiella <- ape::root(tree_klebsiella, node_number=1316, resolve.root = TRUE,outgroup=1316)
+
+ggtree(rooted_tree_klebsiella,layout = 'circular') + 
+  geom_text(aes( label = node, x = branch), hjust = 1.2, color = "blue",size=1) + #show node number
+  geom_text2(aes(subset = !is.na(label) & isTip == FALSE, label = label), hjust = -0.5,size=1.5) #show bootstrap values
+
+# Get the external node numbers
+external_node_numbers <- 1:length(tree_klebsiella$tip.label)
+# Get the external node labels
+external_node_labels <- tree_klebsiella$tip.label
+# Combine the node numbers and labels
+external_node_df <- data.frame(node = external_node_numbers, label = external_node_labels)
+# subset with our draft geomes node number
+external_node_df_filtered <- external_node_df %>%
+  filter(str_detect(label, 'coassembly'))
+
+
+ggtree(rooted_tree_klebsiella,layout='circular')
+
+###color our draft genomes with their node numbers
+nodes_to_color <- c(external_node_df_filtered$node)
+# Group the nodes using groupOTU
+tree_grouped <- groupOTU(rooted_tree_klebsiella, nodes_to_color, "group1")
+
+###add colored points for our draft genomes 
+# Create ggtree object
+ggtree_obj <- ggtree(rooted_tree_klebsiella)
+label_of_interest <- c(external_node_df_filtered$label)
+subset_data <- subset(ggtree_obj$data, label %in% label_of_interest)
+
+
+### circular layout
+tree_circular <- ggtree(tree_grouped,layout = 'circular',aes(color=group1)) + #geom_tiplab(size=0,align = T,linetype = 'dashed',linesize = 0.1) +
+  geom_tree() + geom_highlight(node=2102,alpha=0.3) + #+ geom_tippoint(size=0.1)
+  # geom_text2(aes(subset = !is.na(label) & isTip == FALSE, label = label), hjust = -0.5) + #show the bootstrap values
+  geom_point(data = subset_data, aes(x, y), color = 'red', size = 1) +
+  scale_color_manual(values = c('black','red')) + theme(legend.position = 'none') 
+
+```
+
+```{r Fig s6d}
+
+### plot with Phandango
+
+```
+
+```{r Fig s6e,f}
+
+df_recombinations_all <- read.csv(r'(LRT_microbiomes_critical_illness\Data_repository\Supplementary_figures\klebsiella_recombination-consensus_blocks_all.csv)')
+df_pi <- read.table(r"(LRT_microbiomes_critical_illness\Data_repository\Supplementary_figures\all_patients-klebsiella-windowed.pi)",header = T)
+
+
+p_recombinations <- ggplot() + 
+  geom_segment(aes(x=coordinates,y=y_start,xend=coordinates,yend=y_end,size=cds_length),
+               data=df_recombinations_all,color='#377eb8') +
+  labs(x='Position on Chromosome',y='Recombination\nblocks') + 
+  scale_x_continuous(expand = c(0.02, 0),limits=c(0,5500000),breaks=c(0,2000000,4000000),labels= scales::comma) +
+  scale_y_continuous(expand = c(0, 0)) +
+  # scale_y_continuous(limits = c(0,23),breaks =seq(1,23),
+  #                    labels = c('P123','P143','P136','P146','P77','P25','P52', 'P112','P23',
+  #                               'P26','P157','P130','P113','P118','P144','P105','P156','P141',
+  #                               'P132','P114','P147','P124','P151')) + 
+  # theme_pubr(base_size =30,legend = 'none',border = T) 
+  theme_bw(base_size = 35) +
+  theme(axis.text.y = element_blank(),
+        axis.ticks.y = element_blank(),legend.position = 'none')
+
+
+p_pi<-ggplot(df_pi,aes(x = BIN_END, y = PI))+
+  geom_line(size = 0.66,color='#e41a1c') +
+  theme_classic2()+
+  theme(panel.spacing = unit(1.5, "cm"),
+        strip.background = element_blank(),
+        strip.placement = "outside",
+        legend.position = "none",
+        plot.margin=unit(c(1,1,1,1), "cm"))+
+  scale_x_continuous(expand = c(0.02, 0),labels= scales::comma) +
+  scale_y_continuous(expand = c(0, 0)) + theme_bw(base_size = 35)
+p_pi <- ggpar(p_pi,
+              xlab = "",
+              ylab= "Pi") 
+
+```
+
+```{r Fig s6g}
+
+df_kegg_pathway = read.csv(r"(LRT_microbiomes_critical_illness\Data_repository\Supplementary_figures\acinetobacter-kegg_pathway-combined.csv)")
+
+cols <- c('Cellular Processes'='#e44235','Environmental Information Processing'='#d92aab',
+          'Genetic Information Processing'='#ffc1cc','Metabolism'='#0f52ba',
+          'Human Diseases'='#9baddc','Organismal Systems'='#505888')
+
+# calculate the statistics about each category
+df_kegg_pathway <- df_kegg_pathway %>% 
+  count(level1,level2)
+# convert gene numbers to fractions
+df_kegg_pathway <- df_kegg_pathway %>%
+  mutate(percentage = n/sum(n))
+
+
+df_kegg_pathway <-df_kegg_pathway %>% 
+  mutate(level1 = trimws(str_remove(level1, "(\\s+[A-Za-z]+)?[0-9-]+"))) %>%  
+  mutate(level2 = trimws(str_remove(level2, "(\\s+[A-Za-z]+)?[0-9-]+")))
+
+
+plot_kegg <-ggbarplot(df_kegg_pathway,x = "level2", y = "percentage",orientation = "horiz",
+                      fill = "level1",sort.val = 'asc',sort.by.groups = F) + 
+  scale_fill_manual(values=cols)
+#scale_fill_manual(values=c("#e44235", "#d92aab", "#ffc1cc", "#9baddc", "#0f52ba"))
+
+
+
+ggpar(plot_kegg,
+      xlab = "",
+      ylab = "Proportion",
+      legend.title  = 'KEGG Class',
+      legend = 'right') + theme_pubr(base_size = 24,border = F,legend = 'none')
+
+```
+
+```{r Fig s6h}
+
+
+df_kegg_pathway = read.csv(r"(LRT_microbiomes_critical_illness\Data_repository\Supplementary_figures\klebsiella-kegg_pathway-combined.csv)")
+
+cols <- c('Cellular Processes'='#e44235','Environmental Information Processing'='#d92aab',
+          'Genetic Information Processing'='#ffc1cc','Metabolism'='#0f52ba',
+          'Human Diseases'='#9baddc','Organismal Systems'='#505888')
+
+# calculate the statistics about each category
+df_kegg_pathway <- df_kegg_pathway %>% 
+  count(level1,level2)
+# convert gene numbers to fractions
+df_kegg_pathway <- df_kegg_pathway %>%
+  mutate(percentage = n/sum(n))
+
+
+df_kegg_pathway <-df_kegg_pathway %>% 
+  mutate(level1 = trimws(str_remove(level1, "(\\s+[A-Za-z]+)?[0-9-]+"))) %>%  
+  mutate(level2 = trimws(str_remove(level2, "(\\s+[A-Za-z]+)?[0-9-]+")))
+
+
+plot_kegg <-ggbarplot(df_kegg_pathway,x = "level2", y = "percentage",orientation = "horiz",
+                      fill = "level1",sort.val = 'asc',sort.by.groups = F) + 
+  scale_fill_manual(values=cols)
+#scale_fill_manual(values=c("#e44235", "#d92aab", "#ffc1cc", "#9baddc", "#0f52ba"))
+
+
+
+ggpar(plot_kegg,
+      xlab = "",
+      ylab = "Proportion",
+      legend.title  = 'KEGG Class',
+      legend = 'right') + theme_pubr(base_size = 24,border = F,legend = 'none')
+
+```
+
+```{r Fig s7}
+
+df_abundance <- read.csv(r"(LRT_microbiomes_critical_illness\Data_repository\Supplementary_figures\${pid}-abundance_transmitted_strains.csv)") ### replace the pid with P77,P113,P114,P130,P132 to get plot for each individual
+
+df_abundance$Sampling_Day_ICU <- factor(df_abundance$Sampling_Day_ICU,levels = unique(df_abundance$Sampling_Day_ICU))
+
+plot_df <- ggplot(df_abundance, aes(x=Sampling_Day_ICU, y=relative_abundance, group=taxonomy, color=taxonomy)) +
+    geom_line(size=1) + 
+    geom_point(size=3) +
+    ggtitle(label = 'P114' ) + 
+    ylim(0,100) +
+    theme_bw(base_size = 14) 
+
+
+ggpar(plot_df,
+    ylab = "Relative\nabundance (%)",
+    xlab = F,
+    x.text.angle = 50)  +
+    theme(legend.position = "none") +
+    ggeasy::easy_center_title() 
+
+```
