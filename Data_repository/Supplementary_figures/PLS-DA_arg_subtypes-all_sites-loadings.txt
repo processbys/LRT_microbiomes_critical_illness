@@ -1,0 +1,25 @@
+### PLS-DA_arg_subtypes-all_sites-loadings-comp1.csv
+
+"","value.var"
+"beta-lactam__SHV-3",-0.795508511868487
+"beta-lactam__SHV-36",-0.531258710619712
+"beta-lactam__SHV-96",-0.205709573197336
+"beta-lactam__SHV-157",-0.15977219632083
+"beta-lactam__SHV-85",-0.103921239409214
+"beta-lactam__SHV-93",-0.0740019428201424
+"beta-lactam__SHV-155",-0.0284762211634741
+
+
+### PLS-DA_arg_subtypes-all_sites-loadings-comp2.csv
+
+"","value.var"
+"tetracycline__tetP",-0.656465270598138
+"macrolide-lincosamide-streptogramin__ermX",-0.506145706702247
+"beta-lactam__CMY-98",-0.314372078479419
+"beta-lactam__TEM-182",-0.297612274173358
+"beta-lactam__TEM-153",-0.268440786065031
+"beta-lactam__TEM-195",-0.186821634879385
+"beta-lactam__TEM-213",-0.0964906559749058
+"beta-lactam__OXA-83",-0.0691418404768229
+"beta-lactam__TEM-134",-0.064128074583399
+"beta-lactam__CFE-1",-0.0173428080859655
