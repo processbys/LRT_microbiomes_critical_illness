@@ -11,7 +11,8 @@ library(patchwork)
 ## Input data
 # input data was stored at the directory 'Data_repository'
 
-
+### Figure 1
+### --------------------------------------------------------------------------------------------------------------------------------------------
 
 ```{r Fig 1b}
 
@@ -59,7 +60,7 @@ venn.diagram(
 ```{r Fig 1c}
 
 df_prevalent <- read.csv(r"(LRT_microbiomes_critical_illness\Data_repository\Main_figures\microbiome_species-top_prevalent.csv)")
-df_order <- read.csv(r"(LRT_microbiomes_critical_illness\Data_repository\Main_figures\microbiome_species-top_prevalent-sorted.csv)")
+df_order <- read.csv(r"(LRT_microbiomes_critical_illness\Data_repository\Main_figures\microbiome_species-top_prevalent-orders.csv)")
 df_sorted_desc <- arrange(df_order, desc(prevalency_percentage_all))
 
 order_species <- df_sorted_desc[1:10,'taxonomy']
@@ -87,6 +88,302 @@ ggpar(plot_df,
 ```
 
 ```{r Fig 1d}
+
+tree_phylum_level2 <- read.tree(r'(LRT_microbiomes_critical_illness\Data_repository\Main_figures\gtdbtk_filtered_satisfied.tree)')
+labels_tree_phylogeney.df  <- read.csv(r'(LRT_microbiomes_critical_illness\Data_repository\Main_figures\ggtree_assembled_bins_metadata_with_hospitals.csv)')
+meta_info <- read.csv(r'(LRT_microbiomes_critical_illness\Data_repository\Main_figures\metadata-assembled_bins.csv)')
+
+
+### plot the phylogenetic tree and the strip layer(display information about phylum level taxonomy)
+p_final_layer1 <- ggtree(tree_phylum_level2, branch.length="none",layout = 'fan',open.angle=18,size=0.3) %<+% labels_tree_phylogeney.df + 
+  #Proteobacateria
+  geom_strip(taxa1 = "P139-HospitalA_coassembly.001",
+             taxa2 = "P122-HospitalA_coassembly.002",
+             offset = 8.8,
+             barsize = 40,
+             extend = 0.5,
+             color="#6d9fcd") + #geom_tiplab(size=1.5,align = TRUE,offset = 0.5) + 
+  #Acinetobacteria
+  geom_strip(taxa1 = "P34-HospitalB_coassembly.037",
+             taxa2 = "P38-HospitalB_coassembly.004",
+             offset = 8.8,
+             barsize = 40,
+             extend = 0.5,
+             color="#c3e5f5") +
+  #Firmicutes
+  geom_strip(taxa1 = "P34-HospitalB_coassembly.038",
+             taxa2 = "P123-HospitalA_coassembly.005",
+             offset = 8.8,
+             barsize = 40,
+             extend = 0.5,
+             color="#A4A7DE") +
+  #Firmicutes
+  geom_strip(taxa1 = "P34-HospitalB_coassembly.022",
+             taxa2 = "P123-HospitalA_coassembly.007",
+             offset = 8.8,
+             barsize = 40,
+             extend = 0.5,
+             color="#A4A7DE") +
+  #Firmicutes
+  geom_strip(taxa1 = "P34-HospitalB_coassembly.027",
+             taxa2 = "P34-HospitalB_coassembly.050",
+             offset = 8.8,
+             barsize = 40,
+             extend = 0.5,
+             color="#A4A7DE") +
+  #Firmicutes
+  geom_strip(taxa1 = "P45-HospitalB_coassembly.008",
+             taxa2 = "P22-HospitalB_coassembly.002",
+             offset = 8.8,
+             barsize = 40,
+             extend = 0.5,
+             color="#A4A7DE") +
+  #Bacteroidota
+  geom_strip(taxa1 = "P72-HospitalB_coassembly.005",
+             taxa2 = "P44-HospitalB_coassembly.009",
+             offset = 8.8,
+             barsize = 40,
+             extend = 0.5,
+             color="#ffc3c3") + 
+  #Actinobacteriota
+  geom_strip(taxa1 = "P34-HospitalB_coassembly.014",
+             taxa2 = "P24-HospitalB_coassembly.005",
+             offset = 8.8,
+             barsize = 40,
+             extend = 0.5,
+             color="#c3e5f5")
+
+
+## show collection sites with various star types 
+p_final_layer2 <- p_final_layer1 +
+  geom_fruit(data=meta_info, geom=geom_star,
+             mapping=aes(y=user_genome,x=sampling_site,starshape=sampling_site,fill=sampling_site),
+             color = "black", offset=0.30,
+             size =2,
+             pwidth=0.1,
+             grid.params=list(
+               linetype=2,
+               size=0.5
+             )) + scale_fill_manual(values=c("#FFC125","#87CEFA","#7B68EE"),
+                                    guide=guide_legend(override.aes = list(size = 8)))  + 
+  geom_tiplab(aes(label=species),size=1.7,offset = 1.2) + new_scale_fill()  
+
+
+
+## show collections sites with various colors
+# p_final_layer2 <- p_final_layer1 +
+#   geom_fruit(data=meta_info, geom=geom_tile,
+#              mapping=aes(y=user_genome,fill=sampling_site),
+#              color = "black", offset = 0.5,size = 0.02,width=2.4,) +
+#   scale_fill_manual(values=c("#FFC125","#87CEFA","#7B68EE")) + geom_tiplab(size=1.5)
+#   
+p_final_layer3 <- p_final_layer2 + 
+  geom_fruit(data=meta_info, geom=geom_bar,
+             mapping=aes(y=user_genome, x=fastani_af, fill=sampling_site),
+             offset = 0.05,
+             pwidth=0.1,
+             width=0.6,
+             orientation="y", 
+             stat="identity",
+             show.legend=F,
+             axis.params = list(axis='x',text.size=2,nbreak=2,vjust=1)) +
+  scale_fill_manual(values=c("#FFC125","#87CEFA","#7B68EE"))  + new_scale_fill() +
+  geom_tippoint(mapping=aes(color=phylum),
+                size=1.2,
+                show.legend=F) +
+  scale_color_manual(values=c("Proteobacteria"="#6d9fcd",
+                              "Actinobacteriota"="#c3e5f5",
+                              "Firmicutes"="#A4A7DE",
+                              "Firmicutes_A"="#A4A7DE",
+                              "Firmicutes_C"="#A4A7DE",
+                              "Bacteroidota"="#ffc3c3")) 
+
+
+p_final_layer4 <- p_final_layer3 + 
+  # Acinetobacter baumannii
+  geom_strip(taxa1 = "P123-HospitalA_coassembly.002",
+             taxa2 = "P122-HospitalA_coassembly.002",
+             offset = 29,
+             barsize =0.8,
+             extend = 0.5,
+             color="#267278",
+             alpha=1) +
+  # Burkholderia cenocepacia
+  geom_strip(taxa1 = "P157-HospitalA_coassembly.003",
+             taxa2 = "P66-HospitalB_coassembly.002",
+             offset = 29,
+             barsize =0.8,
+             extend = 0.5,
+             color="#65338D",
+             alpha=1) +
+  geom_strip(taxa1 = "P14-HospitalC_coassembly.002",
+             taxa2 = "P6-HospitalC_coassembly.002",
+             offset = 29,
+             barsize =0.8,
+             extend = 0.5,
+             color="#65338D",
+             alpha=1) +
+  # Corynebacterium striatum
+  geom_strip(taxa1 = "P121-HospitalA_coassembly.003",
+             taxa2 = "P24-HospitalB_coassembly.005",
+             offset = 29,
+             barsize =0.8,
+             extend = 0.5,
+             color="#4770B3",
+             alpha=1) +
+  geom_strip(taxa1 = "P155-HospitalA_coassembly.004",
+             taxa2 = "P155-HospitalA_coassembly.004",
+             offset = 29,
+             barsize =0.8,
+             extend = 0.5,
+             color="#4770B3",
+             alpha=1) +
+  # Elizabethkingia anophelis
+  geom_strip(taxa1 = "P141-HospitalA_coassembly.002",
+             taxa2 = "P141-HospitalA_coassembly.001",
+             offset = 29,
+             barsize =0.8,
+             extend = 0.5,
+             color="#D21F75",
+             alpha=1) +
+  # Enterococcus_B faecium
+  geom_strip(taxa1 = "P96-HospitalB_coassembly.002",
+             taxa2 = "P76-HospitalB_coassembly.001",
+             offset = 29,
+             barsize =0.8,
+             extend = 0.5,
+             color="#3B3689",
+             alpha=1) +
+  # Klebsiella pneumoniae
+  geom_strip(taxa1 = "P116-HospitalA_coassembly.002",
+             taxa2 = "P155-HospitalA_coassembly.002",
+             offset = 29,
+             barsize =0.8,
+             extend = 0.5,
+             color="#50AED3",
+             alpha=1) +
+  geom_strip(taxa1 = "P115-HospitalA_coassembly.001",
+             taxa2 = "P156-HospitalA_coassembly.002",
+             offset = 29,
+             barsize =0.8,
+             extend = 0.5,
+             color="#50AED3",
+             alpha=1)+
+  geom_strip(taxa1 = "P96-HospitalB_coassembly.001",
+             taxa2 = "P96-HospitalB_coassembly.001",
+             offset = 29,
+             barsize =0.8,
+             extend = 0.5,
+             color="#50AED3",
+             alpha=1) +
+  # Porphyromonas pasteri
+  geom_strip(taxa1 = "P121-HospitalA_coassembly.002",
+             taxa2 = "P32-HospitalB_coassembly.008",
+             offset = 29,
+             barsize =0.8,
+             extend = 0.5,
+             color="#48B24F",
+             alpha=1) +
+  # Prevotella melaninogenica
+  geom_strip(taxa1 = "P23-HospitalB_coassembly.006",
+             taxa2 = "P45-HospitalB_coassembly.006",
+             offset = 29,
+             barsize =0.8,
+             extend = 0.5,
+             color="#E57438",
+             alpha=1) +
+  geom_strip(taxa1 = "P50-HospitalB_coassembly.004",
+             taxa2 = "P34-HospitalB_coassembly.003",
+             offset = 29,
+             barsize =0.8,
+             extend = 0.5,
+             color="#E57438",
+             alpha=1) +
+  # Prevotella oris
+  geom_strip(taxa1 = "P72-HospitalB_coassembly.013",
+             taxa2 = "P47-HospitalB_coassembly.010",
+             offset = 29,
+             barsize =0.8,
+             extend = 0.5,
+             color="#569DD2",
+             alpha=1) +
+  # Pseudomonas aeruginosa
+  geom_strip(taxa1 = "P20-HospitalC_coassembly.001",
+             taxa2 = "P152-HospitalA_coassembly.004",
+             offset = 29,
+             barsize =0.8,
+             extend = 0.5,
+             color="#569D79",
+             alpha=1) +
+  # Stenotrophomonas maltophilia
+  geom_strip(taxa1 = "P105-HospitalB_coassembly.003",
+             taxa2 = "P139-HospitalA_coassembly.001",
+             offset = 29,
+             barsize =0.8,
+             extend = 0.5,
+             color="#58595B",
+             alpha=1) + 
+  # Haemophilus influenzae
+  geom_strip(taxa1 = "P54-HospitalB_coassembly.001",
+             taxa2 = "P44-HospitalB_coassembly.002",
+             offset = 29,
+             barsize =0.8,
+             extend = 0.5,
+             color="black",
+             alpha=1) + 
+  # Slackia exigua
+  geom_strip(taxa1 = "P45-HospitalB_coassembly.020",
+             taxa2 = "P72-HospitalB_coassembly.026",
+             offset = 29,
+             barsize =0.8,
+             extend = 0.5,
+             color="black",
+             alpha=1) + 
+  # Staphylococcus aureus
+  geom_strip(taxa1 = "P34-HospitalB_coassembly.029",
+             taxa2 = "P155-HospitalA_coassembly.010",
+             offset = 29,
+             barsize =0.8,
+             extend = 0.5,
+             color="black",
+             alpha=1) + 
+  # Streptococcus anginosus
+  geom_strip(taxa1 = "P80-HospitalB_coassembly.001",
+             taxa2 = "P80-HospitalB_coassembly.001",
+             offset = 29,
+             barsize =0.8,
+             extend = 0.5,
+             color="black",
+             alpha=1) +
+  geom_strip(taxa1 = "P112-HospitalA_coassembly.001",
+             taxa2 = "P112-HospitalA_coassembly.001",
+             offset = 29,
+             barsize =0.8,
+             extend = 0.5,
+             color="black",
+             alpha=1) +
+  geom_strip(taxa1 = "P47-HospitalB_coassembly.004",
+             taxa2 = "P47-HospitalB_coassembly.004",
+             offset = 29,
+             barsize =0.8,
+             extend = 0.5,
+             color="black",
+             alpha=1) +
+  # Streptococcus constellatus
+  geom_strip(taxa1 = "P45-HospitalB_coassembly.009",
+             taxa2 = "P50-HospitalB_coassembly.005",
+             offset = 29,
+             barsize =0.8,
+             extend = 0.5,
+             color="black",
+             alpha=1) +
+  geom_strip(taxa1 = "P102-HospitalB_coassembly.006",
+             taxa2 = "P102-HospitalB_coassembly.006",
+             offset = 29,
+             barsize =0.8,
+             extend = 0.5,
+             color="black",
+             alpha=1) 
 
 ```
 
