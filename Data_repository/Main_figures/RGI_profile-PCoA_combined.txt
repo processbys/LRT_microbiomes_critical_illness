@@ -1,0 +1,81 @@
+### RGI_profile-PCoA_acinetobacter.csv
+
+AAC(3)-Ia,AAC(6')-Ib9,ADC-30,ADC-73,ANT(3'')-IIa,ANT(3'')-IIc,APH(3'')-Ib,APH(3')-Ia,APH(6)-Id,Acinetobacter baumannii AbaF,Acinetobacter baumannii AbaQ,Acinetobacter baumannii AmvA,Acinetobacter baumannii gyrA conferring resistance to fluoroquinolones,Acinetobacter baumannii parC conferring resistance to fluoroquinolones,CfxA3,Escherichia coli EF-Tu mutants conferring resistance to Pulvomycin,FosA3,LpsB,OXA-23,OXA-66,SHV-12,TEM-1,aadA,abeM,abeS,adeA,adeB,adeC,adeF,adeG,adeH,adeI,adeJ,adeK,adeL,adeN,adeR,adeS,armA,catB8,dfrA14,mefC,mphE,mphG,msrE,qacEdelta1,rmtB,rsmA,sul1,sul2,tet(B),tet(D),tetR,vanT gene in vanG cluster,species,SamplingSite
+0,0,0,1,0,1,1,1,1,1,1,1,1,1,1,0,0,1,1,1,0,1,0,1,1,0,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,1,0,1,0,0,1,0,0,1,0,1,0,acinetobacter,HospitalC
+0,1,0,1,1,1,1,0,1,1,1,1,1,1,0,0,0,1,1,1,0,1,0,1,1,1,0,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,1,0,1,1,1,1,1,0,1,0,1,0,acinetobacter,HospitalC
+0,0,0,1,0,1,0,0,0,1,1,1,1,1,0,0,0,1,0,1,0,0,0,1,1,1,1,1,1,1,1,1,1,1,0,1,1,1,1,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,acinetobacter,HospitalB
+0,1,1,0,0,1,1,1,1,1,1,1,1,1,0,0,0,1,1,1,0,1,1,1,1,1,1,1,1,0,1,1,1,1,1,1,1,1,1,1,0,0,1,0,1,1,0,1,1,0,0,1,1,0,acinetobacter,HospitalC
+0,0,1,0,0,1,0,1,1,1,1,1,1,1,0,0,0,1,1,1,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,1,0,1,0,0,1,0,0,1,0,1,0,acinetobacter,HospitalC
+0,0,0,1,0,1,1,1,1,1,1,1,1,1,0,0,0,1,1,1,0,1,0,1,1,1,1,1,1,1,1,1,0,1,1,1,1,1,1,0,0,0,1,0,1,0,0,1,0,0,1,0,1,0,acinetobacter,HospitalC
+0,0,0,1,0,1,1,0,1,1,1,1,0,1,0,0,0,1,1,1,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,0,1,1,1,0,0,0,1,0,1,0,0,1,0,1,1,0,1,0,acinetobacter,HospitalC
+0,0,0,1,0,1,1,0,1,1,1,1,1,1,0,0,0,1,0,1,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,0,1,1,1,0,0,0,1,0,1,0,0,1,0,0,1,0,1,0,acinetobacter,HospitalC
+0,0,0,1,0,1,1,0,1,1,1,1,1,1,0,0,0,1,1,1,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,1,0,0,1,0,1,0,acinetobacter,HospitalB
+0,0,0,0,0,1,1,0,1,0,1,1,1,0,0,0,0,1,1,1,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,0,1,0,0,0,0,0,0,0,0,0,0,1,0,0,1,0,1,0,acinetobacter,HospitalB
+0,0,0,1,0,1,1,0,1,1,1,1,1,1,0,0,0,1,1,1,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,1,0,0,1,0,1,0,acinetobacter,HospitalB
+0,0,0,1,0,1,0,0,0,1,1,1,1,1,0,0,0,1,1,1,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,0,1,1,1,0,0,0,1,0,1,0,0,1,0,0,1,0,1,0,acinetobacter,HospitalC
+0,1,1,0,1,1,1,1,1,0,1,1,0,1,0,0,0,1,1,1,0,1,0,1,1,1,1,1,1,1,1,1,1,1,1,0,1,1,1,1,0,0,1,0,1,1,0,1,1,0,1,0,1,0,acinetobacter,HospitalC
+0,0,0,1,0,1,1,1,1,1,1,1,1,1,0,1,0,1,1,1,0,1,0,1,1,1,1,1,1,1,1,1,1,1,1,0,1,1,1,0,0,0,1,0,1,0,0,1,0,0,1,0,1,0,acinetobacter,HospitalB
+0,0,0,1,0,1,1,0,1,1,1,1,1,1,0,0,0,1,1,1,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,1,0,0,1,0,1,0,acinetobacter,HospitalB
+0,0,0,1,0,1,1,1,1,0,1,1,1,1,0,0,0,1,1,1,0,1,0,1,1,1,1,1,1,1,1,1,1,0,1,1,1,1,1,0,0,0,1,0,1,0,0,1,0,0,1,0,1,0,acinetobacter,HospitalB
+0,1,1,0,1,1,0,0,0,1,1,1,0,1,0,0,0,1,1,0,0,0,0,1,0,1,0,1,1,0,1,1,0,0,0,0,0,1,0,1,0,0,1,0,1,1,0,1,1,0,0,0,0,0,acinetobacter,HospitalB
+1,0,1,0,0,1,1,1,1,1,1,1,1,1,0,0,0,1,1,1,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,1,0,1,1,0,1,1,0,1,0,1,0,acinetobacter,HospitalC
+0,0,0,1,0,1,1,0,1,1,1,1,0,1,0,0,0,1,1,1,0,0,0,1,1,1,1,0,1,1,1,1,1,1,1,0,1,1,1,0,0,0,1,0,1,0,0,1,0,0,1,0,1,0,acinetobacter,HospitalC
+0,0,1,0,0,1,1,0,1,1,1,1,1,1,0,0,0,1,0,1,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,1,0,1,0,0,0,1,0,0,1,0,1,0,acinetobacter,HospitalC
+0,0,0,1,0,1,1,1,1,1,1,1,1,1,0,0,0,1,1,1,0,1,0,1,1,1,1,0,1,1,1,1,1,1,1,0,1,1,1,0,0,0,1,0,1,0,0,1,0,0,1,0,1,0,acinetobacter,HospitalB
+0,0,0,1,0,0,0,0,0,1,1,1,1,1,0,0,0,1,1,0,0,0,0,1,1,1,0,0,1,1,1,1,1,1,1,0,1,1,1,0,1,0,0,0,0,0,0,1,0,0,1,0,1,0,acinetobacter,HospitalC
+0,0,0,1,0,1,0,0,0,1,1,1,1,1,0,0,0,1,1,1,0,1,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,1,0,1,1,0,1,0,acinetobacter,HospitalC
+0,0,0,1,0,1,1,0,1,1,1,1,1,1,0,0,0,1,1,1,0,1,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,1,0,1,0,0,1,0,0,1,0,1,1,acinetobacter,HospitalC
+0,0,0,1,0,1,1,0,1,1,1,1,1,1,0,0,0,1,1,1,0,1,0,1,1,1,1,1,1,1,1,1,1,1,1,0,1,1,1,0,0,0,1,0,1,0,0,1,0,0,1,0,1,0,acinetobacter,HospitalC
+0,0,0,1,0,1,0,0,0,1,1,1,0,1,0,0,1,1,1,1,1,0,0,1,1,1,1,1,1,1,1,1,1,0,1,0,1,1,1,0,1,0,1,0,1,0,0,1,0,0,1,0,1,0,acinetobacter,HospitalC
+0,1,1,0,1,1,1,1,1,1,1,1,1,1,0,0,0,1,1,1,0,1,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,1,0,1,1,0,1,1,0,1,0,1,0,acinetobacter,HospitalC
+
+### RGI_profile-PCoA_corynebacterium.csv
+
+AAC(3)-Ia	AAC(6')-Ia	AAC(6')-Ib4	ANT(3'')-IIa	APH(3'')-Ib	APH(3')-Ia	APH(6)-Id	Corynebacterium striatum tetA	ErmX	GES-5	Mycobacterium tuberculosis rpsL mutations conferring resistance to Streptomycin	aadA	aadA2	aphA15	cmx	qacEdelta1	sul1	sul2	tet(W)	vanT gene in vanG cluster	vanW gene in vanI cluster	species	SamplingSite
+0	1	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	1	1	1	corynebacterium	HospitalC
+0	0	0	1	0	1	1	1	1	0	1	0	0	0	1	1	1	1	1	1	1	corynebacterium	HospitalC
+0	1	0	0	0	0	0	0	1	0	0	1	0	0	0	1	1	0	1	1	1	corynebacterium	HospitalB
+0	1	0	0	0	0	0	0	1	0	0	1	0	0	0	1	1	0	1	1	1	corynebacterium	HospitalC
+0	1	0	0	0	1	0	0	1	0	1	1	0	0	1	1	1	0	0	1	1	corynebacterium	HospitalC
+0	0	0	0	0	0	1	1	1	0	1	0	0	0	1	0	0	0	1	1	1	corynebacterium	HospitalB
+0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	1	1	corynebacterium	HospitalB
+0	1	0	0	0	0	0	0	1	0	0	1	0	0	0	1	1	0	1	0	1	corynebacterium	HospitalB
+0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	1	corynebacterium	HospitalB
+0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	1	1	corynebacterium	HospitalB
+0	0	0	0	0	1	0	1	1	0	1	0	0	0	0	0	0	0	1	1	1	corynebacterium	HospitalB
+1	0	0	1	0	0	0	0	1	0	0	0	0	0	0	1	1	0	0	1	1	corynebacterium	HospitalC
+0	1	0	0	0	0	0	0	1	0	0	1	0	0	0	1	1	0	1	1	1	corynebacterium	HospitalC
+0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	1	1	corynebacterium	HospitalB
+0	1	0	0	0	0	0	0	1	0	0	1	0	0	0	1	1	0	1	1	1	corynebacterium	HospitalB
+0	1	1	1	0	0	0	1	1	1	1	0	0	1	1	0	0	0	0	1	1	corynebacterium	HospitalC
+0	1	0	0	0	0	0	0	1	0	0	1	0	0	0	1	1	0	1	1	1	corynebacterium	HospitalB
+0	0	0	0	0	1	1	1	1	0	1	0	0	0	1	0	0	0	1	1	1	corynebacterium	HospitalB
+0	1	0	0	0	0	0	0	0	0	0	1	0	0	0	1	1	0	1	1	1	corynebacterium	HospitalB
+0	1	0	1	0	0	0	0	1	0	0	0	0	0	0	1	1	0	1	1	1	corynebacterium	HospitalC
+0	0	0	0	0	0	0	0	0	0	0	0	1	0	1	1	1	0	0	1	1	corynebacterium	HospitalC
+0	0	0	0	0	1	0	1	1	0	1	0	0	0	1	0	0	0	0	1	1	corynebacterium	HospitalC
+0	1	0	0	0	0	0	0	1	0	0	1	0	0	0	0	0	0	1	1	1	corynebacterium	HospitalB
+0	1	0	0	0	0	0	0	1	0	1	1	0	0	0	1	1	0	1	1	1	corynebacterium	HospitalB
+0	0	0	0	1	1	0	1	1	0	1	0	0	0	1	0	0	0	0	1	1	corynebacterium	HospitalC
+0	1	0	0	0	0	0	0	1	0	0	1	0	0	0	1	1	0	1	1	1	corynebacterium	HospitalB
+0	1	0	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1	1	corynebacterium	HospitalB
+0	1	0	1	0	0	0	0	0	0	1	0	0	0	0	1	1	0	1	1	1	corynebacterium	HospitalB
+0	0	0	0	0	0	1	1	1	0	1	0	0	0	1	0	0	0	0	1	1	corynebacterium	HospitalB
+0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	1	1	corynebacterium	HospitalB
+
+### RGI_profile-PCoA_klebsiella.csv 
+
+ANT(2'')-Ia	ANT(3'')-IIa	ANT(3'')-IIc	ArnT	CRP	CTX-M-3	CTX-M-65	CrcB	Escherichia coli AcrAB-TolC with MarR mutations conferring resistance to ciprofloxacin and tetracycline	Escherichia coli EF-Tu mutants conferring resistance to Pulvomycin	Escherichia coli UhpT with mutation conferring resistance to fosfomycin	Escherichia coli mdfA	Escherichia coli parC conferring resistance to fluoroquinolones	FosA6	Haemophilus influenzae PBP3 conferring resistance to beta-lactam antibiotics	KPC-2	Klebsiella pneumoniae KpnE	Klebsiella pneumoniae KpnF	Klebsiella pneumoniae KpnG	Klebsiella pneumoniae KpnH	Klebsiella pneumoniae OmpK37	LAP-2	LptD	OmpA	PmrF	QnrB2	QnrS1	SHV-1	SHV-11	SHV-12	Salmonella enterica gyrA with mutation conferring resistance to triclosan	TEM-1	aadA2	acrB	acrD	adeF	baeR	catII from Escherichia coli K-12	cmlA4	dfrA14	emrR	eptB	fosA5	marA	mdtB	mdtC	mphA	msbA	oqxA	oqxB	qacEdelta1	qacL	rmtB	rsmA	smeD	sul1	sul2	tet(A)	vanG	species	SamplingSite
+0	1	0	1	1	0	1	0	1	1	1	1	1	1	1	0	1	1	1	1	0	1	1	1	1	0	1	0	1	0	1	1	0	1	0	0	1	1	0	0	1	1	0	1	1	1	0	1	0	0	1	0	1	1	0	0	1	1	1	klebsiella	HospitalA
+0	0	0	1	1	0	0	0	1	0	1	1	0	0	1	0	1	1	1	1	1	0	1	1	1	0	0	1	0	0	0	0	0	1	0	0	1	0	0	0	1	1	1	1	1	0	0	1	1	1	0	0	0	1	0	0	0	0	0	klebsiella	HospitalC
+0	0	0	1	0	0	0	1	1	1	1	1	0	0	1	0	0	0	1	1	1	0	1	1	1	0	0	1	0	0	0	0	0	1	0	1	1	0	0	0	1	1	1	1	1	1	0	1	1	1	0	0	0	1	0	0	0	0	1	klebsiella	HospitalB
+0	0	0	1	1	0	0	0	1	1	1	1	0	1	1	0	1	1	1	1	1	0	1	1	1	0	0	0	1	0	0	0	0	1	1	0	1	0	0	0	1	1	0	1	1	1	0	1	1	1	0	0	0	1	0	0	0	0	1	klebsiella	HospitalB
+0	1	1	1	1	0	0	0	1	0	1	1	1	1	1	0	1	1	1	1	0	0	0	1	1	0	0	0	0	0	1	0	0	0	0	0	1	0	0	0	1	1	0	1	1	1	0	1	0	0	1	0	0	1	0	1	0	0	1	klebsiella	HospitalC
+0	0	0	1	1	1	0	0	1	1	1	1	0	1	1	0	1	1	1	1	0	0	1	1	1	1	0	0	0	1	0	1	0	0	1	1	1	0	0	0	1	1	0	1	1	1	0	1	1	0	0	0	0	1	0	1	0	0	1	klebsiella	HospitalC
+0	0	0	1	1	0	1	0	1	0	1	1	1	1	1	1	1	1	1	1	0	0	1	1	1	0	0	0	1	0	1	0	0	1	1	0	1	0	0	0	1	1	0	1	1	1	1	1	0	0	0	0	0	1	0	0	0	0	1	klebsiella	HospitalB
+0	0	0	1	1	0	0	0	1	1	1	1	0	1	1	1	1	1	1	1	1	0	1	1	1	0	0	0	1	0	0	1	0	0	0	1	1	0	0	0	1	1	0	1	1	1	0	1	1	1	0	0	0	1	1	0	0	0	1	klebsiella	HospitalB
+1	0	0	1	1	0	1	0	1	1	1	1	1	1	1	1	1	1	1	1	0	0	1	1	1	0	0	0	1	0	1	1	1	0	0	0	1	0	1	0	1	1	0	1	1	1	0	1	0	0	1	1	1	1	0	1	0	0	1	klebsiella	HospitalC
+0	1	0	1	1	0	1	0	1	0	1	1	1	1	1	1	1	1	1	1	0	1	1	1	1	0	1	0	0	1	1	1	0	0	1	0	1	1	0	1	1	1	0	1	1	1	0	1	0	0	1	0	1	1	0	1	1	1	1	klebsiella	HospitalA
+0	0	0	1	1	0	0	0	1	0	1	1	0	1	1	0	1	1	1	1	0	0	1	1	1	0	0	0	1	0	0	0	0	1	1	0	1	0	0	0	1	1	0	1	1	1	0	1	1	1	0	0	0	1	0	0	0	0	1	klebsiella	HospitalB
+0	0	0	1	1	0	0	0	1	1	1	1	1	1	1	1	1	1	1	1	0	1	1	1	1	0	1	0	0	0	1	1	0	1	1	0	1	0	0	0	1	1	0	1	1	1	0	1	0	0	0	0	1	1	0	0	1	1	1	klebsiella	HospitalC
+0	0	0	1	1	0	1	0	0	1	1	1	1	1	1	1	1	1	1	1	0	1	1	1	1	0	1	0	0	1	1	1	0	1	1	0	1	1	0	1	1	1	0	1	1	1	0	1	0	0	1	0	1	1	0	1	1	1	1	klebsiella	HospitalA
