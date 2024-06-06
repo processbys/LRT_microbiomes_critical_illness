@@ -1,0 +1,112 @@
+### head-to-head_comparisons-DNA_concentration_too_low.csv
+
+Method,Detection_Failed,Percentage_Failed
+CMEM,1,0.029411764705882353
+Power Water,12,0.35294117647058826
+AllPrep DNA,10,0.29411764705882354
+
+### head-to-head_comparisons-DNA_concentration.csv
+
+Sample,Concentration,Group,Method
+S1,24.8,Chelex100,CMEM
+S1,17.3,PowerWater,Power Water
+S1,23.0,AllPrep DNA Kit,AllPrep DNA
+S2,9.808,Chelex100,CMEM
+S2,5.1,PowerWater,Power Water
+S2,13.0,AllPrep DNA Kit,AllPrep DNA
+S3,2.4480000000000004,Chelex100,CMEM
+S3,0.88,PowerWater,Power Water
+S3,2.39,AllPrep DNA Kit,AllPrep DNA
+S4,2.656,Chelex100,CMEM
+S4,1.34,PowerWater,Power Water
+S4,1.17,AllPrep DNA Kit,AllPrep DNA
+S5,4.912,Chelex100,CMEM
+S5,3.73,PowerWater,Power Water
+S5,3.11,AllPrep DNA Kit,AllPrep DNA
+S6,2.9920000000000004,Chelex100,CMEM
+S6,0.352,PowerWater,Power Water
+S6,1.19,AllPrep DNA Kit,AllPrep DNA
+S7,1.1088,Chelex100,CMEM
+S7,0.285,PowerWater,Power Water
+S7,0.327,AllPrep DNA Kit,AllPrep DNA
+S8,3.088,Chelex100,CMEM
+S8,0.153,PowerWater,Power Water
+S8,0.245,AllPrep DNA Kit,AllPrep DNA
+S9,10.48,Chelex100,CMEM
+S9,0.7,PowerWater,Power Water
+S9,0.111,AllPrep DNA Kit,AllPrep DNA
+S10,0.36640000000000006,Chelex100,CMEM
+S10,0.0,PowerWater,Power Water
+S10,0.0,AllPrep DNA Kit,AllPrep DNA
+S11,0.42880000000000007,Chelex100,CMEM
+S11,0.0,PowerWater,Power Water
+S11,0.0,AllPrep DNA Kit,AllPrep DNA
+S12,1.2272,Chelex100,CMEM
+S12,0.058,PowerWater,Power Water
+S12,0.088,AllPrep DNA Kit,AllPrep DNA
+S13,2.7680000000000002,Chelex100,CMEM
+S13,0.0927,PowerWater,Power Water
+S13,0.066,AllPrep DNA Kit,AllPrep DNA
+S14,0.9888,Chelex100,CMEM
+S14,0.0713,PowerWater,Power Water
+S14,0.0853,AllPrep DNA Kit,AllPrep DNA
+S15,0.45439999999999997,Chelex100,CMEM
+S15,0.0,PowerWater,Power Water
+S15,0.0,AllPrep DNA Kit,AllPrep DNA
+S16,3.8560000000000003,Chelex100,CMEM
+S16,0.111,PowerWater,Power Water
+S16,0.0447,AllPrep DNA Kit,AllPrep DNA
+S17,0.40800000000000003,Chelex100,CMEM
+S17,0.039,PowerWater,Power Water
+S17,1.07,AllPrep DNA Kit,AllPrep DNA
+S18,9.312000000000001,Chelex100,CMEM
+S18,5.0,PowerWater,Power Water
+S18,10.2,AllPrep DNA Kit,AllPrep DNA
+S19,0.3456,Chelex100,CMEM
+S19,0.0,PowerWater,Power Water
+S19,0.036,AllPrep DNA Kit,AllPrep DNA
+S20,1.3872,Chelex100,CMEM
+S20,0.037,PowerWater,Power Water
+S20,0.167,AllPrep DNA Kit,AllPrep DNA
+S21,0.7504,Chelex100,CMEM
+S21,0.0,PowerWater,Power Water
+S21,0.0,AllPrep DNA Kit,AllPrep DNA
+S22,0.5952000000000001,Chelex100,CMEM
+S22,0.0,PowerWater,Power Water
+S22,0.056,AllPrep DNA Kit,AllPrep DNA
+S23,0.15152000000000002,Chelex100,CMEM
+S23,0.0,PowerWater,Power Water
+S23,0.0,AllPrep DNA Kit,AllPrep DNA
+S24,2.4160000000000004,Chelex100,CMEM
+S24,0.0447,PowerWater,Power Water
+S24,0.0467,AllPrep DNA Kit,AllPrep DNA
+S25,0.6192000000000001,Chelex100,CMEM
+S25,0.0,PowerWater,Power Water
+S25,0.0,AllPrep DNA Kit,AllPrep DNA
+S26,1.5888,Chelex100,CMEM
+S26,0.452,PowerWater,Power Water
+S26,0.149,AllPrep DNA Kit,AllPrep DNA
+S27,0.0,Chelex100,CMEM
+S27,0.0,PowerWater,Power Water
+S27,0.0,AllPrep DNA Kit,AllPrep DNA
+S28,1.5888,Chelex100,CMEM
+S28,0.0137,PowerWater,Power Water
+S28,0.0393,AllPrep DNA Kit,AllPrep DNA
+S29,6.128,Chelex100,CMEM
+S29,0.159,PowerWater,Power Water
+S29,2.25,AllPrep DNA Kit,AllPrep DNA
+S30,41.28,Chelex100,CMEM
+S30,7.2,PowerWater,Power Water
+S30,2.7,AllPrep DNA Kit,AllPrep DNA
+S31,0.3312,Chelex100,CMEM
+S31,0.0,PowerWater,Power Water
+S31,0.0,AllPrep DNA Kit,AllPrep DNA
+S32,0.05872000000000001,Chelex100,CMEM
+S32,0.0,PowerWater,Power Water
+S32,0.0,AllPrep DNA Kit,AllPrep DNA
+S33,1.6320000000000001,Chelex100,CMEM
+S33,0.56,PowerWater,Power Water
+S33,0.79,AllPrep DNA Kit,AllPrep DNA
+S34,0.07152,Chelex100,CMEM
+S34,0.0,PowerWater,Power Water
+S34,0.0,AllPrep DNA Kit,AllPrep DNA
