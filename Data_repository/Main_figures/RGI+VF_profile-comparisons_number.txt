@@ -186,4 +186,4 @@ P130_Hospital-C_coassembly.005.fasta,stenotrophomonas,8
 P139_Hospital-C_coassembly.001.fasta,stenotrophomonas,4
 P99_Hospital-B_coassembly.bin.1.fasta,stenotrophomonas,4
 
-  
+  ### vfdb_profile-species_all-vf_num.csv
