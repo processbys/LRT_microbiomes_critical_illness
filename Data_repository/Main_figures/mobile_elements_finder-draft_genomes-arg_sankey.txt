@@ -1,0 +1,69 @@
+### mobile_elements_finder-draft_genomes-arg_sankey-nodes.csv
+
+Acinetobacter baumannii
+Corynebacterium striatum
+Klebsiella pneumoniae
+Pseudomonas aeruginosa
+Stenotrophomonas maltophilia
+Composite transposon
+Insertion sequence
+Unit transposon
+Aminoglycoside antibiotic
+Carbapenem
+Cephalosporin
+Diaminopyrimidine antibiotic
+Disinfecting agents and antiseptics
+Fluoroquinolone antibiotic
+Lincosamide antibiotic
+Macrolide antibiotic
+Monobactam
+Penam
+Penem
+Phenicol antibiotic
+Streptogramin a antibiotic
+Streptogramin antibiotic
+Streptogramin b antibiotic
+Sulfonamide antibiotic
+Tetracycline antibiotic
+
+### obile_elements_finder-draft_genomes-arg_sankey-links-scaled.csv
+
+source,target,value,source_name,source_type,target_name,target_type,normalized_value
+0,5,24.13694267515924,Acinetobacter baumannii,species,Composite transposon,MGE,1073
+1,5,19.748407643312103,Corynebacterium striatum,species,Composite transposon,MGE,878
+2,5,9.114649681528665,Klebsiella pneumoniae,species,Composite transposon,MGE,405
+0,6,83.65367915243444,Acinetobacter baumannii,species,Insertion sequence,MGE,3718
+1,6,16.215943958779597,Corynebacterium striatum,species,Insertion sequence,MGE,721
+2,6,61.4780292942743,Klebsiella pneumoniae,species,Insertion sequence,MGE,2732
+3,6,5.791408556706998,Pseudomonas aeruginosa,species,Insertion sequence,MGE,257
+4,6,3.8609390378046657,Stenotrophomonas maltophilia,species,Insertion sequence,MGE,172
+0,7,1.0,Acinetobacter baumannii,species,Unit transposon,MGE,44
+5,8,13.0,Composite transposon,MGE,Aminoglycoside antibiotic,ARG_Class,578
+5,17,9.0,Composite transposon,MGE,Penam,ARG_Class,400
+5,10,7.0,Composite transposon,MGE,Cephalosporin,ARG_Class,311
+5,16,5.0,Composite transposon,MGE,Monobactam,ARG_Class,222
+5,18,5.0,Composite transposon,MGE,Penem,ARG_Class,222
+5,19,4.0,Composite transposon,MGE,Phenicol antibiotic,ARG_Class,178
+5,15,3.0,Composite transposon,MGE,Macrolide antibiotic,ARG_Class,133
+5,9,2.0,Composite transposon,MGE,Carbapenem,ARG_Class,89
+5,24,2.0,Composite transposon,MGE,Tetracycline antibiotic,ARG_Class,89
+5,12,1.0,Composite transposon,MGE,Disinfecting agents and antiseptics,ARG_Class,44
+5,21,1.0,Composite transposon,MGE,Streptogramin antibiotic,ARG_Class,44
+5,23,1.0,Composite transposon,MGE,Sulfonamide antibiotic,ARG_Class,44
+6,15,35.0,Insertion sequence,MGE,Macrolide antibiotic,ARG_Class,1556
+6,8,28.0,Insertion sequence,MGE,Aminoglycoside antibiotic,ARG_Class,1244
+6,10,17.0,Insertion sequence,MGE,Cephalosporin,ARG_Class,756
+6,21,15.0,Insertion sequence,MGE,Streptogramin antibiotic,ARG_Class,667
+6,24,14.0,Insertion sequence,MGE,Tetracycline antibiotic,ARG_Class,622
+6,17,11.0,Insertion sequence,MGE,Penam,ARG_Class,489
+6,16,8.0,Insertion sequence,MGE,Monobactam,ARG_Class,356
+6,14,7.0,Insertion sequence,MGE,Lincosamide antibiotic,ARG_Class,311
+6,20,7.0,Insertion sequence,MGE,Streptogramin a antibiotic,ARG_Class,311
+6,22,7.0,Insertion sequence,MGE,Streptogramin b antibiotic,ARG_Class,311
+6,23,7.0,Insertion sequence,MGE,Sulfonamide antibiotic,ARG_Class,311
+6,18,6.0,Insertion sequence,MGE,Penem,ARG_Class,267
+6,9,5.0,Insertion sequence,MGE,Carbapenem,ARG_Class,222
+6,19,2.0,Insertion sequence,MGE,Phenicol antibiotic,ARG_Class,89
+6,11,1.0,Insertion sequence,MGE,Diaminopyrimidine antibiotic,ARG_Class,44
+6,13,1.0,Insertion sequence,MGE,Fluoroquinolone antibiotic,ARG_Class,44
+7,24,1.0,Unit transposon,MGE,Tetracycline antibiotic,ARG_Class,44
