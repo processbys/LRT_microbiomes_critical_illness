@@ -1,0 +1,13 @@
+argsubtypes,counts,frequency,mean_abundance,sites,arg_type
+Multidrug__acra,26,0.7878787878787878,5.107868172623032,HospitalA,Multidrug
+Multidrug__multidrug_transporter,163,0.8956043956043956,1.6056684272793238,HospitalB,Multidrug
+Multidrug__multidrug_transporter,121,0.9758064516129032,3.150328938677577,HospitalC,Multidrug
+Beta-lactam__shv-39,25,0.7575757575757576,4.443234100643382,HospitalA,Beta-lactam
+Beta-lactam__cfxa2,82,0.4505494505494505,0.4935941217044874,HospitalB,Beta-lactam
+Beta-lactam__oxa-225,74,0.5967741935483871,1.6214717047323994,HospitalC,Beta-lactam
+Aminoglycoside__rmtb,20,0.6060606060606061,4.351602673634818,HospitalA,Aminoglycoside
+Aminoglycoside__aac(6')-i,67,0.3681318681318681,1.2555055315406844,HospitalB,Aminoglycoside
+Aminoglycoside__aph(3'')-i,93,0.75,2.324879706520776,HospitalC,Aminoglycoside
+MLS__maca,23,0.696969696969697,2.354586005535474,HospitalA,MLS
+MLS__ermx,140,0.7692307692307693,6.681729692471054,HospitalB,MLS
+MLS__ermx,93,0.75,1.2750086514834402,HospitalC,MLS
