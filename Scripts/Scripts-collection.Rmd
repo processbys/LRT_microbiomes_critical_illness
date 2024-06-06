@@ -779,18 +779,112 @@ ggboxplot(df_argtypes_collection2, x="SamplingSite", y="beta.lactam",
 
 ```
 
-```{r Fig 2g}
+```{r Fig 2g,h; Fig S3g}
 
+df_combined  <- read.csv(r'(LRT_microbiomes_critical_illness\Data_repository\Main_figures\argsubtypes_pnuemonia_vs_nonpneumonia.csv)')
+df_argtypes  <- df_combined %>%
+  select(-c('Diagnosed.Pneumonia', 'Antibiotic.Use'))
+
+# Get the names of the argtypes
+argtypes <- colnames(df_argtypes)[!(colnames(df_argtypes) %in% c('SampleID', 'SamplingSite'))]
+# Initialize a vector to store the p-values
+p_values <- numeric(length(argtypes))
+# Perform a Wilcoxon test for each argtype
+for (i in seq_along(argtypes)) {
+  pneumonia_group <- df_combined[df_combined$Diagnosed.Pneumonia == 'Yes', argtypes[i]]
+  non_pneumonia_group <- df_combined[df_combined$Diagnosed.Pneumonia == 'No', argtypes[i]]
+  wilcox_test_result <- wilcox.test(pneumonia_group, non_pneumonia_group)
+  # Check if the p-value is less than 0.05 and the median of the pneumonia group is greater than the median of the non-pneumonia group
+  if (wilcox_test_result$p.value < 0.05 && median(pneumonia_group, na.rm = TRUE) > median(non_pneumonia_group, na.rm = TRUE)) {
+    p_values[i] <- wilcox_test_result$p.value
+  } else {
+    p_values[i] <- NA
+  }
+}
+
+# Combine the argtypes and p-values into a data frame
+df_p_values <- data.frame(Argtype = argtypes, P_Value = p_values)
+df_p_values <- na.omit(df_p_values)
+
+### plot based on the p-values for argtypes and argsubtypes
 my_comparisons <- list(c("Yes", "No"))
+
 df_combined$tetracycline__tetA_log10 <- log10(df_combined$tetracycline__tetA)
 ggboxplot(df_combined, x="Diagnosed.Pneumonia", y="tetracycline__tetA_log10",
-          color = "Diagnosed.Pneumonia", 
+          color = "Diagnosed.Pneumonia", #palette =c("#0073C2", "#EFC000","#ffb500"),
+        #   add = "dotplot",add.params = list(binwidth = 0.1, dotsize = 0.03))  +
           add = "jitter",add.params = list(size = 2.4, alpha = 0.8))  +
   geom_boxplot(aes(color=Diagnosed.Pneumonia), lwd = 0.7) +
   scale_x_discrete(labels = c("No" = "No Pneumonia", "Yes" = "Pneumonia")) +
   stat_compare_means(comparisons = my_comparisons,label = "p.label",size=7,
                      vjust=.15,tip.length= c(0,0,0)) + 
   labs(x=NULL,y='Total ARG abundance (log10)',) +  ggtitle('Tetracycline__tetA') +
+  theme_pubr(base_size = 23,legend ='none',x.text.angle = 30) + 
+  ggeasy::easy_center_title() + 
+  scale_color_npg()
+
+
+### ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+my_comparisons <- list(c("Yes", "No"))
+
+df_combined$multidrug__mexB_log10 <- log10(df_combined$multidrug__mexB)
+ggboxplot(df_combined, x="Diagnosed.Pneumonia", y="multidrug__mexB_log10",
+          color = "Diagnosed.Pneumonia", #palette =c("#0073C2", "#EFC000","#ffb500"),
+          #   add = "dotplot",add.params = list(binwidth = 0.1, dotsize = 0.03))  +
+          add = "jitter",add.params = list(size = 2.4, alpha = 0.8))  +
+  geom_boxplot(aes(color=Diagnosed.Pneumonia), lwd = 0.7) +
+  # geom_boxplot(aes(color=Diagnosed.Pneumonia), lwd = 0.7) +
+  scale_x_discrete(labels = c("No" = "No Pneumonia", "Yes" = "Pneumonia")) +
+  #   stat_boxplot(mapping = aes(color=Diagnosed.Pneumonia),geom = "errorbar",width=0.05)  +
+  stat_compare_means(comparisons = my_comparisons,label = "p.label",size=7,
+                     vjust=.15,tip.length= c(0,0,0)) + 
+  #   yscale("log10",.format = T)  +
+  labs(x=NULL,y='Total ARG abundance (log10)',) +  ggtitle('Multidrug__mexB') +
+  # scale_y_continuous(limits=c(-2,2))+
+  theme_pubr(base_size = 23,legend ='none',x.text.angle = 30) + 
+  ggeasy::easy_center_title() + 
+  scale_color_npg()
+
+
+### ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+my_comparisons <- list(c("Yes", "No"))
+
+df_combined$tetracycline__tetB_log10 <- log10(df_combined$tetracycline__tetB)
+ggboxplot(df_combined, x="Diagnosed.Pneumonia", y="tetracycline__tetB_log10",
+          color = "Diagnosed.Pneumonia", #palette =c("#0073C2", "#EFC000","#ffb500"),
+          #   add = "dotplot",add.params = list(binwidth = 0.1, dotsize = 0.03))  +
+          add = "jitter",add.params = list(size = 2.4, alpha = 0.8))  +
+  geom_boxplot(aes(color=Diagnosed.Pneumonia), lwd = 0.7) +
+  # geom_boxplot(aes(color=Diagnosed.Pneumonia), lwd = 0.7) +
+  scale_x_discrete(labels = c("No" = "No Pneumonia", "Yes" = "Pneumonia")) +
+  #   stat_boxplot(mapping = aes(color=Diagnosed.Pneumonia),geom = "errorbar",width=0.05)  +
+  stat_compare_means(comparisons = my_comparisons,label = "p.label",size=7,
+                     vjust=.15,tip.length= c(0,0,0)) + 
+  #   yscale("log10",.format = T)  +
+  labs(x=NULL,y='Total ARG abundance (log10)',) +  ggtitle('Tetracycline__tetB') +
+  # scale_y_continuous(limits=c(-2,2))+
+  theme_pubr(base_size = 23,legend ='none',x.text.angle = 30) + 
+  ggeasy::easy_center_title() + 
+  scale_color_npg()
+
+
+
+### ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+my_comparisons <- list(c("Yes", "No"))
+
+df_combined$aminoglycoside__aph.3...IIb_log10 <- log10(df_combined$aminoglycoside__aph.3...IIb)
+ggboxplot(df_combined, x="Diagnosed.Pneumonia", y="aminoglycoside__aph.3...IIb_log10",
+          color = "Diagnosed.Pneumonia", #palette =c("#0073C2", "#EFC000","#ffb500"),
+          #   add = "dotplot",add.params = list(binwidth = 0.1, dotsize = 0.03))  +
+          add = "jitter",add.params = list(size = 2.4, alpha = 0.8))  +
+  geom_boxplot(aes(color=Diagnosed.Pneumonia), lwd = 0.7) +
+  # geom_boxplot(aes(color=Diagnosed.Pneumonia), lwd = 0.7) +
+  scale_x_discrete(labels = c("No" = "No Pneumonia", "Yes" = "Pneumonia")) +
+  #   stat_boxplot(mapping = aes(color=Diagnosed.Pneumonia),geom = "errorbar",width=0.05)  +
+  stat_compare_means(comparisons = my_comparisons,label = "p.label",size=7,
+                     vjust=.15,tip.length= c(0,0,0)) + 
+  #   yscale("log10",.format = T)  +
+  labs(x=NULL,y='Total ARG abundance (log10)',) +  ggtitle('Aminoglycoside__aph.3...IIb') +
   # scale_y_continuous(limits=c(-2,2))+
   theme_pubr(base_size = 23,legend ='none',x.text.angle = 30) + 
   ggeasy::easy_center_title() + 
@@ -798,36 +892,105 @@ ggboxplot(df_combined, x="Diagnosed.Pneumonia", y="tetracycline__tetA_log10",
 
 ```
 
-```{r Fig 2h}
+```{r Fig 2i,j; Fig S3h}
 
-my_comparisons <- list(c("Yes", "No"))
+df_target_argsubtype_icu_day  <- read.csv(r'(LRT_microbiomes_critical_illness\Data_repository\Main_figures\argsubtype-pneumonia-icu_day.csv)')
+df_target_argsubtype_icu_day$multidrug__mexE_log10 <- log10(df_target_argsubtype_icu_day$multidrug__mexE)
+df_target_argsubtype_icu_day$multidrug__smeB_log10 <- log10(df_target_argsubtype_icu_day$multidrug__smeB)
+df_target_argsubtype_icu_day$aminoglycoside__aph.3...IIb_log10 <- log10(df_target_argsubtype_icu_day$aminoglycoside__aph.3...IIb)
+df_target_argsubtype_icu_day$multidrug__smeC_log10 <- log10(df_target_argsubtype_icu_day$multidrug__smeC)
 
-df_combined$multidrug__mexB_log10 <- log10(df_combined$multidrug__mexB)
-ggboxplot(df_combined, x="Diagnosed.Pneumonia", y="multidrug__mexB_log10",
-          color = "Diagnosed.Pneumonia", 
+
+### Box plot for each argsubtype
+my_comparisons <- list(c("[0,7]", ">28"), c("(7,14]", ">28"), c( "(14,21]",">28"), c("(21,28]", ">28"))
+# my_comparisons <- list(c("(7,14]","[0,7]"), c("(14,21]","[0,7]"), c( "(21,28]","[0,7]"), c(">28","[0,7]"))
+df_target_argsubtype_icu_day$Sample.Day_ICU_fac2 <- factor(df_target_argsubtype_icu_day$Sample.Day_ICU_fac2, levels = c("[0,7]", "(7,14]", "(14,21]", "(21,28]", ">28"))
+
+
+ggboxplot(df_target_argsubtype_icu_day, x="Sample.Day_ICU_fac2", y="multidrug__mexE_log10",
+          color = "Sample.Day_ICU_fac2", #palette =c("#0073C2", "#EFC000","#ffb500"),
+        #   add = "dotplot",add.params = list(binwidth = 0.1, dotsize = 0.03))  +
           add = "jitter",add.params = list(size = 2.4, alpha = 0.8))  +
-  geom_boxplot(aes(color=Diagnosed.Pneumonia), lwd = 0.7) +
-  scale_x_discrete(labels = c("No" = "No Pneumonia", "Yes" = "Pneumonia")) +
+  geom_boxplot(aes(color=Sample.Day_ICU_fac2), lwd = 0.7) +
+  # geom_boxplot(aes(color=Sample.Day_ICU_fac2), lwd = 0.7) +
+  # scale_x_discrete(labels = c("No" = "No Pneumonia", "Yes" = "Pneumonia")) +
+#   stat_boxplot(mapping = aes(color=Diagnosed.Pneumonia),geom = "errorbar",width=0.05)  +
   stat_compare_means(comparisons = my_comparisons,label = "p.label",size=7,
                      vjust=.15,tip.length= c(0,0,0)) + 
-  labs(x=NULL,y='Total ARG abundance (log10)',) +  ggtitle('Multidrug__mexB') +
-  theme_pubr(base_size = 23,legend ='none',x.text.angle = 30) + 
+#   yscale("log10",.format = T)  +
+  labs(x='Days in the ICU',y='Total ARG abundance (log10)',) +  ggtitle('Multidrug__mexE') +
+  # scale_y_continuous(limits=c(-2,2))+
+  theme_pubr(base_size = 23,legend ='none',x.text.angle = 50) + 
   ggeasy::easy_center_title() + 
   scale_color_npg()
 
+#---------------------------------------------------------------------------------------
+
+ggboxplot(df_target_argsubtype_icu_day, x="Sample.Day_ICU_fac2", y="multidrug__smeB_log10",
+          color = "Sample.Day_ICU_fac2", #palette =c("#0073C2", "#EFC000","#ffb500"),
+        #   add = "dotplot",add.params = list(binwidth = 0.1, dotsize = 0.03))  +
+          add = "jitter",add.params = list(size = 2.4, alpha = 0.8))  +
+  geom_boxplot(aes(color=Sample.Day_ICU_fac2), lwd = 0.7) +
+  # geom_boxplot(aes(color=Sample.Day_ICU_fac2), lwd = 0.7) +
+  # scale_x_discrete(labels = c("No" = "No Pneumonia", "Yes" = "Pneumonia")) +
+#   stat_boxplot(mapping = aes(color=Diagnosed.Pneumonia),geom = "errorbar",width=0.05)  +
+  stat_compare_means(comparisons = my_comparisons,label = "p.label",size=7,
+                     vjust=.15,tip.length= c(0,0,0)) + 
+#   yscale("log10",.format = T)  +
+  labs(x='Days in the ICU',y='Total ARG abundance (log10)',) +  ggtitle('Multidrug__smeB') +
+  # scale_y_continuous(limits=c(-2,2))+
+  theme_pubr(base_size = 23,legend ='none',x.text.angle = 50) + 
+  ggeasy::easy_center_title() + 
+  scale_color_npg()
+
+
+#---------------------------------------------------------------------------------------
+
+ggboxplot(df_target_argsubtype_icu_day, x="Sample.Day_ICU_fac2", y="aminoglycoside__aph.3...IIb_log10",
+          color = "Sample.Day_ICU_fac2", #palette =c("#0073C2", "#EFC000","#ffb500"),
+        #   add = "dotplot",add.params = list(binwidth = 0.1, dotsize = 0.03))  +
+          add = "jitter",add.params = list(size = 2.4, alpha = 0.8))  +
+  geom_boxplot(aes(color=Sample.Day_ICU_fac2), lwd = 0.7) +
+  # geom_boxplot(aes(color=Sample.Day_ICU_fac2), lwd = 0.7) +
+  # scale_x_discrete(labels = c("No" = "No Pneumonia", "Yes" = "Pneumonia")) +
+#   stat_boxplot(mapping = aes(color=Diagnosed.Pneumonia),geom = "errorbar",width=0.05)  +
+  stat_compare_means(comparisons = my_comparisons,label = "p.label",size=7,
+                     vjust=.15,tip.length= c(0,0,0)) + 
+#   yscale("log10",.format = T)  +
+  labs(x='Days in the ICU',y='Total ARG abundance (log10)',) +  ggtitle('Aminoglycoside__aph.3...IIb') +
+  # scale_y_continuous(limits=c(-2,2))+
+  theme_pubr(base_size = 23,legend ='none',x.text.angle = 50) + 
+  ggeasy::easy_center_title() + 
+  scale_color_npg()
+
+#---------------------------------------------------------------------------------------
+
+ggboxplot(df_target_argsubtype_icu_day, x="Sample.Day_ICU_fac2", y="multidrug__smeC_log10",
+          color = "Sample.Day_ICU_fac2", #palette =c("#0073C2", "#EFC000","#ffb500"),
+        #   add = "dotplot",add.params = list(binwidth = 0.1, dotsize = 0.03))  +
+          add = "jitter",add.params = list(size = 2.4, alpha = 0.8))  +
+  geom_boxplot(aes(color=Sample.Day_ICU_fac2), lwd = 0.7) +
+  # geom_boxplot(aes(color=Sample.Day_ICU_fac2), lwd = 0.7) +
+  # scale_x_discrete(labels = c("No" = "No Pneumonia", "Yes" = "Pneumonia")) +
+#   stat_boxplot(mapping = aes(color=Diagnosed.Pneumonia),geom = "errorbar",width=0.05)  +
+  stat_compare_means(comparisons = my_comparisons,label = "p.label",size=7,
+                     vjust=.15,tip.length= c(0,0,0)) + 
+#   yscale("log10",.format = T)  +
+  labs(x='Days in the ICU',y='Total ARG abundance (log10)',) +  ggtitle('Multidrug__smeC') +
+  # scale_y_continuous(limits=c(-2,2))+
+  theme_pubr(base_size = 23,legend ='none',x.text.angle = 50) + 
+  ggeasy::easy_center_title() + 
+  scale_color_npg()
+
+
 ```
+### Figure S2
+### --------------------------------------------------------------------------------------------------------------------------------------------
 
-```{r Fig 2i}
-
-```
-
-```{r Fig 2j}
-
-```
 
 ```{r Fig S2a}
 
-df_species_selected <- read.csv(r'(LRT_microbiomes_critical_illness\Data_repository\Supplementary_figures\MDS_metrics-bray+species_abundance-species_pneumonia.csv)')
+df_species_selected <- read.csv(r'(LRT_microbiomes_critical_illness\Data_repository\Main_figures\MDS_metrics-bray+species_abundance-species_pneumonia.csv)') # save in the same file 'MDS_metrics-bray-species_profiles_pneumonia.txt'
 df_species_selected$SamplingSite  <- str_replace_all(df_species_selected$SamplingSite, "-", "")
 df_species_selected$variable <- str_split(df_species_selected$variable, "__", simplify = TRUE)[,2]
 df_species_selected$variable  <- str_replace_all(df_species_selected$variable, "_", " ")
@@ -866,7 +1029,7 @@ plot_top_pathabundance <- Heatmap(matrix_top_abundance_log,show_column_names = T
 
 ```{r Fig S2c}
 
-df_tempral_dyanmics_group_new_criteria <- read.csv(r'(LRT_microbiomes_critical_illness\Data_repository\Supplementary_figures\OI+WBC+Neutrophils-temporal_dynamics_groups.csv)')
+df_tempral_dyanmics_group_new_criteria <- read.csv(r'(LRT_microbiomes_critical_illness\Data_repository\Supplementary_figures\OI+Neutrophils-temporal_dynamics_groups.csv)')
 df_tempral_dyanmics_group_new_criteria$Group <- factor(df_tempral_dyanmics_group_new_criteria$Group,levels =c('multiple','stable') )
 df_tempral_dyanmics_groups_no_na <- na.omit(df_tempral_dyanmics_groups)
 my_comparisons <- list(c('multiple','stable'))
@@ -894,6 +1057,9 @@ ggboxplot(df_tempral_dyanmics_group_new_criteria_neutrophil, x="Group", y="The.P
   theme_pubr(base_size = 21,legend ='none',x.text.angle = 30)
 
 ```
+
+### Figure 3
+### --------------------------------------------------------------------------------------------------------------------------------------------
 
 ```{r Fig 3a}
 
