@@ -1063,7 +1063,7 @@ ggboxplot(df_tempral_dyanmics_group_new_criteria_neutrophil, x="Group", y="The.P
 
 ```{r Fig 3a}
 
-df_arg_num = read.csv(r"(LRT_microbiomes_critical_illness\Data_repository\Main_figures\RGI_profile-comparisons_arg_number.csv)")
+df_arg_num = read.csv(r"(LRT_microbiomes_critical_illness\Data_repository\Main_figures\RGI_profile-comparisons_arg_number.csv)") # save in the same file 'RGI+VF_profile-comparisons_number.txt'
 df_arg_num$species <- factor(df_arg_num$species,levels = c('pseudomonas','acinetobacter','klebsiella','corynebacterium','stenotrophomonas'))
 my_comparisons <- list(c('pseudomonas','stenotrophomonas'),c('pseudomonas','corynebacterium'),
                        c('acinetobacter','stenotrophomonas'),c('acinetobacter','corynebacterium'),
@@ -1089,43 +1089,143 @@ ggboxplot(df_arg_num, x="species", y="arg_num_normalized",
 ```
 
 ```{r Fig 3b}
-df_meta_argname <- read.csv(r'(LRT_microbiomes_critical_illness\Data_repository\Main_figures\RGI_profile-species_all-metadata-arg_acronym.csv)')
 
-dend_species_all <- ReadDendrogram(r"(LRT_microbiomes_critical_illness\Data_repository\Main_figures\inputfiles.tre-test.nwk)")
-tree_species_all <- read.tree(r"(LRT_microbiomes_critical_illness\Data_repository\Main_figures\inputfiles.tre.nwk)")
+
+df_rgi_species_all <- read.csv(r'(LRT_microbiomes_critical_illness\Data_repository\Main_figures\RGI_profile_species_all.csv)') # save in the same file 'RGI_profile_species_all.txt'
+row.names(df_rgi_species_all) <- df_rgi_species_all$filename
+matrix_rgi_species_all <- as.matrix(df_rgi_species_all[,-1])
+df_metadata_species_all <- read.csv(r'(LRT_microbiomes_critical_illness\Data_repository\Main_figures\RGI_profile_species_all_metadata.csv)') # save in the same file 'RGI_profile_species_all.txt'
+labels_annotation_col <- data.frame(species=df_metadata_species_all$species)
+# colnames(labels_annotation_col) <- c('species')
+row.names(labels_annotation_col) <- df_metadata_species_all$filename
+
+labels_annotation_samplingsite <- data.frame(species=df_metadata_species_all$SamplingSite)
+row.names(labels_annotation_samplingsite) <- df_metadata_species_all$filename
+
+tree_species_all <- read.tree(r"(LRT_microbiomes_critical_illness\Data_repository\Main_figures\RGI_profile_species_all.tre.nwk)") # save in the same file 'RGI_profile_species_all.txt'
 order_row <- data.frame(species=tree_species_all$tip.label)
-
-
-plot_heatmap_species_all <- Heatmap(t(matrix_rgi_species_all),
-                                    #breaks = c(0,1,3),
-                                    col = c('#ffffff','#ff0000'),
-                                    # col = c('#f7faff','#08306b'),
-                                    left_annotation  = rowAnnotation(df=labels_annotation_col,
-                                                                     col=list(species=c(corynebacterium="#e36255", stenotrophomonas="#ec9a86",
-                                                                                        pseudomonas="#a2c5c9", klebsiella="#f3c262", 
-                                                                                        acinetobacter="#f1e0ce"))),
-                                    #                                     col = list(category=c(core='#16519f',accessory='#f07e74'))),
-                                    # row_split = factor(labels_annotation_col[,1],levels = c("corynebacterium",'stenotrophomonas','klebsiella','pseudomonas',"acinetobacter")),
-                                    # row_split = c(30,9,12,13,27),
-                                    #border_color = NA,
-                                    # cluster_rows =as.dendrogram(dendrogram),
-                                    # cluster_rows = F,
-                                    cluster_columns =T,
-                                    # cluster_rows = F,cluster_columns =T,
-                                    show_column_dend = F,show_row_dend = T,rect_gp = gpar(col= "grey"),
-                                    show_column_names = T,show_row_names = T,
-                                    row_order = order_row$species)
+order_row <- na.omit(order_row)
+#horizontal version
+plot_horizontal <- Heatmap(matrix_rgi_species_all,
+        #breaks = c(0,1,3),
+        col = c('#ffffff','#ff0000'),
+        left_annotation   = rowAnnotation(df=labels_annotation_col,
+                                         col=list(species=c(corynebacterium="#e36255", stenotrophomonas="#ec9a86",
+                                                            pseudomonas="#a2c5c9", klebsiella="#f3c262", 
+                                                            acinetobacter="#f1e0ce")),
+                                         show_annotation_name = F,show_legend=F),
+        right_annotation = rowAnnotation(df=labels_annotation_samplingsite,
+                                         col=list(species=c(HospitalA="#32A251", HospitalB="#008FD5",
+                                                            HospitalC="#FC7D0B")),
+                                         show_annotation_name = F,show_legend=F),
+        cluster_columns =T,
+        cluster_rows =F,
+        show_column_dend = F,show_row_dend = F,#rect_gp = gpar(col= "#B9B9B9",lwd=0.02),
+        show_column_names =F,show_row_names =F,
+        show_heatmap_legend = F,
+        column_names_gp = grid::gpar(fontsize=3),
+        row_order = order_row$species )
 
 ```
 
 ```{r Fig 3c}
+
+###plot RGI profile for acinetobacter
+df_rgi_profile_acinetobacter = read.csv(r"(LRT_microbiomes_critical_illness\Data_repository\Main_figures\RGI_profile-PCoA_acinetobacter.csv)", header= TRUE) # save in the same file 'RGI_profile-PCoA_combined.txt'
+abundance_acinetobacter = df_rgi_profile_acinetobacter[,2:(ncol(df_rgi_profile_acinetobacter)-2)]
+m_abundance_acinetobacter = as.matrix(abundance_acinetobacter)
+
+
+diss_acinetobacter <- vegdist(m_abundance_acinetobacter, method = "bray")
+pcoa_acinetobacter <- cmdscale(diss_acinetobacter, eig = TRUE, k = 2) 
+
+data_scores_acinetobacter = as.data.frame(pcoa_acinetobacter$points)
+names(data_scores_acinetobacter) <- c("PCoA1", "PCoA2")
+k_acinetobacter <- 4 
+kmeans_result_acinetobacter <- kmeans(as.data.frame(pcoa_acinetobacter$points), centers = k_acinetobacter)
+
+data_scores_acinetobacter$cluster = kmeans_result_acinetobacter$cluster
+data_scores_acinetobacter$cluster <- factor(data_scores_acinetobacter$cluster)
+
+p_scatter_acinetobacter <- ggscatter(data_scores_acinetobacter,
+                                     x = "PCoA1", 
+                                     y = "PCoA2",
+                                     color = 'cluster',
+                                     palette = c("#7f59af", "#e64833", "#63c5ea", "#3e5386"),
+                                     #shape = "SamplingSite",
+                                     size=5,
+                                     ggtheme = theme_pubr(border = T,base_size = 45),
+                                     legend = 'none',
+                                     ellipse = T,ellipse.level = 0.90)  + ggtitle('A. baumannii') +
+  ggeasy::easy_center_title() + theme(plot.title = element_text(face = "italic",size = 45))
+
+###-----------------------------------------------------------------------------------------------------------------------------------------
+
+###plot RGI profile for corynebacterium
+df_rgi_profile_corynebacterium = read.csv(r"(LRT_microbiomes_critical_illness\Data_repository\Main_figures\RGI_profile-PCoA_corynebacterium.csv)", header= TRUE) # save in the same file 'RGI_profile-PCoA_combined.txt'
+abundance_corynebacterium = df_rgi_profile_corynebacterium[,2:(ncol(df_rgi_profile_corynebacterium)-2)]
+m_abundance_corynebacterium = as.matrix(abundance_corynebacterium)
+
+diss_corynebacterium <- vegdist(m_abundance_corynebacterium, method = "bray")
+pcoa_corynebacterium <- cmdscale(diss_corynebacterium, eig = TRUE, k = 2) 
+
+data_scores_corynebacterium = as.data.frame(pcoa_corynebacterium$points)
+names(data_scores_corynebacterium) <- c("PCoA1", "PCoA2")
+k_corynebacterium <- 3  
+kmeans_result_corynebacterium <- kmeans(as.data.frame(pcoa_corynebacterium$points), centers = k_corynebacterium)
+
+data_scores_corynebacterium$cluster = kmeans_result_corynebacterium$cluster
+data_scores_corynebacterium$cluster <- factor(data_scores_corynebacterium$cluster)
+
+p_scatter_corynebacterium <- ggscatter(data_scores_corynebacterium,
+                                       x = "PCoA1", 
+                                       y = "PCoA2",
+                                       color = 'cluster',
+                                       palette = c("#7f59af", "#e64833", "#63c5ea", "#3e5386"),
+                                       #shape = "SamplingSite",
+                                       size=5,
+                                       ggtheme = theme_pubr(border = T,base_size = 45),
+                                       legend = 'none',
+                                       ellipse = T,ellipse.level = 0.90)  + ggtitle('C. striatum') +
+  ggeasy::easy_center_title() + theme(plot.title = element_text(face = "italic",size = 45))
+
+###-----------------------------------------------------------------------------------------------------------------------------------------
+
+###plot RGI profile for klebsiella
+df_rgi_profile_klebsiella = read.csv(r"(LRT_microbiomes_critical_illness\Data_repository\Main_figures\RGI_profile-PCoA_klebsiella.csv)", header= TRUE) # save in the same file 'RGI_profile-PCoA_combined.txt'
+abundance_klebsiella = df_rgi_profile_klebsiella[,2:(ncol(df_rgi_profile_klebsiella)-2)]
+m_abundance_klebsiella = as.matrix(abundance_klebsiella)
+
+diss_klebsiella <- vegdist(m_abundance_klebsiella, method = "bray")
+pcoa_klebsiella <- cmdscale(diss_klebsiella, eig = TRUE, k = 2) 
+
+data_scores_klebsiella = as.data.frame(pcoa_klebsiella$points)
+names(data_scores_klebsiella) <- c("PCoA1", "PCoA2")
+kmeans_result_klebsiella <- kmeans(as.data.frame(pcoa_klebsiella$points), centers = k_klebsiella)
+data_scores_klebsiella$cluster = kmeans_result_klebsiella$cluster
+data_scores_klebsiella$cluster <- factor(data_scores_klebsiella$cluster)
+
+p_scatter_klebsiella <- ggscatter(data_scores_klebsiella,
+                                  x = "PCoA1", 
+                                  y = "PCoA2",
+                                  color = 'cluster',
+                                  palette = c("#7f59af", "#e64833", "#63c5ea", "#3e5386"),
+                                  #shape = "SamplingSite",
+                                  size=5,
+                                  ggtheme = theme_pubr(border = T,base_size = 45),
+                                  legend = 'none',
+                                  ellipse = T,ellipse.level = 0.90)  + ggtitle('K. pneumoniae') +
+  ggeasy::easy_center_title() + theme(plot.title = element_text(face = "italic",size = 45))
+
+(p_scatter_acinetobacter)/(p_scatter_corynebacterium)/(p_scatter_klebsiella)
+
 
 ```
 
 ```{r Fig 3d}
 
 
-df_vf_num = read.csv(r"(LRT_microbiomes_critical_illness\Data_repository\Main_figures\vfdb_profile-species_all-vf_num.csv)")
+df_vf_num = read.csv(r"(LRT_microbiomes_critical_illness\Data_repository\Main_figures\vfdb_profile-species_all-vf_num.csv)")  # save in the same file 'RGI+VF_profile-comparisons_number.txt'
 df_vf_num$species <- factor(df_vf_num$species,levels = c('pseudomonas','acinetobacter','klebsiella','corynebacterium','stenotrophomonas'))
 my_comparisons <- list(c('pseudomonas','stenotrophomonas'),c('pseudomonas','corynebacterium'),
                        c('acinetobacter','stenotrophomonas'),c('acinetobacter','corynebacterium'),
@@ -1151,11 +1251,133 @@ ggboxplot(df_vf_num, x="species", y="vf_num_normalized",
 
 ```{r Fig 3e}
 
+df_vf_species_all <- read.csv(r'(LRT_microbiomes_critical_illness\Data_repository\Main_figures\vfdb_profile-species_all-VFG.csv)')  # save in the same file 'vf_profile_species_all.txt'
+row.names(df_vf_species_all) <- df_vf_species_all$X.FILE
+df_vf_species_all[df_vf_species_all>0] =1
+matrix_vf_species_all <- as.matrix(df_vf_species_all[,-c(1,2)])
+df_metadata_species_all <- read.csv(r'(LRT_microbiomes_critical_illness\Data_repository\Main_figures\RGI_profile_species_all_metadata.csv)')  # save in the same file 'vf_profile_species_all.txt'
+labels_annotation_col <- data.frame(species=df_metadata_species_all$species)
+row.names(labels_annotation_col) <- df_metadata_species_all$filename
+
+labels_annotation_samplingsite <- data.frame(species=df_metadata_species_all$SamplingSite)
+row.names(labels_annotation_samplingsite) <- df_metadata_species_all$filename
+
+tree_species_all <- read.tree(r"(LRT_microbiomes_critical_illness\Data_repository\Main_figures\vfdb_profile-species_all.tre.nwk)")  # save in the same file 'vf_profile_species_all.txtt'
+order_row <- data.frame(species=tree_species_all$tip.label)
+
+plot_heatmap_species_all <- Heatmap(matrix_vf_species_all,
+                                    #breaks = c(0,1,3),
+                                    col = c('#ffffff','#ff0000'),
+                                    # col = c('#f7faff','#08306b'),
+                                    left_annotation  = rowAnnotation(df=labels_annotation_col,
+                                                                     col=list(species=c(corynebacterium="#e36255", stenotrophomonas="#ec9a86",
+                                                                                        pseudomonas="#a2c5c9", klebsiella="#f3c262",
+                                                                                        acinetobacter="#f1e0ce")),show_legend=F),
+                                    right_annotation = rowAnnotation(df=labels_annotation_samplingsite,
+                                                                         col=list(species=c(HospitalA="#32A251", HospitalB="#008FD5",
+                                                                                            HospitalC="#FC7D0B")),
+                                                                         show_annotation_name = T,show_legend=F),
+                                    cluster_rows =T,cluster_columns =F,
+                                    show_column_dend = F,show_row_dend =F,#rect_gp = gpar(col= "#B9B9B9",lwd=0.000001),
+                                    show_column_names = F,show_row_names = F,
+                                    show_heatmap_legend = F,
+                                    row_order = order_row$species)
+
 ```
 
 ```{r Fig 3f}
 
+###plot vfdb profile for acinetobacter
+df_vfdb_profile_acinetobacter = read.csv(r"(LRT_microbiomes_critical_illness\Data_repository\Main_figures\vfdb_profile-PCoA_acinetobacter.csv)", header= TRUE) # save in the same file 'vf_profile-PCoA_combined.txt'
+abundance_acinetobacter = df_vfdb_profile_acinetobacter[,2:(ncol(df_vfdb_profile_acinetobacter)-2)]
+m_abundance_acinetobacter = as.matrix(abundance_acinetobacter)
+
+
+diss_acinetobacter <- vegdist(m_abundance_acinetobacter, method = "bray")
+pcoa_acinetobacter <- cmdscale(diss_acinetobacter, eig = TRUE, k = 2) 
+data_scores_acinetobacter = as.data.frame(pcoa_acinetobacter$points)
+names(data_scores_acinetobacter) <- c("PCoA1", "PCoA2")
+k_acinetobacter <- 5  
+kmeans_result_acinetobacter <- kmeans(as.data.frame(pcoa_acinetobacter$points), centers = k_acinetobacter)
+data_scores_acinetobacter$cluster = kmeans_result_acinetobacter$cluster
+data_scores_acinetobacter$cluster <- factor(data_scores_acinetobacter$cluster)
+
+p_scatter_acinetobacter <- ggscatter(data_scores_acinetobacter,
+                                     x = "PCoA1", 
+                                     y = "PCoA2",
+                                     color = 'cluster',
+                                     palette = c("#7f59af", "#e64833", "#63c5ea", "#3e5386",'#f6cbcb'),
+                                     #shape = "SamplingSite",
+                                     size=5,
+                                     ggtheme = theme_pubr(border = T,base_size = 45),
+                                     legend = 'none',
+                                     ellipse = T,ellipse.level = 0.90)  + ggtitle('A. baumannii') +
+  ggeasy::easy_center_title() + theme(plot.title = element_text(face = "italic",size = 45))
+
+
+
+###-----------------------------------------------------------------------------------------------------------------------------------------
+
+###plot vfdb profile for klebsiella
+df_vfdb_profile_klebsiella = read.csv(r"(LRT_microbiomes_critical_illness\Data_repository\Main_figures\vfdb_profile-PCoA_klebsiella.csv)", header= TRUE) # save in the same file 'vf_profile-PCoA_combined.txt'
+abundance_klebsiella = df_vfdb_profile_klebsiella[,2:(ncol(df_vfdb_profile_klebsiella)-2)]
+m_abundance_klebsiella = as.matrix(abundance_klebsiella)
+diss_klebsiella <- vegdist(m_abundance_klebsiella, method = "bray")
+pcoa_klebsiella <- cmdscale(diss_klebsiella, eig = TRUE, k = 2) 
+data_scores_klebsiella = as.data.frame(pcoa_klebsiella$points)
+names(data_scores_klebsiella) <- c("PCoA1", "PCoA2")
+k_klebsiella <- 3  
+kmeans_result_klebsiella <- kmeans(as.data.frame(pcoa_klebsiella$points), centers = k_klebsiella)
+data_scores_klebsiella$cluster = kmeans_result_klebsiella$cluster
+data_scores_klebsiella$cluster <- factor(data_scores_klebsiella$cluster)
+
+p_scatter_klebsiella <- ggscatter(data_scores_klebsiella,
+                                  x = "PCoA1", 
+                                  y = "PCoA2",
+                                  color = 'cluster',
+                                  palette = c("#7f59af", "#e64833", "#63c5ea", "#3e5386"),
+                                  #shape = "SamplingSite",
+                                  size=5,
+                                  ggtheme = theme_pubr(border = T,base_size = 45),
+                                  legend = 'none',
+                                  ellipse = T,ellipse.level = 0.90)  + ggtitle('K. pneumoniae') +
+  ggeasy::easy_center_title() + theme(plot.title = element_text(face = "italic",size = 45))
+
+
+###-----------------------------------------------------------------------------------------------------------------------------------------
+
+###plot vfdb profile for pseudomonas
+df_vfdb_profile_pseudomonas = read.csv(r"(LRT_microbiomes_critical_illness\Data_repository\Main_figures\vfdb_profile-PCoA_pseudomonas.csv)", header= TRUE) # save in the same file 'vf_profile-PCoA_combined.txt'
+abundance_pseudomonas = df_vfdb_profile_pseudomonas[,2:(ncol(df_vfdb_profile_pseudomonas)-2)]
+m_abundance_pseudomonas = as.matrix(abundance_pseudomonas)
+diss_pseudomonas <- vegdist(m_abundance_pseudomonas, method = "bray")
+pcoa_pseudomonas <- cmdscale(diss_pseudomonas, eig = TRUE, k = 2) 
+data_scores_pseudomonas = as.data.frame(pcoa_pseudomonas$points)
+names(data_scores_pseudomonas) <- c("PCoA1", "PCoA2")
+k_pseudomonas <- 3 
+kmeans_result_pseudomonas <- kmeans(as.data.frame(pcoa_pseudomonas$points), centers = k_pseudomonas)
+data_scores_pseudomonas$cluster = kmeans_result_pseudomonas$cluster
+data_scores_pseudomonas$cluster <- factor(data_scores_pseudomonas$cluster)
+
+p_scatter_pseudomonas <- ggscatter(data_scores_pseudomonas,
+                                   x = "PCoA1", 
+                                   y = "PCoA2",
+                                   color = 'cluster',
+                                   palette = c("#7f59af", "#e64833", "#63c5ea", "#3e5386"),
+                                   #shape = "SamplingSite",
+                                   size=5,
+                                   ggtheme = theme_pubr(border = T,base_size = 45),
+                                   legend = 'none',
+                                   ellipse = T,ellipse.level = 0.90)  + ggtitle('P. aeruginosa') +
+  ggeasy::easy_center_title() + theme(plot.title = element_text(face = "italic",size = 45))
+
+(p_scatter_acinetobacter)/(p_scatter_klebsiella)/(p_scatter_pseudomonas)
+
+
 ```
+
+### Figure S3
+### --------------------------------------------------------------------------------------------------------------------------------------------
 
 ```{r Fig S3a}
 
@@ -1176,7 +1398,7 @@ ggbarplot(df_argsubtype_top3,
 
 ```{r Fig S3b}
 
-df_argtypes_collection <- read.csv(r"(LRT_microbiomes_critical_illness\Data_repository\Supplementary_figures\argtypes-collection_all_sites.csv)")
+df_argtypes_collection <- read.csv(r"(LRT_microbiomes_critical_illness\Data_repository\Main_figures\argtypes-collection_all_sites-pneumonia_patients.csv)")
 df_argtypes_collection2 <- arrange(df_argtypes_collection,SamplingSite)
 my_comparisons <- list( c("HospitalA", "HospitalB"), c("HospitalA", "HospitalC"), c("HospitalB", "HospitalC") )
 
@@ -1290,7 +1512,7 @@ ggpar(plot_splsda,
 
 ```{r Fig S3e}
 
-df_loading1 <- read.csv(r'(LRT_microbiomes_critical_illness\Data_repository\Supplementary_figures\PLS-DA_arg_subtypes-all_sites-loadings-comp1.csv)',header = TRUE)
+df_loading1 <- read.csv(r'(LRT_microbiomes_critical_illness\Data_repository\Supplementary_figures\PLS-DA_arg_subtypes-all_sites-loadings-comp1.csv)',header = TRUE) # save in the same file 'PLS-DA_arg_subtypes-all_sites-loadings.txt'
 plot_loading1 <- ggbarplot(df_loading1[1:6,],x = "X", y = "value.var",orientation = "horiz",
           fill = "#e6a024", color = "#e6a024",sort.val = 'desc',ggtheme = theme_bw(base_size = 19)) + labs(title = 'Component-1') +
   theme(plot.title = element_text(hjust = 0.5),
@@ -1301,7 +1523,7 @@ plot_loading1 <- ggpar(plot_loading1,
       orientation = 'reverse')  #+ theme_pubr(base_size = 32,legend = "right",margin = FALSE)
 
 #plot loadings on component-2
-df_loading2 <- read.csv(r'(LRT_microbiomes_critical_illness\Data_repository\Supplementary_figures\PLS-DA_arg_subtypes-all_sites-loadings-comp2.csv)',header = TRUE)
+df_loading2 <- read.csv(r'(LRT_microbiomes_critical_illness\Data_repository\Supplementary_figures\PLS-DA_arg_subtypes-all_sites-loadings-comp2.csv)',header = TRUE) # save in the same file 'PLS-DA_arg_subtypes-all_sites-loadings.txt'
 df_loading2 <- df_loading2 %>%
   mutate(X=str_replace(X,'_chloramphenicol acetyltransferase',''),
          X=str_replace(X,'_\\(ramA_or_sud2\\)',''))
@@ -1386,11 +1608,11 @@ circos.track(track.index = 1,
 ```
 
 ```{r Fig S3g}
-
+### code was provided in Fig 2g,h
 ```
 
 ```{r Fig S3h}
-
+### code was provided in Fig 2i,j
 ```
 
 ```{r Fig S3f}
