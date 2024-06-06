@@ -1,0 +1,364 @@
+mge_no	name	synonyms	type	allele_len	depth	e_value	identity	coverage	gaps	substitution	contig	start	end	cigar	species	stop
+1	ISAba24		insertion sequence	2421		0	1	1	0	0	k141_28672	315	2735	M2421	acinetobacter	
+2	ISEc29		insertion sequence	1325		0	1	1	0	0	k141_29187	2459	3783	M1325	acinetobacter	
+3	ISAba26		insertion sequence	1318		0	0.996	1	0	5	k141_8909	9723	11040	M1318	acinetobacter	
+4	ISVsa3	ISVs3	insertion sequence	977		0	1	1	0	0	k141_27504	2872	3848	M977	acinetobacter	
+3	ISAba26		insertion sequence	1318		0	0.996	1	0	5	k141_28030	9679	10996	M1318	acinetobacter	
+2	ISEc29		insertion sequence	1325		0	1	1	0	0	k141_9183	8182	9506	M1325	acinetobacter	
+1	Tn6022	AbaR4	unit transposon	11576		0	1	0.96	0	1	k141_16991	166	11741	M5506 N56 M6014	acinetobacter	
+3	ISAba1		insertion sequence	1180		0	0.999	1	0	1	k141_53241	108	1287	M1180	acinetobacter	
+4	ISVsa3	ISVs3	insertion sequence	977		0	1	1	0	0	k141_240746	7091	8067	M977	acinetobacter	
+5	ISAba22		insertion sequence	1274		0	1	0.951	0	0	k141_91096	1	1274	M942 N62 M270	acinetobacter	
+6	ISAba24		insertion sequence	2421		0	1	1	0	0	k141_156735	9637	12057	M2421	acinetobacter	
+7	ISEc29		insertion sequence	1325		0	1	1	0	0	k141_156735	4930	6254	M1325	acinetobacter	
+8	ISEc28		insertion sequence	897		0	0.999	1	0	1	k141_156735	2381	3277	M897	acinetobacter	
+9	IS17		insertion sequence	1047		0	0.931	0.989	11	61	k141_51465	23283	24329	M59 I1 M251 I1 M11 D2 M5 D2 M1 D2 M1 D1 M1 D2 M709	acinetobacter	
+11	ISAba26		insertion sequence	1313		0	0.996	0.996	0	5	k141_88775	1	1313	M1313	acinetobacter	
+1	ISAba1		insertion sequence	1180		0	0.999	1	0	1	k141_22058	23858	25037	M1180	acinetobacter	
+2	ISAba26		insertion sequence	1318		0	0.996	1	0	5	k141_33240	602	1919	M1318	acinetobacter	
+3	ISVsa3	ISVs3	insertion sequence	977		0	1	1	0	0	k141_71088	7078	8054	M977	acinetobacter	
+4	ISEc29		insertion sequence	1325		0	1	1	0	0	k141_27844	4845	6169	M1325	acinetobacter	
+5	ISEc28		insertion sequence	897		0	0.999	1	0	1	k141_27844	2296	3192	M897	acinetobacter	
+6	IS17		insertion sequence	1047		0	0.931	0.989	11	61	k141_79300	3902	4948	M709 D2 M1 D1 M1 D2 M1 D2 M5 D2 M11 I1 M251 I1 M59	acinetobacter	
+2_1	cn_7354_ISAba1		composite transposon	7354		0	0.999	1	0	1	k141_22058	23857	31211		acinetobacter	
+1	ISAba26		insertion sequence	1318		0	0.996	1	0	5	k141_17001	167	1484	M1318	acinetobacter	
+2	ISVsa3	ISVs3	insertion sequence	977		0	1	1	0	0	k141_12629	3155	4131	M977	acinetobacter	
+3	ISAba24		insertion sequence	2421		0	1	1	0	0	k141_14503	1269	3689	M2421	acinetobacter	
+4	ISEc29		insertion sequence	1325		0	1	1	0	0	k141_14503	7072	8396	M1325	acinetobacter	
+5	ISAba22		insertion sequence	1274		0	1	0.951	0	0	k141_10354	9848	11121	M942 N62 M270	acinetobacter	
+6	ISAba1		insertion sequence	1180		0	0.999	1	0	1	k141_18674	53896	55075	M1180	acinetobacter	
+1	ISAba26		insertion sequence	1318		0	0.996	1	0	5	k141_72956	4214	5531	M1318	acinetobacter	
+2	ISAba1		insertion sequence	1180		0	0.999	1	0	1	k141_39676	20398	21577	M1180	acinetobacter	
+3	IS26	IS160;IS26L;IS26R;IS6;IS140;IS46	insertion sequence	820		0	0.998	1	0	2	k141_6136	8712	9531	M820	acinetobacter	
+5	ISVsa3	ISVs3	insertion sequence	977		0	1	1	0	0	k141_169072	169	1145	M977	acinetobacter	
+6	ISEc29		insertion sequence	1325		0	1	1	0	0	k141_189738	38126	39450	M1325	acinetobacter	
+1	ISVsa3	ISVs3	insertion sequence	977		0	1	1	0	0	k141_4397	2651	3627	M977	acinetobacter	
+2	ISAba10		insertion sequence	1023		0	0.999	1	0	1	k141_11724	11558	12580	M1023	acinetobacter	
+3	ISAba22		insertion sequence	1274		0	1	0.951	0	0	k141_13048	25269	26542	M270 N62 M942	acinetobacter	
+4	ISAba26		insertion sequence	1318		0	0.996	1	0	5	k141_12971	28741	30058	M1318	acinetobacter	
+5	ISAba24		insertion sequence	2421		0	1	1	0	0	k141_7591	1483	3903	M2421	acinetobacter	
+6	ISEc29		insertion sequence	1325		0	1	1	0	0	k141_7591	7286	8610	M1325	acinetobacter	
+7	ISAba1		insertion sequence	1180		0	0.998	1	0	2	k141_7594	6120	7299	M1180	acinetobacter	
+8	Tn6207		unit transposon	6766		0	1	0.995	0	0	k141_9795	249	7014	M6766	acinetobacter	
+8_7	cn_3739_ISAba1		composite transposon	3739		0	0.998	1	0	2	k141_7594	6119	9858		acinetobacter	
+1	ISAba26		insertion sequence	1318		0	0.996	1	0	5	k141_233836	72580	73897	M1318	acinetobacter	
+3	ISVsa3	ISVs3	insertion sequence	977		0	1	1	0	0	k141_218065	2779	3755	M977	acinetobacter	
+1	ISAba26		insertion sequence	1318		0	0.996	1	0	5	k141_1993150	7456	8773	M1318	acinetobacter	
+2	ISAba1		insertion sequence	1180		0	1	1	0	0	k141_887719	10	1189	M1180	acinetobacter	
+3	ISVsa3	ISVs3	insertion sequence	977		0	1	1	0	0	k141_719164	2854	3830	M977	acinetobacter	
+1	ISVsa3	ISVs3	insertion sequence	977		0	1	1	0	0	k141_23662	4777	5753	M977	acinetobacter	
+2	ISAba26		insertion sequence	1318		0	0.996	1	0	5	k141_22941	1	1318	M1318	acinetobacter	
+1	ISAba26		insertion sequence	1316		0	0.995	0.998	0	6	k141_1008	50	1365	M1316	acinetobacter	
+2	IS26	IS160;IS26L;IS26R;IS6;IS140;IS46	insertion sequence	820		0	0.998	1	0	2	k141_38182	7802	8621	M820	acinetobacter	
+3	ISEc29		insertion sequence	1325		0	1	1	0	0	k141_86050	47014	48338	M1325	acinetobacter	
+1	IS26	IS160;IS26L;IS26R;IS6;IS140;IS46	insertion sequence	820		0	0.995	1	0	4	k141_41009	3	822	M820	acinetobacter	
+2	IS17		insertion sequence	1047		0	0.931	0.989	11	61	k141_113584	3828	4874	M709 D2 M1 D1 M1 D2 M1 D2 M5 D2 M11 I1 M251 I1 M59	acinetobacter	
+4	ISVsa3	ISVs3	insertion sequence	977		0	1	1	0	0	k141_103929	39031	40007	M977	acinetobacter	
+5	ISAba1		insertion sequence	1179		0	0.998	0.999	0	2	k141_60750	32570	33748	M1179	acinetobacter	
+6	ISEc29		insertion sequence	1325		0	1	1	0	0	k141_155475	5441	6765	M1325	acinetobacter	
+7	ISEc28		insertion sequence	897		0	0.999	1	0	1	k141_155475	8418	9314	M897	acinetobacter	
+8	ISAba26		insertion sequence	1313		0	0.994	0.995	1	7	k141_14866	71	1383	M6 D1 M1306	acinetobacter	
+1	ISVsa3	ISVs3	insertion sequence	977		0	1	1	0	0	k141_24594	4772	5748	M977	acinetobacter	
+2	ISAba24		insertion sequence	2421		0	1	1	0	0	k141_53145	1244	3664	M2421	acinetobacter	
+3	ISEc29		insertion sequence	1325		0	1	1	0	0	k141_53145	7047	8371	M1325	acinetobacter	
+4	IS5075		insertion sequence	1327		0	0.996	1	0	5	k141_13801	178	1504	M1327	acinetobacter	
+5	IS26	IS160;IS26L;IS26R;IS6;IS140;IS46	insertion sequence	820		0	1	1	0	0	k141_35329	699	1518	M820	acinetobacter	
+6	ISKpn27		insertion sequence	1067		0	0.998	0.986	1	1	k141_48732	92	1158	M1060 D1 M6	acinetobacter	
+1	ISAba1		insertion sequence	1180		0	0.999	1	0	1	k141_8866	2707	3886	M1180	acinetobacter	
+2	ISVsa3	ISVs3	insertion sequence	977		0	1	1	0	0	k141_8363	2655	3631	M977	acinetobacter	
+3	ISAba26		insertion sequence	1318		0	0.996	1	0	5	k141_12900	17373	18690	M1318	acinetobacter	
+4	IS26	IS160;IS26L;IS26R;IS6;IS140;IS46	insertion sequence	820		0	0.998	1	0	2	k141_11801	9715	10534	M820	acinetobacter	
+2_1	cn_3801_ISAba1		composite transposon	3801		0	0.999	1	0	1	k141_8866	85	3886		acinetobacter	
+1	ISAba24		insertion sequence	2421		0	1	1	0	0	k141_263469	1248	3668	M2421	acinetobacter	
+2	ISAba26		insertion sequence	1318		0	0.996	1	0	5	k141_10199	16	1333	M1318	acinetobacter	
+3	ISEc29		insertion sequence	1325		0	1	1	0	0	k141_523004	1483	2807	M1325	acinetobacter	
+4	ISVsa3	ISVs3	insertion sequence	977		0	1	1	0	0	k141_62742	4780	5756	M977	acinetobacter	
+1	ISEc29		insertion sequence	1325		0	1	1	0	0	k141_593037	4810	6134	M1325	acinetobacter	
+2	ISEc28		insertion sequence	897		0	0.999	1	0	1	k141_593037	2261	3157	M897	acinetobacter	
+3	IS17		insertion sequence	1047		0	0.931	0.989	11	61	k141_140261	1363	2409	M709 D2 M1 D1 M1 D2 M1 D2 M5 D2 M11 I1 M251 I1 M59	acinetobacter	
+4	ISAba26		insertion sequence	1318		0	0.996	1	0	5	k141_63744	37916	39233	M1318	acinetobacter	
+6	ISEc29		insertion sequence	1325		0	1	1	0	0	k141_593037	4810	6134	M1325	acinetobacter	
+7	ISEc28		insertion sequence	897		0	0.999	1	0	1	k141_593037	2261	3157	M897	acinetobacter	
+8	IS17		insertion sequence	1047		0	0.931	0.989	11	61	k141_140261	1363	2409	M709 D2 M1 D1 M1 D2 M1 D2 M5 D2 M11 I1 M251 I1 M59	acinetobacter	
+9	ISAba26		insertion sequence	1318		0	0.996	1	0	5	k141_63744	37916	39233	M1318	acinetobacter	
+1	ISVsa3	ISVs3	insertion sequence	977		0	1	1	0	0	k141_37714	4794	5770	M977	acinetobacter	
+2	ISAba26		insertion sequence	1318		0	0.996	1	0	5	k141_109456	19332	20649	M1318	acinetobacter	
+3	ISEc29		insertion sequence	1325		0	1	1	0	0	k141_98534	4920	6244	M1325	acinetobacter	
+4	ISEc28		insertion sequence	897		0	0.999	1	0	1	k141_98534	7897	8793	M897	acinetobacter	
+6	ISAba22		insertion sequence	1274		0	1	0.951	0	0	k141_128975	2625	3898	M942 N62 M270	acinetobacter	
+8	ISAba1		insertion sequence	1180		0	0.999	1	0	1	k141_12677	1000	2179	M1180	acinetobacter	
+9	ISAba24		insertion sequence	2421		0	1	1	0	0	k141_27365	86762	89182	M2421	acinetobacter	
+10	IS17		insertion sequence	1047		0	0.931	0.989	11	61	k141_43558	3837	4883	M709 D2 M1 D1 M1 D2 M1 D2 M5 D2 M11 I1 M251 I1 M59	acinetobacter	
+1	ISVsa3	ISVs3	insertion sequence	977		0	1	1	0	0	k141_61909	2652	3628	M977	acinetobacter	
+2	ISAba2		insertion sequence	1343		0	0.905	0.995	3	121	k141_61909	8177	9519	M26 D1 M9 I1 M4 N37 M1239 D1 M26	acinetobacter	
+3	ISAba26		insertion sequence	1318		0	0.996	1	0	5	k141_46358	1	1318	M1318	acinetobacter	
+4	IS26	IS160;IS26L;IS26R;IS6;IS140;IS46	insertion sequence	820		0	0.998	1	0	2	k141_174860	1	820	M820	acinetobacter	
+5	ISAba1		insertion sequence	1151		0	1	0.975	0	0	k141_184735	2336	3486	M1151	acinetobacter	
+6	ISEc29		insertion sequence	1325		0	1	1	0	0	k141_92956	12938	14262	M1325	acinetobacter	
+1	ISSep2		insertion sequence	1564		0	1	0.969	0	0	k141_5854	902	2465	M308 N49 M1207	acinetobacter	
+2	ISEc29		insertion sequence	1325		0	1	1	0	0	k141_7953	4845	6169	M1325	acinetobacter	
+3	ISEc28		insertion sequence	897		0	0.999	1	0	1	k141_7953	2296	3192	M897	acinetobacter	
+4	ISAba24		insertion sequence	2421		0	1	1	0	0	k141_2251	7	2427	M2421	acinetobacter	
+5	ISVsa3	ISVs3	insertion sequence	977		0	1	1	0	0	k141_3465	2872	3848	M977	acinetobacter	
+1	ISAba24		insertion sequence	2421		0	1	1	0	0	k141_249797	7958	10378	M2421	acinetobacter	
+2	ISEc29		insertion sequence	1325		0	1	1	0	0	k141_249797	3251	4575	M1325	acinetobacter	
+3	ISVsa3	ISVs3	insertion sequence	977		0	1	1	0	0	k141_278347	4218	5194	M977	acinetobacter	
+6	IS26	IS160;IS26L;IS26R;IS6;IS140;IS46	insertion sequence	820		0	1	1	0	0	k141_71258	7	826	M820	acinetobacter	
+7_6	cn_4484_IS26		composite transposon	4484		0	1	1	0	0	k141_71258	6	4490		acinetobacter	
+1	ISAba24		insertion sequence	2421		0	1	1	0	0	k141_6328	1940	4360	M2421	acinetobacter	
+2	ISEc29		insertion sequence	1325		0	1	1	0	0	k141_23949	1676	3000	M1325	acinetobacter	
+3	ISEc28		insertion sequence	897		0	0.999	1	0	1	k141_19976	326	1222	M897	acinetobacter	
+1	ISVsa3	ISVs3	insertion sequence	977		0	1	1	0	0	k141_150984	1119	2095	M977	acinetobacter	
+2	ISAba26		insertion sequence	1318		0	0.996	1	0	5	k141_62816	52	1369	M1318	acinetobacter	
+1	IS26	IS160;IS26L;IS26R;IS6;IS140;IS46	insertion sequence	820		0	1	1	0	0	k141_107139	39389	40208	M820	acinetobacter	
+2	ISAba1		insertion sequence	1180		0	1	1	0	0	k141_87202	3	1182	M1180	acinetobacter	
+3	ISAba24		insertion sequence	2421		0	1	1	0	0	k141_111868	1276	3696	M2421	acinetobacter	
+4	ISVsa3	ISVs3	insertion sequence	977		0	1	1	0	0	k141_79058	4787	5763	M977	acinetobacter	
+5	ISEc29		insertion sequence	1325		0	1	1	0	0	k141_82270	3513	4837	M1325	acinetobacter	
+6	ISEc28		insertion sequence	897		0	0.999	1	0	1	k141_82270	6490	7386	M897	acinetobacter	
+7	ISAba26		insertion sequence	1318		0	0.996	1	0	5	k141_79122	9722	11039	M1318	acinetobacter	
+1	ISAba26		insertion sequence	1318		0	0.996	1	0	5	k141_15735	9677	10994	M1318	acinetobacter	
+2	IS26	IS160;IS26L;IS26R;IS6;IS140;IS46	insertion sequence	820		0	1	1	0	0	k141_4185	1	820	M820	acinetobacter	
+3	ISVsa3	ISVs3	insertion sequence	977		0	1	1	0	0	k141_23355	5068	6044	M977	acinetobacter	
+4	ISAba10		insertion sequence	1023		0	0.999	1	0	1	k141_9688	3162	4184	M1023	acinetobacter	
+5	ISAba24		insertion sequence	2421		0	1	1	0	0	k141_16325	44283	46703	M2421	acinetobacter	
+6	ISEc29		insertion sequence	1325		0	1	1	0	0	k141_16325	39576	40900	M1325	acinetobacter	
+1	ISAba26		insertion sequence	1318		0	0.996	1	0	5	k141_7010	21319	22636	M1318	acinetobacter	
+2	ISAba26		insertion sequence	1318		0	0.996	1	0	5	k141_7010	28661	29978	M1318	acinetobacter	
+3	ISKpn18		insertion sequence	1283		0	1	0.985	0	0	k141_11208	54321	55603	M1283	acinetobacter	
+5	ISAba1		insertion sequence	1180		0	0.999	1	0	1	k141_23423	4641	5820	M1180	acinetobacter	
+8	ISAba24		insertion sequence	2421		0	1	1	0	0	k141_16559	1263	3683	M2421	acinetobacter	
+9	ISEc29		insertion sequence	1325		0	1	1	0	0	k141_16559	7066	8390	M1325	acinetobacter	
+3_1_2	cn_8660_ISAba26		composite transposon	8660		0	0.996	1	0	5	k141_7010	21318	29978		acinetobacter	
+1	IS26	IS160;IS26L;IS26R;IS6;IS140;IS46	insertion sequence	820		0	1	1	0	0	k141_19489	19	838	M820	acinetobacter	
+2	ISVsa3	ISVs3	insertion sequence	977		0	1	1	0	0	k141_27288	4772	5748	M977	acinetobacter	
+3	ISEc29		insertion sequence	1325		0	1	1	0	0	k141_24922	5218	6542	M1325	acinetobacter	
+4	ISEc28		insertion sequence	897		0	0.999	1	0	1	k141_24922	2669	3565	M897	acinetobacter	
+5	ISAba24		insertion sequence	2421		0	1	1	0	0	k141_2976	1255	3675	M2421	acinetobacter	
+3	ISCfr1		insertion sequence	1614		0	0.999	0.998	0	1	k141_195384	15431	17044	M1614	klebsiella	
+4	ISVsa3	ISVs3	insertion sequence	977		0	1	1	0	0	k141_139140	1938	2914	M977	klebsiella	
+6	IS102		insertion sequence	1016		0	0.941	0.959	3	57	k141_64818	238	1253	M937 I2 M5 D1 M26 N0 M47	klebsiella	
+10	ISKpn27		insertion sequence	1080		0	1	1	0	0	k141_107184	578	1657	M1080	klebsiella	
+12	ISKpn18		insertion sequence	1283		0	1	0.985	0	0	k141_8844	1	1283	M1283	klebsiella	
+16	ISKpn42		insertion sequence	1161		0	1	1	0	0	k141_170357	513	1673	M1161	klebsiella	
+17	ISKpn28		insertion sequence	1096		0	1	1	0	0	k141_3658	1	1096	M1096	klebsiella	
+21	ISKpn1		insertion sequence	1445		0	0.999	1	0	1	k141_92204	1	1445	M1445	klebsiella	
+22	ISKox1		insertion sequence	2404		0	0.996	0.952	0	9	k141_194765	127	2530	M2404	klebsiella	
+2	ISStma6		insertion sequence	1094		0	0.982	0.999	1	19	k141_15562	178	1271	M938 D1 M155	klebsiella	
+5	ISKpn28		insertion sequence	1096		0	1	1	0	0	k141_7516	21413	22508	M1096	klebsiella	
+1	IS102		insertion sequence	1056		0	0.936	0.997	3	65	k141_23015	887	1942	M26 D1 M5 I2 M1024	klebsiella	
+2	ISKpn28		insertion sequence	1096		0	1	1	0	0	k141_89700	1608	2703	M1096	klebsiella	
+4	ISKox1		insertion sequence	2496		0	0.996	0.988	1	9	k141_48487	1029	3524	M2493 I1 M3	klebsiella	
+5	ISKpn42		insertion sequence	1116		0	1	0.961	0	0	k141_106053	1	1116	M1116	klebsiella	
+10	ISEch12		insertion sequence	1211		0	0.908	0.998	2	109	k141_18257	220	1430	M527 I1 M4 D1 M679	klebsiella	
+12	ISKpn1		insertion sequence	1445		0	0.998	1	0	3	k141_85053	966	2410	M1445	klebsiella	
+3	IS102		insertion sequence	1056		0	0.933	0.997	3	68	k141_119022	2202	3257	M26 D1 M5 I2 M1024	klebsiella	
+6	ISKox1		insertion sequence	2526		0	0.996	1	0	9	k141_143297	8687	11212	M2526	klebsiella	
+12	ISKpn42		insertion sequence	1161		0	1	1	0	0	k141_9345	2068	3228	M1161	klebsiella	
+14	ISKpn1		insertion sequence	1445		0	0.999	1	0	1	k141_39175	59379	60823	M1445	klebsiella	
+3	ISCfr1		insertion sequence	1614		0	0.999	0.998	0	1	k141_4865	31675	33288	M1614	klebsiella	
+4	ISKpn28		insertion sequence	1096		0	1	1	0	0	k141_104766	56748	57843	M1096	klebsiella	
+7	IS5075		insertion sequence	1327		0	0.996	1	0	5	k141_3901	16094	17420	M1327	klebsiella	
+8	ISEc9	ISEcp1;ISEcp1B	insertion sequence	1656		0	1	1	0	0	k141_52257	77050	78705	M1656	klebsiella	
+10	ISKpn26		insertion sequence	1196		0	0.995	1	0	6	k141_90387	3013	4208	M1196	klebsiella	
+11_10	cn_4208_ISKpn26		composite transposon	4208		0	0.995	1	0	6	k141_90387	0	4208		klebsiella	
+1	ISKpn27		insertion sequence	1080		0	1	1	0	0	k141_66239	1627	2706	M1080	klebsiella	
+3	ISKpn28		insertion sequence	1096		0	1	1	0	0	k141_91861	104928	106023	M1096	klebsiella	
+6	ISKpn47		insertion sequence	1316		0	1	0.999	0	0	k141_69457	8415	9730	M1316	klebsiella	
+7	IS102		insertion sequence	1038		0	0.926	0.982	0	77	k141_43955	8313	9350	M1038	klebsiella	
+8	ISKpn14		insertion sequence	768		0	1	1	0	0	k141_43955	7545	8312	M768	klebsiella	
+1	IS5075		insertion sequence	1327		0	0.996	1	0	5	k141_131175	67	1393	M1327	klebsiella	
+2	ISEc9	ISEcp1;ISEcp1B	insertion sequence	1656		0	1	1	0	0	k141_255357	1987	3642	M1656	klebsiella	
+3	IS102		insertion sequence	1057		0	0.926	1	0	78	k141_255357	10	1066	M1057	klebsiella	
+4	ISCfr1		insertion sequence	1614		0	0.999	0.998	0	1	k141_318513	28955	30568	M1614	klebsiella	
+6	ISEcl1		insertion sequence	1333		0	0.981	0.998	3	22	k141_143242	8570	9902	M61 I3 M1272	klebsiella	
+7	ISKpn14		insertion sequence	768		0	0.997	1	0	2	k141_33340	522	1289	M768	klebsiella	
+8	ISKpn33		insertion sequence	2526		0	1	1	0	0	k141_105985	21147	23672	M2526	klebsiella	
+9	ISKpn28		insertion sequence	1096		0	1	1	0	0	k141_105985	15122	16217	M1096	klebsiella	
+12	ISKpn18		insertion sequence	1283		0	1	0.985	0	0	k141_221123	182	1464	M1283	klebsiella	
+14	ISKpn27		insertion sequence	1080		0	1	1	0	0	k141_144761	2408	3487	M1080	klebsiella	
+15	IS26	IS160;IS26L;IS26R;IS6;IS140;IS46	insertion sequence	820		0	1	1	0	0	k141_144761	1109	1928	M820	klebsiella	
+16_15	cn_1896_IS26		composite transposon	1896		0	1	1	0	0	k141_144761	32	1928		klebsiella	
+17_15	cn_4868_IS26		composite transposon	4868		0	1	1	0	0	k141_144761	1108	5976		klebsiella	
+1	ISKpn42		insertion sequence	1161		0	1	1	0	0	k141_36539	217	1377	M1161	klebsiella	
+3	ISKpn1		insertion sequence	1445		0	0.999	1	0	1	k141_243511	35465	36909	M1445	klebsiella	
+5	IS102		insertion sequence	1056		0	0.933	0.997	3	68	k141_464699	21	1076	M26 D1 M5 I2 M1024	klebsiella	
+8	ISKpn27		insertion sequence	1080		0	1	1	0	0	k141_457942	45255	46334	M1080	klebsiella	
+12	ISKox1		insertion sequence	2526		0	0.996	1	0	9	k141_376837	154539	157064	M2526	klebsiella	
+1	ISKpn14		insertion sequence	768		0	0.999	1	0	1	k141_82819	1	768	M768	klebsiella	
+2	ISCfr1		insertion sequence	1614		0	0.999	0.998	0	1	k141_74519	31685	33298	M1614	klebsiella	
+3	IS102		insertion sequence	1057		0	0.926	1	0	78	k141_68304	1863	2919	M1057	klebsiella	
+5	ISKpn28		insertion sequence	1096		0	1	1	0	0	k141_76029	1	1096	M1096	klebsiella	
+11	Tn6082		unit transposon	3567		0	1	0.982	0	0	k141_70000	2376	5942	M3567	klebsiella	
+12	IS6100	IS6100R;IS6100L	insertion sequence	880		0	1	1	0	0	k141_70000	1496	2375	M880	klebsiella	
+13	ISKpn26		insertion sequence	1191		0	0.996	0.996	0	5	k141_29168	24037	25227	M1191	klebsiella	
+14	ISKpn18		insertion sequence	1283		0	1	0.985	0	0	k141_67469	36103	37385	M1283	klebsiella	
+1	IS102		insertion sequence	1056		0	0.942	0.997	3	58	k141_28506	44842	45897	M1024 I2 M5 D1 M26	klebsiella	
+3	ISEc9	ISEcp1;ISEcp1B	insertion sequence	1656		0	1	1	0	0	k141_97014	7450	9105	M1656	klebsiella	
+4	IS102		insertion sequence	1057		0	0.925	1	0	79	k141_97014	5473	6529	M1057	klebsiella	
+7	ISKpn14		insertion sequence	768		0	1	1	0	0	k141_61707	26400	27167	M768	klebsiella	
+9	ISCfr1		insertion sequence	1614		0	0.999	0.998	0	1	k141_36806	29601	31214	M1614	klebsiella	
+10	ISKpn19		insertion sequence	2851		0	1	1	0	0	k141_79469	29736	32586	M2851	klebsiella	
+12	ISKpn18		insertion sequence	1283		0	0.999	0.985	0	1	k141_73694	38	1320	M1283	klebsiella	
+16	ISKpn27		insertion sequence	1080		0	1	1	0	0	k141_71534	936	2015	M1080	klebsiella	
+17	ISKox1		insertion sequence	2526		0	0.996	1	0	9	k141_77344	26367	28892	M2526	klebsiella	
+21	ISKpn28		insertion sequence	1096		0	1	1	0	0	k141_21980	1	1096	M1096	klebsiella	
+22	ISPsp9		insertion sequence	1718		0	0.917	1	0	143	k141_109289	111	1828	M1718	klebsiella	
+23	IS5075		insertion sequence	1327		0	0.996	1	0	5	k141_74030	6054	7380	M1327	klebsiella	
+25	ISVsa3	ISVs3	insertion sequence	977		0	1	1	0	0	k141_124850	2420	3396	M977	klebsiella	
+26	ISKpn1		insertion sequence	1445		0	0.997	1	0	4	k141_14101	26001	27445	M1445	klebsiella	
+27	ISKpn42		insertion sequence	1161		0	1	1	0	0	k141_84928	239	1399	M1161	klebsiella	
+2_1	cn_4821_IS102		composite transposon	4821		0	0.942	0.997	3	58	k141_28506	44841	49662		klebsiella	
+2	ISKox1		insertion sequence	2526		0	0.996	1	0	9	k141_15649	1121	3646	M2526	klebsiella	
+3	IS102		insertion sequence	1056		0	0.945	0.997	3	55	k141_7339	7092	8147	M1024 I2 M5 D1 M26	klebsiella	
+10	ISKpn42		insertion sequence	1161		0	1	1	0	0	k141_13142	337	1497	M1161	klebsiella	
+12	ISKpn1		insertion sequence	1445		0	0.999	1	0	2	k141_31985	80	1524	M1445	klebsiella	
+14	ISSen4	ISEc34;IS1222SC	insertion sequence	1221		0	0.965	0.998	2	41	k141_35454	5319	6539	M1205 D1 M2 I1 M13	klebsiella	
+15	ISKpn28		insertion sequence	1085		0	1	0.99	0	0	k141_21606	79	1163	M1085	klebsiella	
+1	IS102		insertion sequence	1055		0	0.946	0.996	3	54	k141_27167	77	1131	M1023 I2 M5 D1 M26	klebsiella	
+2	ISVsa3	ISVs3	insertion sequence	977		0	1	1	0	0	k141_15816	4274	5250	M977	klebsiella	
+6	IS5075		insertion sequence	1327		0	0.996	1	0	5	k141_8853	26248	27574	M1327	klebsiella	
+7	ISKpn27		insertion sequence	1080		0	1	1	0	0	k141_6869	2493	3572	M1080	klebsiella	
+8	ISKpn1		insertion sequence	1445		0	0.997	1	0	5	k141_7691	26017	27461	M1445	klebsiella	
+12	ISKpn28		insertion sequence	1085		0	1	0.99	0	0	k141_15518	69	1153	M1085	klebsiella	
+14	ISKpn19		insertion sequence	2851		0	1	1	0	0	k141_24936	50114	52964	M2851	klebsiella	
+18	ISKox1		insertion sequence	2526		0	0.996	1	0	9	k141_7735	20881	23406	M2526	klebsiella	
+23	ISKpn42		insertion sequence	1161		0	1	1	0	0	k141_782	235	1395	M1161	klebsiella	
+25	ISCfr1		insertion sequence	1614		0	0.999	0.998	0	1	k141_24321	27265	28878	M1614	klebsiella	
+2	IS5075		insertion sequence	1327		0	0.996	1	0	5	k141_401491	13739	15065	M1327	klebsiella	
+3	ISKpn19		insertion sequence	2851		0	1	1	0	0	k141_65478	136	2986	M2851	klebsiella	
+7	ISKpn18		insertion sequence	1283		0	1	0.985	0	0	k141_145316	27	1309	M1283	klebsiella	
+8	ISKpn28		insertion sequence	1096		0	1	1	0	0	k141_180371	1	1096	M1096	klebsiella	
+9	ISKpn14		insertion sequence	768		0	1	1	0	0	k141_22189	1	768	M768	klebsiella	
+11	ISKpn1		insertion sequence	1440		0	0.998	0.997	0	3	k141_259893	14011	15450	M1440	klebsiella	
+12	ISCfr1		insertion sequence	1614		0	0.999	0.998	0	1	k141_542478	4854	6467	M1614	klebsiella	
+14	IS102		insertion sequence	1056		0	0.942	0.997	3	58	k141_404136	2167	3222	M1024 I2 M5 D1 M26	klebsiella	
+19	IS102		insertion sequence	1057		0	0.926	1	0	78	k141_434832	1307	2363	M1057	klebsiella	
+20	ISKox1		insertion sequence	2526		0	0.996	1	0	9	k141_231539	1114	3639	M2526	klebsiella	
+21	ISKpn42		insertion sequence	1161		0	1	1	0	0	k141_231539	3860	5020	M1161	klebsiella	
+23	ISKpn27		insertion sequence	1080		0	1	1	0	0	k141_48990	1602	2681	M1080	klebsiella	
+24	IS26	IS160;IS26L;IS26R;IS6;IS140;IS46	insertion sequence	820		0	1	1	0	0	k141_79102	1	820	M820	klebsiella	
+25	ISVsa3	ISVs3	insertion sequence	977		0	1	1	0	0	k141_475226	11242	12218	M977	klebsiella	
+1	ISCre1		insertion sequence	1385		0	0.999	1	0	1	k141_24431	24445	25829	M1385	corynebacterium	
+3	ISCx1		insertion sequence	538		0	0.928	0.993	4	35	k141_53602	948	1485	M193 D2 M228 I1 M25 D1 M89	corynebacterium	
+1	ISKpn27		insertion sequence	1077		0	0.997	0.997	0	3	k141_55232	1	1077	M1077	corynebacterium	
+3	ISPsp9		insertion sequence	1718		0	0.917	1	0	143	k141_15382	56	1773	M1718	corynebacterium	
+6	IS26	IS160;IS26L;IS26R;IS6;IS140;IS46	insertion sequence	820		0	1	1	0	0	k141_36781	464	1283	M820	corynebacterium	
+1	ISCre1		insertion sequence	1385		0	0.999	1	0	1	k141_135167	350	1734	M1385	corynebacterium	
+4	ISCx1		insertion sequence	536		0	1	1	0	0	k141_50182	1306	1841	M536	corynebacterium	
+5	IS26	IS160;IS26L;IS26R;IS6;IS140;IS46	insertion sequence	820		0	0.999	1	0	1	k141_59137	1096	1915	M820	corynebacterium	
+6_5	cn_1915_IS26		composite transposon	1915		0	0.999	1	0	1	k141_59137	0	1915		corynebacterium	
+1	IS26	IS160;IS26L;IS26R;IS6;IS140;IS46	insertion sequence	820		0	1	1	0	0	k141_41441	1216	2035	M820	corynebacterium	
+2_1	cn_1939_IS26		composite transposon	1939		0	1	1	0	0	k141_41441	96	2035		corynebacterium	
+1	ISCx1		insertion sequence	536		0	1	1	0	0	k141_71753	2474	3009	M536	corynebacterium	
+4	ISCre1		insertion sequence	1385		0	0.999	1	0	1	k141_43415	4510	5894	M1385	corynebacterium	
+1	ISCx1		insertion sequence	538		0	0.929	0.993	4	34	k141_173321	1351	1888	M193 D2 M228 I1 M25 D1 M89	corynebacterium	
+2	ISCx1		insertion sequence	536		0	1	1	0	0	k141_1764569	1181	1716	M536	corynebacterium	
+3	ISCre1		insertion sequence	1385		0	1	1	0	0	k141_812879	2971	4355	M1385	corynebacterium	
+1	ISCx1		insertion sequence	536		0	1	1	0	0	k141_25867	1228	1763	M536	corynebacterium	
+2	ISCre1		insertion sequence	1385		0	1	1	0	0	k141_87203	1	1385	M1385	corynebacterium	
+2	ISAba24		insertion sequence	2421		0	1	1	0	0	k141_647112	7186	9606	M2421	corynebacterium	
+3	IS26	IS160;IS26L;IS26R;IS6;IS140;IS46	insertion sequence	820		0	1	1	0	0	k141_647112	5238	6057	M820	corynebacterium	
+1	ISStma2		insertion sequence	1428		0	0.98	1	0	29	k141_14273	146	1573	M1428	corynebacterium	
+2	ISCx1		insertion sequence	538		0	0.928	0.993	4	35	k141_116193	930	1467	M193 D2 M228 I1 M25 D1 M89	corynebacterium	
+3	ISCre1		insertion sequence	1385		0	0.999	1	0	1	k141_201736	5	1389	M1385	corynebacterium	
+4	ISPsp9		insertion sequence	1718		0	0.917	1	0	143	k141_25975	637	2354	M1718	corynebacterium	
+5	ISCre1		insertion sequence	1385		0	0.999	1	0	1	k141_72089	630	2014	M1385	corynebacterium	
+2	ISCre1		insertion sequence	1385		0	0.999	1	0	2	k141_152865	3	1387	M1385	corynebacterium	
+3_2	cn_6668_ISCre1		composite transposon	6668		0	0.999	1	0	2	k141_152865	2	6670		corynebacterium	
+3	ISCre1		insertion sequence	1385		0	0.999	1	0	1	k141_13544	3810	5194	M1385	corynebacterium	
+4	ISCx1		insertion sequence	538		0	0.928	0.993	4	35	k141_119503	3521	4058	M193 D2 M228 I1 M25 D1 M89	corynebacterium	
+1	ISCre1		insertion sequence	1385		0	1	1	0	0	k141_162667	3	1387	M1385	corynebacterium	
+4	IS6100	IS6100R;IS6100L	insertion sequence	880		0	1	1	0	0	k141_188020	151	1030	M880	corynebacterium	
+2_1	cn_9271_ISCre1		composite transposon	9271		0	1	1	0	0	k141_162667	2	9273		corynebacterium	
+4	IS26	IS160;IS26L;IS26R;IS6;IS140;IS46	insertion sequence	820		0	1	1	0	0	k141_66817	1132	1951	M820	corynebacterium	
+4	ISEnfa4		insertion sequence	1324		0	0.926	0.995	6	92	k141_147634	1	1324	M42 I1 M3 D1 M6 D1 M968 D1 M2 I1 M205 I1 M95	corynebacterium	
+5_4	cn_1696_ISEnfa4		composite transposon	1696		0	0.926	0.995	6	92	k141_147634	0	1696		corynebacterium	
+3	ISCx1		insertion sequence	517		0	0.927	0.953	4	34	k141_210960	25663	26179	M193 D2 M228 I1 M25 D1 M68	corynebacterium	
+4	ISPsp9		insertion sequence	1718		0	0.917	1	0	143	k141_217715	389	2106	M1718	corynebacterium	
+7	ISCre1		insertion sequence	1385		0	0.999	1	0	1	k141_172221	15	1399	M1385	corynebacterium	
+1	ISCre1		insertion sequence	1385		0	0.999	1	0	1	k141_144832	13171	14555	M1385	corynebacterium	
+3	ISCx1		insertion sequence	536		0	1	1	0	0	k141_48146	10228	10763	M536	corynebacterium	
+4	ISCre1		insertion sequence	1385		0	1	1	0	0	k141_110142	89899	91283	M1385	corynebacterium	
+5	ISActu1		insertion sequence	1442		0	0.943	0.999	2	80	k141_284772	2931	4372	M69 D1 M1335 D1 M36	corynebacterium	
+1	ISCre1		insertion sequence	1385		0	0.999	1	0	1	k141_297271	5258	6642	M1385	corynebacterium	
+2_1	cn_6642_ISCre1		composite transposon	6642		0	0.999	1	0	1	k141_297271	0	6642		corynebacterium	
+1	ISCre1		insertion sequence	1385		0	0.998	1	0	3	k141_3189	115	1499	M1385	corynebacterium	
+2	ISCx1		insertion sequence	536		0	1	1	0	0	k141_19196	1225	1760	M536	corynebacterium	
+5	ISSmi3		insertion sequence	1531		0	0.934	1	0	101	k141_24840	4	1534	M1531	corynebacterium	
+6	ISCre1		insertion sequence	1385		0	1	1	0	0	k141_8916	24395	25779	M1385	corynebacterium	
+8	ISActu1		insertion sequence	1397		0	0.943	0.969	1	79	k141_46333	2851	4247	M69 D1 M1327	corynebacterium	
+9	ISCx1		insertion sequence	538		0	0.933	0.993	4	32	k141_19148	39	576	M193 D2 M228 I1 M25 D1 M89	corynebacterium	
+3	ISCre1		insertion sequence	1385		0	0.999	1	0	1	k141_913582	798	2182	M1385	corynebacterium	
+2	ISCre1		insertion sequence	1385		0	0.999	1	0	1	k141_169863	7992	9376	M1385	corynebacterium	
+2	ISCre1		insertion sequence	1385		0	0.999	1	0	1	k141_68625	3	1387	M1385	corynebacterium	
+2	ISCx1		insertion sequence	538		0	0.931	0.993	4	33	k141_140672	1908	2445	M193 D2 M228 I1 M25 D1 M89	corynebacterium	
+3	ISCx1		insertion sequence	536		0	1	1	0	0	k141_186717	1272	1807	M536	corynebacterium	
+1	ISCx1		insertion sequence	530		0	0.981	0.989	6	4	k141_186776	2710	3239	M491 I6 M39	corynebacterium	
+4	ISCre1		insertion sequence	1385		0	0.999	1	0	1	k141_253217	71678	73062	M1385	corynebacterium	
+5_4	cn_6590_ISCre1		composite transposon	6590		0	0.999	1	0	1	k141_253217	71677	78267		corynebacterium	
+1	ISPa32		insertion sequence	1233		0	0.984	0.998	3	17	k141_42920	20191	21423	M462 I3 M771	pseudomonas	
+2	ISPa87		insertion sequence	2514		0	0.992	0.951	0	19	k141_169525	18	2531	M2514	pseudomonas	
+3	ISPa1328		insertion sequence	1328		0	0.927	1	0	97	k141_86123	1347	2674	M1328	pseudomonas	
+4	ISPpu33		insertion sequence	1306		0	1	1	0	0	k141_62766	1367	2672	M1306	pseudomonas	
+6	ISCfr1		insertion sequence	1616		0	0.935	0.999	0	105	k141_34877	1146	2761	M1616	pseudomonas	
+8	ISPa32		insertion sequence	1225		0	0.901	0.989	4	118	k141_57452	490	1714	M112 I1 M209 I1 M177 D1 M304 I1 M422	pseudomonas	
+9	ISPa31		insertion sequence	1670		0	0.999	0.999	1	0	k141_42535	1162	2831	M307 I1 M1363	pseudomonas	
+1	ISPa32		insertion sequence	1236		0	0.988	1	0	15	k141_71523	579	1814	M1236	pseudomonas	
+2	ISPa6	IS-PA-6	insertion sequence	1302		0	0.947	0.957	27	43	k141_107258	2533	3834	M9 D2 M63 I1 M1 I1 M4 I1 M1 I3 M1 I3 M49 D5 M67 I1 M1 I1 M66 D1 M29 D1 M531 D1 M10 D1 M62 D1 M14 I1 M93 D1 M8 D1 M40 D1 M238	pseudomonas	
+1	ISPsp5		insertion sequence	1617		0	0.909	0.999	2	145	k141_45498	4094	5710	M1184 I1 M5 D1 M427	pseudomonas	
+3	ISPst5		insertion sequence	1191		0	0.992	1	0	9	k141_64606	43120	44310	M1191	pseudomonas	
+1	ISPsy29	ISPsy26	insertion sequence	1231		0	0.929	1	0	87	k141_102123	89121	90351	M1231	pseudomonas	
+2	ISPa2	IS-PA-2	insertion sequence	788		0	0.996	0.997	2	1	k141_9933	2223	3010	M37 D1 M174 D1 M575	pseudomonas	
+4	ICE(Tn4371)6041		ice	48532		0	0.996	0.995	17	200	k141_76061	217803	266334	M5328 N63 M78 N62 M4 D1 M5 D1 M2 D1 M2 D1 M32 D1 M1 D1 M9 D1 M5 D1 M5492 I1 M11788 I6 M13108 N43 M4311 N66 M6927 I1 M69 I1 M1129	pseudomonas	
+1	ISVsa3	ISVs3	insertion sequence	977		0	1	1	0	0	k141_4914	232	1208	M977	pseudomonas	
+2	ISKpn27		insertion sequence	1080		0	1	1	0	0	k141_12959	638	1717	M1080	pseudomonas	
+1	ISPa79		insertion sequence	1443		0	1	0.98	0	0	k141_211228	5833	7275	M1443	pseudomonas	
+3	ISPa32		insertion sequence	1236		0	0.99	1	0	12	k141_169717	29989	31224	M1236	pseudomonas	
+4	ISPa2	IS-PA-2	insertion sequence	788		0	0.991	0.997	2	5	k141_38922	278	1065	M575 D1 M174 D1 M37	pseudomonas	
+7	ISPa4	IS-PA-4	insertion sequence	2572		0	0.994	0.997	8	7	k141_95440	1899	4470	M142 D1 M258 D1 M200 D4 M86 D1 M5 D1 M1873	pseudomonas	
+8	ISPa37		insertion sequence	1454		0	0.993	1	0	10	k141_86818	131	1584	M1454	pseudomonas	
+9	ISPa11		insertion sequence	1372		0	0.991	1	0	12	k141_158476	146	1517	M1372	pseudomonas	
+1	ISPa32		insertion sequence	1236		0	0.992	1	0	10	k141_67363	8651	9886	M1236	pseudomonas	
+2	ISPa2	IS-PA-2	insertion sequence	788		0	0.991	0.997	2	5	k141_21976	13321	14108	M575 D1 M174 D1 M37	pseudomonas	
+3	ISPa6	IS-PA-6	insertion sequence	1333		0	0.966	0.979	28	18	k141_69177	6866	8198	M9 D2 M63 I1 M1 I1 M4 I1 M1 I3 M1 I3 M49 D5 M67 I1 M1 I1 M66 D1 M31 D1 M529 D1 M10 D1 M62 D1 M14 I1 M93 D1 M8 D1 M40 D1 M240 D1 M28	pseudomonas	
+5	ISPa1635		insertion sequence	1637		0	0.991	0.999	2	12	k141_8822	7109	8745	M207 D2 M1428	pseudomonas	
+6	ISPa37		insertion sequence	1455		0	0.995	0.999	1	6	k141_973	6208	7662	M1044 D1 M410	pseudomonas	
+7	ISPa11		insertion sequence	1372		0	0.998	1	0	3	k141_70778	5619	6990	M1372	pseudomonas	
+8	ISPsy29	ISPsy26	insertion sequence	1230		0	0.927	0.999	1	89	k141_21260	5063	6292	M712 I1 M518	pseudomonas	
+2	ISPa6	IS-PA-6	insertion sequence	1333		0	0.965	0.979	28	19	k141_720564	13839	15171	M28 D1 M240 D1 M40 D1 M8 D1 M93 I1 M14 D1 M62 D1 M10 D1 M529 D1 M31 D1 M66 I1 M1 I1 M67 D5 M49 I3 M1 I3 M1 I1 M4 I1 M1 I1 M63 D2 M9	pseudomonas	
+3	ISPa32		insertion sequence	1226		0	0.979	0.992	10	16	k141_2412	39141	40366	M935 I10 M291	pseudomonas	
+1	ISPsp9		insertion sequence	1718		0	0.917	1	0	143	k141_137183	149	1866	M1718	pseudomonas	
+6	ISPa6	IS-PA-6	insertion sequence	1302		0	0.947	0.957	27	43	k141_105846	22509	23810	M9 D2 M63 I1 M1 I1 M4 I1 M1 I3 M1 I3 M49 D5 M67 I1 M1 I1 M66 D1 M29 D1 M531 D1 M10 D1 M62 D1 M14 I1 M93 D1 M8 D1 M40 D1 M238	pseudomonas	
+7	ISPa7		insertion sequence	1669		0	1	1	0	0	k141_267548	7540	9208	M1669	pseudomonas	
+1	ISPa32		insertion sequence	1235		0	0.983	0.999	1	20	k141_123330	30406	31640	M7 I1 M1228	pseudomonas	
+2	ISPsp9		insertion sequence	1718		0	0.916	1	0	145	k141_27822	43	1760	M1718	pseudomonas	
+5	ISPa6	IS-PA-6	insertion sequence	1333		0	0.95	0.977	30	37	k141_150017	9620	10952	M28 D1 M240 D1 M43 D1 M5 D1 M93 I1 M14 D1 M62 D1 M11 D1 M528 D1 M31 D1 M66 I1 M1 I1 M67 D5 M37 I1 M1 I9 M19 D1 M64 D1 M1 D1 M5	pseudomonas	
+6	ISPa5	IS-PA-5	insertion sequence	965		0	0.979	0.994	6	14	k141_150017	8139	9103	M15 D1 M27 D1 M104 D1 M479 I1 M77 I1 M206 I1 M54	pseudomonas	
+2	ICE(Tn4371)6041		ice	48535		0	0.995	0.996	14	205	k141_122131	26476	75010	M1129 I1 M69 I1 M7973 I1 M3330 N43 M9657 I1 M6624 I1 M8619 I1 M5492 D1 M5 D1 M9 D1 M1 D1 M32 D1 M2 D1 M2 D1 M5 D1 M4 N62 M78 N63 M5328	pseudomonas	
+3	ISKpn27		insertion sequence	1080		0	1	1	0	0	k141_71534	936	2015	M1080	pseudomonas	
+4	ISPa2	IS-PA-2	insertion sequence	788		0	0.995	0.997	2	2	k141_77874	2149	2936	M37 D1 M174 D1 M575	pseudomonas	
+1	ISStma6		insertion sequence	1093		0	1	1	0	0	k141_38202	359	1451	M1093	stenotrophomonas	
+2	ISStma1		insertion sequence	1023		0	1	1	0	0	k141_29936	5472	6494	M1023	stenotrophomonas	
+1	ISStma7		insertion sequence	1223		0	1	1	0	0	k141_91555	585	1807	M1223	stenotrophomonas	
+1	ISStma1		insertion sequence	1023		0	0.994	1	0	6	k141_47268	24	1046	M1023	stenotrophomonas	
+2	ISStma12		insertion sequence	1023		0	0.997	1	0	3	k141_20030	3997	5019	M1023	stenotrophomonas	
+3	ISStma2		insertion sequence	1428		0	0.954	1	0	66	k141_78710	6311	7738	M1428	stenotrophomonas	
+4	ISStma6		insertion sequence	1093		0	0.999	1	0	1	k141_6747	707	1799	M1093	stenotrophomonas	
+1	ISStma1		insertion sequence	1023		0	1	1	0	0	k141_270073	12532	13554	M1023	stenotrophomonas	
+2	ISStma2		insertion sequence	1428		0	0.951	1	0	70	k141_537008	3068	4495	M1428	stenotrophomonas	
+1	ISCre1		insertion sequence	1385		0	1	1	0	0	k141_54641	52	1436	M1385	stenotrophomonas	
+3	ISPsp9		insertion sequence	1718		0	0.917	1	0	143	k141_120276	517	2234	M1718	stenotrophomonas	
+4	ISEnfa4		insertion sequence	1324		0	0.917	0.995	6	104	k141_98420	55	1378	M95 I1 M205 I1 M2 D1 M968 D1 M6 D1 M3 I1 M42	stenotrophomonas	
+5	IS256	IS256L;IS256R;IS256E	insertion sequence	1324		0	1	1	0	0	k141_89959	724	2047	M1324	stenotrophomonas	
+6	IS5075		insertion sequence	1327		0	0.996	1	0	5	k141_13860	523	1849	M1327	stenotrophomonas	
+1	ISStma2		insertion sequence	1438		0	0.939	0.993	10	77	k141_61513	3	1440	M1379 D9 M25 D1 M24	stenotrophomonas	
+1	ISStma2		insertion sequence	1438		0	0.939	0.993	10	77	k141_241180	209	1646	M24 D1 M25 D9 M1379	stenotrophomonas	
+1	ISNme4		insertion sequence	713		0	0.931	0.999	1	48	k141_36266	345	1057	M620 D1 M92	EHMOS	
+1	IS26	IS160;IS26L;IS26R;IS6;IS140;IS46	insertion sequence	820		0	1	1	0	0	k141_75194	39	858	M820	EHMOS	
+2	IS4351	IS4351L;IS4351R;IS4400	insertion sequence	1156		0	0.999	0.999	1	0	k141_278982	4880	6035	M948 D1 M207	EHMOS	
+3	ISCx1		insertion sequence	535		0	0.985	0.991	2	6	k141_312547	1774	2308	M343 D2 M190	EHMOS	
+1	ISNesp1		insertion sequence	720		0	0.99	1	0	7	k141_207709	246	965	M720	EHMOS	
+1	IS4351	IS4351L;IS4351R;IS4400	insertion sequence	1156		0	0.999	0.999	1	0	k141_125617	1183	2338	M207 D1 M948	EHMOS	
+1	IS4351	IS4351L;IS4351R;IS4400	insertion sequence	1156		0	0.999	0.999	1	0	k141_42476	47352	48507	M207 D1 M948	EHMOS	
+1	IS4351	IS4351L;IS4351R;IS4400	insertion sequence	1156		0	0.999	0.999	1	0	k141_26081	2269	3424	M207 D1 M948	EHMOS	
