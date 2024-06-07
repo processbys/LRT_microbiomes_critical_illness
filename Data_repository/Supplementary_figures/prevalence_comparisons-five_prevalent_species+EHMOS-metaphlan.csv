@@ -1,0 +1,25 @@
+taxonomy,species_dectect_patient_number,total_patient_num,SamplingSite,prevalency_percentage,group
+Pseudomonas aeruginosa,3,20,Hospital-A,15.0,prevalent
+Acinetobacter baumannii,5,20,Hospital-A,25.0,prevalent
+Klebsiella pneumoniae,11,20,Hospital-A,55.00000000000001,prevalent
+Corynebacterium striatum,8,20,Hospital-A,40.0,prevalent
+Stenotrophomonas maltophilia,3,20,Hospital-A,15.0,prevalent
+Elizabethkingia anophelis,1,20,Hospital-A,5.0,EHMOS
+Corynebacterium striatum,61,86,Hospital-B,70.93023255813954,prevalent
+Acinetobacter baumannii,28,86,Hospital-B,32.55813953488372,prevalent
+Pseudomonas aeruginosa,11,86,Hospital-B,12.790697674418606,prevalent
+Prevotella melaninogenica,14,86,Hospital-B,16.27906976744186,EHMOS
+Klebsiella pneumoniae,17,86,Hospital-B,19.76744186046512,prevalent
+Elizabethkingia anophelis,5,86,Hospital-B,5.813953488372093,EHMOS
+Stenotrophomonas maltophilia,10,86,Hospital-B,11.627906976744184,prevalent
+Neisseria subflava,4,86,Hospital-B,4.651162790697675,EHMOS
+Haemophilus influenzae,4,86,Hospital-B,4.651162790697675,EHMOS
+Prevotella oris,11,86,Hospital-B,12.790697674418606,EHMOS
+Corynebacterium striatum,27,51,Hospital-C,52.94117647058824,prevalent
+Acinetobacter baumannii,39,51,Hospital-C,76.47058823529412,prevalent
+Pseudomonas aeruginosa,12,51,Hospital-C,23.52941176470588,prevalent
+Elizabethkingia anophelis,12,51,Hospital-C,23.52941176470588,EHMOS
+Stenotrophomonas maltophilia,14,51,Hospital-C,27.450980392156865,prevalent
+Klebsiella pneumoniae,19,51,Hospital-C,37.25490196078432,prevalent
+Haemophilus influenzae,1,51,Hospital-C,1.96078431372549,EHMOS
+Prevotella oris,1,51,Hospital-C,1.96078431372549,EHMOS
