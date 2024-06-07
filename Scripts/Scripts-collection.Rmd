@@ -2747,32 +2747,25 @@ ggboxplot(df_prevalence_species_mobilome, x="group", y="prevalency_percentage",f
 
 ```{r Fig s5e}
 
-df_prevalence_species_mobilome <- read.csv(r"(LRT_microbiomes_critical_illness\Data_repository\Supplementary_figures\prevalence_comparisons-five_prevalent_species+EHMOS-metaphlan.csv)")
+df_mge_abundance <- read.csv(r"(LRT_microbiomes_critical_illness\Data_repository\Supplementary_figures\mobile_elements_finder-stats_comparisons-mge_abundance.csv)")
+my_comparisons <- list(c('prevalent','EHMOS'))
 
-plot_df <- ggplot(df_prevalence_species_mobilome, aes(fill=SamplingSite, x=reorder(taxonomy,prevalency_percentage,sum,decreasing=T), y=prevalency_percentage))+  #'x=reorder(species,prevalency_percentage,sum,decreasing=T)' --> order stacked barplot with sum of values
-  geom_bar(position = "dodge",stat = "identity",) +
-  scale_fill_manual(values = c('Hospital-A'='#d93526','Hospital-B'='#f7a902','Hospital-C'='#1a6196'))+
-  scale_x_discrete(labels=c('C. striatum','S. maltophilia','P. aeruginosa','K. pneumoniae','A. baumannii',
-                            'E. anophelis','P. melaninogenica','P. oris','N. subflava','H. influenzae'))+
-  theme_pubr(x.text.angle = 35)
-plot_df
-
-ggpar(plot_df,
-      ylab = "Percentage of detected\nsamples (%)",
-      xlab = "Species",
-      font.xtickslab=c(18),
-      font.ytickslab=c(18),
-      font.x = c(18,"bold"),
-      font.y = c(18,"bold"),
-      font.legend = c(18,'bold'),
-      x.text.angle =50) + theme_pubr(base_size = 30,x.text.angle =35,legend = "none",margin = FALSE)
+ggboxplot(df_mge_abundance, x="group", y="mge_num",
+          color = "group", palette =c("#E41A1C","#377EB8","#4DAF4A","#984EA3","#FF7F00","#F781BF","#A65628","#F781BF"),
+          add = "jitter",add.params = list(size = 1.5, alpha = 0.5))  +
+  stat_boxplot(mapping = aes(color=group),geom = "errorbar",width=0.1)  +
+  stat_compare_means(comparisons = my_comparisons,label = "p.label",size=12,
+                     vjust=.15,tip.length= c(0,0,0)) + 
+scale_x_discrete(labels=c('More prevalent species','EHMOS'))+
+  labs(x=NULL,y='Number of mobile elements',) +  
+  theme_pubr(base_size = 36,legend ='none',x.text.angle = 30) 
 
 ```
 
 ```{r Fig s5f,g}
 
 ### Fig s5g
-bbone <- read_mauve_backbone(r'(LRT_microbiomes_critical_illness\Data_repository\Supplementary_figures\plasmids_publish_selected.backbone)',
+bbone <- read_mauve_backbone(r'(LRT_microbiomes_critical_illness\Data_repository\Supplementary_figures\plasmids_selected-comparisons-NZ_CP010782.1.backbone)', # save in the same file 'plasmids_selected-comparisons.backbone'
                              ref=1, filter_low=0)
 names <- c('NZ_CP010782.1',
            'Patient_6')
@@ -2792,7 +2785,7 @@ plot_gene_map(dna_segs=bbone$dna_segs,
               override_color_schemes=TRUE)
 
 ### Fig s5g
-bbone <- read_mauve_backbone(r'(LRT_microbiomes_critical_illness\Data_repository\Supplementary_figures\plasmids_selected-comparisons-NZ_CP045266.1.backbone)',
+bbone <- read_mauve_backbone(r'(LRT_microbiomes_critical_illness\Data_repository\Supplementary_figures\plasmids_selected-comparisons-NZ_CP045266.1.backbone)', # save in the same file 'plasmids_selected-comparisons.backbone'
                              ref=1, filter_low=0)
 names <- c('NZ_CP030131.1',
            'NZ_CP058229.1',
@@ -2836,9 +2829,6 @@ get_upper_tri <- function(cormat){
 
 df_plasmids_ani <- read.csv(r"(LRT_microbiomes_critical_illness\Data_repository\Supplementary_figures\plasmids_selected-ANI-NZ_CP045266.1_fraglen.csv)")
 
-#replace patient name with patientID
-df_plasmids_ani$query <- str_replace(df_plasmids_ani$query,'zhouboxun-xiangya','Patient_115')
-colnames(df_plasmids_ani) <-  str_replace(colnames(df_plasmids_ani),'zhouboxun.xiangya','Patient_115')
 #remove suffix: '.fasta' 
 colnames(df_plasmids_ani) <- str_remove(colnames(df_plasmids_ani),'.fasta')
 row.names(df_plasmids_ani) <- str_remove(df_plasmids_ani$query,'.fasta')
@@ -2914,6 +2904,9 @@ p1 <- ggplot(data=df,aes(x=var2,y=var1))+
 
 ```
 
+### Figure 6
+### --------------------------------------------------------------------------------------------------------------------------------------------
+
 ```{r Fig 6b,c}
 
 df_instrain_comparison = read.csv(r"(LRT_microbiomes_critical_illness\Data_repository\Main_figures\instrain_comparisons-SNPs+ANI_groups.csv)")
@@ -2931,7 +2924,10 @@ ggviolin(df_instrain_comparison, "Group", "SNPs_number",  fill = "Group",ylim=c(
   labs(x=NULL,y='SNPs number',) +  
   theme_pubr(base_size = 26,legend ='none',x.text.angle = 35) 
 
+
+
 ###  Fig 6c
+###violinplot version (ANI as y-axis)
 ggviolin(df_instrain_comparison, "Group", "ANI",  fill = "Group",ylim=c(99.999,100),
          # palette = c("#fde5f0", "#bce3ed"),
          palette = c("#FFE4FA", "#A3C6DE"),
@@ -2943,6 +2939,9 @@ ggviolin(df_instrain_comparison, "Group", "ANI",  fill = "Group",ylim=c(99.999,1
   theme_pubr(base_size = 26,legend ='none',x.text.angle = 30) 
 
 ```
+
+### Figure S6
+### --------------------------------------------------------------------------------------------------------------------------------------------
 
 ```{r Fig s6a}
 
