@@ -1,0 +1,13 @@
+PatientA,PatientB,SamplingSite,SNPs_number,ANI,Group
+P20,P1,HospitalA,0,1,direct
+P52,P77,HospitalB,0,1,indirect
+P52,P25,HospitalB,2,0.999999469,indirect
+P77,P25,HospitalB,0,1,direct
+P23,P26,HospitalB,5,0.99999866,direct
+P130,P118,HospitalC,5,0.999998695,direct
+P130,P113,HospitalC,10,0.999997396,direct
+P118,P113,HospitalC,5,0.999998695,direct
+P123,P143,HospitalC,0,1,indirect
+P141,P132,HospitalC,15,0.999996165,indirect
+P141,P114,HospitalC,16,0.999995909,indirect
+P132,P114,HospitalC,0,1,direct
