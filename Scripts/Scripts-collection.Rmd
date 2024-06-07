@@ -2517,7 +2517,7 @@ p_scatter_stenotrophomonas <- ggscatter(data_scores_stenotrophomonas,
 
 ```
 
-### Figure S5
+### Figure 5
 ### --------------------------------------------------------------------------------------------------------------------------------------------
 
 ```{r Fig 5a}
@@ -2564,8 +2564,8 @@ ggpar(p_snps_distribution,
 
 ```{r Fig 5c,d}
 
-df_recombinations_all <- read.csv(r'(LRT_microbiomes_critical_illness\Data_repository\Main_figures\acinetobacter-recombinations-consensus_blocks_all.csv)')
-df_pi <- read.table(r"(LRT_microbiomes_critical_illness\Data_repository\Main_figures\all_patients-acinetobacter.pi)",header = T)
+df_recombinations_all <- read.csv(r'(LRT_microbiomes_critical_illness\Data_repository\Main_figures\acinetobacter-recombinations-consensus_blocks_all.csv)') # save in the same file 'acinetobacter-recombination.txt'
+df_pi <- read.table(r"(LRT_microbiomes_critical_illness\Data_repository\Main_figures\all_patients-acinetobacter.pi)",header = T) # save in the same file 'acinetobacter-recombination.txt'
 
 
 p_recombinations <- ggplot() + 
@@ -2609,11 +2609,7 @@ my_cols <- c("#0D0887FF", "#6A00A8FF", "#B12A90FF",
 
 df_acinetobacter <- read.csv(r'(LRT_microbiomes_critical_illness\Data_repository\Main_figures\all_patients-snps_distribution-acinetobacter-region1.csv)')
 df_acinetobacter_filtered <- subset(df_acinetobacter,PatientID %in% my_order)
-
-df_tree <- read.tree(r"(LRT_microbiomes_critical_illness\Data_repository\Main_figures\draft_only-outgroup_removed-snpscalling_filtered_resolved.tre)")
-df_tree2 <- read.tree(r"(LRT_microbiomes_critical_illness\Data_repository\Main_figures\draft_only-outgroup_removed-snpscalling_filtered_resolved.tre2)")
-df_meta <- read.csv(r"(LRT_microbiomes_critical_illness\Data_repository\Main_figures\metadata-filename2sampleid.csv)")
-
+df_tree2 <- read.tree(r"(LRT_microbiomes_critical_illness\Data_repository\Main_figures\draft_only-snpscalling_filtered_resolved.tre)")
 tree_order_sampleid <- c('P105','P124','P114','P156','P141','P132','P151','P118','P130','P113','P143',
                          'P123','P144','P112','P136','P77','P25','P52','P146','P23','P26','P157')
 df_acinetobacter_filtered2 <- subset(df_acinetobacter,PatientID %in% tree_order_sampleid)
@@ -2671,9 +2667,12 @@ ax.figure.tight_layout()
 
 ```
 
-```{r Fig s5a}
-df_top_abundant_mges <- read.csv(r'(LRT_microbiomes_critical_illness\Data_repository\Supplementary_figures\mobile_elements_finder-contigs_all-most_abundant_mges.csv)')
+### Figure S5
+### --------------------------------------------------------------------------------------------------------------------------------------------
 
+```{r Fig s5a}
+
+df_top_abundant_mges <- read.csv(r'(LRT_microbiomes_critical_illness\Data_repository\Supplementary_figures\mobile_elements_finder-contigs_all-most_abundant_mges.csv)')
 
 plot_top_abundant_mges<- ggbarplot(df_top_abundant_mges[1:6,],x = "name", y = "counts",#orientation = "horiz",
                                   fill = "#a6cee3", color = "#a6cee3") + theme_bw(base_size = 24) +
