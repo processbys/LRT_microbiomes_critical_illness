@@ -1,0 +1,770 @@
+CHROM,POS,TYPE,REF,ALT,EVIDENCE,FTYPE,STRAND,NT_POS,AA_POS,EFFECT,LOCUS_TAG,GENE,PRODUCT,MUTATION_TYPE,snps_number,percentage,PatientID
+NZ_CP050916,2801285,snp,A,G,G:30 A:0,CDS,+,642/1122,214/373,stop_lost c.642A>G p.Ter214Trpext*?,HFD83_RS13460,0,ATP-binding protein,stop_lost,1,0.840336134,P157
+NZ_CP050916,2865678,del,AATT,A,A:19 AATT:0,CDS,+,851/1029,284/342,disruptive_inframe_deletion c.851_853delTTA p.Ile284del,HFD83_RS13760,0,alpha/beta hydrolase,disruptive_inframe_deletion,1,0.840336134,P157
+NZ_CP050916,2887694,snp,T,A,A:17 T:0,CDS,+,122/876,41/291,missense_variant c.122T>A p.Val41Glu,HFD83_RS13840,0,LysR substrate-binding domain-containing protein,missense_variant,1,0.840336134,P157
+NZ_CP050916,2924496,snp,G,T,T:27 G:0,CDS,-,1567/1623,523/540,missense_variant c.1567C>A p.Gln523Lys,HFD83_RS14025,0,BCCT family transporter,missense_variant,4,3.361344538,P157
+NZ_CP050916,2927874,snp,C,A,A:37 C:0,CDS,+,931/1473,311/490,missense_variant c.931C>A p.Gln311Lys,HFD83_RS14035,betB,betaine-aldehyde dehydrogenase,missense_variant,2,1.680672269,P157
+NZ_CP050916,2930892,complex,TTGAG,ACGAA,ACGAA:23 TTGAG:0,CDS,+,212/1641,71/546,missense_variant c.212_216delTTGAGinsACGAA p.Phe71Tyr,HFD83_RS14045,mqo,malate dehydrogenase (quinone),missense_variant,1,0.840336134,P157
+NZ_CP050916,2932445,complex,ACCG,GTCA,GTCA:17 ACCG:0,CDS,+,33/471,11/156,missense_variant c.33_36delACCGinsGTCA p.Pro12Ser,HFD83_RS14050,0,hypothetical protein,missense_variant,1,0.840336134,P157
+NZ_CP050916,2941130,snp,A,G,G:20 A:0,CDS,-,1085/1467,362/488,missense_variant c.1085T>C p.Ile362Thr,HFD83_RS14095,0,porin family protein,missense_variant,1,0.840336134,P157
+NZ_CP050916,2958405,snp,G,A,A:13 G:0,CDS,-,1021/1794,341/597,missense_variant c.1021C>T p.Pro341Ser,HFD83_RS14165,0,P-loop NTPase fold protein,missense_variant,1,0.840336134,P157
+NZ_CP050916,2973111,del,AC,A,A:10 AC:0,CDS,-,596/768,199/255,frameshift_variant c.596delG p.Gly199fs,HFD83_RS14235,0,hypothetical protein,frameshift_variant,1,0.840336134,P157
+NZ_CP050916,2980132,complex,TGCAC,AGTAG,AGTAG:18 TGCAC:0,CDS,+,51/360,17/119,missense_variant c.51_55delTGCACinsAGTAG p.AlaGln18ValGlu,HFD83_RS14275,0,hypothetical protein,missense_variant,4,3.361344538,P157
+NZ_CP050916,2982058,snp,G,A,A:19 G:0,CDS,-,595/699,199/232,missense_variant c.595C>T p.His199Tyr,HFD83_RS14295,0,hypothetical protein,missense_variant,1,0.840336134,P157
+NZ_CP050916,2982993,snp,C,G,G:22 C:0,CDS,-,454/795,152/264,missense_variant c.454G>C p.Val152Leu,HFD83_RS14300,0,hypothetical protein,missense_variant,1,0.840336134,P157
+NZ_CP050916,2987980,snp,A,T,T:14 A:0,CDS,-,1299/1452,433/483,missense_variant c.1299T>A p.His433Gln,HFD83_RS14330,0,hypothetical protein,missense_variant,5,4.201680672,P157
+NZ_CP050916,2989474,snp,C,T,T:20 C:0,CDS,-,1757/1953,586/650,missense_variant c.1757G>A p.Gly586Asp,HFD83_RS14335,0,hypothetical protein,missense_variant,12,10.08403361,P157
+NZ_CP050916,2994405,snp,A,G,G:14 A:0,CDS,-,239/771,80/256,missense_variant c.239T>C p.Ile80Thr,HFD83_RS14355,0,hypothetical protein,missense_variant,1,0.840336134,P157
+NZ_CP050916,2994686,snp,G,A,A:18 G:0,CDS,-,245/288,82/95,missense_variant c.245C>T p.Thr82Ile,HFD83_RS14360,0,hypothetical protein,missense_variant,1,0.840336134,P157
+NZ_CP050916,2997711,snp,A,G,G:27 A:0,CDS,-,7684/10353,2562/3450,missense_variant c.7684T>C p.Tyr2562His,HFD83_RS14365,0,DUF1983 domain-containing protein,missense_variant,25,21.00840336,P157
+NZ_CP050916,3007689,snp,A,G,G:22 A:0,CDS,-,95/267,32/88,missense_variant c.95T>C p.Val32Ala,HFD83_RS14385,0,type II toxin-antitoxin system RelE/ParE family toxin,missense_variant,1,0.840336134,P157
+NZ_CP050916,3026097,snp,C,T,T:13 C:0,CDS,-,574/1446,192/481,missense_variant c.574G>A p.Val192Ile,HFD83_RS14505,0,hypothetical protein,missense_variant,1,0.840336134,P157
+NZ_CP050916,3027986,snp,A,T,T:16 A:0,CDS,-,501/942,167/313,missense_variant c.501T>A p.His167Gln,HFD83_RS14520,0,hypothetical protein,missense_variant,7,5.882352941,P157
+NZ_CP050916,3030118,complex,AAATTACT,TGATCACA,TGATCACA:10 AAATTACT:0,CDS,-,298/900,97/299,missense_variant c.291_298delAGTAATTTinsTGTGATCA p.Leu100Met,HFD83_RS14530,0,phage antirepressor N-terminal domain-containing protein,missense_variant,2,1.680672269,P157
+NZ_CP050916,3030676,snp,G,T,T:31 G:0,CDS,-,746/942,249/313,missense_variant c.746C>A p.Ala249Asp,HFD83_RS14535,0,type II toxin-antitoxin system HicB family antitoxin,missense_variant,2,1.680672269,P157
+NZ_CP050916,3032634,snp,T,C,C:24 T:0,CDS,-,142/1056,48/351,missense_variant c.142A>G p.Ile48Val,HFD83_RS14540,0,hypothetical protein,missense_variant,1,0.840336134,P157
+NZ_CP050916,3033053,snp,G,T,T:15 G:0,CDS,-,2025/2289,675/762,missense_variant c.2025C>A p.Asp675Glu,HFD83_RS14545,0,phage tail tip lysozyme,missense_variant,5,4.201680672,P157
+NZ_CP050916,3035976,snp,T,G,G:15 T:0,CDS,-,367/840,123/279,missense_variant c.367A>C p.Asn123His,HFD83_RS14555,0,hypothetical protein,missense_variant,6,5.042016807,P157
+NZ_CP050916,3036364,snp,C,T,T:26 C:0,CDS,-,679/687,227/228,missense_variant c.679G>A p.Ala227Thr,HFD83_RS14560,0,helix-turn-helix domain-containing protein,missense_variant,6,5.042016807,P157
+NZ_CP050916,3037636,snp,C,T,T:20 C:0,CDS,-,97/690,33/229,missense_variant c.97G>A p.Asp33Asn,HFD83_RS14565,0,RusA family crossover junction endodeoxyribonuclease,missense_variant,1,0.840336134,P157
+NZ_CP050916,3039814,snp,T,C,C:25 T:0,CDS,-,326/534,109/177,missense_variant c.326A>G p.Asn109Ser,HFD83_RS14575,0,hypothetical protein,missense_variant,2,1.680672269,P157
+NZ_CP050916,3052409,snp,C,A,A:21 C:0,CDS,+,56/804,19/267,missense_variant c.56C>A p.Pro19Gln,HFD83_RS14675,0,DUF2303 family protein,missense_variant,4,3.361344538,P157
+NZ_CP050916,3053275,snp,T,A,A:21 T:1,CDS,+,33/261,11/86,missense_variant c.33T>A p.Asp11Glu,HFD83_RS14680,0,hypothetical protein,missense_variant,3,2.521008403,P157
+NZ_CP050916,3053749,snp,T,C,C:15 T:0,CDS,+,188/330,63/109,missense_variant c.188T>C p.Val63Ala,HFD83_RS14685,0,hypothetical protein,missense_variant,1,0.840336134,P157
+NZ_CP050916,3054495,complex,ACCTATTGGCA,GCCTTTTAGCT,GCCTTTTAGCT:16 ACCTATTGGCA:0,CDS,+,69/681,23/226,missense_variant c.69_79delACCTATTGGCAinsGCCTTTTAGCT p.IleGlyIle25PheSerLeu,HFD83_RS14695,0,DNA polymerase III subunit epsilon,missense_variant,8,6.722689076,P157
+NZ_CP050916,3056571,snp,A,T,T:12 A:0,CDS,-,1039/1152,347/383,missense_variant c.1039T>A p.Ser347Thr,HFD83_RS14720,0,site-specific integrase,missense_variant,3,2.521008403,P157
+NZ_CP050916,3168006,snp,C,T,T:16 C:1,CDS,-,460/1038,154/345,missense_variant c.460G>A p.Ala154Thr,HFD83_RS15285,0,cell division protein ZipA,missense_variant,1,0.840336134,P157
+NZ_CP050916,3186389,snp,C,T,T:24 C:0,CDS,-,379/1479,127/492,missense_variant c.379G>A p.Glu127Lys,HFD83_RS15350,0,hypothetical protein,missense_variant,1,0.840336134,P157
+NZ_CP050916,2927874,snp,C,A,A:25 C:1,CDS,+,931/1473,311/490,missense_variant c.931C>A p.Gln311Lys,HFD83_RS14035,betB,betaine-aldehyde dehydrogenase,missense_variant,2,16.66666667,P156
+NZ_CP050916,2930892,complex,TTGAG,ACGAA,ACGAA:23 TTGAG:2,CDS,+,212/1641,71/546,missense_variant c.212_216delTTGAGinsACGAA p.Phe71Tyr,HFD83_RS14045,mqo,malate dehydrogenase (quinone),missense_variant,1,8.333333333,P156
+NZ_CP050916,2941130,snp,A,G,G:31 A:0,CDS,-,1085/1467,362/488,missense_variant c.1085T>C p.Ile362Thr,HFD83_RS14095,0,porin family protein,missense_variant,1,8.333333333,P156
+NZ_CP050916,2958405,snp,G,A,A:28 G:0,CDS,-,1021/1794,341/597,missense_variant c.1021C>T p.Pro341Ser,HFD83_RS14165,0,P-loop NTPase fold protein,missense_variant,1,8.333333333,P156
+NZ_CP050916,2980132,complex,TGCAC,AGTAG,AGTAG:15 TGCAC:0,CDS,+,51/360,17/119,missense_variant c.51_55delTGCACinsAGTAG p.AlaGln18ValGlu,HFD83_RS14275,0,hypothetical protein,missense_variant,4,33.33333333,P156
+NZ_CP050916,2982058,snp,G,A,A:20 G:0,CDS,-,595/699,199/232,missense_variant c.595C>T p.His199Tyr,HFD83_RS14295,0,hypothetical protein,missense_variant,1,8.333333333,P156
+NZ_CP050916,2982993,snp,C,G,G:16 C:0,CDS,-,454/795,152/264,missense_variant c.454G>C p.Val152Leu,HFD83_RS14300,0,hypothetical protein,missense_variant,1,8.333333333,P156
+NZ_CP050916,3007689,snp,A,G,G:19 A:0,CDS,-,95/267,32/88,missense_variant c.95T>C p.Val32Ala,HFD83_RS14385,0,type II toxin-antitoxin system RelE/ParE family toxin,missense_variant,1,8.333333333,P156
+NZ_CP050916,2924496,snp,G,T,T:15 G:0,CDS,-,1567/1623,523/540,missense_variant c.1567C>A p.Gln523Lys,HFD83_RS14025,0,BCCT family transporter,missense_variant,2,4.761904762,P90
+NZ_CP050916,2941130,snp,A,G,G:11 A:0,CDS,-,1085/1467,362/488,missense_variant c.1085T>C p.Ile362Thr,HFD83_RS14095,0,porin family protein,missense_variant,1,2.380952381,P90
+NZ_CP050916,2980409,snp,C,A,A:13 C:0,CDS,+,328/360,110/119,missense_variant c.328C>A p.Gln110Lys,HFD83_RS14275,0,hypothetical protein,missense_variant,1,2.380952381,P90
+NZ_CP050916,2982993,snp,C,G,G:12 C:0,CDS,-,454/795,152/264,missense_variant c.454G>C p.Val152Leu,HFD83_RS14300,0,hypothetical protein,missense_variant,1,2.380952381,P90
+NZ_CP050916,2989763,snp,C,T,T:10 C:0,CDS,-,1468/1953,490/650,missense_variant c.1468G>A p.Ala490Thr,HFD83_RS14335,0,hypothetical protein,missense_variant,6,14.28571429,P90
+NZ_CP050916,2994686,snp,G,A,A:14 G:0,CDS,-,245/288,82/95,missense_variant c.245C>T p.Thr82Ile,HFD83_RS14360,0,hypothetical protein,missense_variant,1,2.380952381,P90
+NZ_CP050916,2997735,snp,C,A,A:10 C:0,CDS,-,7660/10353,2554/3450,missense_variant c.7660G>T p.Ala2554Ser,HFD83_RS14365,0,DUF1983 domain-containing protein,missense_variant,11,26.19047619,P90
+NZ_CP050916,3028297,snp,C,T,T:10 C:0,CDS,-,190/942,64/313,missense_variant c.190G>A p.Val64Ile,HFD83_RS14520,0,hypothetical protein,missense_variant,1,2.380952381,P90
+NZ_CP050916,3031205,snp,T,C,C:11 T:0,CDS,-,217/942,73/313,missense_variant c.217A>G p.Ile73Val,HFD83_RS14535,0,type II toxin-antitoxin system HicB family antitoxin,missense_variant,1,2.380952381,P90
+NZ_CP050916,3033053,snp,G,T,T:12 G:0,CDS,-,2025/2289,675/762,missense_variant c.2025C>A p.Asp675Glu,HFD83_RS14545,0,phage tail tip lysozyme,missense_variant,3,7.142857143,P90
+NZ_CP050916,3036257,snp,G,C,C:12 G:0,CDS,-,86/840,29/279,missense_variant c.86C>G p.Ala29Gly,HFD83_RS14555,0,hypothetical protein,missense_variant,1,2.380952381,P90
+NZ_CP050916,3036390,complex,TCTAA,GCTAT,GCTAT:12 TCTAA:0,CDS,-,653/687,217/228,missense_variant c.649_653delTTAGAinsATAGC p.LeuAsp217IleAla,HFD83_RS14560,0,helix-turn-helix domain-containing protein,missense_variant,1,2.380952381,P90
+NZ_CP050916,3037636,snp,C,T,T:13 C:0,CDS,-,97/690,33/229,missense_variant c.97G>A p.Asp33Asn,HFD83_RS14565,0,RusA family crossover junction endodeoxyribonuclease,missense_variant,1,2.380952381,P90
+NZ_CP050916,3052409,snp,C,A,A:10 C:0,CDS,+,56/804,19/267,missense_variant c.56C>A p.Pro19Gln,HFD83_RS14675,0,DUF2303 family protein,missense_variant,4,9.523809524,P90
+NZ_CP050916,3053476,snp,C,G,G:11 C:0,CDS,+,234/261,78/86,missense_variant c.234C>G p.Asp78Glu,HFD83_RS14680,0,hypothetical protein,missense_variant,1,2.380952381,P90
+NZ_CP050916,3053749,snp,T,C,C:10 T:0,CDS,+,188/330,63/109,missense_variant c.188T>C p.Val63Ala,HFD83_RS14685,0,hypothetical protein,missense_variant,1,2.380952381,P90
+NZ_CP050916,3054676,snp,A,G,G:10 A:0,CDS,+,250/681,84/226,missense_variant c.250A>G p.Ile84Val,HFD83_RS14695,0,DNA polymerase III subunit epsilon,missense_variant,3,7.142857143,P90
+NZ_CP050916,3056791,complex,CTCCC,TTCCT,TTCCT:10 CTCCC:0,CDS,-,819/1152,272/383,missense_variant c.815_819delGGGAGinsAGGAA p.Arg272Lys,HFD83_RS14720,0,site-specific integrase,missense_variant,1,2.380952381,P90
+NZ_CP050916,3186389,snp,C,T,T:12 C:0,CDS,-,379/1479,127/492,missense_variant c.379G>A p.Glu127Lys,HFD83_RS15350,0,hypothetical protein,missense_variant,1,2.380952381,P90
+NZ_CP050916,2932565,complex,TACTGCCTATTCT,AACAGCTTATGCA,AACAGCTTATGCA:159 TACTGCCTATTCT:1,CDS,+,153/471,51/156,missense_variant c.153_165delTACTGCCTATTCTinsAACAGCTTATGCA p.Ser55Ala,HFD83_RS14050,0,hypothetical protein,missense_variant,5,6.944444444,P132
+NZ_CP050916,2941130,snp,A,G,G:270 A:0,CDS,-,1085/1467,362/488,missense_variant c.1085T>C p.Ile362Thr,HFD83_RS14095,0,porin family protein,missense_variant,1,1.388888889,P132
+NZ_CP050916,2958405,snp,G,A,A:291 G:3,CDS,-,1021/1794,341/597,missense_variant c.1021C>T p.Pro341Ser,HFD83_RS14165,0,P-loop NTPase fold protein,missense_variant,1,1.388888889,P132
+NZ_CP050916,2978562,snp,C,G,G:150 C:0,CDS,+,1015/1299,339/432,missense_variant c.1015C>G p.Leu339Val,HFD83_RS14260,0,DNA polymerase V subunit UmuC,missense_variant,6,8.333333333,P132
+NZ_CP050916,2980132,complex,TGCAC,AGTAG,AGTAG:150 TGCAC:0,CDS,+,51/360,17/119,missense_variant c.51_55delTGCACinsAGTAG p.AlaGln18ValGlu,HFD83_RS14275,0,hypothetical protein,missense_variant,4,5.555555556,P132
+NZ_CP050916,2982058,snp,G,A,A:300 G:0,CDS,-,595/699,199/232,missense_variant c.595C>T p.His199Tyr,HFD83_RS14295,0,hypothetical protein,missense_variant,1,1.388888889,P132
+NZ_CP050916,2982993,snp,C,G,G:264 C:0,CDS,-,454/795,152/264,missense_variant c.454G>C p.Val152Leu,HFD83_RS14300,0,hypothetical protein,missense_variant,1,1.388888889,P132
+NZ_CP050916,2987980,snp,A,T,T:209 A:0,CDS,-,1299/1452,433/483,missense_variant c.1299T>A p.His433Gln,HFD83_RS14330,0,hypothetical protein,missense_variant,5,6.944444444,P132
+NZ_CP050916,2989474,snp,C,T,T:266 C:0,CDS,-,1757/1953,586/650,missense_variant c.1757G>A p.Gly586Asp,HFD83_RS14335,0,hypothetical protein,missense_variant,12,16.66666667,P132
+NZ_CP050916,2994405,snp,A,G,G:244 A:0,CDS,-,239/771,80/256,missense_variant c.239T>C p.Ile80Thr,HFD83_RS14355,0,hypothetical protein,missense_variant,1,1.388888889,P132
+NZ_CP050916,2994686,snp,G,A,A:266 G:0,CDS,-,245/288,82/95,missense_variant c.245C>T p.Thr82Ile,HFD83_RS14360,0,hypothetical protein,missense_variant,1,1.388888889,P132
+NZ_CP050916,2995323,complex,AACCA,TACCT,TACCT:65 AACCA:0,CDS,-,10072/10353,3356/3450,missense_variant c.10068_10072delTGGTTinsAGGTA p.Ser3358Thr,HFD83_RS14365,0,DUF1983 domain-containing protein,missense_variant,32,44.44444444,P132
+NZ_CP050916,3007689,snp,A,G,G:286 A:0,CDS,-,95/267,32/88,missense_variant c.95T>C p.Val32Ala,HFD83_RS14385,0,type II toxin-antitoxin system RelE/ParE family toxin,missense_variant,1,1.388888889,P132
+NZ_CP050916,3198133,ins,G,GCCTGCA,GCCTGCA:158 G:0,CDS,+,94/1134,32/377,conservative_inframe_insertion c.88_93dupCCTGCA p.Pro30_Ala31dup,HFD83_RS15410,0,HlyD family secretion protein,conservative_inframe_insertion,1,1.388888889,P132
+NZ_CP050916,2903448,snp,G,A,A:476 G:3,CDS,-,34/522,12/173,missense_variant c.34C>T p.Pro12Ser,HFD83_RS13910,0,cupin domain-containing protein,missense_variant,1,2.173913043,P147
+NZ_CP050916,2932565,complex,TACTGCCTATTCT,AACAGCTTATGCA,AACAGCTTATGCA:296 TACTGCCTATTCT:1,CDS,+,153/471,51/156,missense_variant c.153_165delTACTGCCTATTCTinsAACAGCTTATGCA p.Ser55Ala,HFD83_RS14050,0,hypothetical protein,missense_variant,5,10.86956522,P147
+NZ_CP050916,2933438,complex,GCCAGA,ACCGGG,ACCGGG:393 GCCAGA:1,CDS,+,339/879,113/292,missense_variant c.339_344delGCCAGAinsACCGGG p.Glu115Gly,HFD83_RS14055,0,homocysteine S-methyltransferase family protein,missense_variant,3,6.52173913,P147
+NZ_CP050916,2934548,snp,C,A,A:404 C:2,CDS,+,565/1335,189/444,missense_variant c.565C>A p.His189Asn,HFD83_RS14060,0,basic amino acid/polyamine antiporter,missense_variant,1,2.173913043,P147
+NZ_CP050916,2941130,snp,A,G,G:483 A:0,CDS,-,1085/1467,362/488,missense_variant c.1085T>C p.Ile362Thr,HFD83_RS14095,0,porin family protein,missense_variant,1,2.173913043,P147
+NZ_CP050916,2958405,snp,G,A,A:431 G:0,CDS,-,1021/1794,341/597,missense_variant c.1021C>T p.Pro341Ser,HFD83_RS14165,0,P-loop NTPase fold protein,missense_variant,1,2.173913043,P147
+NZ_CP050916,2978562,snp,C,G,G:212 C:0,CDS,+,1015/1299,339/432,missense_variant c.1015C>G p.Leu339Val,HFD83_RS14260,0,DNA polymerase V subunit UmuC,missense_variant,6,13.04347826,P147
+NZ_CP050916,2980132,complex,TGCAC,AGTAG,AGTAG:204 TGCAC:0,CDS,+,51/360,17/119,missense_variant c.51_55delTGCACinsAGTAG p.AlaGln18ValGlu,HFD83_RS14275,0,hypothetical protein,missense_variant,4,8.695652174,P147
+NZ_CP050916,2982058,snp,G,A,A:478 G:0,CDS,-,595/699,199/232,missense_variant c.595C>T p.His199Tyr,HFD83_RS14295,0,hypothetical protein,missense_variant,1,2.173913043,P147
+NZ_CP050916,2982993,snp,C,G,G:451 C:0,CDS,-,454/795,152/264,missense_variant c.454G>C p.Val152Leu,HFD83_RS14300,0,hypothetical protein,missense_variant,1,2.173913043,P147
+NZ_CP050916,2987980,snp,A,T,T:364 A:0,CDS,-,1299/1452,433/483,missense_variant c.1299T>A p.His433Gln,HFD83_RS14330,0,hypothetical protein,missense_variant,5,10.86956522,P147
+NZ_CP050916,2989474,snp,C,T,T:542 C:0,CDS,-,1757/1953,586/650,missense_variant c.1757G>A p.Gly586Asp,HFD83_RS14335,0,hypothetical protein,missense_variant,12,26.08695652,P147
+NZ_CP050916,2992778,snp,G,A,A:485 G:0,CDS,-,715/1536,239/511,missense_variant c.715C>T p.Pro239Ser,HFD83_RS14345,0,hypothetical protein,missense_variant,1,2.173913043,P147
+NZ_CP050916,2994405,snp,A,G,G:384 A:0,CDS,-,239/771,80/256,missense_variant c.239T>C p.Ile80Thr,HFD83_RS14355,0,hypothetical protein,missense_variant,1,2.173913043,P147
+NZ_CP050916,2994686,snp,G,A,A:427 G:0,CDS,-,245/288,82/95,missense_variant c.245C>T p.Thr82Ile,HFD83_RS14360,0,hypothetical protein,missense_variant,1,2.173913043,P147
+NZ_CP050916,3007689,snp,A,G,G:487 A:0,CDS,-,95/267,32/88,missense_variant c.95T>C p.Val32Ala,HFD83_RS14385,0,type II toxin-antitoxin system RelE/ParE family toxin,missense_variant,1,2.173913043,P147
+NZ_CP050916,3110370,snp,G,A,A:417 G:1,CDS,+,541/1230,181/409,missense_variant c.541G>A p.Asp181Asn,HFD83_RS14965,0,beta-ketoacyl-ACP synthase II,missense_variant,1,2.173913043,P147
+NZ_CP050916,2801285,snp,A,G,G:1583 A:1,CDS,+,642/1122,214/373,stop_lost c.642A>G p.Ter214Trpext*?,HFD83_RS13460,0,ATP-binding protein,stop_lost,1,0.636942675,P146
+NZ_CP050916,2832973,snp,A,T,T:770 A:0,CDS,-,524/1701,175/566,missense_variant c.524T>A p.Leu175His,HFD83_RS13605,ureC,urease subunit alpha,missense_variant,1,0.636942675,P146
+NZ_CP050916,2865678,del,AATT,A,A:784 AATT:0,CDS,+,851/1029,284/342,disruptive_inframe_deletion c.851_853delTTA p.Ile284del,HFD83_RS13760,0,alpha/beta hydrolase,disruptive_inframe_deletion,1,0.636942675,P146
+NZ_CP050916,2887694,snp,T,A,A:779 T:0,CDS,+,122/876,41/291,missense_variant c.122T>A p.Val41Glu,HFD83_RS13840,0,LysR substrate-binding domain-containing protein,missense_variant,1,0.636942675,P146
+NZ_CP050916,2924496,snp,G,T,T:1119 G:0,CDS,-,1567/1623,523/540,missense_variant c.1567C>A p.Gln523Lys,HFD83_RS14025,0,BCCT family transporter,missense_variant,4,2.547770701,P146
+NZ_CP050916,2927874,snp,C,A,A:937 C:0,CDS,+,931/1473,311/490,missense_variant c.931C>A p.Gln311Lys,HFD83_RS14035,betB,betaine-aldehyde dehydrogenase,missense_variant,2,1.27388535,P146
+NZ_CP050916,2930892,complex,TTGAG,ACGAA,ACGAA:831 TTGAG:0,CDS,+,212/1641,71/546,missense_variant c.212_216delTTGAGinsACGAA p.Phe71Tyr,HFD83_RS14045,mqo,malate dehydrogenase (quinone),missense_variant,1,0.636942675,P146
+NZ_CP050916,2932445,complex,ACCG,GTCA,GTCA:886 ACCG:0,CDS,+,33/471,11/156,missense_variant c.33_36delACCGinsGTCA p.Pro12Ser,HFD83_RS14050,0,hypothetical protein,missense_variant,1,0.636942675,P146
+NZ_CP050916,2934952,snp,A,T,T:14 A:0,CDS,+,969/1335,323/444,missense_variant c.969A>T p.Leu323Phe,HFD83_RS14060,0,basic amino acid/polyamine antiporter,missense_variant,1,0.636942675,P146
+NZ_CP050916,2959859,snp,T,C,C:801 T:0,CDS,-,1060/1383,354/460,missense_variant c.1060A>G p.Lys354Glu,HFD83_RS14170,0,DUF6035 family protein,missense_variant,1,0.636942675,P146
+NZ_CP050916,2978562,snp,C,G,G:339 C:0,CDS,+,1015/1299,339/432,missense_variant c.1015C>G p.Leu339Val,HFD83_RS14260,0,DNA polymerase V subunit UmuC,missense_variant,6,3.821656051,P146
+NZ_CP050916,2980132,complex,TGCAC,AGTAG,AGTAG:405 TGCAC:0,CDS,+,51/360,17/119,missense_variant c.51_55delTGCACinsAGTAG p.AlaGln18ValGlu,HFD83_RS14275,0,hypothetical protein,missense_variant,4,2.547770701,P146
+NZ_CP050916,2982058,snp,G,A,A:908 G:0,CDS,-,595/699,199/232,missense_variant c.595C>T p.His199Tyr,HFD83_RS14295,0,hypothetical protein,missense_variant,1,0.636942675,P146
+NZ_CP050916,2982993,snp,C,G,G:899 C:0,CDS,-,454/795,152/264,missense_variant c.454G>C p.Val152Leu,HFD83_RS14300,0,hypothetical protein,missense_variant,1,0.636942675,P146
+NZ_CP050916,2987980,snp,A,T,T:789 A:0,CDS,-,1299/1452,433/483,missense_variant c.1299T>A p.His433Gln,HFD83_RS14330,0,hypothetical protein,missense_variant,5,3.184713376,P146
+NZ_CP050916,2989474,snp,C,T,T:898 C:0,CDS,-,1757/1953,586/650,missense_variant c.1757G>A p.Gly586Asp,HFD83_RS14335,0,hypothetical protein,missense_variant,12,7.643312102,P146
+NZ_CP050916,2994405,snp,A,G,G:889 A:0,CDS,-,239/771,80/256,missense_variant c.239T>C p.Ile80Thr,HFD83_RS14355,0,hypothetical protein,missense_variant,1,0.636942675,P146
+NZ_CP050916,2994686,snp,G,A,A:820 G:0,CDS,-,245/288,82/95,missense_variant c.245C>T p.Thr82Ile,HFD83_RS14360,0,hypothetical protein,missense_variant,1,0.636942675,P146
+NZ_CP050916,2995323,complex,AACCA,TACCT,TACCT:213 AACCA:0,CDS,-,10072/10353,3356/3450,missense_variant c.10068_10072delTGGTTinsAGGTA p.Ser3358Thr,HFD83_RS14365,0,DUF1983 domain-containing protein,missense_variant,32,20.38216561,P146
+NZ_CP050916,3007689,snp,A,G,G:950 A:0,CDS,-,95/267,32/88,missense_variant c.95T>C p.Val32Ala,HFD83_RS14385,0,type II toxin-antitoxin system RelE/ParE family toxin,missense_variant,1,0.636942675,P146
+NZ_CP050916,3026097,snp,C,T,T:741 C:0,CDS,-,574/1446,192/481,missense_variant c.574G>A p.Val192Ile,HFD83_RS14505,0,hypothetical protein,missense_variant,1,0.636942675,P146
+NZ_CP050916,3027986,snp,A,T,T:611 A:0,CDS,-,501/942,167/313,missense_variant c.501T>A p.His167Gln,HFD83_RS14520,0,hypothetical protein,missense_variant,7,4.458598726,P146
+NZ_CP050916,3030118,complex,AAATTACT,TGATCACA,TGATCACA:421 AAATTACT:0,CDS,-,298/900,97/299,missense_variant c.291_298delAGTAATTTinsTGTGATCA p.Leu100Met,HFD83_RS14530,0,phage antirepressor N-terminal domain-containing protein,missense_variant,2,1.27388535,P146
+NZ_CP050916,3030676,snp,G,T,T:929 G:1,CDS,-,746/942,249/313,missense_variant c.746C>A p.Ala249Asp,HFD83_RS14535,0,type II toxin-antitoxin system HicB family antitoxin,missense_variant,2,1.27388535,P146
+NZ_CP050916,3031757,snp,T,G,G:546 T:0,CDS,-,1019/1056,340/351,missense_variant c.1019A>C p.Asn340Thr,HFD83_RS14540,0,hypothetical protein,missense_variant,2,1.27388535,P146
+NZ_CP050916,3033053,snp,G,T,T:971 G:0,CDS,-,2025/2289,675/762,missense_variant c.2025C>A p.Asp675Glu,HFD83_RS14545,0,phage tail tip lysozyme,missense_variant,14,8.917197452,P146
+NZ_CP050916,3035707,complex,CTCAGTTCGA,TTCTGTCTTG,TTCTGTCTTG:117 CTCAGTTCGA:0,CDS,-,636/840,209/279,missense_variant c.627_636delTCGAACTGAGinsCAAGACAGAA p.Arg210Lys,HFD83_RS14555,0,hypothetical protein,missense_variant,7,4.458598726,P146
+NZ_CP050916,3036364,snp,C,T,T:928 C:0,CDS,-,679/687,227/228,missense_variant c.679G>A p.Ala227Thr,HFD83_RS14560,0,helix-turn-helix domain-containing protein,missense_variant,6,3.821656051,P146
+NZ_CP050916,3037636,snp,C,T,T:1014 C:0,CDS,-,97/690,33/229,missense_variant c.97G>A p.Asp33Asn,HFD83_RS14565,0,RusA family crossover junction endodeoxyribonuclease,missense_variant,1,0.636942675,P146
+NZ_CP050916,3039814,snp,T,C,C:884 T:0,CDS,-,326/534,109/177,missense_variant c.326A>G p.Asn109Ser,HFD83_RS14575,0,hypothetical protein,missense_variant,2,1.27388535,P146
+NZ_CP050916,3052409,snp,C,A,A:810 C:0,CDS,+,56/804,19/267,missense_variant c.56C>A p.Pro19Gln,HFD83_RS14675,0,DUF2303 family protein,missense_variant,4,2.547770701,P146
+NZ_CP050916,3053275,snp,T,A,A:884 T:0,CDS,+,33/261,11/86,missense_variant c.33T>A p.Asp11Glu,HFD83_RS14680,0,hypothetical protein,missense_variant,3,1.910828025,P146
+NZ_CP050916,3053749,snp,T,C,C:567 T:0,CDS,+,188/330,63/109,missense_variant c.188T>C p.Val63Ala,HFD83_RS14685,0,hypothetical protein,missense_variant,6,3.821656051,P146
+NZ_CP050916,3054495,complex,ACCTATTGGCA,GCCTTTTAGCT,GCCTTTTAGCT:516 ACCTATTGGCA:0,CDS,+,69/681,23/226,missense_variant c.69_79delACCTATTGGCAinsGCCTTTTAGCT p.IleGlyIle25PheSerLeu,HFD83_RS14695,0,DNA polymerase III subunit epsilon,missense_variant,8,5.095541401,P146
+NZ_CP050916,3055191,snp,A,T,T:323 A:0,CDS,+,72/363,24/120,missense_variant c.72A>T p.Lys24Asn,HFD83_RS14700,0,ead/Ea22-like family protein,missense_variant,3,1.910828025,P146
+NZ_CP050916,3055436,snp,T,C,C:36 T:0,CDS,+,317/363,106/120,missense_variant c.317T>C p.Ile106Thr,HFD83_RS14705,0,hypothetical protein,missense_variant,5,3.184713376,P146
+NZ_CP050916,3055756,complex,ACTGCA,GTTGAG,GTTGAG:35 ACTGCA:0,CDS,+,148/171,50/56,missense_variant c.148_153delACTGCAinsGTTGAG p.ThrAla50ValGlu,HFD83_RS14710,0,hypothetical protein,missense_variant,1,0.636942675,P146
+NZ_CP050916,3056571,snp,A,T,T:403 A:0,CDS,-,1039/1152,347/383,missense_variant c.1039T>A p.Ser347Thr,HFD83_RS14720,0,site-specific integrase,missense_variant,3,1.910828025,P146
+NZ_CP050916,3168006,snp,C,T,T:917 C:0,CDS,-,460/1038,154/345,missense_variant c.460G>A p.Ala154Thr,HFD83_RS15285,0,cell division protein ZipA,missense_variant,1,0.636942675,P146
+NZ_CP050916,3186389,snp,C,T,T:969 C:0,CDS,-,379/1479,127/492,missense_variant c.379G>A p.Glu127Lys,HFD83_RS15350,0,hypothetical protein,missense_variant,1,0.636942675,P146
+NZ_CP050916,2801285,snp,A,G,G:264 A:0,CDS,+,642/1122,214/373,stop_lost c.642A>G p.Ter214Trpext*?,HFD83_RS13460,0,ATP-binding protein,stop_lost,1,0.454545455,P113
+NZ_CP050916,2818656,snp,A,T,T:97 A:0,CDS,+,273/777,91/258,missense_variant c.273A>T p.Glu91Asp,HFD83_RS13530,0,dioxygenase,missense_variant,1,0.454545455,P113
+NZ_CP050916,2832973,snp,A,T,T:94 A:0,CDS,-,524/1701,175/566,missense_variant c.524T>A p.Leu175His,HFD83_RS13605,ureC,urease subunit alpha,missense_variant,1,0.454545455,P113
+NZ_CP050916,2865678,del,AATT,A,A:106 AATT:0,CDS,+,851/1029,284/342,disruptive_inframe_deletion c.851_853delTTA p.Ile284del,HFD83_RS13760,0,alpha/beta hydrolase,disruptive_inframe_deletion,1,0.454545455,P113
+NZ_CP050916,2868311,snp,A,T,T:141 A:0,CDS,-,875/2265,292/754,stop_gained c.875T>A p.Leu292*,HFD83_RS13770,0,TonB-dependent siderophore receptor,stop_gained,1,0.454545455,P113
+NZ_CP050916,2887694,snp,T,A,A:116 T:0,CDS,+,122/876,41/291,missense_variant c.122T>A p.Val41Glu,HFD83_RS13840,0,LysR substrate-binding domain-containing protein,missense_variant,1,0.454545455,P113
+NZ_CP050916,2924496,snp,G,T,T:167 G:0,CDS,-,1567/1623,523/540,missense_variant c.1567C>A p.Gln523Lys,HFD83_RS14025,0,BCCT family transporter,missense_variant,4,1.818181818,P113
+NZ_CP050916,2927874,snp,C,A,A:107 C:0,CDS,+,931/1473,311/490,missense_variant c.931C>A p.Gln311Lys,HFD83_RS14035,betB,betaine-aldehyde dehydrogenase,missense_variant,2,0.909090909,P113
+NZ_CP050916,2930892,complex,TTGAG,ACGAA,ACGAA:106 TTGAG:0,CDS,+,212/1641,71/546,missense_variant c.212_216delTTGAGinsACGAA p.Phe71Tyr,HFD83_RS14045,mqo,malate dehydrogenase (quinone),missense_variant,1,0.454545455,P113
+NZ_CP050916,2932445,complex,ACCG,GTCA,GTCA:127 ACCG:0,CDS,+,33/471,11/156,missense_variant c.33_36delACCGinsGTCA p.Pro12Ser,HFD83_RS14050,0,hypothetical protein,missense_variant,1,0.454545455,P113
+NZ_CP050916,2941130,snp,A,G,G:132 A:0,CDS,-,1085/1467,362/488,missense_variant c.1085T>C p.Ile362Thr,HFD83_RS14095,0,porin family protein,missense_variant,1,0.454545455,P113
+NZ_CP050916,2958405,snp,G,A,A:158 G:0,CDS,-,1021/1794,341/597,missense_variant c.1021C>T p.Pro341Ser,HFD83_RS14165,0,P-loop NTPase fold protein,missense_variant,1,0.454545455,P113
+NZ_CP050916,2978562,snp,C,G,G:81 C:0,CDS,+,1015/1299,339/432,missense_variant c.1015C>G p.Leu339Val,HFD83_RS14260,0,DNA polymerase V subunit UmuC,missense_variant,6,2.727272727,P113
+NZ_CP050916,2980132,complex,TGCAC,AGTAG,AGTAG:84 TGCAC:0,CDS,+,51/360,17/119,missense_variant c.51_55delTGCACinsAGTAG p.AlaGln18ValGlu,HFD83_RS14275,0,hypothetical protein,missense_variant,4,1.818181818,P113
+NZ_CP050916,2982058,snp,G,A,A:152 G:0,CDS,-,595/699,199/232,missense_variant c.595C>T p.His199Tyr,HFD83_RS14295,0,hypothetical protein,missense_variant,1,0.454545455,P113
+NZ_CP050916,2982993,snp,C,G,G:134 C:0,CDS,-,454/795,152/264,missense_variant c.454G>C p.Val152Leu,HFD83_RS14300,0,hypothetical protein,missense_variant,1,0.454545455,P113
+NZ_CP050916,2987980,snp,A,T,T:150 A:0,CDS,-,1299/1452,433/483,missense_variant c.1299T>A p.His433Gln,HFD83_RS14330,0,hypothetical protein,missense_variant,5,2.272727273,P113
+NZ_CP050916,2989474,snp,C,T,T:157 C:0,CDS,-,1757/1953,586/650,missense_variant c.1757G>A p.Gly586Asp,HFD83_RS14335,0,hypothetical protein,missense_variant,12,5.454545455,P113
+NZ_CP050916,2994405,snp,A,G,G:129 A:0,CDS,-,239/771,80/256,missense_variant c.239T>C p.Ile80Thr,HFD83_RS14355,0,hypothetical protein,missense_variant,1,0.454545455,P113
+NZ_CP050916,2994686,snp,G,A,A:148 G:0,CDS,-,245/288,82/95,missense_variant c.245C>T p.Thr82Ile,HFD83_RS14360,0,hypothetical protein,missense_variant,1,0.454545455,P113
+NZ_CP050916,2995323,complex,AACCA,TACCT,TACCT:54 AACCA:0,CDS,-,10072/10353,3356/3450,missense_variant c.10068_10072delTGGTTinsAGGTA p.Ser3358Thr,HFD83_RS14365,0,DUF1983 domain-containing protein,missense_variant,32,14.54545455,P113
+NZ_CP050916,3007689,snp,A,G,G:137 A:0,CDS,-,95/267,32/88,missense_variant c.95T>C p.Val32Ala,HFD83_RS14385,0,type II toxin-antitoxin system RelE/ParE family toxin,missense_variant,1,0.454545455,P113
+NZ_CP050916,3010215,snp,A,G,G:127 A:0,CDS,-,71/279,24/92,missense_variant c.71T>C p.Ile24Thr,HFD83_RS14410,0,hypothetical protein,missense_variant,1,0.454545455,P113
+NZ_CP050916,3010395,snp,G,T,T:122 G:0,CDS,-,720/768,240/255,missense_variant c.720C>A p.Asn240Lys,HFD83_RS14415,0,hypothetical protein,missense_variant,7,3.181818182,P113
+NZ_CP050916,3011331,complex,AATT,GATG,GATG:118 AATT:0,CDS,-,1098/1296,365/431,missense_variant c.1095_1098delAATTinsCATC p.Glu365Asp,HFD83_RS14420,0,hypothetical protein,missense_variant,8,3.636363636,P113
+NZ_CP050916,3012775,complex,AGGA,TGGT,TGGT:142 AGGA:0,CDS,-,60/288,19/95,missense_variant c.57_60delTCCTinsACCA p.His19Gln,HFD83_RS14425,0,hypothetical protein,missense_variant,1,0.454545455,P113
+NZ_CP050916,3012936,snp,G,A,A:68 G:0,CDS,-,530/627,177/208,missense_variant c.530C>T p.Thr177Ile,HFD83_RS14430,0,hypothetical protein,missense_variant,11,5,P113
+NZ_CP050916,3013535,snp,A,T,T:70 A:0,CDS,-,1773/1779,591/592,missense_variant c.1773T>A p.Asn591Lys,HFD83_RS14435,0,hypothetical protein,missense_variant,22,10,P113
+NZ_CP050916,3015582,complex,TGT,AGA,AGA:72 TGT:0,CDS,-,183/303,61/100,missense_variant c.181_183delACAinsTCT p.Thr61Ser,HFD83_RS14440,0,hypothetical protein,missense_variant,7,3.181818182,P113
+NZ_CP050916,3015766,complex,TAGTT,AACTC,AACTC:83 TAGTT:0,CDS,-,544/549,180/182,stop_gained c.540_544delAACTAinsGAGTT p.ThrLys181*,HFD83_RS14445,0,hypothetical protein,stop_gained,7,3.181818182,P113
+NZ_CP050916,3016549,snp,A,T,T:137 A:0,CDS,-,881/1131,294/376,missense_variant c.881T>A p.Met294Lys,HFD83_RS14450,0,hypothetical protein,missense_variant,3,1.363636364,P113
+NZ_CP050916,3017577,snp,T,A,A:163 T:0,CDS,-,133/279,45/92,missense_variant c.133A>T p.Ile45Leu,HFD83_RS14455,0,hypothetical protein,missense_variant,1,0.454545455,P113
+NZ_CP050916,3022371,mnp,CA,AT,AT:137 CA:0,CDS,-,496/804,165/267,missense_variant c.495_496delTGinsAT p.Val166Phe,HFD83_RS14480,0,hypothetical protein,missense_variant,3,1.363636364,P113
+NZ_CP050916,3023072,snp,C,A,A:148 C:0,CDS,-,703/906,235/301,missense_variant c.703G>T p.Val235Phe,HFD83_RS14485,0,hypothetical protein,missense_variant,1,0.454545455,P113
+NZ_CP050916,3023969,snp,C,T,T:160 C:0,CDS,-,106/228,36/75,missense_variant c.106G>A p.Val36Ile,HFD83_RS14490,0,hypothetical protein,missense_variant,1,0.454545455,P113
+NZ_CP050916,3024171,snp,A,C,C:142 A:0,CDS,-,374/459,125/152,missense_variant c.374T>G p.Ile125Ser,HFD83_RS14495,0,hypothetical protein,missense_variant,1,0.454545455,P113
+NZ_CP050916,3024680,complex,GGTG,TGCA,TGCA:43 GGTG:0,CDS,-,558/615,185/204,missense_variant c.555_558delCACCinsTGCA p.Thr186Ala,HFD83_RS14500,0,hypothetical protein,missense_variant,2,0.909090909,P113
+NZ_CP050916,3032634,snp,T,C,C:145 T:0,CDS,-,142/1056,48/351,missense_variant c.142A>G p.Ile48Val,HFD83_RS14540,0,hypothetical protein,missense_variant,1,0.454545455,P113
+NZ_CP050916,3033053,snp,G,T,T:170 G:0,CDS,-,2025/2289,675/762,missense_variant c.2025C>A p.Asp675Glu,HFD83_RS14545,0,phage tail tip lysozyme,missense_variant,13,5.909090909,P113
+NZ_CP050916,3035707,complex,CTCAGTTCGA,TTCTGTCTTG,TTCTGTCTTG:42 CTCAGTTCGA:0,CDS,-,636/840,209/279,missense_variant c.627_636delTCGAACTGAGinsCAAGACAGAA p.Arg210Lys,HFD83_RS14555,0,hypothetical protein,missense_variant,7,3.181818182,P113
+NZ_CP050916,3036364,snp,C,T,T:149 C:0,CDS,-,679/687,227/228,missense_variant c.679G>A p.Ala227Thr,HFD83_RS14560,0,helix-turn-helix domain-containing protein,missense_variant,6,2.727272727,P113
+NZ_CP050916,3037636,snp,C,T,T:193 C:0,CDS,-,97/690,33/229,missense_variant c.97G>A p.Asp33Asn,HFD83_RS14565,0,RusA family crossover junction endodeoxyribonuclease,missense_variant,1,0.454545455,P113
+NZ_CP050916,3039814,snp,T,C,C:132 T:0,CDS,-,326/534,109/177,missense_variant c.326A>G p.Asn109Ser,HFD83_RS14575,0,hypothetical protein,missense_variant,2,0.909090909,P113
+NZ_CP050916,3052409,snp,C,A,A:130 C:0,CDS,+,56/804,19/267,missense_variant c.56C>A p.Pro19Gln,HFD83_RS14675,0,DUF2303 family protein,missense_variant,4,1.818181818,P113
+NZ_CP050916,3053275,snp,T,A,A:138 T:0,CDS,+,33/261,11/86,missense_variant c.33T>A p.Asp11Glu,HFD83_RS14680,0,hypothetical protein,missense_variant,3,1.363636364,P113
+NZ_CP050916,3053749,snp,T,C,C:98 T:0,CDS,+,188/330,63/109,missense_variant c.188T>C p.Val63Ala,HFD83_RS14685,0,hypothetical protein,missense_variant,5,2.272727273,P113
+NZ_CP050916,3054495,complex,ACCTATTGGCA,GCCTTTTAGCT,GCCTTTTAGCT:112 ACCTATTGGCA:0,CDS,+,69/681,23/226,missense_variant c.69_79delACCTATTGGCAinsGCCTTTTAGCT p.IleGlyIle25PheSerLeu,HFD83_RS14695,0,DNA polymerase III subunit epsilon,missense_variant,8,3.636363636,P113
+NZ_CP050916,3055191,snp,A,T,T:64 A:0,CDS,+,72/363,24/120,missense_variant c.72A>T p.Lys24Asn,HFD83_RS14700,0,ead/Ea22-like family protein,missense_variant,3,1.363636364,P113
+NZ_CP050916,3055436,snp,T,C,C:14 T:0,CDS,+,317/363,106/120,missense_variant c.317T>C p.Ile106Thr,HFD83_RS14705,0,hypothetical protein,missense_variant,5,2.272727273,P113
+NZ_CP050916,3055756,complex,ACTGCA,GTTGAG,GTTGAG:14 ACTGCA:0,CDS,+,148/171,50/56,missense_variant c.148_153delACTGCAinsGTTGAG p.ThrAla50ValGlu,HFD83_RS14710,0,hypothetical protein,missense_variant,1,0.454545455,P113
+NZ_CP050916,3056571,snp,A,T,T:73 A:0,CDS,-,1039/1152,347/383,missense_variant c.1039T>A p.Ser347Thr,HFD83_RS14720,0,site-specific integrase,missense_variant,3,1.363636364,P113
+NZ_CP050916,3168006,snp,C,T,T:148 C:0,CDS,-,460/1038,154/345,missense_variant c.460G>A p.Ala154Thr,HFD83_RS15285,0,cell division protein ZipA,missense_variant,1,0.454545455,P113
+NZ_CP050916,3186389,snp,C,T,T:162 C:0,CDS,-,379/1479,127/492,missense_variant c.379G>A p.Glu127Lys,HFD83_RS15350,0,hypothetical protein,missense_variant,1,0.454545455,P113
+NZ_CP050916,2832973,snp,A,T,T:668 A:0,CDS,-,524/1701,175/566,missense_variant c.524T>A p.Leu175His,HFD83_RS13605,ureC,urease subunit alpha,missense_variant,1,0.564971751,P123
+NZ_CP050916,2865678,del,AATT,A,A:711 AATT:0,CDS,+,851/1029,284/342,disruptive_inframe_deletion c.851_853delTTA p.Ile284del,HFD83_RS13760,0,alpha/beta hydrolase,disruptive_inframe_deletion,1,0.564971751,P123
+NZ_CP050916,2887694,snp,T,A,A:772 T:0,CDS,+,122/876,41/291,missense_variant c.122T>A p.Val41Glu,HFD83_RS13840,0,LysR substrate-binding domain-containing protein,missense_variant,1,0.564971751,P123
+NZ_CP050916,2924496,snp,G,T,T:997 G:0,CDS,-,1567/1623,523/540,missense_variant c.1567C>A p.Gln523Lys,HFD83_RS14025,0,BCCT family transporter,missense_variant,4,2.259887006,P123
+NZ_CP050916,2927874,snp,C,A,A:884 C:0,CDS,+,931/1473,311/490,missense_variant c.931C>A p.Gln311Lys,HFD83_RS14035,betB,betaine-aldehyde dehydrogenase,missense_variant,2,1.129943503,P123
+NZ_CP050916,2930892,complex,TTGAG,ACGAA,ACGAA:845 TTGAG:0,CDS,+,212/1641,71/546,missense_variant c.212_216delTTGAGinsACGAA p.Phe71Tyr,HFD83_RS14045,mqo,malate dehydrogenase (quinone),missense_variant,1,0.564971751,P123
+NZ_CP050916,2932445,complex,ACCG,GTCA,GTCA:872 ACCG:0,CDS,+,33/471,11/156,missense_variant c.33_36delACCGinsGTCA p.Pro12Ser,HFD83_RS14050,0,hypothetical protein,missense_variant,1,0.564971751,P123
+NZ_CP050916,2941130,snp,A,G,G:954 A:0,CDS,-,1085/1467,362/488,missense_variant c.1085T>C p.Ile362Thr,HFD83_RS14095,0,porin family protein,missense_variant,1,0.564971751,P123
+NZ_CP050916,2958405,snp,G,A,A:894 G:0,CDS,-,1021/1794,341/597,missense_variant c.1021C>T p.Pro341Ser,HFD83_RS14165,0,P-loop NTPase fold protein,missense_variant,1,0.564971751,P123
+NZ_CP050916,2978562,snp,C,G,G:336 C:0,CDS,+,1015/1299,339/432,missense_variant c.1015C>G p.Leu339Val,HFD83_RS14260,0,DNA polymerase V subunit UmuC,missense_variant,6,3.389830508,P123
+NZ_CP050916,2980132,complex,TGCAC,AGTAG,AGTAG:383 TGCAC:0,CDS,+,51/360,17/119,missense_variant c.51_55delTGCACinsAGTAG p.AlaGln18ValGlu,HFD83_RS14275,0,hypothetical protein,missense_variant,4,2.259887006,P123
+NZ_CP050916,2982058,snp,G,A,A:908 G:0,CDS,-,595/699,199/232,missense_variant c.595C>T p.His199Tyr,HFD83_RS14295,0,hypothetical protein,missense_variant,1,0.564971751,P123
+NZ_CP050916,2982993,snp,C,G,G:854 C:0,CDS,-,454/795,152/264,missense_variant c.454G>C p.Val152Leu,HFD83_RS14300,0,hypothetical protein,missense_variant,1,0.564971751,P123
+NZ_CP050916,2987980,snp,A,T,T:857 A:0,CDS,-,1299/1452,433/483,missense_variant c.1299T>A p.His433Gln,HFD83_RS14330,0,hypothetical protein,missense_variant,5,2.824858757,P123
+NZ_CP050916,2989474,snp,C,T,T:884 C:0,CDS,-,1757/1953,586/650,missense_variant c.1757G>A p.Gly586Asp,HFD83_RS14335,0,hypothetical protein,missense_variant,12,6.779661017,P123
+NZ_CP050916,2994405,snp,A,G,G:921 A:0,CDS,-,239/771,80/256,missense_variant c.239T>C p.Ile80Thr,HFD83_RS14355,0,hypothetical protein,missense_variant,1,0.564971751,P123
+NZ_CP050916,2994686,snp,G,A,A:901 G:0,CDS,-,245/288,82/95,missense_variant c.245C>T p.Thr82Ile,HFD83_RS14360,0,hypothetical protein,missense_variant,1,0.564971751,P123
+NZ_CP050916,2995323,complex,AACCA,TACCT,TACCT:259 AACCA:0,CDS,-,10072/10353,3356/3450,missense_variant c.10068_10072delTGGTTinsAGGTA p.Ser3358Thr,HFD83_RS14365,0,DUF1983 domain-containing protein,missense_variant,32,18.07909605,P123
+NZ_CP050916,3007689,snp,A,G,G:919 A:0,CDS,-,95/267,32/88,missense_variant c.95T>C p.Val32Ala,HFD83_RS14385,0,type II toxin-antitoxin system RelE/ParE family toxin,missense_variant,1,0.564971751,P123
+NZ_CP050916,3022919,snp,G,C,C:210 G:6,CDS,-,856/906,286/301,missense_variant c.856C>G p.Pro286Ala,HFD83_RS14485,0,hypothetical protein,missense_variant,13,7.344632768,P123
+NZ_CP050916,3023863,snp,A,C,C:318 A:1,CDS,-,212/228,71/75,missense_variant c.212T>G p.Phe71Cys,HFD83_RS14490,0,hypothetical protein,missense_variant,7,3.95480226,P123
+NZ_CP050916,3024101,complex,GCCTT,ATCGG,ATCGG:72 GCCTT:4,CDS,-,444/459,147/152,missense_variant c.440_444delAAGGCinsCCGAT p.GluGly147AlaAsp,HFD83_RS14495,0,hypothetical protein,missense_variant,11,6.214689266,P123
+NZ_CP050916,3024680,complex,GGTG,TGCA,TGCA:143 GGTG:2,CDS,-,558/615,185/204,missense_variant c.555_558delCACCinsTGCA p.Thr186Ala,HFD83_RS14500,0,hypothetical protein,missense_variant,4,2.259887006,P123
+NZ_CP050916,3026097,snp,C,T,T:778 C:1,CDS,-,574/1446,192/481,missense_variant c.574G>A p.Val192Ile,HFD83_RS14505,0,hypothetical protein,missense_variant,1,0.564971751,P123
+NZ_CP050916,3027986,snp,A,T,T:649 A:0,CDS,-,501/942,167/313,missense_variant c.501T>A p.His167Gln,HFD83_RS14520,0,hypothetical protein,missense_variant,7,3.95480226,P123
+NZ_CP050916,3029737,snp,T,C,C:53 T:0,CDS,-,679/900,227/299,missense_variant c.679A>G p.Lys227Glu,HFD83_RS14530,0,phage antirepressor N-terminal domain-containing protein,missense_variant,3,1.694915254,P123
+NZ_CP050916,3030676,snp,G,T,T:896 G:1,CDS,-,746/942,249/313,missense_variant c.746C>A p.Ala249Asp,HFD83_RS14535,0,type II toxin-antitoxin system HicB family antitoxin,missense_variant,2,1.129943503,P123
+NZ_CP050916,3031757,snp,T,G,G:581 T:0,CDS,-,1019/1056,340/351,missense_variant c.1019A>C p.Asn340Thr,HFD83_RS14540,0,hypothetical protein,missense_variant,2,1.129943503,P123
+NZ_CP050916,3033053,snp,G,T,T:819 G:0,CDS,-,2025/2289,675/762,missense_variant c.2025C>A p.Asp675Glu,HFD83_RS14545,0,phage tail tip lysozyme,missense_variant,14,7.90960452,P123
+NZ_CP050916,3052409,snp,C,A,A:905 C:0,CDS,+,56/804,19/267,missense_variant c.56C>A p.Pro19Gln,HFD83_RS14675,0,DUF2303 family protein,missense_variant,4,2.259887006,P123
+NZ_CP050916,3053275,snp,T,A,A:905 T:0,CDS,+,33/261,11/86,missense_variant c.33T>A p.Asp11Glu,HFD83_RS14680,0,hypothetical protein,missense_variant,3,1.694915254,P123
+NZ_CP050916,3053749,snp,T,C,C:618 T:0,CDS,+,188/330,63/109,missense_variant c.188T>C p.Val63Ala,HFD83_RS14685,0,hypothetical protein,missense_variant,7,3.95480226,P123
+NZ_CP050916,3054495,complex,ACCTATTGGCA,GCCTTTTAGCT,GCCTTTTAGCT:514 ACCTATTGGCA:0,CDS,+,69/681,23/226,missense_variant c.69_79delACCTATTGGCAinsGCCTTTTAGCT p.IleGlyIle25PheSerLeu,HFD83_RS14695,0,DNA polymerase III subunit epsilon,missense_variant,8,4.519774011,P123
+NZ_CP050916,3055191,snp,A,T,T:309 A:0,CDS,+,72/363,24/120,missense_variant c.72A>T p.Lys24Asn,HFD83_RS14700,0,ead/Ea22-like family protein,missense_variant,3,1.694915254,P123
+NZ_CP050916,3055436,snp,T,C,C:36 T:0,CDS,+,317/363,106/120,missense_variant c.317T>C p.Ile106Thr,HFD83_RS14705,0,hypothetical protein,missense_variant,5,2.824858757,P123
+NZ_CP050916,3055756,complex,ACTGCA,GTTGAG,GTTGAG:37 ACTGCA:0,CDS,+,148/171,50/56,missense_variant c.148_153delACTGCAinsGTTGAG p.ThrAla50ValGlu,HFD83_RS14710,0,hypothetical protein,missense_variant,1,0.564971751,P123
+NZ_CP050916,3056571,snp,A,T,T:425 A:0,CDS,-,1039/1152,347/383,missense_variant c.1039T>A p.Ser347Thr,HFD83_RS14720,0,site-specific integrase,missense_variant,3,1.694915254,P123
+NZ_CP050916,3168006,snp,C,T,T:952 C:0,CDS,-,460/1038,154/345,missense_variant c.460G>A p.Ala154Thr,HFD83_RS15285,0,cell division protein ZipA,missense_variant,1,0.564971751,P123
+NZ_CP050916,3186389,snp,C,T,T:890 C:0,CDS,-,379/1479,127/492,missense_variant c.379G>A p.Glu127Lys,HFD83_RS15350,0,hypothetical protein,missense_variant,1,0.564971751,P123
+NZ_CP050916,2801285,snp,A,G,G:52 A:0,CDS,+,642/1122,214/373,stop_lost c.642A>G p.Ter214Trpext*?,HFD83_RS13460,0,ATP-binding protein,stop_lost,1,0.694444444,P25
+NZ_CP050916,2832973,snp,A,T,T:24 A:0,CDS,-,524/1701,175/566,missense_variant c.524T>A p.Leu175His,HFD83_RS13605,ureC,urease subunit alpha,missense_variant,1,0.694444444,P25
+NZ_CP050916,2848273,snp,C,T,T:24 C:0,CDS,-,434/1443,145/480,missense_variant c.434G>A p.Gly145Glu,HFD83_RS13680,0,capsule assembly Wzi family protein,missense_variant,1,0.694444444,P25
+NZ_CP050916,2865678,del,AATT,A,A:25 AATT:0,CDS,+,851/1029,284/342,disruptive_inframe_deletion c.851_853delTTA p.Ile284del,HFD83_RS13760,0,alpha/beta hydrolase,disruptive_inframe_deletion,1,0.694444444,P25
+NZ_CP050916,2887694,snp,T,A,A:28 T:0,CDS,+,122/876,41/291,missense_variant c.122T>A p.Val41Glu,HFD83_RS13840,0,LysR substrate-binding domain-containing protein,missense_variant,1,0.694444444,P25
+NZ_CP050916,2924496,snp,G,T,T:39 G:0,CDS,-,1567/1623,523/540,missense_variant c.1567C>A p.Gln523Lys,HFD83_RS14025,0,BCCT family transporter,missense_variant,4,2.777777778,P25
+NZ_CP050916,2927874,snp,C,A,A:31 C:0,CDS,+,931/1473,311/490,missense_variant c.931C>A p.Gln311Lys,HFD83_RS14035,betB,betaine-aldehyde dehydrogenase,missense_variant,2,1.388888889,P25
+NZ_CP050916,2930892,complex,TTGAG,ACGAA,ACGAA:38 TTGAG:0,CDS,+,212/1641,71/546,missense_variant c.212_216delTTGAGinsACGAA p.Phe71Tyr,HFD83_RS14045,mqo,malate dehydrogenase (quinone),missense_variant,1,0.694444444,P25
+NZ_CP050916,2932445,complex,ACCG,GTCA,GTCA:38 ACCG:0,CDS,+,33/471,11/156,missense_variant c.33_36delACCGinsGTCA p.Pro12Ser,HFD83_RS14050,0,hypothetical protein,missense_variant,1,0.694444444,P25
+NZ_CP050916,2941130,snp,A,G,G:30 A:0,CDS,-,1085/1467,362/488,missense_variant c.1085T>C p.Ile362Thr,HFD83_RS14095,0,porin family protein,missense_variant,1,0.694444444,P25
+NZ_CP050916,2958405,snp,G,A,A:36 G:0,CDS,-,1021/1794,341/597,missense_variant c.1021C>T p.Pro341Ser,HFD83_RS14165,0,P-loop NTPase fold protein,missense_variant,1,0.694444444,P25
+NZ_CP050916,2978562,snp,C,G,G:16 C:0,CDS,+,1015/1299,339/432,missense_variant c.1015C>G p.Leu339Val,HFD83_RS14260,0,DNA polymerase V subunit UmuC,missense_variant,2,1.388888889,P25
+NZ_CP050916,2980132,complex,TGCAC,AGTAG,AGTAG:22 TGCAC:0,CDS,+,51/360,17/119,missense_variant c.51_55delTGCACinsAGTAG p.AlaGln18ValGlu,HFD83_RS14275,0,hypothetical protein,missense_variant,4,2.777777778,P25
+NZ_CP050916,2982058,snp,G,A,A:28 G:0,CDS,-,595/699,199/232,missense_variant c.595C>T p.His199Tyr,HFD83_RS14295,0,hypothetical protein,missense_variant,1,0.694444444,P25
+NZ_CP050916,2982993,snp,C,G,G:24 C:0,CDS,-,454/795,152/264,missense_variant c.454G>C p.Val152Leu,HFD83_RS14300,0,hypothetical protein,missense_variant,1,0.694444444,P25
+NZ_CP050916,2987980,snp,A,T,T:28 A:0,CDS,-,1299/1452,433/483,missense_variant c.1299T>A p.His433Gln,HFD83_RS14330,0,hypothetical protein,missense_variant,5,3.472222222,P25
+NZ_CP050916,2989474,snp,C,T,T:26 C:0,CDS,-,1757/1953,586/650,missense_variant c.1757G>A p.Gly586Asp,HFD83_RS14335,0,hypothetical protein,missense_variant,12,8.333333333,P25
+NZ_CP050916,2994405,snp,A,G,G:29 A:0,CDS,-,239/771,80/256,missense_variant c.239T>C p.Ile80Thr,HFD83_RS14355,0,hypothetical protein,missense_variant,1,0.694444444,P25
+NZ_CP050916,2994686,snp,G,A,A:38 G:0,CDS,-,245/288,82/95,missense_variant c.245C>T p.Thr82Ile,HFD83_RS14360,0,hypothetical protein,missense_variant,1,0.694444444,P25
+NZ_CP050916,2995323,complex,AACCA,TACCT,TACCT:18 AACCA:0,CDS,-,10072/10353,3356/3450,missense_variant c.10068_10072delTGGTTinsAGGTA p.Ser3358Thr,HFD83_RS14365,0,DUF1983 domain-containing protein,missense_variant,29,20.13888889,P25
+NZ_CP050916,3007689,snp,A,G,G:56 A:0,CDS,-,95/267,32/88,missense_variant c.95T>C p.Val32Ala,HFD83_RS14385,0,type II toxin-antitoxin system RelE/ParE family toxin,missense_variant,1,0.694444444,P25
+NZ_CP050916,3026097,snp,C,T,T:33 C:0,CDS,-,574/1446,192/481,missense_variant c.574G>A p.Val192Ile,HFD83_RS14505,0,hypothetical protein,missense_variant,1,0.694444444,P25
+NZ_CP050916,3027986,snp,A,T,T:30 A:0,CDS,-,501/942,167/313,missense_variant c.501T>A p.His167Gln,HFD83_RS14520,0,hypothetical protein,missense_variant,7,4.861111111,P25
+NZ_CP050916,3030118,complex,AAATTACT,TGATCACA,TGATCACA:23 AAATTACT:0,CDS,-,298/900,97/299,missense_variant c.291_298delAGTAATTTinsTGTGATCA p.Leu100Met,HFD83_RS14530,0,phage antirepressor N-terminal domain-containing protein,missense_variant,2,1.388888889,P25
+NZ_CP050916,3030676,snp,G,T,T:43 G:0,CDS,-,746/942,249/313,missense_variant c.746C>A p.Ala249Asp,HFD83_RS14535,0,type II toxin-antitoxin system HicB family antitoxin,missense_variant,2,1.388888889,P25
+NZ_CP050916,3031757,snp,T,G,G:23 T:0,CDS,-,1019/1056,340/351,missense_variant c.1019A>C p.Asn340Thr,HFD83_RS14540,0,hypothetical protein,missense_variant,2,1.388888889,P25
+NZ_CP050916,3033053,snp,G,T,T:36 G:0,CDS,-,2025/2289,675/762,missense_variant c.2025C>A p.Asp675Glu,HFD83_RS14545,0,phage tail tip lysozyme,missense_variant,8,5.555555556,P25
+NZ_CP050916,3035707,complex,CTCAGTTCGA,TTCTGTCTTG,TTCTGTCTTG:12 CTCAGTTCGA:0,CDS,-,636/840,209/279,missense_variant c.627_636delTCGAACTGAGinsCAAGACAGAA p.Arg210Lys,HFD83_RS14555,0,hypothetical protein,missense_variant,7,4.861111111,P25
+NZ_CP050916,3036364,snp,C,T,T:29 C:0,CDS,-,679/687,227/228,missense_variant c.679G>A p.Ala227Thr,HFD83_RS14560,0,helix-turn-helix domain-containing protein,missense_variant,6,4.166666667,P25
+NZ_CP050916,3037636,snp,C,T,T:44 C:0,CDS,-,97/690,33/229,missense_variant c.97G>A p.Asp33Asn,HFD83_RS14565,0,RusA family crossover junction endodeoxyribonuclease,missense_variant,1,0.694444444,P25
+NZ_CP050916,3038929,ins,A,AATCAAACTTAC,AATCAAACTTAC:11 A:0,CDS,-,221/456,74/151,frameshift_variant&stop_gained c.211_221dupGTAAGTTTGAT p.Ile74fs,HFD83_RS14570,0,hypothetical protein,frameshift_variant&stop_gained,1,0.694444444,P25
+NZ_CP050916,3039814,snp,T,C,C:29 T:0,CDS,-,326/534,109/177,missense_variant c.326A>G p.Asn109Ser,HFD83_RS14575,0,hypothetical protein,missense_variant,2,1.388888889,P25
+NZ_CP050916,3044116,snp,C,T,T:13 C:0,CDS,-,745/750,249/249,missense_variant c.745G>A p.Val249Ile,HFD83_RS14610,0,hypothetical protein,missense_variant,2,1.388888889,P25
+NZ_CP050916,3052409,snp,C,A,A:24 C:0,CDS,+,56/804,19/267,missense_variant c.56C>A p.Pro19Gln,HFD83_RS14675,0,DUF2303 family protein,missense_variant,4,2.777777778,P25
+NZ_CP050916,3053275,snp,T,A,A:31 T:0,CDS,+,33/261,11/86,missense_variant c.33T>A p.Asp11Glu,HFD83_RS14680,0,hypothetical protein,missense_variant,3,2.083333333,P25
+NZ_CP050916,3053749,snp,T,C,C:45 T:0,CDS,+,188/330,63/109,missense_variant c.188T>C p.Val63Ala,HFD83_RS14685,0,hypothetical protein,missense_variant,3,2.083333333,P25
+NZ_CP050916,3054495,complex,ACCTATTGGCA,GCCTTTTAGCT,GCCTTTTAGCT:20 ACCTATTGGCA:0,CDS,+,69/681,23/226,missense_variant c.69_79delACCTATTGGCAinsGCCTTTTAGCT p.IleGlyIle25PheSerLeu,HFD83_RS14695,0,DNA polymerase III subunit epsilon,missense_variant,8,5.555555556,P25
+NZ_CP050916,3055191,snp,A,T,T:28 A:0,CDS,+,72/363,24/120,missense_variant c.72A>T p.Lys24Asn,HFD83_RS14700,0,ead/Ea22-like family protein,missense_variant,3,2.083333333,P25
+NZ_CP050916,3055457,snp,T,G,G:11 T:0,CDS,+,338/363,113/120,missense_variant c.338T>G p.Phe113Cys,HFD83_RS14705,0,hypothetical protein,missense_variant,3,2.083333333,P25
+NZ_CP050916,3056571,snp,A,T,T:19 A:0,CDS,-,1039/1152,347/383,missense_variant c.1039T>A p.Ser347Thr,HFD83_RS14720,0,site-specific integrase,missense_variant,3,2.083333333,P25
+NZ_CP050916,3139547,snp,G,A,A:36 G:0,CDS,+,361/951,121/316,missense_variant c.361G>A p.Gly121Ser,HFD83_RS15130,0,ribose-phosphate pyrophosphokinase,missense_variant,2,1.388888889,P25
+NZ_CP050916,3168006,snp,C,T,T:47 C:0,CDS,-,460/1038,154/345,missense_variant c.460G>A p.Ala154Thr,HFD83_RS15285,0,cell division protein ZipA,missense_variant,1,0.694444444,P25
+NZ_CP050916,3186389,snp,C,T,T:36 C:0,CDS,-,379/1479,127/492,missense_variant c.379G>A p.Glu127Lys,HFD83_RS15350,0,hypothetical protein,missense_variant,1,0.694444444,P25
+NZ_CP050916,2801285,snp,A,G,G:12 A:0,CDS,+,642/1122,214/373,stop_lost c.642A>G p.Ter214Trpext*?,HFD83_RS13460,0,ATP-binding protein,stop_lost,1,11.11111111,P24
+NZ_CP050916,2941130,snp,A,G,G:15 A:0,CDS,-,1085/1467,362/488,missense_variant c.1085T>C p.Ile362Thr,HFD83_RS14095,0,porin family protein,missense_variant,1,11.11111111,P24
+NZ_CP050916,2980409,snp,C,A,A:10 C:0,CDS,+,328/360,110/119,missense_variant c.328C>A p.Gln110Lys,HFD83_RS14275,0,hypothetical protein,missense_variant,1,11.11111111,P24
+NZ_CP050916,3001922,snp,A,G,G:10 A:0,CDS,-,3473/10353,1158/3450,missense_variant c.3473T>C p.Leu1158Ser,HFD83_RS14365,0,DUF1983 domain-containing protein,missense_variant,4,44.44444444,P24
+NZ_CP050916,3139547,snp,G,A,A:16 G:0,CDS,+,361/951,121/316,missense_variant c.361G>A p.Gly121Ser,HFD83_RS15130,0,ribose-phosphate pyrophosphokinase,missense_variant,2,22.22222222,P24
+NZ_CP050916,2801285,snp,A,G,G:48 A:0,CDS,+,642/1122,214/373,stop_lost c.642A>G p.Ter214Trpext*?,HFD83_RS13460,0,ATP-binding protein,stop_lost,1,0.735294118,P77
+NZ_CP050916,2832973,snp,A,T,T:24 A:0,CDS,-,524/1701,175/566,missense_variant c.524T>A p.Leu175His,HFD83_RS13605,ureC,urease subunit alpha,missense_variant,1,0.735294118,P77
+NZ_CP050916,2848273,snp,C,T,T:22 C:0,CDS,-,434/1443,145/480,missense_variant c.434G>A p.Gly145Glu,HFD83_RS13680,0,capsule assembly Wzi family protein,missense_variant,1,0.735294118,P77
+NZ_CP050916,2865678,del,AATT,A,A:29 AATT:0,CDS,+,851/1029,284/342,disruptive_inframe_deletion c.851_853delTTA p.Ile284del,HFD83_RS13760,0,alpha/beta hydrolase,disruptive_inframe_deletion,1,0.735294118,P77
+NZ_CP050916,2887694,snp,T,A,A:28 T:0,CDS,+,122/876,41/291,missense_variant c.122T>A p.Val41Glu,HFD83_RS13840,0,LysR substrate-binding domain-containing protein,missense_variant,1,0.735294118,P77
+NZ_CP050916,2924496,snp,G,T,T:47 G:0,CDS,-,1567/1623,523/540,missense_variant c.1567C>A p.Gln523Lys,HFD83_RS14025,0,BCCT family transporter,missense_variant,4,2.941176471,P77
+NZ_CP050916,2927874,snp,C,A,A:29 C:0,CDS,+,931/1473,311/490,missense_variant c.931C>A p.Gln311Lys,HFD83_RS14035,betB,betaine-aldehyde dehydrogenase,missense_variant,2,1.470588235,P77
+NZ_CP050916,2930892,complex,TTGAG,ACGAA,ACGAA:24 TTGAG:0,CDS,+,212/1641,71/546,missense_variant c.212_216delTTGAGinsACGAA p.Phe71Tyr,HFD83_RS14045,mqo,malate dehydrogenase (quinone),missense_variant,1,0.735294118,P77
+NZ_CP050916,2932445,complex,ACCG,GTCA,GTCA:27 ACCG:0,CDS,+,33/471,11/156,missense_variant c.33_36delACCGinsGTCA p.Pro12Ser,HFD83_RS14050,0,hypothetical protein,missense_variant,1,0.735294118,P77
+NZ_CP050916,2941130,snp,A,G,G:31 A:0,CDS,-,1085/1467,362/488,missense_variant c.1085T>C p.Ile362Thr,HFD83_RS14095,0,porin family protein,missense_variant,1,0.735294118,P77
+NZ_CP050916,2958405,snp,G,A,A:30 G:0,CDS,-,1021/1794,341/597,missense_variant c.1021C>T p.Pro341Ser,HFD83_RS14165,0,P-loop NTPase fold protein,missense_variant,1,0.735294118,P77
+NZ_CP050916,2978562,snp,C,G,G:15 C:0,CDS,+,1015/1299,339/432,missense_variant c.1015C>G p.Leu339Val,HFD83_RS14260,0,DNA polymerase V subunit UmuC,missense_variant,3,2.205882353,P77
+NZ_CP050916,2980132,complex,TGCAC,AGTAG,AGTAG:25 TGCAC:0,CDS,+,51/360,17/119,missense_variant c.51_55delTGCACinsAGTAG p.AlaGln18ValGlu,HFD83_RS14275,0,hypothetical protein,missense_variant,4,2.941176471,P77
+NZ_CP050916,2982058,snp,G,A,A:26 G:0,CDS,-,595/699,199/232,missense_variant c.595C>T p.His199Tyr,HFD83_RS14295,0,hypothetical protein,missense_variant,1,0.735294118,P77
+NZ_CP050916,2982993,snp,C,G,G:34 C:0,CDS,-,454/795,152/264,missense_variant c.454G>C p.Val152Leu,HFD83_RS14300,0,hypothetical protein,missense_variant,1,0.735294118,P77
+NZ_CP050916,2987980,snp,A,T,T:20 A:0,CDS,-,1299/1452,433/483,missense_variant c.1299T>A p.His433Gln,HFD83_RS14330,0,hypothetical protein,missense_variant,5,3.676470588,P77
+NZ_CP050916,2989474,snp,C,T,T:22 C:0,CDS,-,1757/1953,586/650,missense_variant c.1757G>A p.Gly586Asp,HFD83_RS14335,0,hypothetical protein,missense_variant,12,8.823529412,P77
+NZ_CP050916,2994405,snp,A,G,G:21 A:0,CDS,-,239/771,80/256,missense_variant c.239T>C p.Ile80Thr,HFD83_RS14355,0,hypothetical protein,missense_variant,1,0.735294118,P77
+NZ_CP050916,2994686,snp,G,A,A:20 G:0,CDS,-,245/288,82/95,missense_variant c.245C>T p.Thr82Ile,HFD83_RS14360,0,hypothetical protein,missense_variant,1,0.735294118,P77
+NZ_CP050916,2997711,snp,A,G,G:24 A:0,CDS,-,7684/10353,2562/3450,missense_variant c.7684T>C p.Tyr2562His,HFD83_RS14365,0,DUF1983 domain-containing protein,missense_variant,27,19.85294118,P77
+NZ_CP050916,3007689,snp,A,G,G:34 A:0,CDS,-,95/267,32/88,missense_variant c.95T>C p.Val32Ala,HFD83_RS14385,0,type II toxin-antitoxin system RelE/ParE family toxin,missense_variant,1,0.735294118,P77
+NZ_CP050916,3026097,snp,C,T,T:20 C:0,CDS,-,574/1446,192/481,missense_variant c.574G>A p.Val192Ile,HFD83_RS14505,0,hypothetical protein,missense_variant,1,0.735294118,P77
+NZ_CP050916,3027986,snp,A,T,T:33 A:0,CDS,-,501/942,167/313,missense_variant c.501T>A p.His167Gln,HFD83_RS14520,0,hypothetical protein,missense_variant,7,5.147058824,P77
+NZ_CP050916,3030118,complex,AAATTACT,TGATCACA,TGATCACA:11 AAATTACT:0,CDS,-,298/900,97/299,missense_variant c.291_298delAGTAATTTinsTGTGATCA p.Leu100Met,HFD83_RS14530,0,phage antirepressor N-terminal domain-containing protein,missense_variant,2,1.470588235,P77
+NZ_CP050916,3030676,snp,G,T,T:44 G:0,CDS,-,746/942,249/313,missense_variant c.746C>A p.Ala249Asp,HFD83_RS14535,0,type II toxin-antitoxin system HicB family antitoxin,missense_variant,2,1.470588235,P77
+NZ_CP050916,3031757,snp,T,G,G:14 T:0,CDS,-,1019/1056,340/351,missense_variant c.1019A>C p.Asn340Thr,HFD83_RS14540,0,hypothetical protein,missense_variant,2,1.470588235,P77
+NZ_CP050916,3033053,snp,G,T,T:30 G:0,CDS,-,2025/2289,675/762,missense_variant c.2025C>A p.Asp675Glu,HFD83_RS14545,0,phage tail tip lysozyme,missense_variant,8,5.882352941,P77
+NZ_CP050916,3035707,complex,CTCAGTTCGA,TTCTGTCTTG,TTCTGTCTTG:10 CTCAGTTCGA:0,CDS,-,636/840,209/279,missense_variant c.627_636delTCGAACTGAGinsCAAGACAGAA p.Arg210Lys,HFD83_RS14555,0,hypothetical protein,missense_variant,7,5.147058824,P77
+NZ_CP050916,3036364,snp,C,T,T:46 C:0,CDS,-,679/687,227/228,missense_variant c.679G>A p.Ala227Thr,HFD83_RS14560,0,helix-turn-helix domain-containing protein,missense_variant,6,4.411764706,P77
+NZ_CP050916,3037636,snp,C,T,T:34 C:0,CDS,-,97/690,33/229,missense_variant c.97G>A p.Asp33Asn,HFD83_RS14565,0,RusA family crossover junction endodeoxyribonuclease,missense_variant,1,0.735294118,P77
+NZ_CP050916,3039814,snp,T,C,C:28 T:0,CDS,-,326/534,109/177,missense_variant c.326A>G p.Asn109Ser,HFD83_RS14575,0,hypothetical protein,missense_variant,2,1.470588235,P77
+NZ_CP050916,3044116,snp,C,T,T:13 C:0,CDS,-,745/750,249/249,missense_variant c.745G>A p.Val249Ile,HFD83_RS14610,0,hypothetical protein,missense_variant,2,1.470588235,P77
+NZ_CP050916,3052409,snp,C,A,A:19 C:0,CDS,+,56/804,19/267,missense_variant c.56C>A p.Pro19Gln,HFD83_RS14675,0,DUF2303 family protein,missense_variant,4,2.941176471,P77
+NZ_CP050916,3053275,snp,T,A,A:30 T:0,CDS,+,33/261,11/86,missense_variant c.33T>A p.Asp11Glu,HFD83_RS14680,0,hypothetical protein,missense_variant,3,2.205882353,P77
+NZ_CP050916,3053749,snp,T,C,C:25 T:0,CDS,+,188/330,63/109,missense_variant c.188T>C p.Val63Ala,HFD83_RS14685,0,hypothetical protein,missense_variant,1,0.735294118,P77
+NZ_CP050916,3054495,complex,ACCTATTGGCA,GCCTTTTAGCT,GCCTTTTAGCT:26 ACCTATTGGCA:0,CDS,+,69/681,23/226,missense_variant c.69_79delACCTATTGGCAinsGCCTTTTAGCT p.IleGlyIle25PheSerLeu,HFD83_RS14695,0,DNA polymerase III subunit epsilon,missense_variant,8,5.882352941,P77
+NZ_CP050916,3055191,snp,A,T,T:21 A:0,CDS,+,72/363,24/120,missense_variant c.72A>T p.Lys24Asn,HFD83_RS14700,0,ead/Ea22-like family protein,missense_variant,2,1.470588235,P77
+NZ_CP050916,3056571,snp,A,T,T:28 A:0,CDS,-,1039/1152,347/383,missense_variant c.1039T>A p.Ser347Thr,HFD83_RS14720,0,site-specific integrase,missense_variant,3,2.205882353,P77
+NZ_CP050916,3139547,snp,G,A,A:32 G:0,CDS,+,361/951,121/316,missense_variant c.361G>A p.Gly121Ser,HFD83_RS15130,0,ribose-phosphate pyrophosphokinase,missense_variant,2,1.470588235,P77
+NZ_CP050916,3168006,snp,C,T,T:38 C:0,CDS,-,460/1038,154/345,missense_variant c.460G>A p.Ala154Thr,HFD83_RS15285,0,cell division protein ZipA,missense_variant,1,0.735294118,P77
+NZ_CP050916,3186389,snp,C,T,T:39 C:0,CDS,-,379/1479,127/492,missense_variant c.379G>A p.Glu127Lys,HFD83_RS15350,0,hypothetical protein,missense_variant,1,0.735294118,P77
+NZ_CP050916,2801285,snp,A,G,G:113 A:0,CDS,+,642/1122,214/373,stop_lost c.642A>G p.Ter214Trpext*?,HFD83_RS13460,0,ATP-binding protein,stop_lost,1,0.4784689,P118
+NZ_CP050916,2818656,snp,A,T,T:53 A:0,CDS,+,273/777,91/258,missense_variant c.273A>T p.Glu91Asp,HFD83_RS13530,0,dioxygenase,missense_variant,1,0.4784689,P118
+NZ_CP050916,2832973,snp,A,T,T:54 A:0,CDS,-,524/1701,175/566,missense_variant c.524T>A p.Leu175His,HFD83_RS13605,ureC,urease subunit alpha,missense_variant,1,0.4784689,P118
+NZ_CP050916,2865678,del,AATT,A,A:78 AATT:0,CDS,+,851/1029,284/342,disruptive_inframe_deletion c.851_853delTTA p.Ile284del,HFD83_RS13760,0,alpha/beta hydrolase,disruptive_inframe_deletion,1,0.4784689,P118
+NZ_CP050916,2868311,snp,A,T,T:66 A:0,CDS,-,875/2265,292/754,stop_gained c.875T>A p.Leu292*,HFD83_RS13770,0,TonB-dependent siderophore receptor,stop_gained,1,0.4784689,P118
+NZ_CP050916,2887694,snp,T,A,A:75 T:0,CDS,+,122/876,41/291,missense_variant c.122T>A p.Val41Glu,HFD83_RS13840,0,LysR substrate-binding domain-containing protein,missense_variant,1,0.4784689,P118
+NZ_CP050916,2924496,snp,G,T,T:68 G:0,CDS,-,1567/1623,523/540,missense_variant c.1567C>A p.Gln523Lys,HFD83_RS14025,0,BCCT family transporter,missense_variant,4,1.913875598,P118
+NZ_CP050916,2927874,snp,C,A,A:60 C:0,CDS,+,931/1473,311/490,missense_variant c.931C>A p.Gln311Lys,HFD83_RS14035,betB,betaine-aldehyde dehydrogenase,missense_variant,2,0.956937799,P118
+NZ_CP050916,2930892,complex,TTGAG,ACGAA,ACGAA:57 TTGAG:0,CDS,+,212/1641,71/546,missense_variant c.212_216delTTGAGinsACGAA p.Phe71Tyr,HFD83_RS14045,mqo,malate dehydrogenase (quinone),missense_variant,1,0.4784689,P118
+NZ_CP050916,2932445,complex,ACCG,GTCA,GTCA:62 ACCG:0,CDS,+,33/471,11/156,missense_variant c.33_36delACCGinsGTCA p.Pro12Ser,HFD83_RS14050,0,hypothetical protein,missense_variant,1,0.4784689,P118
+NZ_CP050916,2941130,snp,A,G,G:98 A:0,CDS,-,1085/1467,362/488,missense_variant c.1085T>C p.Ile362Thr,HFD83_RS14095,0,porin family protein,missense_variant,1,0.4784689,P118
+NZ_CP050916,2958405,snp,G,A,A:62 G:0,CDS,-,1021/1794,341/597,missense_variant c.1021C>T p.Pro341Ser,HFD83_RS14165,0,P-loop NTPase fold protein,missense_variant,1,0.4784689,P118
+NZ_CP050916,2978562,snp,C,G,G:32 C:0,CDS,+,1015/1299,339/432,missense_variant c.1015C>G p.Leu339Val,HFD83_RS14260,0,DNA polymerase V subunit UmuC,missense_variant,3,1.435406699,P118
+NZ_CP050916,2980132,complex,TGCAC,AGTAG,AGTAG:47 TGCAC:0,CDS,+,51/360,17/119,missense_variant c.51_55delTGCACinsAGTAG p.AlaGln18ValGlu,HFD83_RS14275,0,hypothetical protein,missense_variant,4,1.913875598,P118
+NZ_CP050916,2982058,snp,G,A,A:64 G:0,CDS,-,595/699,199/232,missense_variant c.595C>T p.His199Tyr,HFD83_RS14295,0,hypothetical protein,missense_variant,1,0.4784689,P118
+NZ_CP050916,2982993,snp,C,G,G:63 C:0,CDS,-,454/795,152/264,missense_variant c.454G>C p.Val152Leu,HFD83_RS14300,0,hypothetical protein,missense_variant,1,0.4784689,P118
+NZ_CP050916,2987980,snp,A,T,T:34 A:0,CDS,-,1299/1452,433/483,missense_variant c.1299T>A p.His433Gln,HFD83_RS14330,0,hypothetical protein,missense_variant,5,2.392344498,P118
+NZ_CP050916,2989474,snp,C,T,T:58 C:0,CDS,-,1757/1953,586/650,missense_variant c.1757G>A p.Gly586Asp,HFD83_RS14335,0,hypothetical protein,missense_variant,12,5.741626794,P118
+NZ_CP050916,2994405,snp,A,G,G:72 A:0,CDS,-,239/771,80/256,missense_variant c.239T>C p.Ile80Thr,HFD83_RS14355,0,hypothetical protein,missense_variant,1,0.4784689,P118
+NZ_CP050916,2994686,snp,G,A,A:65 G:0,CDS,-,245/288,82/95,missense_variant c.245C>T p.Thr82Ile,HFD83_RS14360,0,hypothetical protein,missense_variant,1,0.4784689,P118
+NZ_CP050916,2995323,complex,AACCA,TACCT,TACCT:24 AACCA:0,CDS,-,10072/10353,3356/3450,missense_variant c.10068_10072delTGGTTinsAGGTA p.Ser3358Thr,HFD83_RS14365,0,DUF1983 domain-containing protein,missense_variant,30,14.35406699,P118
+NZ_CP050916,3007689,snp,A,G,G:113 A:0,CDS,-,95/267,32/88,missense_variant c.95T>C p.Val32Ala,HFD83_RS14385,0,type II toxin-antitoxin system RelE/ParE family toxin,missense_variant,1,0.4784689,P118
+NZ_CP050916,3010215,snp,A,G,G:59 A:0,CDS,-,71/279,24/92,missense_variant c.71T>C p.Ile24Thr,HFD83_RS14410,0,hypothetical protein,missense_variant,1,0.4784689,P118
+NZ_CP050916,3010395,snp,G,T,T:63 G:0,CDS,-,720/768,240/255,missense_variant c.720C>A p.Asn240Lys,HFD83_RS14415,0,hypothetical protein,missense_variant,7,3.349282297,P118
+NZ_CP050916,3011331,complex,AATT,GATG,GATG:47 AATT:0,CDS,-,1098/1296,365/431,missense_variant c.1095_1098delAATTinsCATC p.Glu365Asp,HFD83_RS14420,0,hypothetical protein,missense_variant,8,3.827751196,P118
+NZ_CP050916,3012775,complex,AGGA,TGGT,TGGT:75 AGGA:0,CDS,-,60/288,19/95,missense_variant c.57_60delTCCTinsACCA p.His19Gln,HFD83_RS14425,0,hypothetical protein,missense_variant,1,0.4784689,P118
+NZ_CP050916,3012936,snp,G,A,A:43 G:0,CDS,-,530/627,177/208,missense_variant c.530C>T p.Thr177Ile,HFD83_RS14430,0,hypothetical protein,missense_variant,9,4.306220096,P118
+NZ_CP050916,3013535,snp,A,T,T:28 A:2,CDS,-,1773/1779,591/592,missense_variant c.1773T>A p.Asn591Lys,HFD83_RS14435,0,hypothetical protein,missense_variant,21,10.04784689,P118
+NZ_CP050916,3015582,complex,TGT,AGA,AGA:32 TGT:1,CDS,-,183/303,61/100,missense_variant c.181_183delACAinsTCT p.Thr61Ser,HFD83_RS14440,0,hypothetical protein,missense_variant,7,3.349282297,P118
+NZ_CP050916,3015766,complex,TAGTT,AACTC,AACTC:40 TAGTT:0,CDS,-,544/549,180/182,stop_gained c.540_544delAACTAinsGAGTT p.ThrLys181*,HFD83_RS14445,0,hypothetical protein,stop_gained,7,3.349282297,P118
+NZ_CP050916,3016549,snp,A,T,T:65 A:0,CDS,-,881/1131,294/376,missense_variant c.881T>A p.Met294Lys,HFD83_RS14450,0,hypothetical protein,missense_variant,3,1.435406699,P118
+NZ_CP050916,3017577,snp,T,A,A:97 T:1,CDS,-,133/279,45/92,missense_variant c.133A>T p.Ile45Leu,HFD83_RS14455,0,hypothetical protein,missense_variant,1,0.4784689,P118
+NZ_CP050916,3022371,complex,CA,AT,AT:66 CA:0,CDS,-,496/804,165/267,missense_variant c.495_496delTGinsAT p.Val166Phe,HFD83_RS14480,0,hypothetical protein,missense_variant,3,1.435406699,P118
+NZ_CP050916,3023072,snp,C,A,A:102 C:0,CDS,-,703/906,235/301,missense_variant c.703G>T p.Val235Phe,HFD83_RS14485,0,hypothetical protein,missense_variant,1,0.4784689,P118
+NZ_CP050916,3023969,snp,C,T,T:83 C:0,CDS,-,106/228,36/75,missense_variant c.106G>A p.Val36Ile,HFD83_RS14490,0,hypothetical protein,missense_variant,1,0.4784689,P118
+NZ_CP050916,3024171,snp,A,C,C:58 A:0,CDS,-,374/459,125/152,missense_variant c.374T>G p.Ile125Ser,HFD83_RS14495,0,hypothetical protein,missense_variant,1,0.4784689,P118
+NZ_CP050916,3024680,complex,GGTG,TGCA,TGCA:13 GGTG:0,CDS,-,558/615,185/204,missense_variant c.555_558delCACCinsTGCA p.Thr186Ala,HFD83_RS14500,0,hypothetical protein,missense_variant,2,0.956937799,P118
+NZ_CP050916,3032634,snp,T,C,C:46 T:0,CDS,-,142/1056,48/351,missense_variant c.142A>G p.Ile48Val,HFD83_RS14540,0,hypothetical protein,missense_variant,1,0.4784689,P118
+NZ_CP050916,3033053,snp,G,T,T:77 G:0,CDS,-,2025/2289,675/762,missense_variant c.2025C>A p.Asp675Glu,HFD83_RS14545,0,phage tail tip lysozyme,missense_variant,11,5.263157895,P118
+NZ_CP050916,3035707,complex,CTCAGTTCGA,TTCTGTCTTG,TTCTGTCTTG:20 CTCAGTTCGA:0,CDS,-,636/840,209/279,missense_variant c.627_636delTCGAACTGAGinsCAAGACAGAA p.Arg210Lys,HFD83_RS14555,0,hypothetical protein,missense_variant,7,3.349282297,P118
+NZ_CP050916,3036364,snp,C,T,T:56 C:0,CDS,-,679/687,227/228,missense_variant c.679G>A p.Ala227Thr,HFD83_RS14560,0,helix-turn-helix domain-containing protein,missense_variant,6,2.870813397,P118
+NZ_CP050916,3037636,snp,C,T,T:64 C:0,CDS,-,97/690,33/229,missense_variant c.97G>A p.Asp33Asn,HFD83_RS14565,0,RusA family crossover junction endodeoxyribonuclease,missense_variant,1,0.4784689,P118
+NZ_CP050916,3039814,snp,T,C,C:53 T:0,CDS,-,326/534,109/177,missense_variant c.326A>G p.Asn109Ser,HFD83_RS14575,0,hypothetical protein,missense_variant,2,0.956937799,P118
+NZ_CP050916,3052409,snp,C,A,A:55 C:0,CDS,+,56/804,19/267,missense_variant c.56C>A p.Pro19Gln,HFD83_RS14675,0,DUF2303 family protein,missense_variant,4,1.913875598,P118
+NZ_CP050916,3053275,snp,T,A,A:63 T:0,CDS,+,33/261,11/86,missense_variant c.33T>A p.Asp11Glu,HFD83_RS14680,0,hypothetical protein,missense_variant,3,1.435406699,P118
+NZ_CP050916,3053749,snp,T,C,C:51 T:0,CDS,+,188/330,63/109,missense_variant c.188T>C p.Val63Ala,HFD83_RS14685,0,hypothetical protein,missense_variant,5,2.392344498,P118
+NZ_CP050916,3054495,complex,ACCTATTGGCA,GCCTTTTAGCT,GCCTTTTAGCT:42 ACCTATTGGCA:0,CDS,+,69/681,23/226,missense_variant c.69_79delACCTATTGGCAinsGCCTTTTAGCT p.IleGlyIle25PheSerLeu,HFD83_RS14695,0,DNA polymerase III subunit epsilon,missense_variant,8,3.827751196,P118
+NZ_CP050916,3055191,snp,A,T,T:31 A:0,CDS,+,72/363,24/120,missense_variant c.72A>T p.Lys24Asn,HFD83_RS14700,0,ead/Ea22-like family protein,missense_variant,3,1.435406699,P118
+NZ_CP050916,3055436,snp,T,C,C:12 T:0,CDS,+,317/363,106/120,missense_variant c.317T>C p.Ile106Thr,HFD83_RS14705,0,hypothetical protein,missense_variant,5,2.392344498,P118
+NZ_CP050916,3056571,snp,A,T,T:33 A:0,CDS,-,1039/1152,347/383,missense_variant c.1039T>A p.Ser347Thr,HFD83_RS14720,0,site-specific integrase,missense_variant,3,1.435406699,P118
+NZ_CP050916,3168006,snp,C,T,T:64 C:0,CDS,-,460/1038,154/345,missense_variant c.460G>A p.Ala154Thr,HFD83_RS15285,0,cell division protein ZipA,missense_variant,1,0.4784689,P118
+NZ_CP050916,3186389,snp,C,T,T:56 C:0,CDS,-,379/1479,127/492,missense_variant c.379G>A p.Glu127Lys,HFD83_RS15350,0,hypothetical protein,missense_variant,1,0.4784689,P118
+NZ_CP050916,2801285,snp,A,G,G:168 A:0,CDS,+,642/1122,214/373,stop_lost c.642A>G p.Ter214Trpext*?,HFD83_RS13460,0,ATP-binding protein,stop_lost,1,1.351351351,P151
+NZ_CP050916,2832973,snp,A,T,T:93 A:0,CDS,-,524/1701,175/566,missense_variant c.524T>A p.Leu175His,HFD83_RS13605,ureC,urease subunit alpha,missense_variant,1,1.351351351,P151
+NZ_CP050916,2865678,del,AATT,A,A:115 AATT:0,CDS,+,851/1029,284/342,disruptive_inframe_deletion c.851_853delTTA p.Ile284del,HFD83_RS13760,0,alpha/beta hydrolase,disruptive_inframe_deletion,1,1.351351351,P151
+NZ_CP050916,2887694,snp,T,A,A:80 T:1,CDS,+,122/876,41/291,missense_variant c.122T>A p.Val41Glu,HFD83_RS13840,0,LysR substrate-binding domain-containing protein,missense_variant,1,1.351351351,P151
+NZ_CP050916,2941130,snp,A,G,G:135 A:0,CDS,-,1085/1467,362/488,missense_variant c.1085T>C p.Ile362Thr,HFD83_RS14095,0,porin family protein,missense_variant,1,1.351351351,P151
+NZ_CP050916,2949920,snp,C,T,T:124 C:0,CDS,+,523/945,175/314,missense_variant c.523C>T p.Arg175Cys,HFD83_RS14125,0,dihydrodipicolinate synthase family protein,missense_variant,1,1.351351351,P151
+NZ_CP050916,2978562,snp,C,G,G:63 C:0,CDS,+,1015/1299,339/432,missense_variant c.1015C>G p.Leu339Val,HFD83_RS14260,0,DNA polymerase V subunit UmuC,missense_variant,6,8.108108108,P151
+NZ_CP050916,2980132,complex,TGCAC,AGTAG,AGTAG:58 TGCAC:0,CDS,+,51/360,17/119,missense_variant c.51_55delTGCACinsAGTAG p.AlaGln18ValGlu,HFD83_RS14275,0,hypothetical protein,missense_variant,4,5.405405405,P151
+NZ_CP050916,2982311,complex,CTCCA,TTCCG,TTCCG:98 CTCCA:0,CDS,-,342/699,113/232,missense_variant c.338_342delTGGAGinsCGGAA p.Val113Ala,HFD83_RS14295,0,hypothetical protein,missense_variant,7,9.459459459,P151
+NZ_CP050916,2982655,complex,GTTGC,TTTGA,TTTGA:73 GTTGC:1,CDS,-,792/795,263/264,missense_variant c.788_792delGCAACinsTCAAA p.GlyAsn263ValLys,HFD83_RS14300,0,hypothetical protein,missense_variant,2,2.702702703,P151
+NZ_CP050916,2987980,snp,A,T,T:23 A:0,CDS,-,1299/1452,433/483,missense_variant c.1299T>A p.His433Gln,HFD83_RS14330,0,hypothetical protein,missense_variant,3,4.054054054,P151
+NZ_CP050916,3007689,snp,A,G,G:124 A:0,CDS,-,95/267,32/88,missense_variant c.95T>C p.Val32Ala,HFD83_RS14385,0,type II toxin-antitoxin system RelE/ParE family toxin,missense_variant,1,1.351351351,P151
+NZ_CP050916,3027986,snp,A,T,T:111 A:0,CDS,-,501/942,167/313,missense_variant c.501T>A p.His167Gln,HFD83_RS14520,0,hypothetical protein,missense_variant,7,9.459459459,P151
+NZ_CP050916,3032861,complex,CCCGATG,ACTGATA,ACTGATA:10 CCCGATG:0,CDS,-,2217/2289,737/762,missense_variant c.2211_2217delCATCGGGinsTATCAGT p.Gly739Ser,HFD83_RS14545,0,phage tail tip lysozyme,missense_variant,5,6.756756757,P151
+NZ_CP050916,3049506,snp,G,C,C:96 G:0,CDS,-,104/456,35/151,missense_variant c.104C>G p.Ser35Cys,HFD83_RS14635,0,hypothetical protein,missense_variant,1,1.351351351,P151
+NZ_CP050916,3049629,snp,A,T,T:88 A:0,CDS,-,163/186,55/61,missense_variant c.163T>A p.Phe55Ile,HFD83_RS14640,0,hypothetical protein,missense_variant,1,1.351351351,P151
+NZ_CP050916,3050168,mnp,GA,CG,CG:90 GA:2,CDS,-,229/375,76/124,missense_variant c.228_229delTCinsCG p.Gln77Glu,HFD83_RS14650,0,hypothetical protein,missense_variant,1,1.351351351,P151
+NZ_CP050916,3050477,snp,T,A,A:93 T:0,CDS,-,186/234,62/77,missense_variant c.186A>T p.Lys62Asn,HFD83_RS14655,0,helix-turn-helix transcriptional regulator,missense_variant,2,2.702702703,P151
+NZ_CP050916,3052590,complex,TATG,CGTA,CGTA:86 TATG:0,CDS,+,237/804,79/267,missense_variant c.237_240delTATGinsCGTA p.Met80Val,HFD83_RS14675,0,DUF2303 family protein,missense_variant,5,6.756756757,P151
+NZ_CP050916,3053275,snp,T,A,A:115 T:0,CDS,+,33/261,11/86,missense_variant c.33T>A p.Asp11Glu,HFD83_RS14680,0,hypothetical protein,missense_variant,5,6.756756757,P151
+NZ_CP050916,3053592,snp,G,A,A:70 G:0,CDS,+,31/330,11/109,missense_variant c.31G>A p.Ala11Thr,HFD83_RS14685,0,hypothetical protein,missense_variant,7,9.459459459,P151
+NZ_CP050916,3054495,complex,ACCTATTGGCA,GCCTTTTAGCT,GCCTTTTAGCT:72 ACCTATTGGCA:0,CDS,+,69/681,23/226,missense_variant c.69_79delACCTATTGGCAinsGCCTTTTAGCT p.IleGlyIle25PheSerLeu,HFD83_RS14695,0,DNA polymerase III subunit epsilon,missense_variant,7,9.459459459,P151
+NZ_CP050916,3056571,snp,A,T,T:61 A:0,CDS,-,1039/1152,347/383,missense_variant c.1039T>A p.Ser347Thr,HFD83_RS14720,0,site-specific integrase,missense_variant,3,4.054054054,P151
+NZ_CP050916,3168006,snp,C,T,T:106 C:0,CDS,-,460/1038,154/345,missense_variant c.460G>A p.Ala154Thr,HFD83_RS15285,0,cell division protein ZipA,missense_variant,1,1.351351351,P151
+NZ_CP050916,2801285,snp,A,G,G:32 A:0,CDS,+,642/1122,214/373,stop_lost c.642A>G p.Ter214Trpext*?,HFD83_RS13460,0,ATP-binding protein,stop_lost,1,1.063829787,P26
+NZ_CP050916,2865678,del,AATT,A,A:21 AATT:0,CDS,+,851/1029,284/342,disruptive_inframe_deletion c.851_853delTTA p.Ile284del,HFD83_RS13760,0,alpha/beta hydrolase,disruptive_inframe_deletion,1,1.063829787,P26
+NZ_CP050916,2887694,snp,T,A,A:14 T:0,CDS,+,122/876,41/291,missense_variant c.122T>A p.Val41Glu,HFD83_RS13840,0,LysR substrate-binding domain-containing protein,missense_variant,1,1.063829787,P26
+NZ_CP050916,2924496,snp,G,T,T:14 G:0,CDS,-,1567/1623,523/540,missense_variant c.1567C>A p.Gln523Lys,HFD83_RS14025,0,BCCT family transporter,missense_variant,4,4.255319149,P26
+NZ_CP050916,2927874,snp,C,A,A:14 C:0,CDS,+,931/1473,311/490,missense_variant c.931C>A p.Gln311Lys,HFD83_RS14035,betB,betaine-aldehyde dehydrogenase,missense_variant,2,2.127659574,P26
+NZ_CP050916,2930892,complex,TTGAG,ACGAA,ACGAA:15 TTGAG:0,CDS,+,212/1641,71/546,missense_variant c.212_216delTTGAGinsACGAA p.Phe71Tyr,HFD83_RS14045,mqo,malate dehydrogenase (quinone),missense_variant,1,1.063829787,P26
+NZ_CP050916,2941130,snp,A,G,G:20 A:0,CDS,-,1085/1467,362/488,missense_variant c.1085T>C p.Ile362Thr,HFD83_RS14095,0,porin family protein,missense_variant,1,1.063829787,P26
+NZ_CP050916,2958405,snp,G,A,A:12 G:0,CDS,-,1021/1794,341/597,missense_variant c.1021C>T p.Pro341Ser,HFD83_RS14165,0,P-loop NTPase fold protein,missense_variant,1,1.063829787,P26
+NZ_CP050916,2980132,complex,TGCAC,AGTAG,AGTAG:11 TGCAC:0,CDS,+,51/360,17/119,missense_variant c.51_55delTGCACinsAGTAG p.AlaGln18ValGlu,HFD83_RS14275,0,hypothetical protein,missense_variant,3,3.191489362,P26
+NZ_CP050916,2982993,snp,C,G,G:22 C:0,CDS,-,454/795,152/264,missense_variant c.454G>C p.Val152Leu,HFD83_RS14300,0,hypothetical protein,missense_variant,1,1.063829787,P26
+NZ_CP050916,2988846,snp,A,T,T:13 A:0,CDS,-,433/1452,145/483,missense_variant c.433T>A p.Ser145Thr,HFD83_RS14330,0,hypothetical protein,missense_variant,3,3.191489362,P26
+NZ_CP050916,2989474,snp,C,T,T:22 C:0,CDS,-,1757/1953,586/650,missense_variant c.1757G>A p.Gly586Asp,HFD83_RS14335,0,hypothetical protein,missense_variant,10,10.63829787,P26
+NZ_CP050916,2994405,snp,A,G,G:14 A:0,CDS,-,239/771,80/256,missense_variant c.239T>C p.Ile80Thr,HFD83_RS14355,0,hypothetical protein,missense_variant,1,1.063829787,P26
+NZ_CP050916,2994686,snp,G,A,A:19 G:0,CDS,-,245/288,82/95,missense_variant c.245C>T p.Thr82Ile,HFD83_RS14360,0,hypothetical protein,missense_variant,1,1.063829787,P26
+NZ_CP050916,2997879,snp,C,T,T:11 C:0,CDS,-,7516/10353,2506/3450,missense_variant c.7516G>A p.Glu2506Lys,HFD83_RS14365,0,DUF1983 domain-containing protein,missense_variant,18,19.14893617,P26
+NZ_CP050916,3007689,snp,A,G,G:29 A:0,CDS,-,95/267,32/88,missense_variant c.95T>C p.Val32Ala,HFD83_RS14385,0,type II toxin-antitoxin system RelE/ParE family toxin,missense_variant,1,1.063829787,P26
+NZ_CP050916,3027986,snp,A,T,T:14 A:0,CDS,-,501/942,167/313,missense_variant c.501T>A p.His167Gln,HFD83_RS14520,0,hypothetical protein,missense_variant,4,4.255319149,P26
+NZ_CP050916,3030676,snp,G,T,T:20 G:0,CDS,-,746/942,249/313,missense_variant c.746C>A p.Ala249Asp,HFD83_RS14535,0,type II toxin-antitoxin system HicB family antitoxin,missense_variant,2,2.127659574,P26
+NZ_CP050916,3031757,snp,T,G,G:17 T:0,CDS,-,1019/1056,340/351,missense_variant c.1019A>C p.Asn340Thr,HFD83_RS14540,0,hypothetical protein,missense_variant,2,2.127659574,P26
+NZ_CP050916,3033093,snp,T,G,G:10 T:0,CDS,-,1985/2289,662/762,missense_variant c.1985A>C p.Asn662Thr,HFD83_RS14545,0,phage tail tip lysozyme,missense_variant,5,5.319148936,P26
+NZ_CP050916,3035976,snp,T,G,G:11 T:0,CDS,-,367/840,123/279,missense_variant c.367A>C p.Asn123His,HFD83_RS14555,0,hypothetical protein,missense_variant,6,6.382978723,P26
+NZ_CP050916,3036364,snp,C,T,T:14 C:0,CDS,-,679/687,227/228,missense_variant c.679G>A p.Ala227Thr,HFD83_RS14560,0,helix-turn-helix domain-containing protein,missense_variant,5,5.319148936,P26
+NZ_CP050916,3037636,snp,C,T,T:10 C:0,CDS,-,97/690,33/229,missense_variant c.97G>A p.Asp33Asn,HFD83_RS14565,0,RusA family crossover junction endodeoxyribonuclease,missense_variant,1,1.063829787,P26
+NZ_CP050916,3052409,snp,C,A,A:19 C:0,CDS,+,56/804,19/267,missense_variant c.56C>A p.Pro19Gln,HFD83_RS14675,0,DUF2303 family protein,missense_variant,4,4.255319149,P26
+NZ_CP050916,3053275,snp,T,A,A:19 T:0,CDS,+,33/261,11/86,missense_variant c.33T>A p.Asp11Glu,HFD83_RS14680,0,hypothetical protein,missense_variant,3,3.191489362,P26
+NZ_CP050916,3053749,snp,T,C,C:21 T:0,CDS,+,188/330,63/109,missense_variant c.188T>C p.Val63Ala,HFD83_RS14685,0,hypothetical protein,missense_variant,1,1.063829787,P26
+NZ_CP050916,3054495,complex,ACCTATTGGCA,GCCTTTTAGCT,GCCTTTTAGCT:10 ACCTATTGGCA:0,CDS,+,69/681,23/226,missense_variant c.69_79delACCTATTGGCAinsGCCTTTTAGCT p.IleGlyIle25PheSerLeu,HFD83_RS14695,0,DNA polymerase III subunit epsilon,missense_variant,8,8.510638298,P26
+NZ_CP050916,3055191,snp,A,T,T:12 A:0,CDS,+,72/363,24/120,missense_variant c.72A>T p.Lys24Asn,HFD83_RS14700,0,ead/Ea22-like family protein,missense_variant,1,1.063829787,P26
+NZ_CP050916,3056791,complex,CTCCC,TTCCT,TTCCT:12 CTCCC:0,CDS,-,819/1152,272/383,missense_variant c.815_819delGGGAGinsAGGAA p.Arg272Lys,HFD83_RS14720,0,site-specific integrase,missense_variant,1,1.063829787,P26
+NZ_CP050916,3168006,snp,C,T,T:17 C:0,CDS,-,460/1038,154/345,missense_variant c.460G>A p.Ala154Thr,HFD83_RS15285,0,cell division protein ZipA,missense_variant,1,1.063829787,P26
+NZ_CP050916,2801285,snp,A,G,G:299 A:0,CDS,+,642/1122,214/373,stop_lost c.642A>G p.Ter214Trpext*?,HFD83_RS13460,0,ATP-binding protein,stop_lost,1,0.617283951,P52
+NZ_CP050916,2832973,snp,A,T,T:111 A:0,CDS,-,524/1701,175/566,missense_variant c.524T>A p.Leu175His,HFD83_RS13605,ureC,urease subunit alpha,missense_variant,1,0.617283951,P52
+NZ_CP050916,2848273,snp,C,T,T:155 C:2,CDS,-,434/1443,145/480,missense_variant c.434G>A p.Gly145Glu,HFD83_RS13680,0,capsule assembly Wzi family protein,missense_variant,1,0.617283951,P52
+NZ_CP050916,2865678,del,AATT,A,A:112 AATT:0,CDS,+,851/1029,284/342,disruptive_inframe_deletion c.851_853delTTA p.Ile284del,HFD83_RS13760,0,alpha/beta hydrolase,disruptive_inframe_deletion,1,0.617283951,P52
+NZ_CP050916,2887694,snp,T,A,A:198 T:0,CDS,+,122/876,41/291,missense_variant c.122T>A p.Val41Glu,HFD83_RS13840,0,LysR substrate-binding domain-containing protein,missense_variant,1,0.617283951,P52
+NZ_CP050916,2924496,snp,G,T,T:149 G:0,CDS,-,1567/1623,523/540,missense_variant c.1567C>A p.Gln523Lys,HFD83_RS14025,0,BCCT family transporter,missense_variant,4,2.469135802,P52
+NZ_CP050916,2927874,snp,C,A,A:186 C:0,CDS,+,931/1473,311/490,missense_variant c.931C>A p.Gln311Lys,HFD83_RS14035,betB,betaine-aldehyde dehydrogenase,missense_variant,2,1.234567901,P52
+NZ_CP050916,2930892,complex,TTGAG,ACGAA,ACGAA:139 TTGAG:0,CDS,+,212/1641,71/546,missense_variant c.212_216delTTGAGinsACGAA p.Phe71Tyr,HFD83_RS14045,mqo,malate dehydrogenase (quinone),missense_variant,1,0.617283951,P52
+NZ_CP050916,2932445,complex,ACCG,GTCA,GTCA:141 ACCG:0,CDS,+,33/471,11/156,missense_variant c.33_36delACCGinsGTCA p.Pro12Ser,HFD83_RS14050,0,hypothetical protein,missense_variant,1,0.617283951,P52
+NZ_CP050916,2941130,snp,A,G,G:166 A:0,CDS,-,1085/1467,362/488,missense_variant c.1085T>C p.Ile362Thr,HFD83_RS14095,0,porin family protein,missense_variant,1,0.617283951,P52
+NZ_CP050916,2958405,snp,G,A,A:165 G:0,CDS,-,1021/1794,341/597,missense_variant c.1021C>T p.Pro341Ser,HFD83_RS14165,0,P-loop NTPase fold protein,missense_variant,1,0.617283951,P52
+NZ_CP050916,2978562,snp,C,G,G:94 C:0,CDS,+,1015/1299,339/432,missense_variant c.1015C>G p.Leu339Val,HFD83_RS14260,0,DNA polymerase V subunit UmuC,missense_variant,6,3.703703704,P52
+NZ_CP050916,2980132,complex,TGCAC,AGTAG,AGTAG:73 TGCAC:0,CDS,+,51/360,17/119,missense_variant c.51_55delTGCACinsAGTAG p.AlaGln18ValGlu,HFD83_RS14275,0,hypothetical protein,missense_variant,4,2.469135802,P52
+NZ_CP050916,2982058,snp,G,A,A:184 G:0,CDS,-,595/699,199/232,missense_variant c.595C>T p.His199Tyr,HFD83_RS14295,0,hypothetical protein,missense_variant,1,0.617283951,P52
+NZ_CP050916,2982993,snp,C,G,G:141 C:0,CDS,-,454/795,152/264,missense_variant c.454G>C p.Val152Leu,HFD83_RS14300,0,hypothetical protein,missense_variant,1,0.617283951,P52
+NZ_CP050916,2987980,snp,A,T,T:133 A:0,CDS,-,1299/1452,433/483,missense_variant c.1299T>A p.His433Gln,HFD83_RS14330,0,hypothetical protein,missense_variant,5,3.086419753,P52
+NZ_CP050916,2989474,snp,C,T,T:161 C:0,CDS,-,1757/1953,586/650,missense_variant c.1757G>A p.Gly586Asp,HFD83_RS14335,0,hypothetical protein,missense_variant,12,7.407407407,P52
+NZ_CP050916,2994405,snp,A,G,G:184 A:0,CDS,-,239/771,80/256,missense_variant c.239T>C p.Ile80Thr,HFD83_RS14355,0,hypothetical protein,missense_variant,1,0.617283951,P52
+NZ_CP050916,2994686,snp,G,A,A:132 G:0,CDS,-,245/288,82/95,missense_variant c.245C>T p.Thr82Ile,HFD83_RS14360,0,hypothetical protein,missense_variant,1,0.617283951,P52
+NZ_CP050916,2995323,complex,AACCA,TACCT,TACCT:53 AACCA:0,CDS,-,10072/10353,3356/3450,missense_variant c.10068_10072delTGGTTinsAGGTA p.Ser3358Thr,HFD83_RS14365,0,DUF1983 domain-containing protein,missense_variant,32,19.75308642,P52
+NZ_CP050916,3007689,snp,A,G,G:157 A:0,CDS,-,95/267,32/88,missense_variant c.95T>C p.Val32Ala,HFD83_RS14385,0,type II toxin-antitoxin system RelE/ParE family toxin,missense_variant,1,0.617283951,P52
+NZ_CP050916,3026097,snp,C,T,T:165 C:0,CDS,-,574/1446,192/481,missense_variant c.574G>A p.Val192Ile,HFD83_RS14505,0,hypothetical protein,missense_variant,1,0.617283951,P52
+NZ_CP050916,3027986,snp,A,T,T:127 A:1,CDS,-,501/942,167/313,missense_variant c.501T>A p.His167Gln,HFD83_RS14520,0,hypothetical protein,missense_variant,7,4.320987654,P52
+NZ_CP050916,3029737,snp,T,C,C:15 T:1,CDS,-,679/900,227/299,missense_variant c.679A>G p.Lys227Glu,HFD83_RS14530,0,phage antirepressor N-terminal domain-containing protein,missense_variant,3,1.851851852,P52
+NZ_CP050916,3030676,snp,G,T,T:161 G:0,CDS,-,746/942,249/313,missense_variant c.746C>A p.Ala249Asp,HFD83_RS14535,0,type II toxin-antitoxin system HicB family antitoxin,missense_variant,2,1.234567901,P52
+NZ_CP050916,3031757,snp,T,G,G:115 T:0,CDS,-,1019/1056,340/351,missense_variant c.1019A>C p.Asn340Thr,HFD83_RS14540,0,hypothetical protein,missense_variant,2,1.234567901,P52
+NZ_CP050916,3033053,snp,G,T,T:167 G:0,CDS,-,2025/2289,675/762,missense_variant c.2025C>A p.Asp675Glu,HFD83_RS14545,0,phage tail tip lysozyme,missense_variant,13,8.024691358,P52
+NZ_CP050916,3035707,complex,CTCAGTTCGA,TTCTGTCTTG,TTCTGTCTTG:41 CTCAGTTCGA:0,CDS,-,636/840,209/279,missense_variant c.627_636delTCGAACTGAGinsCAAGACAGAA p.Arg210Lys,HFD83_RS14555,0,hypothetical protein,missense_variant,7,4.320987654,P52
+NZ_CP050916,3036364,snp,C,T,T:157 C:0,CDS,-,679/687,227/228,missense_variant c.679G>A p.Ala227Thr,HFD83_RS14560,0,helix-turn-helix domain-containing protein,missense_variant,6,3.703703704,P52
+NZ_CP050916,3037636,snp,C,T,T:158 C:0,CDS,-,97/690,33/229,missense_variant c.97G>A p.Asp33Asn,HFD83_RS14565,0,RusA family crossover junction endodeoxyribonuclease,missense_variant,1,0.617283951,P52
+NZ_CP050916,3039814,snp,T,C,C:132 T:0,CDS,-,326/534,109/177,missense_variant c.326A>G p.Asn109Ser,HFD83_RS14575,0,hypothetical protein,missense_variant,2,1.234567901,P52
+NZ_CP050916,3044116,snp,C,T,T:59 C:0,CDS,-,745/750,249/249,missense_variant c.745G>A p.Val249Ile,HFD83_RS14610,0,hypothetical protein,missense_variant,2,1.234567901,P52
+NZ_CP050916,3052409,snp,C,A,A:165 C:0,CDS,+,56/804,19/267,missense_variant c.56C>A p.Pro19Gln,HFD83_RS14675,0,DUF2303 family protein,missense_variant,4,2.469135802,P52
+NZ_CP050916,3053275,snp,T,A,A:163 T:0,CDS,+,33/261,11/86,missense_variant c.33T>A p.Asp11Glu,HFD83_RS14680,0,hypothetical protein,missense_variant,3,1.851851852,P52
+NZ_CP050916,3053749,snp,T,C,C:152 T:0,CDS,+,188/330,63/109,missense_variant c.188T>C p.Val63Ala,HFD83_RS14685,0,hypothetical protein,missense_variant,6,3.703703704,P52
+NZ_CP050916,3054495,complex,ACCTATTGGCA,GCCTTTTAGCT,GCCTTTTAGCT:134 ACCTATTGGCA:0,CDS,+,69/681,23/226,missense_variant c.69_79delACCTATTGGCAinsGCCTTTTAGCT p.IleGlyIle25PheSerLeu,HFD83_RS14695,0,DNA polymerase III subunit epsilon,missense_variant,8,4.938271605,P52
+NZ_CP050916,3055191,snp,A,T,T:82 A:0,CDS,+,72/363,24/120,missense_variant c.72A>T p.Lys24Asn,HFD83_RS14700,0,ead/Ea22-like family protein,missense_variant,3,1.851851852,P52
+NZ_CP050916,3055442,snp,T,G,G:20 T:0,CDS,+,323/363,108/120,missense_variant c.323T>G p.Leu108Arg,HFD83_RS14705,0,hypothetical protein,missense_variant,5,3.086419753,P52
+NZ_CP050916,3055756,complex,ACTGCA,GTTGAG,GTTGAG:14 ACTGCA:0,CDS,+,148/171,50/56,missense_variant c.148_153delACTGCAinsGTTGAG p.ThrAla50ValGlu,HFD83_RS14710,0,hypothetical protein,missense_variant,1,0.617283951,P52
+NZ_CP050916,3056571,snp,A,T,T:102 A:0,CDS,-,1039/1152,347/383,missense_variant c.1039T>A p.Ser347Thr,HFD83_RS14720,0,site-specific integrase,missense_variant,3,1.851851852,P52
+NZ_CP050916,3139547,snp,G,A,A:176 G:1,CDS,+,361/951,121/316,missense_variant c.361G>A p.Gly121Ser,HFD83_RS15130,0,ribose-phosphate pyrophosphokinase,missense_variant,2,1.234567901,P52
+NZ_CP050916,3168006,snp,C,T,T:177 C:0,CDS,-,460/1038,154/345,missense_variant c.460G>A p.Ala154Thr,HFD83_RS15285,0,cell division protein ZipA,missense_variant,1,0.617283951,P52
+NZ_CP050916,3186389,snp,C,T,T:163 C:0,CDS,-,379/1479,127/492,missense_variant c.379G>A p.Glu127Lys,HFD83_RS15350,0,hypothetical protein,missense_variant,1,0.617283951,P52
+NZ_CP050916,2832973,snp,A,T,T:11 A:0,CDS,-,524/1701,175/566,missense_variant c.524T>A p.Leu175His,HFD83_RS13605,ureC,urease subunit alpha,missense_variant,1,2.325581395,P103
+NZ_CP050916,2925303,snp,C,T,T:12 C:0,CDS,-,760/1623,254/540,missense_variant c.760G>A p.Val254Ile,HFD83_RS14025,0,BCCT family transporter,missense_variant,2,4.651162791,P103
+NZ_CP050916,2941130,snp,A,G,G:14 A:0,CDS,-,1085/1467,362/488,missense_variant c.1085T>C p.Ile362Thr,HFD83_RS14095,0,porin family protein,missense_variant,1,2.325581395,P103
+NZ_CP050916,2980409,snp,C,A,A:11 C:0,CDS,+,328/360,110/119,missense_variant c.328C>A p.Gln110Lys,HFD83_RS14275,0,hypothetical protein,missense_variant,1,2.325581395,P103
+NZ_CP050916,2982058,snp,G,A,A:12 G:0,CDS,-,595/699,199/232,missense_variant c.595C>T p.His199Tyr,HFD83_RS14295,0,hypothetical protein,missense_variant,1,2.325581395,P103
+NZ_CP050916,2982993,snp,C,G,G:13 C:0,CDS,-,454/795,152/264,missense_variant c.454G>C p.Val152Leu,HFD83_RS14300,0,hypothetical protein,missense_variant,1,2.325581395,P103
+NZ_CP050916,2988039,complex,CATTACTA,TATTGCTG,TATTGCTG:10 CATTACTA:0,CDS,-,1240/1452,411/483,missense_variant c.1233_1240delTAGTAATGinsCAGCAATA p.Val414Ile,HFD83_RS14330,0,hypothetical protein,missense_variant,4,9.302325581,P103
+NZ_CP050916,2989474,snp,C,T,T:15 C:0,CDS,-,1757/1953,586/650,missense_variant c.1757G>A p.Gly586Asp,HFD83_RS14335,0,hypothetical protein,missense_variant,11,25.58139535,P103
+NZ_CP050916,2994405,snp,A,G,G:12 A:0,CDS,-,239/771,80/256,missense_variant c.239T>C p.Ile80Thr,HFD83_RS14355,0,hypothetical protein,missense_variant,1,2.325581395,P103
+NZ_CP050916,2994686,snp,G,A,A:10 G:0,CDS,-,245/288,82/95,missense_variant c.245C>T p.Thr82Ile,HFD83_RS14360,0,hypothetical protein,missense_variant,1,2.325581395,P103
+NZ_CP050916,3004408,snp,T,A,A:10 T:0,CDS,-,987/10353,329/3450,missense_variant c.987A>T p.Arg329Ser,HFD83_RS14365,0,DUF1983 domain-containing protein,missense_variant,1,2.325581395,P103
+NZ_CP050916,3007689,snp,A,G,G:10 A:0,CDS,-,95/267,32/88,missense_variant c.95T>C p.Val32Ala,HFD83_RS14385,0,type II toxin-antitoxin system RelE/ParE family toxin,missense_variant,1,2.325581395,P103
+NZ_CP050916,3028297,snp,C,T,T:12 C:0,CDS,-,190/942,64/313,missense_variant c.190G>A p.Val64Ile,HFD83_RS14520,0,hypothetical protein,missense_variant,2,4.651162791,P103
+NZ_CP050916,3034823,snp,G,T,T:13 G:0,CDS,-,255/2289,85/762,missense_variant c.255C>A p.Asp85Glu,HFD83_RS14545,0,phage tail tip lysozyme,missense_variant,4,9.302325581,P103
+NZ_CP050916,3036257,snp,G,C,C:21 G:1,CDS,-,86/840,29/279,missense_variant c.86C>G p.Ala29Gly,HFD83_RS14555,0,hypothetical protein,missense_variant,1,2.325581395,P103
+NZ_CP050916,3036364,snp,C,T,T:21 C:0,CDS,-,679/687,227/228,missense_variant c.679G>A p.Ala227Thr,HFD83_RS14560,0,helix-turn-helix domain-containing protein,missense_variant,4,9.302325581,P103
+NZ_CP050916,3039814,snp,T,C,C:11 T:0,CDS,-,326/534,109/177,missense_variant c.326A>G p.Asn109Ser,HFD83_RS14575,0,hypothetical protein,missense_variant,1,2.325581395,P103
+NZ_CP050916,3052561,snp,G,A,A:12 G:0,CDS,+,208/804,70/267,missense_variant c.208G>A p.Asp70Asn,HFD83_RS14675,0,DUF2303 family protein,missense_variant,2,4.651162791,P103
+NZ_CP050916,3053284,snp,T,G,G:12 T:1,CDS,+,42/261,14/86,missense_variant c.42T>G p.Phe14Leu,HFD83_RS14680,0,hypothetical protein,missense_variant,2,4.651162791,P103
+NZ_CP050916,3053749,snp,T,C,C:11 T:0,CDS,+,188/330,63/109,missense_variant c.188T>C p.Val63Ala,HFD83_RS14685,0,hypothetical protein,missense_variant,1,2.325581395,P103
+NZ_CP050916,2933438,complex,GCCAGA,ACCGGG,ACCGGG:10 GCCAGA:0,CDS,+,339/879,113/292,missense_variant c.339_344delGCCAGAinsACCGGG p.Glu115Gly,HFD83_RS14055,0,homocysteine S-methyltransferase family protein,missense_variant,1,4.761904762,P105
+NZ_CP050916,2936683,snp,G,A,A:14 G:0,CDS,-,604/1914,202/637,missense_variant c.604C>T p.His202Tyr,HFD83_RS14065,0,alpha/beta fold hydrolase,missense_variant,2,9.523809524,P105
+NZ_CP050916,2948655,snp,C,T,T:12 C:0,CDS,-,556/891,186/296,missense_variant c.556G>A p.Val186Ile,HFD83_RS14120,0,LysR family transcriptional regulator,missense_variant,5,23.80952381,P105
+NZ_CP050916,2951099,mnp,CG,AA,AA:15 CG:0,CDS,+,585/1386,195/461,missense_variant c.585_586delCGinsAA p.Val196Ile,HFD83_RS14130,0,MFS transporter,missense_variant,3,14.28571429,P105
+NZ_CP050916,2952005,complex,CATTA,TATTG,TATTG:13 CATTA:0,CDS,+,27/1347,9/448,missense_variant c.27_31delCATTAinsTATTG p.Ser11Gly,HFD83_RS14135,0,OprD family porin,missense_variant,9,42.85714286,P105
+NZ_CP050916,3132848,snp,C,T,T:15 C:0,CDS,+,515/1866,172/621,missense_variant c.515C>T p.Ala172Val,HFD83_RS15085,0,DNA primase,missense_variant,1,4.761904762,P105
+NZ_CP050916,2932565,complex,TACTGCCTATTCT,AACAGCTTATGCA,AACAGCTTATGCA:865 TACTGCCTATTCT:0,CDS,+,153/471,51/156,missense_variant c.153_165delTACTGCCTATTCTinsAACAGCTTATGCA p.Ser55Ala,HFD83_RS14050,0,hypothetical protein,missense_variant,5,6.756756757,P114
+NZ_CP050916,2941130,snp,A,G,G:1322 A:0,CDS,-,1085/1467,362/488,missense_variant c.1085T>C p.Ile362Thr,HFD83_RS14095,0,porin family protein,missense_variant,1,1.351351351,P114
+NZ_CP050916,2958405,snp,G,A,A:1440 G:0,CDS,-,1021/1794,341/597,missense_variant c.1021C>T p.Pro341Ser,HFD83_RS14165,0,P-loop NTPase fold protein,missense_variant,1,1.351351351,P114
+NZ_CP050916,2978562,snp,C,G,G:445 C:0,CDS,+,1015/1299,339/432,missense_variant c.1015C>G p.Leu339Val,HFD83_RS14260,0,DNA polymerase V subunit UmuC,missense_variant,6,8.108108108,P114
+NZ_CP050916,2980132,complex,TGCAC,AGTAG,AGTAG:495 TGCAC:0,CDS,+,51/360,17/119,missense_variant c.51_55delTGCACinsAGTAG p.AlaGln18ValGlu,HFD83_RS14275,0,hypothetical protein,missense_variant,4,5.405405405,P114
+NZ_CP050916,2982058,snp,G,A,A:1233 G:0,CDS,-,595/699,199/232,missense_variant c.595C>T p.His199Tyr,HFD83_RS14295,0,hypothetical protein,missense_variant,1,1.351351351,P114
+NZ_CP050916,2982993,snp,C,G,G:1217 C:0,CDS,-,454/795,152/264,missense_variant c.454G>C p.Val152Leu,HFD83_RS14300,0,hypothetical protein,missense_variant,1,1.351351351,P114
+NZ_CP050916,2987980,snp,A,T,T:1128 A:0,CDS,-,1299/1452,433/483,missense_variant c.1299T>A p.His433Gln,HFD83_RS14330,0,hypothetical protein,missense_variant,5,6.756756757,P114
+NZ_CP050916,2989474,snp,C,T,T:1258 C:0,CDS,-,1757/1953,586/650,missense_variant c.1757G>A p.Gly586Asp,HFD83_RS14335,0,hypothetical protein,missense_variant,12,16.21621622,P114
+NZ_CP050916,2994405,snp,A,G,G:1090 A:0,CDS,-,239/771,80/256,missense_variant c.239T>C p.Ile80Thr,HFD83_RS14355,0,hypothetical protein,missense_variant,1,1.351351351,P114
+NZ_CP050916,2994686,snp,G,A,A:1141 G:0,CDS,-,245/288,82/95,missense_variant c.245C>T p.Thr82Ile,HFD83_RS14360,0,hypothetical protein,missense_variant,1,1.351351351,P114
+NZ_CP050916,2995323,complex,AACCA,TACCT,TACCT:344 AACCA:0,CDS,-,10072/10353,3356/3450,missense_variant c.10068_10072delTGGTTinsAGGTA p.Ser3358Thr,HFD83_RS14365,0,DUF1983 domain-containing protein,missense_variant,34,45.94594595,P114
+NZ_CP050916,3007689,snp,A,G,G:1261 A:0,CDS,-,95/267,32/88,missense_variant c.95T>C p.Val32Ala,HFD83_RS14385,0,type II toxin-antitoxin system RelE/ParE family toxin,missense_variant,1,1.351351351,P114
+NZ_CP050916,3198133,ins,G,GCCTGCA,GCCTGCA:654 G:1,CDS,+,94/1134,32/377,conservative_inframe_insertion c.88_93dupCCTGCA p.Pro30_Ala31dup,HFD83_RS15410,0,HlyD family secretion protein,conservative_inframe_insertion,1,1.351351351,P114
+NZ_CP050916,2801285,snp,A,G,G:940 A:3,CDS,+,642/1122,214/373,stop_lost c.642A>G p.Ter214Trpext*?,HFD83_RS13460,0,ATP-binding protein,stop_lost,1,0.4784689,P130
+NZ_CP050916,2818656,snp,A,T,T:409 A:3,CDS,+,273/777,91/258,missense_variant c.273A>T p.Glu91Asp,HFD83_RS13530,0,dioxygenase,missense_variant,1,0.4784689,P130
+NZ_CP050916,2832973,snp,A,T,T:375 A:6,CDS,-,524/1701,175/566,missense_variant c.524T>A p.Leu175His,HFD83_RS13605,ureC,urease subunit alpha,missense_variant,1,0.4784689,P130
+NZ_CP050916,2865678,del,AATT,A,A:416 AATT:1,CDS,+,851/1029,284/342,disruptive_inframe_deletion c.851_853delTTA p.Ile284del,HFD83_RS13760,0,alpha/beta hydrolase,disruptive_inframe_deletion,1,0.4784689,P130
+NZ_CP050916,2868311,snp,A,T,T:527 A:0,CDS,-,875/2265,292/754,stop_gained c.875T>A p.Leu292*,HFD83_RS13770,0,TonB-dependent siderophore receptor,stop_gained,1,0.4784689,P130
+NZ_CP050916,2887694,snp,T,A,A:395 T:2,CDS,+,122/876,41/291,missense_variant c.122T>A p.Val41Glu,HFD83_RS13840,0,LysR substrate-binding domain-containing protein,missense_variant,1,0.4784689,P130
+NZ_CP050916,2924496,snp,G,T,T:574 G:8,CDS,-,1567/1623,523/540,missense_variant c.1567C>A p.Gln523Lys,HFD83_RS14025,0,BCCT family transporter,missense_variant,4,1.913875598,P130
+NZ_CP050916,2927874,snp,C,A,A:517 C:1,CDS,+,931/1473,311/490,missense_variant c.931C>A p.Gln311Lys,HFD83_RS14035,betB,betaine-aldehyde dehydrogenase,missense_variant,2,0.956937799,P130
+NZ_CP050916,2930892,complex,TTGAG,ACGAA,ACGAA:413 TTGAG:2,CDS,+,212/1641,71/546,missense_variant c.212_216delTTGAGinsACGAA p.Phe71Tyr,HFD83_RS14045,mqo,malate dehydrogenase (quinone),missense_variant,1,0.4784689,P130
+NZ_CP050916,2932445,complex,ACCG,GTCA,GTCA:434 ACCG:4,CDS,+,33/471,11/156,missense_variant c.33_36delACCGinsGTCA p.Pro12Ser,HFD83_RS14050,0,hypothetical protein,missense_variant,1,0.4784689,P130
+NZ_CP050916,2941130,snp,A,G,G:505 A:0,CDS,-,1085/1467,362/488,missense_variant c.1085T>C p.Ile362Thr,HFD83_RS14095,0,porin family protein,missense_variant,1,0.4784689,P130
+NZ_CP050916,2958405,snp,G,A,A:517 G:0,CDS,-,1021/1794,341/597,missense_variant c.1021C>T p.Pro341Ser,HFD83_RS14165,0,P-loop NTPase fold protein,missense_variant,1,0.4784689,P130
+NZ_CP050916,2978562,snp,C,G,G:215 C:4,CDS,+,1015/1299,339/432,missense_variant c.1015C>G p.Leu339Val,HFD83_RS14260,0,DNA polymerase V subunit UmuC,missense_variant,6,2.870813397,P130
+NZ_CP050916,2980132,complex,TGCAC,AGTAG,AGTAG:214 TGCAC:4,CDS,+,51/360,17/119,missense_variant c.51_55delTGCACinsAGTAG p.AlaGln18ValGlu,HFD83_RS14275,0,hypothetical protein,missense_variant,4,1.913875598,P130
+NZ_CP050916,2982058,snp,G,A,A:512 G:5,CDS,-,595/699,199/232,missense_variant c.595C>T p.His199Tyr,HFD83_RS14295,0,hypothetical protein,missense_variant,1,0.4784689,P130
+NZ_CP050916,2982993,snp,C,G,G:485 C:4,CDS,-,454/795,152/264,missense_variant c.454G>C p.Val152Leu,HFD83_RS14300,0,hypothetical protein,missense_variant,1,0.4784689,P130
+NZ_CP050916,2987980,snp,A,T,T:401 A:6,CDS,-,1299/1452,433/483,missense_variant c.1299T>A p.His433Gln,HFD83_RS14330,0,hypothetical protein,missense_variant,5,2.392344498,P130
+NZ_CP050916,2989474,snp,C,T,T:485 C:3,CDS,-,1757/1953,586/650,missense_variant c.1757G>A p.Gly586Asp,HFD83_RS14335,0,hypothetical protein,missense_variant,12,5.741626794,P130
+NZ_CP050916,2994405,snp,A,G,G:441 A:5,CDS,-,239/771,80/256,missense_variant c.239T>C p.Ile80Thr,HFD83_RS14355,0,hypothetical protein,missense_variant,1,0.4784689,P130
+NZ_CP050916,2994686,snp,G,A,A:466 G:4,CDS,-,245/288,82/95,missense_variant c.245C>T p.Thr82Ile,HFD83_RS14360,0,hypothetical protein,missense_variant,1,0.4784689,P130
+NZ_CP050916,2995323,complex,AACCA,TACCT,TACCT:138 AACCA:1,CDS,-,10072/10353,3356/3450,missense_variant c.10068_10072delTGGTTinsAGGTA p.Ser3358Thr,HFD83_RS14365,0,DUF1983 domain-containing protein,missense_variant,32,15.31100478,P130
+NZ_CP050916,3007689,snp,A,G,G:434 A:0,CDS,-,95/267,32/88,missense_variant c.95T>C p.Val32Ala,HFD83_RS14385,0,type II toxin-antitoxin system RelE/ParE family toxin,missense_variant,1,0.4784689,P130
+NZ_CP050916,3010215,snp,A,G,G:410 A:9,CDS,-,71/279,24/92,missense_variant c.71T>C p.Ile24Thr,HFD83_RS14410,0,hypothetical protein,missense_variant,1,0.4784689,P130
+NZ_CP050916,3010395,snp,G,T,T:450 G:7,CDS,-,720/768,240/255,missense_variant c.720C>A p.Asn240Lys,HFD83_RS14415,0,hypothetical protein,missense_variant,7,3.349282297,P130
+NZ_CP050916,3011331,complex,AATT,GATG,GATG:372 AATT:6,CDS,-,1098/1296,365/431,missense_variant c.1095_1098delAATTinsCATC p.Glu365Asp,HFD83_RS14420,0,hypothetical protein,missense_variant,8,3.827751196,P130
+NZ_CP050916,3012775,complex,AGGA,TGGT,TGGT:371 AGGA:3,CDS,-,60/288,19/95,missense_variant c.57_60delTCCTinsACCA p.His19Gln,HFD83_RS14425,0,hypothetical protein,missense_variant,1,0.4784689,P130
+NZ_CP050916,3012936,snp,G,A,A:201 G:5,CDS,-,530/627,177/208,missense_variant c.530C>T p.Thr177Ile,HFD83_RS14430,0,hypothetical protein,missense_variant,8,3.827751196,P130
+NZ_CP050916,3013535,snp,A,T,T:173 A:5,CDS,-,1773/1779,591/592,missense_variant c.1773T>A p.Asn591Lys,HFD83_RS14435,0,hypothetical protein,missense_variant,20,9.56937799,P130
+NZ_CP050916,3015582,complex,TGT,AGA,AGA:223 TGT:2,CDS,-,183/303,61/100,missense_variant c.181_183delACAinsTCT p.Thr61Ser,HFD83_RS14440,0,hypothetical protein,missense_variant,7,3.349282297,P130
+NZ_CP050916,3015766,complex,TAGTT,AACTC,AACTC:216 TAGTT:3,CDS,-,544/549,180/182,stop_gained c.540_544delAACTAinsGAGTT p.ThrLys181*,HFD83_RS14445,0,hypothetical protein,stop_gained,7,3.349282297,P130
+NZ_CP050916,3016549,snp,A,T,T:457 A:4,CDS,-,881/1131,294/376,missense_variant c.881T>A p.Met294Lys,HFD83_RS14450,0,hypothetical protein,missense_variant,3,1.435406699,P130
+NZ_CP050916,3017577,snp,T,A,A:575 T:9,CDS,-,133/279,45/92,missense_variant c.133A>T p.Ile45Leu,HFD83_RS14455,0,hypothetical protein,missense_variant,1,0.4784689,P130
+NZ_CP050916,3022371,mnp,CA,AT,AT:465 CA:4,CDS,-,496/804,165/267,missense_variant c.495_496delTGinsAT p.Val166Phe,HFD83_RS14480,0,hypothetical protein,missense_variant,3,1.435406699,P130
+NZ_CP050916,3023072,snp,C,A,A:498 C:4,CDS,-,703/906,235/301,missense_variant c.703G>T p.Val235Phe,HFD83_RS14485,0,hypothetical protein,missense_variant,1,0.4784689,P130
+NZ_CP050916,3023969,snp,C,T,T:492 C:0,CDS,-,106/228,36/75,missense_variant c.106G>A p.Val36Ile,HFD83_RS14490,0,hypothetical protein,missense_variant,1,0.4784689,P130
+NZ_CP050916,3024171,snp,A,C,C:473 A:5,CDS,-,374/459,125/152,missense_variant c.374T>G p.Ile125Ser,HFD83_RS14495,0,hypothetical protein,missense_variant,1,0.4784689,P130
+NZ_CP050916,3024680,complex,GGTG,TGCA,TGCA:91 GGTG:7,CDS,-,558/615,185/204,missense_variant c.555_558delCACCinsTGCA p.Thr186Ala,HFD83_RS14500,0,hypothetical protein,missense_variant,2,0.956937799,P130
+NZ_CP050916,3032634,snp,T,C,C:439 T:2,CDS,-,142/1056,48/351,missense_variant c.142A>G p.Ile48Val,HFD83_RS14540,0,hypothetical protein,missense_variant,1,0.4784689,P130
+NZ_CP050916,3033053,snp,G,T,T:531 G:4,CDS,-,2025/2289,675/762,missense_variant c.2025C>A p.Asp675Glu,HFD83_RS14545,0,phage tail tip lysozyme,missense_variant,11,5.263157895,P130
+NZ_CP050916,3035707,complex,CTCAGTTCGA,TTCTGTCTTG,TTCTGTCTTG:78 CTCAGTTCGA:6,CDS,-,636/840,209/279,missense_variant c.627_636delTCGAACTGAGinsCAAGACAGAA p.Arg210Lys,HFD83_RS14555,0,hypothetical protein,missense_variant,7,3.349282297,P130
+NZ_CP050916,3036364,snp,C,T,T:438 C:3,CDS,-,679/687,227/228,missense_variant c.679G>A p.Ala227Thr,HFD83_RS14560,0,helix-turn-helix domain-containing protein,missense_variant,6,2.870813397,P130
+NZ_CP050916,3037636,snp,C,T,T:525 C:2,CDS,-,97/690,33/229,missense_variant c.97G>A p.Asp33Asn,HFD83_RS14565,0,RusA family crossover junction endodeoxyribonuclease,missense_variant,1,0.4784689,P130
+NZ_CP050916,3039814,snp,T,C,C:393 T:1,CDS,-,326/534,109/177,missense_variant c.326A>G p.Asn109Ser,HFD83_RS14575,0,hypothetical protein,missense_variant,2,0.956937799,P130
+NZ_CP050916,3052409,snp,C,A,A:509 C:7,CDS,+,56/804,19/267,missense_variant c.56C>A p.Pro19Gln,HFD83_RS14675,0,DUF2303 family protein,missense_variant,4,1.913875598,P130
+NZ_CP050916,3053275,snp,T,A,A:542 T:6,CDS,+,33/261,11/86,missense_variant c.33T>A p.Asp11Glu,HFD83_RS14680,0,hypothetical protein,missense_variant,3,1.435406699,P130
+NZ_CP050916,3053749,snp,T,C,C:384 T:1,CDS,+,188/330,63/109,missense_variant c.188T>C p.Val63Ala,HFD83_RS14685,0,hypothetical protein,missense_variant,6,2.870813397,P130
+NZ_CP050916,3054495,complex,ACCTATTGGCA,GCCTTTTAGCT,GCCTTTTAGCT:282 ACCTATTGGCA:11,CDS,+,69/681,23/226,missense_variant c.69_79delACCTATTGGCAinsGCCTTTTAGCT p.IleGlyIle25PheSerLeu,HFD83_RS14695,0,DNA polymerase III subunit epsilon,missense_variant,8,3.827751196,P130
+NZ_CP050916,3055191,snp,A,T,T:194 A:1,CDS,+,72/363,24/120,missense_variant c.72A>T p.Lys24Asn,HFD83_RS14700,0,ead/Ea22-like family protein,missense_variant,3,1.435406699,P130
+NZ_CP050916,3055756,complex,ACTGCA,GTTGAG,GTTGAG:30 ACTGCA:1,CDS,+,148/171,50/56,missense_variant c.148_153delACTGCAinsGTTGAG p.ThrAla50ValGlu,HFD83_RS14710,0,hypothetical protein,missense_variant,1,0.4784689,P130
+NZ_CP050916,3056571,snp,A,T,T:232 A:3,CDS,-,1039/1152,347/383,missense_variant c.1039T>A p.Ser347Thr,HFD83_RS14720,0,site-specific integrase,missense_variant,3,1.435406699,P130
+NZ_CP050916,3168006,snp,C,T,T:475 C:6,CDS,-,460/1038,154/345,missense_variant c.460G>A p.Ala154Thr,HFD83_RS15285,0,cell division protein ZipA,missense_variant,1,0.4784689,P130
+NZ_CP050916,3186389,snp,C,T,T:565 C:4,CDS,-,379/1479,127/492,missense_variant c.379G>A p.Glu127Lys,HFD83_RS15350,0,hypothetical protein,missense_variant,1,0.4784689,P130
+NZ_CP050916,2932565,complex,TACTGCCTATTCT,AACAGCTTATGCA,AACAGCTTATGCA:13 TACTGCCTATTCT:0,CDS,+,153/471,51/156,missense_variant c.153_165delTACTGCCTATTCTinsAACAGCTTATGCA p.Ser55Ala,HFD83_RS14050,0,hypothetical protein,missense_variant,4,7.142857143,P141
+NZ_CP050916,2941130,snp,A,G,G:10 A:0,CDS,-,1085/1467,362/488,missense_variant c.1085T>C p.Ile362Thr,HFD83_RS14095,0,porin family protein,missense_variant,1,1.785714286,P141
+NZ_CP050916,2958405,snp,G,A,A:24 G:0,CDS,-,1021/1794,341/597,missense_variant c.1021C>T p.Pro341Ser,HFD83_RS14165,0,P-loop NTPase fold protein,missense_variant,1,1.785714286,P141
+NZ_CP050916,2978597,complex,GAAGTGCGGTGTG,AAAATGTGAGGTC,AAAATGTGAGGTC:10 GAAGTGCGGTGTG:0,CDS,+,1050/1299,350/432,missense_variant c.1050_1062delGAAGTGCGGTGTGinsAAAATGTGAGGTC p.Gly353Glu,HFD83_RS14260,0,DNA polymerase V subunit UmuC,missense_variant,2,3.571428571,P141
+NZ_CP050916,2980132,complex,TGCAC,AGTAG,AGTAG:14 TGCAC:0,CDS,+,51/360,17/119,missense_variant c.51_55delTGCACinsAGTAG p.AlaGln18ValGlu,HFD83_RS14275,0,hypothetical protein,missense_variant,4,7.142857143,P141
+NZ_CP050916,2982058,snp,G,A,A:15 G:0,CDS,-,595/699,199/232,missense_variant c.595C>T p.His199Tyr,HFD83_RS14295,0,hypothetical protein,missense_variant,1,1.785714286,P141
+NZ_CP050916,2982993,snp,C,G,G:18 C:0,CDS,-,454/795,152/264,missense_variant c.454G>C p.Val152Leu,HFD83_RS14300,0,hypothetical protein,missense_variant,1,1.785714286,P141
+NZ_CP050916,2987980,snp,A,T,T:27 A:0,CDS,-,1299/1452,433/483,missense_variant c.1299T>A p.His433Gln,HFD83_RS14330,0,hypothetical protein,missense_variant,5,8.928571429,P141
+NZ_CP050916,2989474,snp,C,T,T:25 C:0,CDS,-,1757/1953,586/650,missense_variant c.1757G>A p.Gly586Asp,HFD83_RS14335,0,hypothetical protein,missense_variant,11,19.64285714,P141
+NZ_CP050916,2994405,snp,A,G,G:24 A:0,CDS,-,239/771,80/256,missense_variant c.239T>C p.Ile80Thr,HFD83_RS14355,0,hypothetical protein,missense_variant,1,1.785714286,P141
+NZ_CP050916,2994686,snp,G,A,A:14 G:0,CDS,-,245/288,82/95,missense_variant c.245C>T p.Thr82Ile,HFD83_RS14360,0,hypothetical protein,missense_variant,1,1.785714286,P141
+NZ_CP050916,2997711,snp,A,G,G:13 A:0,CDS,-,7684/10353,2562/3450,missense_variant c.7684T>C p.Tyr2562His,HFD83_RS14365,0,DUF1983 domain-containing protein,missense_variant,23,41.07142857,P141
+NZ_CP050916,3007689,snp,A,G,G:24 A:0,CDS,-,95/267,32/88,missense_variant c.95T>C p.Val32Ala,HFD83_RS14385,0,type II toxin-antitoxin system RelE/ParE family toxin,missense_variant,1,1.785714286,P141
+NZ_CP050916,2801285,snp,A,G,G:36 A:0,CDS,+,642/1122,214/373,stop_lost c.642A>G p.Ter214Trpext*?,HFD83_RS13460,0,ATP-binding protein,stop_lost,1,0.8,P23
+NZ_CP050916,2832973,snp,A,T,T:19 A:0,CDS,-,524/1701,175/566,missense_variant c.524T>A p.Leu175His,HFD83_RS13605,ureC,urease subunit alpha,missense_variant,1,0.8,P23
+NZ_CP050916,2865678,del,AATT,A,A:13 AATT:0,CDS,+,851/1029,284/342,disruptive_inframe_deletion c.851_853delTTA p.Ile284del,HFD83_RS13760,0,alpha/beta hydrolase,disruptive_inframe_deletion,1,0.8,P23
+NZ_CP050916,2887694,snp,T,A,A:22 T:0,CDS,+,122/876,41/291,missense_variant c.122T>A p.Val41Glu,HFD83_RS13840,0,LysR substrate-binding domain-containing protein,missense_variant,1,0.8,P23
+NZ_CP050916,2924496,snp,G,T,T:38 G:0,CDS,-,1567/1623,523/540,missense_variant c.1567C>A p.Gln523Lys,HFD83_RS14025,0,BCCT family transporter,missense_variant,4,3.2,P23
+NZ_CP050916,2927874,snp,C,A,A:22 C:0,CDS,+,931/1473,311/490,missense_variant c.931C>A p.Gln311Lys,HFD83_RS14035,betB,betaine-aldehyde dehydrogenase,missense_variant,2,1.6,P23
+NZ_CP050916,2930892,complex,TTGAG,ACGAA,ACGAA:20 TTGAG:0,CDS,+,212/1641,71/546,missense_variant c.212_216delTTGAGinsACGAA p.Phe71Tyr,HFD83_RS14045,mqo,malate dehydrogenase (quinone),missense_variant,1,0.8,P23
+NZ_CP050916,2932445,complex,ACCG,GTCA,GTCA:33 ACCG:0,CDS,+,33/471,11/156,missense_variant c.33_36delACCGinsGTCA p.Pro12Ser,HFD83_RS14050,0,hypothetical protein,missense_variant,1,0.8,P23
+NZ_CP050916,2941130,snp,A,G,G:25 A:0,CDS,-,1085/1467,362/488,missense_variant c.1085T>C p.Ile362Thr,HFD83_RS14095,0,porin family protein,missense_variant,1,0.8,P23
+NZ_CP050916,2958405,snp,G,A,A:16 G:0,CDS,-,1021/1794,341/597,missense_variant c.1021C>T p.Pro341Ser,HFD83_RS14165,0,P-loop NTPase fold protein,missense_variant,1,0.8,P23
+NZ_CP050916,2978562,snp,C,G,G:20 C:0,CDS,+,1015/1299,339/432,missense_variant c.1015C>G p.Leu339Val,HFD83_RS14260,0,DNA polymerase V subunit UmuC,missense_variant,3,2.4,P23
+NZ_CP050916,2980132,complex,TGCAC,AGTAG,AGTAG:14 TGCAC:0,CDS,+,51/360,17/119,missense_variant c.51_55delTGCACinsAGTAG p.AlaGln18ValGlu,HFD83_RS14275,0,hypothetical protein,missense_variant,4,3.2,P23
+NZ_CP050916,2982058,snp,G,A,A:26 G:0,CDS,-,595/699,199/232,missense_variant c.595C>T p.His199Tyr,HFD83_RS14295,0,hypothetical protein,missense_variant,1,0.8,P23
+NZ_CP050916,2982993,snp,C,G,G:33 C:0,CDS,-,454/795,152/264,missense_variant c.454G>C p.Val152Leu,HFD83_RS14300,0,hypothetical protein,missense_variant,1,0.8,P23
+NZ_CP050916,2987980,snp,A,T,T:22 A:0,CDS,-,1299/1452,433/483,missense_variant c.1299T>A p.His433Gln,HFD83_RS14330,0,hypothetical protein,missense_variant,5,4,P23
+NZ_CP050916,2989474,snp,C,T,T:38 C:0,CDS,-,1757/1953,586/650,missense_variant c.1757G>A p.Gly586Asp,HFD83_RS14335,0,hypothetical protein,missense_variant,12,9.6,P23
+NZ_CP050916,2994405,snp,A,G,G:33 A:0,CDS,-,239/771,80/256,missense_variant c.239T>C p.Ile80Thr,HFD83_RS14355,0,hypothetical protein,missense_variant,1,0.8,P23
+NZ_CP050916,2994686,snp,G,A,A:24 G:0,CDS,-,245/288,82/95,missense_variant c.245C>T p.Thr82Ile,HFD83_RS14360,0,hypothetical protein,missense_variant,1,0.8,P23
+NZ_CP050916,2997711,snp,A,G,G:20 A:0,CDS,-,7684/10353,2562/3450,missense_variant c.7684T>C p.Tyr2562His,HFD83_RS14365,0,DUF1983 domain-containing protein,missense_variant,26,20.8,P23
+NZ_CP050916,3007689,snp,A,G,G:24 A:0,CDS,-,95/267,32/88,missense_variant c.95T>C p.Val32Ala,HFD83_RS14385,0,type II toxin-antitoxin system RelE/ParE family toxin,missense_variant,1,0.8,P23
+NZ_CP050916,3027986,snp,A,T,T:25 A:0,CDS,-,501/942,167/313,missense_variant c.501T>A p.His167Gln,HFD83_RS14520,0,hypothetical protein,missense_variant,6,4.8,P23
+NZ_CP050916,3030118,complex,AAATTACT,TGATCACA,TGATCACA:13 AAATTACT:0,CDS,-,298/900,97/299,missense_variant c.291_298delAGTAATTTinsTGTGATCA p.Leu100Met,HFD83_RS14530,0,phage antirepressor N-terminal domain-containing protein,missense_variant,2,1.6,P23
+NZ_CP050916,3030676,snp,G,T,T:39 G:0,CDS,-,746/942,249/313,missense_variant c.746C>A p.Ala249Asp,HFD83_RS14535,0,type II toxin-antitoxin system HicB family antitoxin,missense_variant,2,1.6,P23
+NZ_CP050916,3031757,snp,T,G,G:27 T:0,CDS,-,1019/1056,340/351,missense_variant c.1019A>C p.Asn340Thr,HFD83_RS14540,0,hypothetical protein,missense_variant,2,1.6,P23
+NZ_CP050916,3033053,snp,G,T,T:29 G:0,CDS,-,2025/2289,675/762,missense_variant c.2025C>A p.Asp675Glu,HFD83_RS14545,0,phage tail tip lysozyme,missense_variant,8,6.4,P23
+NZ_CP050916,3035976,snp,T,G,G:28 T:0,CDS,-,367/840,123/279,missense_variant c.367A>C p.Asn123His,HFD83_RS14555,0,hypothetical protein,missense_variant,6,4.8,P23
+NZ_CP050916,3036364,snp,C,T,T:24 C:0,CDS,-,679/687,227/228,missense_variant c.679G>A p.Ala227Thr,HFD83_RS14560,0,helix-turn-helix domain-containing protein,missense_variant,6,4.8,P23
+NZ_CP050916,3037636,snp,C,T,T:37 C:0,CDS,-,97/690,33/229,missense_variant c.97G>A p.Asp33Asn,HFD83_RS14565,0,RusA family crossover junction endodeoxyribonuclease,missense_variant,1,0.8,P23
+NZ_CP050916,3039814,snp,T,C,C:28 T:0,CDS,-,326/534,109/177,missense_variant c.326A>G p.Asn109Ser,HFD83_RS14575,0,hypothetical protein,missense_variant,2,1.6,P23
+NZ_CP050916,3052409,snp,C,A,A:17 C:0,CDS,+,56/804,19/267,missense_variant c.56C>A p.Pro19Gln,HFD83_RS14675,0,DUF2303 family protein,missense_variant,4,3.2,P23
+NZ_CP050916,3053275,snp,T,A,A:22 T:0,CDS,+,33/261,11/86,missense_variant c.33T>A p.Asp11Glu,HFD83_RS14680,0,hypothetical protein,missense_variant,3,2.4,P23
+NZ_CP050916,3053749,snp,T,C,C:30 T:0,CDS,+,188/330,63/109,missense_variant c.188T>C p.Val63Ala,HFD83_RS14685,0,hypothetical protein,missense_variant,1,0.8,P23
+NZ_CP050916,3054495,complex,ACCTATTGGCA,GCCTTTTAGCT,GCCTTTTAGCT:14 ACCTATTGGCA:0,CDS,+,69/681,23/226,missense_variant c.69_79delACCTATTGGCAinsGCCTTTTAGCT p.IleGlyIle25PheSerLeu,HFD83_RS14695,0,DNA polymerase III subunit epsilon,missense_variant,8,6.4,P23
+NZ_CP050916,3056571,snp,A,T,T:20 A:0,CDS,-,1039/1152,347/383,missense_variant c.1039T>A p.Ser347Thr,HFD83_RS14720,0,site-specific integrase,missense_variant,3,2.4,P23
+NZ_CP050916,3168006,snp,C,T,T:34 C:0,CDS,-,460/1038,154/345,missense_variant c.460G>A p.Ala154Thr,HFD83_RS15285,0,cell division protein ZipA,missense_variant,1,0.8,P23
+NZ_CP050916,3186389,snp,C,T,T:38 C:0,CDS,-,379/1479,127/492,missense_variant c.379G>A p.Glu127Lys,HFD83_RS15350,0,hypothetical protein,missense_variant,1,0.8,P23
+NZ_CP050916,2958405,snp,G,A,A:11 G:0,CDS,-,1021/1794,341/597,missense_variant c.1021C>T p.Pro341Ser,HFD83_RS14165,0,P-loop NTPase fold protein,missense_variant,1,5.263157895,P155
+NZ_CP050916,2982058,snp,G,A,A:11 G:0,CDS,-,595/699,199/232,missense_variant c.595C>T p.His199Tyr,HFD83_RS14295,0,hypothetical protein,missense_variant,1,5.263157895,P155
+NZ_CP050916,2988846,snp,A,T,T:16 A:0,CDS,-,433/1452,145/483,missense_variant c.433T>A p.Ser145Thr,HFD83_RS14330,0,hypothetical protein,missense_variant,3,15.78947368,P155
+NZ_CP050916,2989507,snp,G,A,A:11 G:0,CDS,-,1724/1953,575/650,missense_variant c.1724C>T p.Ser575Phe,HFD83_RS14335,0,hypothetical protein,missense_variant,8,42.10526316,P155
+NZ_CP050916,2997879,snp,C,T,T:14 C:0,CDS,-,7516/10353,2506/3450,missense_variant c.7516G>A p.Glu2506Lys,HFD83_RS14365,0,DUF1983 domain-containing protein,missense_variant,5,26.31578947,P155
+NZ_CP050916,3007689,snp,A,G,G:15 A:0,CDS,-,95/267,32/88,missense_variant c.95T>C p.Val32Ala,HFD83_RS14385,0,type II toxin-antitoxin system RelE/ParE family toxin,missense_variant,1,5.263157895,P155
+NZ_CP050916,2801285,snp,A,G,G:48 A:0,CDS,+,642/1122,214/373,stop_lost c.642A>G p.Ter214Trpext*?,HFD83_RS13460,0,ATP-binding protein,stop_lost,1,0.763358779,P144
+NZ_CP050916,2832973,snp,A,T,T:12 A:0,CDS,-,524/1701,175/566,missense_variant c.524T>A p.Leu175His,HFD83_RS13605,ureC,urease subunit alpha,missense_variant,1,0.763358779,P144
+NZ_CP050916,2865678,del,AATT,A,A:24 AATT:0,CDS,+,851/1029,284/342,disruptive_inframe_deletion c.851_853delTTA p.Ile284del,HFD83_RS13760,0,alpha/beta hydrolase,disruptive_inframe_deletion,1,0.763358779,P144
+NZ_CP050916,2887694,snp,T,A,A:15 T:0,CDS,+,122/876,41/291,missense_variant c.122T>A p.Val41Glu,HFD83_RS13840,0,LysR substrate-binding domain-containing protein,missense_variant,1,0.763358779,P144
+NZ_CP050916,2924496,snp,G,T,T:31 G:0,CDS,-,1567/1623,523/540,missense_variant c.1567C>A p.Gln523Lys,HFD83_RS14025,0,BCCT family transporter,missense_variant,4,3.053435115,P144
+NZ_CP050916,2927874,snp,C,A,A:36 C:0,CDS,+,931/1473,311/490,missense_variant c.931C>A p.Gln311Lys,HFD83_RS14035,betB,betaine-aldehyde dehydrogenase,missense_variant,2,1.526717557,P144
+NZ_CP050916,2930892,complex,TTGAG,ACGAA,ACGAA:34 TTGAG:0,CDS,+,212/1641,71/546,missense_variant c.212_216delTTGAGinsACGAA p.Phe71Tyr,HFD83_RS14045,mqo,malate dehydrogenase (quinone),missense_variant,1,0.763358779,P144
+NZ_CP050916,2932445,complex,ACCG,GTCA,GTCA:28 ACCG:0,CDS,+,33/471,11/156,missense_variant c.33_36delACCGinsGTCA p.Pro12Ser,HFD83_RS14050,0,hypothetical protein,missense_variant,1,0.763358779,P144
+NZ_CP050916,2941130,snp,A,G,G:37 A:0,CDS,-,1085/1467,362/488,missense_variant c.1085T>C p.Ile362Thr,HFD83_RS14095,0,porin family protein,missense_variant,1,0.763358779,P144
+NZ_CP050916,2958405,snp,G,A,A:23 G:0,CDS,-,1021/1794,341/597,missense_variant c.1021C>T p.Pro341Ser,HFD83_RS14165,0,P-loop NTPase fold protein,missense_variant,1,0.763358779,P144
+NZ_CP050916,2978562,snp,C,G,G:12 C:0,CDS,+,1015/1299,339/432,missense_variant c.1015C>G p.Leu339Val,HFD83_RS14260,0,DNA polymerase V subunit UmuC,missense_variant,3,2.290076336,P144
+NZ_CP050916,2980132,complex,TGCAC,AGTAG,AGTAG:17 TGCAC:0,CDS,+,51/360,17/119,missense_variant c.51_55delTGCACinsAGTAG p.AlaGln18ValGlu,HFD83_RS14275,0,hypothetical protein,missense_variant,4,3.053435115,P144
+NZ_CP050916,2982058,snp,G,A,A:26 G:0,CDS,-,595/699,199/232,missense_variant c.595C>T p.His199Tyr,HFD83_RS14295,0,hypothetical protein,missense_variant,1,0.763358779,P144
+NZ_CP050916,2982993,snp,C,G,G:38 C:0,CDS,-,454/795,152/264,missense_variant c.454G>C p.Val152Leu,HFD83_RS14300,0,hypothetical protein,missense_variant,1,0.763358779,P144
+NZ_CP050916,2987980,snp,A,T,T:31 A:0,CDS,-,1299/1452,433/483,missense_variant c.1299T>A p.His433Gln,HFD83_RS14330,0,hypothetical protein,missense_variant,5,3.816793893,P144
+NZ_CP050916,2989474,snp,C,T,T:34 C:0,CDS,-,1757/1953,586/650,missense_variant c.1757G>A p.Gly586Asp,HFD83_RS14335,0,hypothetical protein,missense_variant,12,9.160305344,P144
+NZ_CP050916,2994405,snp,A,G,G:37 A:0,CDS,-,239/771,80/256,missense_variant c.239T>C p.Ile80Thr,HFD83_RS14355,0,hypothetical protein,missense_variant,1,0.763358779,P144
+NZ_CP050916,2994686,snp,G,A,A:26 G:0,CDS,-,245/288,82/95,missense_variant c.245C>T p.Thr82Ile,HFD83_RS14360,0,hypothetical protein,missense_variant,1,0.763358779,P144
+NZ_CP050916,2997711,snp,A,G,G:18 A:0,CDS,-,7684/10353,2562/3450,missense_variant c.7684T>C p.Tyr2562His,HFD83_RS14365,0,DUF1983 domain-containing protein,missense_variant,25,19.08396947,P144
+NZ_CP050916,3007689,snp,A,G,G:40 A:0,CDS,-,95/267,32/88,missense_variant c.95T>C p.Val32Ala,HFD83_RS14385,0,type II toxin-antitoxin system RelE/ParE family toxin,missense_variant,1,0.763358779,P144
+NZ_CP050916,3026097,snp,C,T,T:29 C:0,CDS,-,574/1446,192/481,missense_variant c.574G>A p.Val192Ile,HFD83_RS14505,0,hypothetical protein,missense_variant,1,0.763358779,P144
+NZ_CP050916,3027986,snp,A,T,T:28 A:0,CDS,-,501/942,167/313,missense_variant c.501T>A p.His167Gln,HFD83_RS14520,0,hypothetical protein,missense_variant,7,5.34351145,P144
+NZ_CP050916,3030118,complex,AAATTACT,TGATCACA,TGATCACA:17 AAATTACT:0,CDS,-,298/900,97/299,missense_variant c.291_298delAGTAATTTinsTGTGATCA p.Leu100Met,HFD83_RS14530,0,phage antirepressor N-terminal domain-containing protein,missense_variant,2,1.526717557,P144
+NZ_CP050916,3030676,snp,G,T,T:41 G:0,CDS,-,746/942,249/313,missense_variant c.746C>A p.Ala249Asp,HFD83_RS14535,0,type II toxin-antitoxin system HicB family antitoxin,missense_variant,2,1.526717557,P144
+NZ_CP050916,3031757,snp,T,G,G:29 T:0,CDS,-,1019/1056,340/351,missense_variant c.1019A>C p.Asn340Thr,HFD83_RS14540,0,hypothetical protein,missense_variant,2,1.526717557,P144
+NZ_CP050916,3033053,snp,G,T,T:23 G:0,CDS,-,2025/2289,675/762,missense_variant c.2025C>A p.Asp675Glu,HFD83_RS14545,0,phage tail tip lysozyme,missense_variant,9,6.870229008,P144
+NZ_CP050916,3035976,snp,T,G,G:20 T:0,CDS,-,367/840,123/279,missense_variant c.367A>C p.Asn123His,HFD83_RS14555,0,hypothetical protein,missense_variant,6,4.580152672,P144
+NZ_CP050916,3036364,snp,C,T,T:39 C:0,CDS,-,679/687,227/228,missense_variant c.679G>A p.Ala227Thr,HFD83_RS14560,0,helix-turn-helix domain-containing protein,missense_variant,6,4.580152672,P144
+NZ_CP050916,3037636,snp,C,T,T:30 C:0,CDS,-,97/690,33/229,missense_variant c.97G>A p.Asp33Asn,HFD83_RS14565,0,RusA family crossover junction endodeoxyribonuclease,missense_variant,1,0.763358779,P144
+NZ_CP050916,3039814,snp,T,C,C:32 T:1,CDS,-,326/534,109/177,missense_variant c.326A>G p.Asn109Ser,HFD83_RS14575,0,hypothetical protein,missense_variant,2,1.526717557,P144
+NZ_CP050916,3052409,snp,C,A,A:39 C:0,CDS,+,56/804,19/267,missense_variant c.56C>A p.Pro19Gln,HFD83_RS14675,0,DUF2303 family protein,missense_variant,4,3.053435115,P144
+NZ_CP050916,3053275,snp,T,A,A:37 T:0,CDS,+,33/261,11/86,missense_variant c.33T>A p.Asp11Glu,HFD83_RS14680,0,hypothetical protein,missense_variant,3,2.290076336,P144
+NZ_CP050916,3053749,snp,T,C,C:28 T:0,CDS,+,188/330,63/109,missense_variant c.188T>C p.Val63Ala,HFD83_RS14685,0,hypothetical protein,missense_variant,1,0.763358779,P144
+NZ_CP050916,3054495,complex,ACCTATTGGCA,GCCTTTTAGCT,GCCTTTTAGCT:31 ACCTATTGGCA:0,CDS,+,69/681,23/226,missense_variant c.69_79delACCTATTGGCAinsGCCTTTTAGCT p.IleGlyIle25PheSerLeu,HFD83_RS14695,0,DNA polymerase III subunit epsilon,missense_variant,8,6.106870229,P144
+NZ_CP050916,3055191,snp,A,T,T:25 A:0,CDS,+,72/363,24/120,missense_variant c.72A>T p.Lys24Asn,HFD83_RS14700,0,ead/Ea22-like family protein,missense_variant,3,2.290076336,P144
+NZ_CP050916,3056571,snp,A,T,T:17 A:0,CDS,-,1039/1152,347/383,missense_variant c.1039T>A p.Ser347Thr,HFD83_RS14720,0,site-specific integrase,missense_variant,3,2.290076336,P144
+NZ_CP050916,3139740,snp,G,A,A:45 G:3,CDS,+,554/951,185/316,missense_variant c.554G>A p.Gly185Asp,HFD83_RS15130,0,ribose-phosphate pyrophosphokinase,missense_variant,1,0.763358779,P144
+NZ_CP050916,3168006,snp,C,T,T:33 C:0,CDS,-,460/1038,154/345,missense_variant c.460G>A p.Ala154Thr,HFD83_RS15285,0,cell division protein ZipA,missense_variant,1,0.763358779,P144
+NZ_CP050916,3186389,snp,C,T,T:32 C:0,CDS,-,379/1479,127/492,missense_variant c.379G>A p.Glu127Lys,HFD83_RS15350,0,hypothetical protein,missense_variant,1,0.763358779,P144
+NZ_CP050916,2801285,snp,A,G,G:68 A:2,CDS,+,642/1122,214/373,stop_lost c.642A>G p.Ter214Trpext*?,HFD83_RS13460,0,ATP-binding protein,stop_lost,1,1.204819277,P112
+NZ_CP050916,2832973,snp,A,T,T:18 A:0,CDS,-,524/1701,175/566,missense_variant c.524T>A p.Leu175His,HFD83_RS13605,ureC,urease subunit alpha,missense_variant,1,1.204819277,P112
+NZ_CP050916,2841919,snp,A,G,G:22 A:2,CDS,+,337/1338,113/445,missense_variant c.337A>G p.Thr113Ala,HFD83_RS13650,0,CitMHS family transporter,missense_variant,1,1.204819277,P112
+NZ_CP050916,2924496,snp,G,T,T:50 G:4,CDS,-,1567/1623,523/540,missense_variant c.1567C>A p.Gln523Lys,HFD83_RS14025,0,BCCT family transporter,missense_variant,2,2.409638554,P112
+NZ_CP050916,2932445,complex,ACCG,GTCA,GTCA:28 ACCG:1,CDS,+,33/471,11/156,missense_variant c.33_36delACCGinsGTCA p.Pro12Ser,HFD83_RS14050,0,hypothetical protein,missense_variant,1,1.204819277,P112
+NZ_CP050916,2941130,snp,A,G,G:38 A:0,CDS,-,1085/1467,362/488,missense_variant c.1085T>C p.Ile362Thr,HFD83_RS14095,0,porin family protein,missense_variant,1,1.204819277,P112
+NZ_CP050916,2958405,snp,G,A,A:35 G:0,CDS,-,1021/1794,341/597,missense_variant c.1021C>T p.Pro341Ser,HFD83_RS14165,0,P-loop NTPase fold protein,missense_variant,1,1.204819277,P112
+NZ_CP050916,2978562,snp,C,G,G:24 C:0,CDS,+,1015/1299,339/432,missense_variant c.1015C>G p.Leu339Val,HFD83_RS14260,0,DNA polymerase V subunit UmuC,missense_variant,3,3.614457831,P112
+NZ_CP050916,2980132,complex,TGCAC,AGTAG,AGTAG:30 TGCAC:0,CDS,+,51/360,17/119,missense_variant c.51_55delTGCACinsAGTAG p.AlaGln18ValGlu,HFD83_RS14275,0,hypothetical protein,missense_variant,4,4.819277108,P112
+NZ_CP050916,2982058,snp,G,A,A:37 G:0,CDS,-,595/699,199/232,missense_variant c.595C>T p.His199Tyr,HFD83_RS14295,0,hypothetical protein,missense_variant,1,1.204819277,P112
+NZ_CP050916,2982993,snp,C,G,G:38 C:0,CDS,-,454/795,152/264,missense_variant c.454G>C p.Val152Leu,HFD83_RS14300,0,hypothetical protein,missense_variant,1,1.204819277,P112
+NZ_CP050916,2987980,snp,A,T,T:22 A:0,CDS,-,1299/1452,433/483,missense_variant c.1299T>A p.His433Gln,HFD83_RS14330,0,hypothetical protein,missense_variant,5,6.024096386,P112
+NZ_CP050916,2989474,snp,C,T,T:37 C:0,CDS,-,1757/1953,586/650,missense_variant c.1757G>A p.Gly586Asp,HFD83_RS14335,0,hypothetical protein,missense_variant,12,14.45783133,P112
+NZ_CP050916,2994405,snp,A,G,G:29 A:0,CDS,-,239/771,80/256,missense_variant c.239T>C p.Ile80Thr,HFD83_RS14355,0,hypothetical protein,missense_variant,1,1.204819277,P112
+NZ_CP050916,2994686,snp,G,A,A:28 G:0,CDS,-,245/288,82/95,missense_variant c.245C>T p.Thr82Ile,HFD83_RS14360,0,hypothetical protein,missense_variant,1,1.204819277,P112
+NZ_CP050916,2995323,complex,AACCA,TACCT,TACCT:12 AACCA:0,CDS,-,10072/10353,3356/3450,missense_variant c.10068_10072delTGGTTinsAGGTA p.Ser3358Thr,HFD83_RS14365,0,DUF1983 domain-containing protein,missense_variant,29,34.93975904,P112
+NZ_CP050916,3007689,snp,A,G,G:39 A:0,CDS,-,95/267,32/88,missense_variant c.95T>C p.Val32Ala,HFD83_RS14385,0,type II toxin-antitoxin system RelE/ParE family toxin,missense_variant,1,1.204819277,P112
+NZ_CP050916,3026097,snp,C,T,T:23 C:2,CDS,-,574/1446,192/481,missense_variant c.574G>A p.Val192Ile,HFD83_RS14505,0,hypothetical protein,missense_variant,1,1.204819277,P112
+NZ_CP050916,3028297,snp,C,T,T:22 C:2,CDS,-,190/942,64/313,missense_variant c.190G>A p.Val64Ile,HFD83_RS14520,0,hypothetical protein,missense_variant,2,2.409638554,P112
+NZ_CP050916,3034952,complex,GATACCA,AATATCT,AATATCT:22 GATACCA:2,CDS,-,126/2289,40/762,missense_variant c.120_126delTGGTATCinsAGATATT p.Gly41Asp,HFD83_RS14545,0,phage tail tip lysozyme,missense_variant,1,1.204819277,P112
+NZ_CP050916,3035976,snp,T,G,G:27 T:1,CDS,-,367/840,123/279,missense_variant c.367A>C p.Asn123His,HFD83_RS14555,0,hypothetical protein,missense_variant,4,4.819277108,P112
+NZ_CP050916,3036826,snp,C,T,T:38 C:1,CDS,-,217/687,73/228,missense_variant c.217G>A p.Val73Ile,HFD83_RS14560,0,helix-turn-helix domain-containing protein,missense_variant,2,2.409638554,P112
+NZ_CP050916,3037636,snp,C,T,T:48 C:2,CDS,-,97/690,33/229,missense_variant c.97G>A p.Asp33Asn,HFD83_RS14565,0,RusA family crossover junction endodeoxyribonuclease,missense_variant,1,1.204819277,P112
+NZ_CP050916,3053020,snp,T,A,A:37 T:2,CDS,+,667/804,223/267,missense_variant c.667T>A p.Ser223Thr,HFD83_RS14675,0,DUF2303 family protein,missense_variant,1,1.204819277,P112
+NZ_CP050916,3053275,snp,T,A,A:36 T:3,CDS,+,33/261,11/86,missense_variant c.33T>A p.Asp11Glu,HFD83_RS14680,0,hypothetical protein,missense_variant,1,1.204819277,P112
+NZ_CP050916,3053749,snp,T,C,C:26 T:1,CDS,+,188/330,63/109,missense_variant c.188T>C p.Val63Ala,HFD83_RS14685,0,hypothetical protein,missense_variant,1,1.204819277,P112
+NZ_CP050916,3054495,complex,ACCTATTGGCA,GCCTTTTAGCT,GCCTTTTAGCT:24 ACCTATTGGCA:2,CDS,+,69/681,23/226,missense_variant c.69_79delACCTATTGGCAinsGCCTTTTAGCT p.IleGlyIle25PheSerLeu,HFD83_RS14695,0,DNA polymerase III subunit epsilon,missense_variant,2,2.409638554,P112
+NZ_CP050916,3186389,snp,C,T,T:42 C:4,CDS,-,379/1479,127/492,missense_variant c.379G>A p.Glu127Lys,HFD83_RS15350,0,hypothetical protein,missense_variant,1,1.204819277,P112
+NZ_CP050916,2832973,snp,A,T,T:72 A:0,CDS,-,524/1701,175/566,missense_variant c.524T>A p.Leu175His,HFD83_RS13605,ureC,urease subunit alpha,missense_variant,1,0.628930818,P143
+NZ_CP050916,2865678,del,AATT,A,A:51 AATT:0,CDS,+,851/1029,284/342,disruptive_inframe_deletion c.851_853delTTA p.Ile284del,HFD83_RS13760,0,alpha/beta hydrolase,disruptive_inframe_deletion,1,0.628930818,P143
+NZ_CP050916,2887694,snp,T,A,A:63 T:0,CDS,+,122/876,41/291,missense_variant c.122T>A p.Val41Glu,HFD83_RS13840,0,LysR substrate-binding domain-containing protein,missense_variant,1,0.628930818,P143
+NZ_CP050916,2924496,snp,G,T,T:121 G:1,CDS,-,1567/1623,523/540,missense_variant c.1567C>A p.Gln523Lys,HFD83_RS14025,0,BCCT family transporter,missense_variant,4,2.51572327,P143
+NZ_CP050916,2927874,snp,C,A,A:70 C:1,CDS,+,931/1473,311/490,missense_variant c.931C>A p.Gln311Lys,HFD83_RS14035,betB,betaine-aldehyde dehydrogenase,missense_variant,2,1.257861635,P143
+NZ_CP050916,2930892,complex,TTGAG,ACGAA,ACGAA:60 TTGAG:0,CDS,+,212/1641,71/546,missense_variant c.212_216delTTGAGinsACGAA p.Phe71Tyr,HFD83_RS14045,mqo,malate dehydrogenase (quinone),missense_variant,1,0.628930818,P143
+NZ_CP050916,2932445,complex,ACCG,GTCA,GTCA:55 ACCG:0,CDS,+,33/471,11/156,missense_variant c.33_36delACCGinsGTCA p.Pro12Ser,HFD83_RS14050,0,hypothetical protein,missense_variant,1,0.628930818,P143
+NZ_CP050916,2941130,snp,A,G,G:83 A:0,CDS,-,1085/1467,362/488,missense_variant c.1085T>C p.Ile362Thr,HFD83_RS14095,0,porin family protein,missense_variant,1,0.628930818,P143
+NZ_CP050916,2958405,snp,G,A,A:64 G:0,CDS,-,1021/1794,341/597,missense_variant c.1021C>T p.Pro341Ser,HFD83_RS14165,0,P-loop NTPase fold protein,missense_variant,1,0.628930818,P143
+NZ_CP050916,2978562,snp,C,G,G:23 C:0,CDS,+,1015/1299,339/432,missense_variant c.1015C>G p.Leu339Val,HFD83_RS14260,0,DNA polymerase V subunit UmuC,missense_variant,4,2.51572327,P143
+NZ_CP050916,2980132,complex,TGCAC,AGTAG,AGTAG:55 TGCAC:0,CDS,+,51/360,17/119,missense_variant c.51_55delTGCACinsAGTAG p.AlaGln18ValGlu,HFD83_RS14275,0,hypothetical protein,missense_variant,4,2.51572327,P143
+NZ_CP050916,2982058,snp,G,A,A:58 G:0,CDS,-,595/699,199/232,missense_variant c.595C>T p.His199Tyr,HFD83_RS14295,0,hypothetical protein,missense_variant,1,0.628930818,P143
+NZ_CP050916,2982993,snp,C,G,G:60 C:0,CDS,-,454/795,152/264,missense_variant c.454G>C p.Val152Leu,HFD83_RS14300,0,hypothetical protein,missense_variant,1,0.628930818,P143
+NZ_CP050916,2987980,snp,A,T,T:43 A:0,CDS,-,1299/1452,433/483,missense_variant c.1299T>A p.His433Gln,HFD83_RS14330,0,hypothetical protein,missense_variant,5,3.144654088,P143
+NZ_CP050916,2989474,snp,C,T,T:77 C:0,CDS,-,1757/1953,586/650,missense_variant c.1757G>A p.Gly586Asp,HFD83_RS14335,0,hypothetical protein,missense_variant,12,7.547169811,P143
+NZ_CP050916,2994405,snp,A,G,G:47 A:0,CDS,-,239/771,80/256,missense_variant c.239T>C p.Ile80Thr,HFD83_RS14355,0,hypothetical protein,missense_variant,1,0.628930818,P143
+NZ_CP050916,2994686,snp,G,A,A:41 G:0,CDS,-,245/288,82/95,missense_variant c.245C>T p.Thr82Ile,HFD83_RS14360,0,hypothetical protein,missense_variant,1,0.628930818,P143
+NZ_CP050916,2995323,complex,AACCA,TACCT,TACCT:15 AACCA:0,CDS,-,10072/10353,3356/3450,missense_variant c.10068_10072delTGGTTinsAGGTA p.Ser3358Thr,HFD83_RS14365,0,DUF1983 domain-containing protein,missense_variant,31,19.49685535,P143
+NZ_CP050916,3007689,snp,A,G,G:55 A:0,CDS,-,95/267,32/88,missense_variant c.95T>C p.Val32Ala,HFD83_RS14385,0,type II toxin-antitoxin system RelE/ParE family toxin,missense_variant,1,0.628930818,P143
+NZ_CP050916,3022919,snp,G,C,C:21 G:0,CDS,-,856/906,286/301,missense_variant c.856C>G p.Pro286Ala,HFD83_RS14485,0,hypothetical protein,missense_variant,11,6.918238994,P143
+NZ_CP050916,3023863,snp,A,C,C:37 A:1,CDS,-,212/228,71/75,missense_variant c.212T>G p.Phe71Cys,HFD83_RS14490,0,hypothetical protein,missense_variant,7,4.402515723,P143
+NZ_CP050916,3024281,mnp,TG,AT,AT:31 TG:0,CDS,-,264/459,88/152,missense_variant c.263_264delCAinsAT p.Pro88His,HFD83_RS14495,0,hypothetical protein,missense_variant,8,5.031446541,P143
+NZ_CP050916,3024680,complex,GGTG,TGCA,TGCA:10 GGTG:0,CDS,-,558/615,185/204,missense_variant c.555_558delCACCinsTGCA p.Thr186Ala,HFD83_RS14500,0,hypothetical protein,missense_variant,4,2.51572327,P143
+NZ_CP050916,3026097,snp,C,T,T:43 C:1,CDS,-,574/1446,192/481,missense_variant c.574G>A p.Val192Ile,HFD83_RS14505,0,hypothetical protein,missense_variant,1,0.628930818,P143
+NZ_CP050916,3027986,snp,A,T,T:36 A:0,CDS,-,501/942,167/313,missense_variant c.501T>A p.His167Gln,HFD83_RS14520,0,hypothetical protein,missense_variant,7,4.402515723,P143
+NZ_CP050916,3030118,complex,AAATTACT,TGATCACA,TGATCACA:26 AAATTACT:0,CDS,-,298/900,97/299,missense_variant c.291_298delAGTAATTTinsTGTGATCA p.Leu100Met,HFD83_RS14530,0,phage antirepressor N-terminal domain-containing protein,missense_variant,2,1.257861635,P143
+NZ_CP050916,3030676,snp,G,T,T:55 G:0,CDS,-,746/942,249/313,missense_variant c.746C>A p.Ala249Asp,HFD83_RS14535,0,type II toxin-antitoxin system HicB family antitoxin,missense_variant,2,1.257861635,P143
+NZ_CP050916,3031757,snp,T,G,G:75 T:0,CDS,-,1019/1056,340/351,missense_variant c.1019A>C p.Asn340Thr,HFD83_RS14540,0,hypothetical protein,missense_variant,2,1.257861635,P143
+NZ_CP050916,3033053,snp,G,T,T:73 G:0,CDS,-,2025/2289,675/762,missense_variant c.2025C>A p.Asp675Glu,HFD83_RS14545,0,phage tail tip lysozyme,missense_variant,9,5.660377358,P143
+NZ_CP050916,3052409,snp,C,A,A:49 C:0,CDS,+,56/804,19/267,missense_variant c.56C>A p.Pro19Gln,HFD83_RS14675,0,DUF2303 family protein,missense_variant,4,2.51572327,P143
+NZ_CP050916,3053275,snp,T,A,A:60 T:0,CDS,+,33/261,11/86,missense_variant c.33T>A p.Asp11Glu,HFD83_RS14680,0,hypothetical protein,missense_variant,3,1.886792453,P143
+NZ_CP050916,3053749,snp,T,C,C:43 T:0,CDS,+,188/330,63/109,missense_variant c.188T>C p.Val63Ala,HFD83_RS14685,0,hypothetical protein,missense_variant,4,2.51572327,P143
+NZ_CP050916,3054495,complex,ACCTATTGGCA,GCCTTTTAGCT,GCCTTTTAGCT:30 ACCTATTGGCA:0,CDS,+,69/681,23/226,missense_variant c.69_79delACCTATTGGCAinsGCCTTTTAGCT p.IleGlyIle25PheSerLeu,HFD83_RS14695,0,DNA polymerase III subunit epsilon,missense_variant,8,5.031446541,P143
+NZ_CP050916,3055191,snp,A,T,T:26 A:0,CDS,+,72/363,24/120,missense_variant c.72A>T p.Lys24Asn,HFD83_RS14700,0,ead/Ea22-like family protein,missense_variant,3,1.886792453,P143
+NZ_CP050916,3055436,snp,T,C,C:12 T:0,CDS,+,317/363,106/120,missense_variant c.317T>C p.Ile106Thr,HFD83_RS14705,0,hypothetical protein,missense_variant,5,3.144654088,P143
+NZ_CP050916,3056571,snp,A,T,T:38 A:0,CDS,-,1039/1152,347/383,missense_variant c.1039T>A p.Ser347Thr,HFD83_RS14720,0,site-specific integrase,missense_variant,3,1.886792453,P143
+NZ_CP050916,3168006,snp,C,T,T:68 C:0,CDS,-,460/1038,154/345,missense_variant c.460G>A p.Ala154Thr,HFD83_RS15285,0,cell division protein ZipA,missense_variant,1,0.628930818,P143
+NZ_CP050916,3186389,snp,C,T,T:95 C:0,CDS,-,379/1479,127/492,missense_variant c.379G>A p.Glu127Lys,HFD83_RS15350,0,hypothetical protein,missense_variant,1,0.628930818,P143
+NZ_CP050916,2801285,snp,A,G,G:2182 A:0,CDS,+,642/1122,214/373,stop_lost c.642A>G p.Ter214Trpext*?,HFD83_RS13460,0,ATP-binding protein,stop_lost,1,0.625,P136
+NZ_CP050916,2832973,snp,A,T,T:451 A:0,CDS,-,524/1701,175/566,missense_variant c.524T>A p.Leu175His,HFD83_RS13605,ureC,urease subunit alpha,missense_variant,1,0.625,P136
+NZ_CP050916,2865678,del,AATT,A,A:508 AATT:0,CDS,+,851/1029,284/342,disruptive_inframe_deletion c.851_853delTTA p.Ile284del,HFD83_RS13760,0,alpha/beta hydrolase,disruptive_inframe_deletion,1,0.625,P136
+NZ_CP050916,2887694,snp,T,A,A:485 T:0,CDS,+,122/876,41/291,missense_variant c.122T>A p.Val41Glu,HFD83_RS13840,0,LysR substrate-binding domain-containing protein,missense_variant,1,0.625,P136
+NZ_CP050916,2924496,snp,G,T,T:573 G:0,CDS,-,1567/1623,523/540,missense_variant c.1567C>A p.Gln523Lys,HFD83_RS14025,0,BCCT family transporter,missense_variant,4,2.5,P136
+NZ_CP050916,2927874,snp,C,A,A:590 C:1,CDS,+,931/1473,311/490,missense_variant c.931C>A p.Gln311Lys,HFD83_RS14035,betB,betaine-aldehyde dehydrogenase,missense_variant,2,1.25,P136
+NZ_CP050916,2930892,complex,TTGAG,ACGAA,ACGAA:898 TTGAG:0,CDS,+,212/1641,71/546,missense_variant c.212_216delTTGAGinsACGAA p.Phe71Tyr,HFD83_RS14045,mqo,malate dehydrogenase (quinone),missense_variant,1,0.625,P136
+NZ_CP050916,2932445,complex,ACCG,GTCA,GTCA:746 ACCG:0,CDS,+,33/471,11/156,missense_variant c.33_36delACCGinsGTCA p.Pro12Ser,HFD83_RS14050,0,hypothetical protein,missense_variant,1,0.625,P136
+NZ_CP050916,2941130,snp,A,G,G:605 A:0,CDS,-,1085/1467,362/488,missense_variant c.1085T>C p.Ile362Thr,HFD83_RS14095,0,porin family protein,missense_variant,1,0.625,P136
+NZ_CP050916,2958405,snp,G,A,A:575 G:1,CDS,-,1021/1794,341/597,missense_variant c.1021C>T p.Pro341Ser,HFD83_RS14165,0,P-loop NTPase fold protein,missense_variant,1,0.625,P136
+NZ_CP050916,2978562,snp,C,G,G:243 C:0,CDS,+,1015/1299,339/432,missense_variant c.1015C>G p.Leu339Val,HFD83_RS14260,0,DNA polymerase V subunit UmuC,missense_variant,6,3.75,P136
+NZ_CP050916,2980132,complex,TGCAC,AGTAG,AGTAG:279 TGCAC:0,CDS,+,51/360,17/119,missense_variant c.51_55delTGCACinsAGTAG p.AlaGln18ValGlu,HFD83_RS14275,0,hypothetical protein,missense_variant,4,2.5,P136
+NZ_CP050916,2982058,snp,G,A,A:642 G:0,CDS,-,595/699,199/232,missense_variant c.595C>T p.His199Tyr,HFD83_RS14295,0,hypothetical protein,missense_variant,1,0.625,P136
+NZ_CP050916,2982993,snp,C,G,G:609 C:0,CDS,-,454/795,152/264,missense_variant c.454G>C p.Val152Leu,HFD83_RS14300,0,hypothetical protein,missense_variant,1,0.625,P136
+NZ_CP050916,2987980,snp,A,T,T:458 A:0,CDS,-,1299/1452,433/483,missense_variant c.1299T>A p.His433Gln,HFD83_RS14330,0,hypothetical protein,missense_variant,5,3.125,P136
+NZ_CP050916,2989474,snp,C,T,T:628 C:0,CDS,-,1757/1953,586/650,missense_variant c.1757G>A p.Gly586Asp,HFD83_RS14335,0,hypothetical protein,missense_variant,12,7.5,P136
+NZ_CP050916,2994405,snp,A,G,G:569 A:0,CDS,-,239/771,80/256,missense_variant c.239T>C p.Ile80Thr,HFD83_RS14355,0,hypothetical protein,missense_variant,1,0.625,P136
+NZ_CP050916,2994686,snp,G,A,A:575 G:0,CDS,-,245/288,82/95,missense_variant c.245C>T p.Thr82Ile,HFD83_RS14360,0,hypothetical protein,missense_variant,1,0.625,P136
+NZ_CP050916,2995323,complex,AACCA,TACCT,TACCT:178 AACCA:0,CDS,-,10072/10353,3356/3450,missense_variant c.10068_10072delTGGTTinsAGGTA p.Ser3358Thr,HFD83_RS14365,0,DUF1983 domain-containing protein,missense_variant,33,20.625,P136
+NZ_CP050916,3007689,snp,A,G,G:666 A:0,CDS,-,95/267,32/88,missense_variant c.95T>C p.Val32Ala,HFD83_RS14385,0,type II toxin-antitoxin system RelE/ParE family toxin,missense_variant,1,0.625,P136
+NZ_CP050916,3026097,snp,C,T,T:577 C:0,CDS,-,574/1446,192/481,missense_variant c.574G>A p.Val192Ile,HFD83_RS14505,0,hypothetical protein,missense_variant,1,0.625,P136
+NZ_CP050916,3027986,snp,A,T,T:502 A:0,CDS,-,501/942,167/313,missense_variant c.501T>A p.His167Gln,HFD83_RS14520,0,hypothetical protein,missense_variant,7,4.375,P136
+NZ_CP050916,3029737,snp,T,C,C:34 T:1,CDS,-,679/900,227/299,missense_variant c.679A>G p.Lys227Glu,HFD83_RS14530,0,phage antirepressor N-terminal domain-containing protein,missense_variant,3,1.875,P136
+NZ_CP050916,3030676,snp,G,T,T:696 G:0,CDS,-,746/942,249/313,missense_variant c.746C>A p.Ala249Asp,HFD83_RS14535,0,type II toxin-antitoxin system HicB family antitoxin,missense_variant,2,1.25,P136
+NZ_CP050916,3031757,snp,T,G,G:332 T:0,CDS,-,1019/1056,340/351,missense_variant c.1019A>C p.Asn340Thr,HFD83_RS14540,0,hypothetical protein,missense_variant,2,1.25,P136
+NZ_CP050916,3033053,snp,G,T,T:557 G:0,CDS,-,2025/2289,675/762,missense_variant c.2025C>A p.Asp675Glu,HFD83_RS14545,0,phage tail tip lysozyme,missense_variant,14,8.75,P136
+NZ_CP050916,3035707,complex,CTCAGTTCGA,TTCTGTCTTG,TTCTGTCTTG:91 CTCAGTTCGA:0,CDS,-,636/840,209/279,missense_variant c.627_636delTCGAACTGAGinsCAAGACAGAA p.Arg210Lys,HFD83_RS14555,0,hypothetical protein,missense_variant,7,4.375,P136
+NZ_CP050916,3036364,snp,C,T,T:551 C:0,CDS,-,679/687,227/228,missense_variant c.679G>A p.Ala227Thr,HFD83_RS14560,0,helix-turn-helix domain-containing protein,missense_variant,6,3.75,P136
+NZ_CP050916,3037636,snp,C,T,T:636 C:0,CDS,-,97/690,33/229,missense_variant c.97G>A p.Asp33Asn,HFD83_RS14565,0,RusA family crossover junction endodeoxyribonuclease,missense_variant,1,0.625,P136
+NZ_CP050916,3039814,snp,T,C,C:504 T:0,CDS,-,326/534,109/177,missense_variant c.326A>G p.Asn109Ser,HFD83_RS14575,0,hypothetical protein,missense_variant,2,1.25,P136
+NZ_CP050916,3052409,snp,C,A,A:538 C:0,CDS,+,56/804,19/267,missense_variant c.56C>A p.Pro19Gln,HFD83_RS14675,0,DUF2303 family protein,missense_variant,4,2.5,P136
+NZ_CP050916,3053275,snp,T,A,A:683 T:0,CDS,+,33/261,11/86,missense_variant c.33T>A p.Asp11Glu,HFD83_RS14680,0,hypothetical protein,missense_variant,3,1.875,P136
+NZ_CP050916,3053749,snp,T,C,C:425 T:0,CDS,+,188/330,63/109,missense_variant c.188T>C p.Val63Ala,HFD83_RS14685,0,hypothetical protein,missense_variant,6,3.75,P136
+NZ_CP050916,3054495,complex,ACCTATTGGCA,GCCTTTTAGCT,GCCTTTTAGCT:379 ACCTATTGGCA:0,CDS,+,69/681,23/226,missense_variant c.69_79delACCTATTGGCAinsGCCTTTTAGCT p.IleGlyIle25PheSerLeu,HFD83_RS14695,0,DNA polymerase III subunit epsilon,missense_variant,8,5,P136
+NZ_CP050916,3055191,snp,A,T,T:215 A:0,CDS,+,72/363,24/120,missense_variant c.72A>T p.Lys24Asn,HFD83_RS14700,0,ead/Ea22-like family protein,missense_variant,3,1.875,P136
+NZ_CP050916,3055436,snp,T,C,C:30 T:0,CDS,+,317/363,106/120,missense_variant c.317T>C p.Ile106Thr,HFD83_RS14705,0,hypothetical protein,missense_variant,5,3.125,P136
+NZ_CP050916,3055756,complex,ACTGCA,GTTGAG,GTTGAG:33 ACTGCA:0,CDS,+,148/171,50/56,missense_variant c.148_153delACTGCAinsGTTGAG p.ThrAla50ValGlu,HFD83_RS14710,0,hypothetical protein,missense_variant,1,0.625,P136
+NZ_CP050916,3056571,snp,A,T,T:283 A:0,CDS,-,1039/1152,347/383,missense_variant c.1039T>A p.Ser347Thr,HFD83_RS14720,0,site-specific integrase,missense_variant,3,1.875,P136
+NZ_CP050916,3159096,snp,G,A,A:519 G:0,CDS,-,478/1281,160/426,missense_variant c.478C>T p.His160Tyr,HFD83_RS15250,bioA,adenosylmethionine--8-amino-7-oxononanoate transaminase,missense_variant,1,0.625,P136
+NZ_CP050916,3168006,snp,C,T,T:640 C:0,CDS,-,460/1038,154/345,missense_variant c.460G>A p.Ala154Thr,HFD83_RS15285,0,cell division protein ZipA,missense_variant,1,0.625,P136
+NZ_CP050916,3186389,snp,C,T,T:614 C:0,CDS,-,379/1479,127/492,missense_variant c.379G>A p.Glu127Lys,HFD83_RS15350,0,hypothetical protein,missense_variant,1,0.625,P136
+NZ_CP050916,2932565,complex,TACTGCCTATTCT,AACAGCTTATGCA,AACAGCTTATGCA:10 TACTGCCTATTCT:0,CDS,+,153/471,51/156,missense_variant c.153_165delTACTGCCTATTCTinsAACAGCTTATGCA p.Ser55Ala,HFD83_RS14050,0,hypothetical protein,missense_variant,6,12,P124
+NZ_CP050916,2933438,complex,GCCAGA,ACCGGG,ACCGGG:13 GCCAGA:0,CDS,+,339/879,113/292,missense_variant c.339_344delGCCAGAinsACCGGG p.Glu115Gly,HFD83_RS14055,0,homocysteine S-methyltransferase family protein,missense_variant,3,6,P124
+NZ_CP050916,2934548,snp,C,A,A:10 C:0,CDS,+,565/1335,189/444,missense_variant c.565C>A p.His189Asn,HFD83_RS14060,0,basic amino acid/polyamine antiporter,missense_variant,1,2,P124
+NZ_CP050916,2936524,snp,G,A,A:15 G:0,CDS,-,763/1914,255/637,missense_variant c.763C>T p.His255Tyr,HFD83_RS14065,0,alpha/beta fold hydrolase,missense_variant,5,10,P124
+NZ_CP050916,2938074,snp,G,A,A:13 G:0,CDS,-,44/708,15/235,missense_variant c.44C>T p.Ala15Val,HFD83_RS14070,0,DUF1275 domain-containing protein,missense_variant,1,2,P124
+NZ_CP050916,2941130,snp,A,G,G:22 A:0,CDS,-,1085/1467,362/488,missense_variant c.1085T>C p.Ile362Thr,HFD83_RS14095,0,porin family protein,missense_variant,1,2,P124
+NZ_CP050916,2980132,complex,TGCAC,AGTAG,AGTAG:11 TGCAC:0,CDS,+,51/360,17/119,missense_variant c.51_55delTGCACinsAGTAG p.AlaGln18ValGlu,HFD83_RS14275,0,hypothetical protein,missense_variant,4,8,P124
+NZ_CP050916,2982993,snp,C,G,G:10 C:0,CDS,-,454/795,152/264,missense_variant c.454G>C p.Val152Leu,HFD83_RS14300,0,hypothetical protein,missense_variant,1,2,P124
+NZ_CP050916,2988846,snp,A,T,T:12 A:0,CDS,-,433/1452,145/483,missense_variant c.433T>A p.Ser145Thr,HFD83_RS14330,0,hypothetical protein,missense_variant,2,4,P124
+NZ_CP050916,2989512,snp,A,T,T:10 A:0,CDS,-,1719/1953,573/650,missense_variant c.1719T>A p.Asp573Glu,HFD83_RS14335,0,hypothetical protein,missense_variant,7,14,P124
+NZ_CP050916,2994405,snp,A,G,G:13 A:0,CDS,-,239/771,80/256,missense_variant c.239T>C p.Ile80Thr,HFD83_RS14355,0,hypothetical protein,missense_variant,1,2,P124
+NZ_CP050916,2997711,snp,A,G,G:14 A:0,CDS,-,7684/10353,2562/3450,missense_variant c.7684T>C p.Tyr2562His,HFD83_RS14365,0,DUF1983 domain-containing protein,missense_variant,18,36,P124
