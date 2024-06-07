@@ -1,6 +1,6 @@
 # LRT_microbiomes_critical_illness
 
-This repository contains data and analytical code for bioinformatic analyses of the manuscript entitiled "Deep longitudinal lower respiratory tract microbiome profiling reveals genome-resolved functional and evolutionary dynamics in critical illness" (under revision, Nature Comunications).
+This repository contains data and analytical code for bioinformatic analyses of the manuscript entitiled "Deep longitudinal lower respiratory tract microbiome profiling reveals genome-resolved functional and evolutionary dynamics in critical illness" (under revision, Nature Communications).
 
 ## Software required
 The analytical code provided in this repository was implemented using R version 4.2.0 in RStudio. No specialized hardware requirements are necessary to run the code.
