@@ -4,9 +4,15 @@ This repository contains data and analytical code for bioinformatic analyses of 
 
 ## Software required
 - `ggplot2`: 3.4.1
+- `ggpubr`: 0.6.0
 - `ggtext`: 0.1.2
 - `ggstar`: 1.0.4 
-- `ComplexHeatmap`: 2.12.1 
+- `ComplexHeatmap`: 2.12.1
+- `ggVennDiagram`: 1.2.2
+- `VennDiagram`: 1.7.3
+- `ggvenn`: 0.1.10
+- `dplyr`: 1.1.1
+- `patchwork`: 1.1.2
 - `stringr`: 1.5.0
 - `aplot`: 0.1.10
 - `ggeasy`: 0.1.4 
