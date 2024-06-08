@@ -389,6 +389,83 @@ p_final_layer4 <- p_final_layer3 +
 
 ```{r Fig 1e}
 
+load(r'(LRT_microbiomes_critical_illness\Data_repository\Main_figures\adonisBac.RData)')
+load(r'(LRT_microbiomes_critical_illness\Data_repository\Main_figures\adonisArg.RData)')
+load(r'(LRT_microbiomes_critical_illness\Data_repository\Main_figures\adonisPwy.RData)')
+adonisBac2$Microbiome = 'Bacteria'
+adonisArg2$Microbiome = 'ARG'
+adonisPwy2$Microbiome = 'Pathway'
+adonisBac2$Variable = xs_norm[adonisBac2$variable]
+adonisBac2$Variable %<>% factor(., levels = adonisBac2$Variable[order(adonisBac2$adonis.r2)])
+adonisBac2$adonis.r2 %<>% as.numeric()
+adonisBac2$adonis.p  %<>% as.numeric()
+bbp = ggplot(adonisBac2, aes(x=adonis.r2, y=Variable)) +
+  geom_col(fill="gray", width = 0.25, alpha = 0.8) +
+  geom_point(aes(fill = adonis.p), stroke = 0.2, shape = 21, size = 5) +
+  scale_fill_distiller(palette = 4, name = expression(~ italic(P) ~ 'value')) +
+  scale_x_continuous(expand = expansion(mult = c(0, 0.2)), breaks = seq(0,0.1,0.02)) +
+  theme(strip.text = element_text(size = 13), strip.background = element_rect(fill = '#E2E5E9', color = NA),
+                   # axis.text.x = element_text(angle = 45, hjust = 1, vjust = 1),
+                   legend.position = 'right') +
+  xlab(expression(italic(R)^2)) + ylab("") 
+print(bbp)
+adonisArg2$Variable = xs_norm[adonisArg2$variable]
+adonisArg2$Variable %<>% factor(., levels = adonisArg2$Variable[order(adonisArg2$adonis.r2)])
+adonisArg2$adonis.r2 %<>% as.numeric()
+adonisArg2$adonis.p  %<>% as.numeric()
+bbp = ggplot(adonisArg2, aes(x=adonis.r2, y=Variable)) +
+  geom_col(fill="gray", width = 0.25, alpha = 0.8) +
+  geom_point(aes(fill = adonis.p), stroke = 0.2, shape = 21, size = 5) +
+  scale_fill_distiller(palette = 4, name = expression(~ italic(P) ~ 'value')) +
+  scale_x_continuous(expand = expansion(mult = c(0, 0.2)), breaks = seq(0,0.1,0.02)) +
+  theme(strip.text = element_text(size = 13), strip.background = element_rect(fill = '#E2E5E9', color = NA),
+                   # axis.text.x = element_text(angle = 45, hjust = 1, vjust = 1),
+                   legend.position = 'right') +
+  xlab(expression(italic(R)^2)) + ylab("") 
+print(bbp)
+adonisPwy2$Variable = xs_norm[adonisPwy2$variable]
+adonisPwy2$Variable %<>% factor(., levels = adonisPwy2$Variable[order(adonisPwy2$adonis.r2)])
+adonisPwy2$adonis.r2 %<>% as.numeric()
+adonisPwy2$adonis.p  %<>% as.numeric()
+bbp = ggplot(adonisPwy2, aes(x=adonis.r2, y=Variable)) +
+  geom_col(fill="gray", width = 0.25, alpha = 0.8) +
+  geom_point(aes(fill = adonis.p), stroke = 0.2, shape = 21, size = 5) +
+  scale_fill_distiller(palette = 4, name = expression(~ italic(P) ~ 'value')) +
+  scale_x_continuous(expand = expansion(mult = c(0, 0.2)), breaks = seq(0,0.1,0.02)) +
+  theme(strip.text = element_text(size = 13), strip.background = element_rect(fill = '#E2E5E9', color = NA),
+                   # axis.text.x = element_text(angle = 45, hjust = 1, vjust = 1),
+                   legend.position = 'right') +
+  xlab(expression(italic(R)^2)) + ylab("") 
+print(bbp)
+adonis2DF = rbind(adonisBac2, adonisArg2, adonisPwy2) %>% as.data.frame()
+sumDF = adonis2DF %>% group_by(Variable) %>%
+  summarise(sum = sum( adonis.r2))
+adonis2DF$Variable %<>% factor(., levels = sumDF$Variable[order(sumDF$sum)])
+adonis2DF$Microbiome %<>% factor(., levels= c('Bacteria', 'Pathway', 'ARG'))
+bpR = ggplot() +
+  geom_bar(data = adonis2DF, mapping = aes(x=adonis.r2, y=Variable, fill = Microbiome), 
+           position = "stack", stat = "identity",width=0.8) +
+  scale_fill_manual(values = c('Bacteria' = '#F0D490', 'Pathway' = '#80B1D3', 'ARG' = '#99CCCC')) +
+  scale_x_continuous(limits = c(0, 0.15), expand = expansion(mult = c(0,0)), breaks = seq(0,0.15,0.025)) +
+  geom_text(data = sumDF, mapping = aes(x = sum+0.002, y = Variable, label = Variable), 
+            size = 4.5, hjust = 0) +
+  labs(x = expression(~~Adonis~~italic(R)^2)) +
+  theme(legend.position = 'right', axis.text.y = element_blank(), axis.title.y = element_blank())
+pdf('./adonis_barplot.pdf', width = 5.56, height = 3.49)
+print(bpR)
+dev.off()
+adonis2DF$P = adonis2DF$adonis.p
+adonis2DF$P[adonis2DF$P >= 0.05] = 1
+adonis2DF$P[which(adonis2DF$P < 0.05)] = 0
+pMat = reshape2::dcast(adonis2DF, Microbiome ~variable) %>% data.frame(., row.names = 1) %>% t()
+row.names(pMat) = xs_norm[row.names(pMat)]
+pMat = pMat[match(levels(adonis2DF$Variable) %>% rev(), row.names(pMat)), ]
+pdf('./adonis_heatmap.pdf', width = 8.79, height = 6)
+pheatmap(pMat, scale = F, cluster_cols = F, cluster_rows = F, border_color = 'white',
+         cellwidth = 25,cellheight= 25, gaps_col = 1:2, gaps_row = 1:12,
+         color = colorRampPalette(c('#CD5C5C', 'white'))(100))
+dev.off()
+
 ```
 ### Figure S1
 ### --------------------------------------------------------------------------------------------------------------------------------------------
