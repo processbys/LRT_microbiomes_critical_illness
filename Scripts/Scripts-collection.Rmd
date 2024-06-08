@@ -472,6 +472,132 @@ dev.off()
 
 ```{r Fig S1a}
 
+df_too_low <- read.csv((r'(LRT_microbiomes_critical_illness\Data_repository\Supplementary_figures\microbiome_species-top_prevalent.csv\head-to-head_comparisons-DNA_concentration_too_low.csv)')) # save in the same file 'head-to-head_comparisons-DNA_concentration.txt'
+df_too_low$Percentage_Failed <- df_too_low$Percentage_Failed *100
+df_too_low$Percentage_successful <- 100 - df_too_low$Percentage_Failed
+plot <- ggbarplot(df_too_low, "Method", "Percentage_successful",
+                  color = '#1f78b4',fill='#1f78b4',palette = "#1f78b4",
+                  label = F,
+                  position = position_dodge(0.9)) + 
+  scale_x_discrete(labels= c('CMEM','Power Water','AllPrep DNA')) + 
+  labs(x=NULL,y='Percentage of samples with detectable\nDNA after extraction (%)') + theme_bw(base_size = 27)
+ggpar(plot,legend = 'bottom',x.text.angle = 30)
+
+```
+
+```{r Fig S1b}
+
+df_concentration <- read.csv(r'(LRT_microbiomes_critical_illness\Data_repository\Supplementary_figures\head-to-head_comparisons-DNA_concentration.csv)')
+df_concentration$Concentration  <- log10(df_concentration$Concentration + 1)
+df_concentration$Method <- factor(df_concentration$Method,levels =c('CMEM','Power Water','AllPrep DNA') )
+my_comparisons <- list(c('CMEM','Power Water'),c('CMEM','AllPrep DNA'),c('Power Water','AllPrep DNA'))
+p_concentration <- ggboxplot(df_concentration, "Method", "Concentration",
+          color = "Method", palette =c("#00AFBB", "#E7B800", "#FC4E07"),
+          add = "jitter",add.params = list(size = 1.5, alpha = 0.5))  +
+  stat_boxplot(geom = "errorbar",width=0.05,color=c("#00AFBB", "#E7B800", "#FC4E07"))  +
+  stat_compare_means(comparisons = my_comparisons,label = "p.label",size=8,vjust=0) +
+  scale_x_discrete(labels= c('CMEM','Power Water','AllPrep DNA')) + 
+  labs(x=NULL,y='DNA concentration (log10, ng/ul)',) + #ylim(-1,10) +
+  theme_bw(base_size = 24)
+
+```
+
+```{r Fig S1c}
+
+df_mappingrate <- read.csv(r'(G:\Bio-Analysis\Python\Vscode\Task01-NEW\Responses-related\files-reformat\MappingRate_ETAs.csv)')
+df_mappingrate$microbial <- 100 - df_mappingrate$HumanMappingRate
+df_mappingrate$fold_increase <- 100 - df_mappingrate$HumanMappingRate -1
+
+plot_microbial_reads <- ggboxplot(df_mappingrate, x=NULL, y="microbial",
+                              color = "#2077b4", palette =c("#2077b4", "#E7B800", "#FC4E07"),
+                              add = "jitter",add.params = list(size = 1.5, alpha = 0.5)) +
+  stat_boxplot(geom = "errorbar",width=0.05,color='#2077b4')  +
+  scale_x_discrete(labels='Samples') +
+  labs(x=NULL,y='Proportion of microbial reads (%)') + theme_bw(base_size = 16)+
+  theme(axis.text.x = element_text(angle=30,hjust=0.7,vjust=0.8)) 
+
+```
+
+```{r Fig S1d}
+
+df_profiles_vegan  <-  read.csv(r"(LRT_microbiomes_critical_illness\Data_repository\Supplementary_figures\microbial_profile-feasibility_validation.csv)",header = TRUE) # save in the same file 'microbial_profile-feasibility_validation.txt'
+metadata = read.csv(r"(LRT_microbiomes_critical_illness\Data_repository\Supplementary_figures\metadata-microbial_profile-feasibility_validation.csv)",header = TRUE)  # save in the same file 'microbial_profile-feasibility_validation.txt'
+
+df_profiles_vegan_abundance <- df_profiles_vegan[,3:ncol(df_profiles_vegan)]
+df_profiles_vegan_matrix <- as.matrix(df_profiles_vegan[,3:ncol(df_profiles_vegan)])
+
+abundance <- select(df_profiles_vegan,-c(SampleID,Group))
+rownames(abundance) <- df_profiles_vegan[1:nrow(df_profiles_vegan),1]
+abundance <- t(abundance) #transposed dataframe
+
+pca_metadata <- data.frame(df_profiles_vegan[1:nrow(df_profiles_vegan),2])
+rownames(pca_metadata) <- df_profiles_vegan[1:nrow(df_profiles_vegan),1]
+colnames(pca_metadata) <- c('Group')
+p <- pca(abundance,metadata=pca_metadata)
+
+# adonis test 
+set.seed(123)
+adonis2(df_profiles_vegan_matrix ~ Group, df_profiles_vegan, method = "bray", permutations = 999)
+
+df_pca_output <- as.data.frame(p$rotated)
+df_pca_output$SampleID <- rownames(df_pca_output)
+df_pca_output <- merge(df_pca_output, metadata, by = "SampleID")
+
+ggscatter(df_pca_output, x = "PC1", y = "PC2", color = "Group", palette = c("#0466AB", "#D15D4E"), 
+           size =5, alpha = 1) +
+  geom_line(data = df_pca_output, aes(group = Order), color = "black",alpha = 0.8) +
+  # stat_ellipse(aes(color = Group), geom = "path", alpha = 1, linetype = "solid",linewidth =0.8,
+  #              level = 0.9) + theme_pubr(border = T)
+  stat_ellipse(aes(fill = Group), geom = "polygon", linetype = "solid", level = 0.95,alpha=0.3) +
+#   scale_fill_manual(values = c("#0466AB", "#FFEFF2"))
+  theme_pubr(base_size = 23,border = T)
+
+```
+
+```{r Fig S1e}
+
+df_diversity  <- read.csv(r"(LRT_microbiomes_critical_illness\Data_repository\Supplementary_figures\alpha_diversity-comparison-pneumonia_vs_no_pneumonia.csv)",header = TRUE)
+df_merged_subset$Diagnosed.Pneumonia   <- factor(df_merged_subset$Diagnosed.Pneumonia,levels = c("No","Yes"))
+
+my_comparisons <- list(c("No",'Yes'))
+
+p_diversity_shannon <- ggplot(df_merged_subset, aes(x=Diagnosed.Pneumonia,y=Alpha_diversity_Shannon,fill=Diagnosed.Pneumonia)) +
+  stat_boxplot(geom = "errorbar",width=0.15)+
+  geom_boxplot(size=0.5 ) + #theme_classic2() +
+#   geom_line(aes(group=Order),colour='Gray75', size=0.7)+
+  geom_line(size=0.3) +
+  scale_fill_manual(values = c("#00AFBB", "#E7B800")) +
+  scale_x_discrete(labels = c("No Pneumonia","Pneumonia")) +
+  stat_compare_means(label.y = 3.2,comparisons = my_comparisons,label = "p.signif",size=7,bracket.size = 0.5) +
+  stat_compare_means(label.y = 3.8,label.x = 1,size=8) + 
+  labs(x = NULL, y = "Alpha diversity (Shannon)") +
+  theme_pubr(base_size = 21, border =F,legend = "none")
+
+ggpar(p_diversity_shannon,x.text.angle = 30,legend = 'none')
+
+```
+
+```{r Fig S1f}
+
+df_arg_abundance  <- read.csv(r"(LRT_microbiomes_critical_illness\Data_repository\Supplementary_figures\argtypes-comparison-pneumonia_vs_nopneumonia.csv)",header = TRUE)
+df_arg_abundance$totoal_arg_abundance_log10 <- log10(df_arg_abundance$totoal_arg_abundance)
+my_comparisons <- list(c("No",'Yes'))
+p_arg_abundance <- ggplot(df_arg_abundance, aes(x=Diagnosed.Pneumonia,y=totoal_arg_abundance_log10,fill=Diagnosed.Pneumonia)) +
+  stat_boxplot(geom = "errorbar",width=0.15)+
+  geom_boxplot(size=0.5 ) + #theme_classic2() +
+  geom_line(size=0.3) +
+  scale_fill_manual(values = c("#00AFBB", "#E7B800")) +
+  scale_x_discrete(labels = c("No Pneumonia","Pneumonia")) +
+  stat_compare_means(label.y = 3.0,comparisons = my_comparisons,label = "p.signif",size=7,bracket.size = 0.5) +
+  stat_compare_means(label.y = 3.8,label.x = 1,size=8) + 
+  labs(x = NULL, y = "Total ARG abundance (log10)") +
+  theme_pubr(base_size = 20, border =F,legend = "none")
+ggpar(p_arg_abundance,x.text.angle = 30,legend = 'none')
+
+```
+
+```{r Fig S1g}
+
 #most prevalent species for hospitalA
 df_species_hospitalA <- read.csv(r'(LRT_microbiomes_critical_illness\Data_repository\Supplementary_figures\microbiome_species-top_prevalent.csv\microbiome_species-statistics_count-Hospital-A.csv)',header = TRUE) # save in the same file 'microbiome_species-statistics_count-Hospitals.txt'
 df_species_hospitalA$taxonomy <- gsub("^s__", "", df_species_hospitalA$taxonomy) # Remove the prefix
@@ -515,91 +641,7 @@ plot_species_hospitalA|plot_species_hospitalB|plot_species_hospitalC
 
 ```
 
-```{r Fig S1b}
-
-df_too_low <- read.csv((r'(LRT_microbiomes_critical_illness\Data_repository\Supplementary_figures\microbiome_species-top_prevalent.csv\head-to-head_comparisons-DNA_concentration_too_low.csv)')) # save in the same file 'head-to-head_comparisons-DNA_concentration.txt'
-df_too_low$Percentage_Failed <- df_too_low$Percentage_Failed *100
-df_too_low$Percentage_successful <- 100 - df_too_low$Percentage_Failed
-plot <- ggbarplot(df_too_low, "Method", "Percentage_successful",
-                  color = '#1f78b4',fill='#1f78b4',palette = "#1f78b4",
-                  label = F,
-                  position = position_dodge(0.9)) + 
-  scale_x_discrete(labels= c('CMEM','Power Water','AllPrep DNA')) + 
-  labs(x=NULL,y='Percentage of samples with detectable\nDNA after extraction (%)') + theme_bw(base_size = 27)
-ggpar(plot,legend = 'bottom',x.text.angle = 30)
-
-```
-
-```{r Fig S1c}
-
-df_concentration <- read.csv(r'(LRT_microbiomes_critical_illness\Data_repository\Supplementary_figures\head-to-head_comparisons-DNA_concentration.csv)')
-df_concentration$Concentration  <- log10(df_concentration$Concentration + 1)
-df_concentration$Method <- factor(df_concentration$Method,levels =c('CMEM','Power Water','AllPrep DNA') )
-my_comparisons <- list(c('CMEM','Power Water'),c('CMEM','AllPrep DNA'),c('Power Water','AllPrep DNA'))
-p_concentration <- ggboxplot(df_concentration, "Method", "Concentration",
-          color = "Method", palette =c("#00AFBB", "#E7B800", "#FC4E07"),
-          add = "jitter",add.params = list(size = 1.5, alpha = 0.5))  +
-  stat_boxplot(geom = "errorbar",width=0.05,color=c("#00AFBB", "#E7B800", "#FC4E07"))  +
-  stat_compare_means(comparisons = my_comparisons,label = "p.label",size=8,vjust=0) +
-  scale_x_discrete(labels= c('CMEM','Power Water','AllPrep DNA')) + 
-  labs(x=NULL,y='DNA concentration (log10, ng/ul)',) + #ylim(-1,10) +
-  theme_bw(base_size = 24)
-
-```
-
-```{r Fig S1d}
-
-df_mappingrate <- read.csv(r'(G:\Bio-Analysis\Python\Vscode\Task01-NEW\Responses-related\files-reformat\MappingRate_ETAs.csv)')
-df_mappingrate$microbial <- 100 - df_mappingrate$HumanMappingRate
-df_mappingrate$fold_increase <- 100 - df_mappingrate$HumanMappingRate -1
-
-plot_microbial_reads <- ggboxplot(df_mappingrate, x=NULL, y="microbial",
-                              color = "#2077b4", palette =c("#2077b4", "#E7B800", "#FC4E07"),
-                              add = "jitter",add.params = list(size = 1.5, alpha = 0.5)) +
-  stat_boxplot(geom = "errorbar",width=0.05,color='#2077b4')  +
-  scale_x_discrete(labels='Samples') +
-  labs(x=NULL,y='Proportion of microbial reads (%)') + theme_bw(base_size = 16)+
-  theme(axis.text.x = element_text(angle=30,hjust=0.7,vjust=0.8)) 
-
-```
-
-```{r Fig S1e}
-
-df_profiles_vegan  <-  read.csv(r"(LRT_microbiomes_critical_illness\Data_repository\Supplementary_figures\microbial_profile-feasibility_validation.csv)",header = TRUE) # save in the same file 'microbial_profile-feasibility_validation.txt'
-metadata = read.csv(r"(LRT_microbiomes_critical_illness\Data_repository\Supplementary_figures\metadata-microbial_profile-feasibility_validation.csv)",header = TRUE)  # save in the same file 'microbial_profile-feasibility_validation.txt'
-
-df_profiles_vegan_abundance <- df_profiles_vegan[,3:ncol(df_profiles_vegan)]
-df_profiles_vegan_matrix <- as.matrix(df_profiles_vegan[,3:ncol(df_profiles_vegan)])
-
-abundance <- select(df_profiles_vegan,-c(SampleID,Group))
-rownames(abundance) <- df_profiles_vegan[1:nrow(df_profiles_vegan),1]
-abundance <- t(abundance) #transposed dataframe
-
-pca_metadata <- data.frame(df_profiles_vegan[1:nrow(df_profiles_vegan),2])
-rownames(pca_metadata) <- df_profiles_vegan[1:nrow(df_profiles_vegan),1]
-colnames(pca_metadata) <- c('Group')
-p <- pca(abundance,metadata=pca_metadata)
-
-# adonis test 
-set.seed(123)
-adonis2(df_profiles_vegan_matrix ~ Group, df_profiles_vegan, method = "bray", permutations = 999)
-
-df_pca_output <- as.data.frame(p$rotated)
-df_pca_output$SampleID <- rownames(df_pca_output)
-df_pca_output <- merge(df_pca_output, metadata, by = "SampleID")
-
-ggscatter(df_pca_output, x = "PC1", y = "PC2", color = "Group", palette = c("#0466AB", "#D15D4E"), 
-           size =5, alpha = 1) +
-  geom_line(data = df_pca_output, aes(group = Order), color = "black",alpha = 0.8) +
-  # stat_ellipse(aes(color = Group), geom = "path", alpha = 1, linetype = "solid",linewidth =0.8,
-  #              level = 0.9) + theme_pubr(border = T)
-  stat_ellipse(aes(fill = Group), geom = "polygon", linetype = "solid", level = 0.95,alpha=0.3) +
-#   scale_fill_manual(values = c("#0466AB", "#FFEFF2"))
-  theme_pubr(base_size = 23,border = T)
-
-```
-
-```{r Fig S1f}
+```{r Fig S1h}
 
 df_diversity  <- read.csv(r"(LRT_microbiomes_critical_illness\Data_repository\Supplementary_figures\alpha_diversity-feasibility_validation-comparison.csv)",header = TRUE)
 df_diversity$Group  <- factor(df_diversity$Group,levels = c("Undepleted","Depleted"))
@@ -633,7 +675,7 @@ p_diversity_simpson <- ggplot(df_diversity, aes(x=Group,y=Alpha_diversity_Simpso
 
 ```
 
-```{r Fig S1g}
+```{r Fig S1i}
 
 df_total_args  <- read.csv(r"(LRT_microbiomes_critical_illness\Data_repository\Supplementary_figures\total_arg_abundance-feasibility_validation.csv)",header = TRUE)
 df_total_args$Group  <- factor(df_total_args$Group,levels = c("Undepleted","Depleted"))
@@ -653,48 +695,32 @@ p_arg_abundance <- ggplot(df_total_args, aes(x=Group,y=total_arg_abundance_log10
 
 ```
 
-```{r Fig S1h}
+```{r Fig S1j}
 
-df_diversity  <- read.csv(r"(LRT_microbiomes_critical_illness\Data_repository\Supplementary_figures\alpha_diversity-comparison-pneumonia_vs_no_pneumonia.csv)",header = TRUE)
-df_merged_subset$Diagnosed.Pneumonia   <- factor(df_merged_subset$Diagnosed.Pneumonia,levels = c("No","Yes"))
-
-my_comparisons <- list(c("No",'Yes'))
-
-p_diversity_shannon <- ggplot(df_merged_subset, aes(x=Diagnosed.Pneumonia,y=Alpha_diversity_Shannon,fill=Diagnosed.Pneumonia)) +
-  stat_boxplot(geom = "errorbar",width=0.15)+
-  geom_boxplot(size=0.5 ) + #theme_classic2() +
-#   geom_line(aes(group=Order),colour='Gray75', size=0.7)+
-  geom_line(size=0.3) +
-  scale_fill_manual(values = c("#00AFBB", "#E7B800")) +
-  scale_x_discrete(labels = c("No Pneumonia","Pneumonia")) +
-  stat_compare_means(label.y = 3.2,comparisons = my_comparisons,label = "p.signif",size=7,bracket.size = 0.5) +
-  stat_compare_means(label.y = 3.8,label.x = 1,size=8) + 
-  labs(x = NULL, y = "Alpha diversity (Shannon)") +
-  theme_pubr(base_size = 21, border =F,legend = "none")
-
-ggpar(p_diversity_shannon,x.text.angle = 30,legend = 'none')
-
-```
-
-```{r Fig S1i}
-
-df_arg_abundance  <- read.csv(r"(LRT_microbiomes_critical_illness\Data_repository\Supplementary_figures\argtypes-comparison-pneumonia_vs_nopneumonia.csv)",header = TRUE)
-df_arg_abundance$totoal_arg_abundance_log10 <- log10(df_arg_abundance$totoal_arg_abundance)
-my_comparisons <- list(c("No",'Yes'))
-p_arg_abundance <- ggplot(df_arg_abundance, aes(x=Diagnosed.Pneumonia,y=totoal_arg_abundance_log10,fill=Diagnosed.Pneumonia)) +
-  stat_boxplot(geom = "errorbar",width=0.15)+
-  geom_boxplot(size=0.5 ) + #theme_classic2() +
-  geom_line(size=0.3) +
-  scale_fill_manual(values = c("#00AFBB", "#E7B800")) +
-  scale_x_discrete(labels = c("No Pneumonia","Pneumonia")) +
-  stat_compare_means(label.y = 3.0,comparisons = my_comparisons,label = "p.signif",size=7,bracket.size = 0.5) +
-  stat_compare_means(label.y = 3.8,label.x = 1,size=8) + 
-  labs(x = NULL, y = "Total ARG abundance (log10)") +
-  theme_pubr(base_size = 20, border =F,legend = "none")
-ggpar(p_arg_abundance,x.text.angle = 30,legend = 'none')
+load(r'(LRT_microbiomes_critical_illness\Data_repository\Supplementary_figuresargBC.RData)')
+load(r'(LRT_microbiomes_critical_illness\Data_repository\Supplementary_figuresbacBC.RData)')
+load(r'(LRT_microbiomes_critical_illness\Data_repository\Supplementary_figurespwyBC.RData)')
+argBC$Microbiome = 'ARG'
+bacBC$Microbiome = 'Bacteria'
+pwyBC$Microbiome = 'Pathway'
+allBC = rbind(argBC, pwyBC,bacBC)
+allBC$Group %<>% factor(., levels = c('Within hospital', 'Between hospital'))
+allBC$Microbiome %<>% factor(., levels = c('Bacteria', 'Pathway', 'ARG'))
+table(allBC$Microbiome )
+bc = ggplot(allBC, aes(x = Group, y = value, fill = Group)) +
+  geom_boxplot(outlier.size = 0.5) +
+  stat_compare_means(hjust = -1,label = 'p.signif') +
+  scale_y_continuous(expand = expansion(add = c(0.02, 0.1))) +
+  scale_fill_manual(values = c('#DEDEDE', '#9AD7C6')) +
+  facet_wrap(.~Microbiome) +
+  labs(y = 'Bray-Curtis dissimilarity') +
+  mytheme3 + theme(strip.text = element_text(size = 13), axis.text.x = element_blank(),
+                   legend.position = 'top', legend.direction = 'horizontal')
+pdf('./bc_boxplot.pdf', width = 4.68, height = 3.33)
+print(bc)
+dev.off()
 
 ```
-
 ### Figure 2
 ### --------------------------------------------------------------------------------------------------------------------------------------------
 
