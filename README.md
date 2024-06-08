@@ -33,6 +33,7 @@ This repository contains data and analytical code for bioinformatic analyses of 
 - `ape`: 5.7.1
 - `magrittr`: 2.0.3 
 - `pheatmap`: 1.0.12
+
 The analytical code provided in this repository was implemented using R version 4.2.0 in RStudio. No specialized hardware requirements are necessary to run the code.
 
 ## Data and Code
