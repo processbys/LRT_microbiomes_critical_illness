@@ -697,9 +697,9 @@ p_arg_abundance <- ggplot(df_total_args, aes(x=Group,y=total_arg_abundance_log10
 
 ```{r Fig S1j}
 
-load(r'(LRT_microbiomes_critical_illness\Data_repository\Supplementary_figuresargBC.RData)')
-load(r'(LRT_microbiomes_critical_illness\Data_repository\Supplementary_figuresbacBC.RData)')
-load(r'(LRT_microbiomes_critical_illness\Data_repository\Supplementary_figurespwyBC.RData)')
+load(r'(LRT_microbiomes_critical_illness\Data_repository\Supplementary_figures\argBC.RData)')
+load(r'(LRT_microbiomes_critical_illness\Data_repository\Supplementary_figures\bacBC.RData)')
+load(r'(LRT_microbiomes_critical_illness\Data_repository\Supplementary_figures\pwyBC.RData)')
 argBC$Microbiome = 'ARG'
 bacBC$Microbiome = 'Bacteria'
 pwyBC$Microbiome = 'Pathway'
