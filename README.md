@@ -45,3 +45,9 @@ The analytical code provided in this repository was implemented using R version 
 ## Data and Code
 - The directory `Data_repository` contains the data required for the analyses and visualization of results.
 - The directory `Scripts` contains the code required for the analyses and visualization of results.
+
+## Demo
+Download the repository and replace the input and output file paths in the code with the absolute file paths corresponding to your local data and output directories.
+
+## Instructions for use
+To execute the code on your local computer, replace all file paths in the scripts with the corresponding absolute file paths on your system.
